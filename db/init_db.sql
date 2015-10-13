@@ -7,7 +7,7 @@
  1. To run this script from the plsql command prompt issue this command
  at the default database prompt -   \i  <PATH to the sql file>/init_db.sql;
  Example:
- postgres=# \i  /Users/lraju/src/pulpo/pulpo/dbscripts/init_db.sql;
+ postgres=# \i  /Users/lraju/src/calendario/db/init_db.sql;
 
  2. To run this from PGADMIN - open the sql editor window and paste the contents below and execute it.
 
@@ -59,17 +59,13 @@ END IF;
 END$$;
 
 create database caldb with owner = webdbas;
-alter database caldb set search_path=cal, calweb, tz,public;
+alter database caldb set search_path=cal, caluser, tz,public;
 
-GRANT CONNECT ON DATABASE pulpodb TO webusers;
+GRANT CONNECT ON DATABASE caldb TO webusers;
 
-\c pulpodb
+\c caldb
 --------------------------------------------------------
 -- hstore
 --------------------------------------------------------
 CREATE EXTENSION IF NOT EXISTS hstore;
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
-
-
-

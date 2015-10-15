@@ -21,8 +21,10 @@
          :app  (handler-component (:app config))
          :http (jetty-server (:http config))
          :db   (hikaricp (:db config))
-         :example (endpoint-component example-endpoint))
+         :example (endpoint-component example-endpoint)
+         )
         (component/system-using
          {:http [:app]
           :app  [:example]
-          :example [:db]}))))
+          :example [:db]
+          }))))

@@ -12,10 +12,11 @@
                  [ring/ring-defaults "0.1.5"]
                  [ring-jetty-component "0.3.0"]
                  [duct/hikaricp-component "0.1.0"]
+                 [yesql  "0.5.1"]
                  [org.postgresql/postgresql "9.4-1203-jdbc4"]]
   :plugins [[lein-environ "1.0.1"]
             [lein-gen "0.2.2"]]
-  :generators [[duct/generators "0.4.4"]]
+  :generators [[duct/generators "0.4.4"][lein-gen/generators "0.2.2"]]
   :duct {:ns-prefix calendario}
   :main ^:skip-aot calendario.main
   :target-path "target/%s/"

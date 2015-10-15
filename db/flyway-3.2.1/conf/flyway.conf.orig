@@ -33,16 +33,16 @@
 # SQL Server        : jdbc:jtds:sqlserver://<host>:<port>/<database>
 # SQLite            : jdbc:sqlite:<database>
 # Vertica*          : jdbc:vertica://<host>:<port>/<database>
-flyway.url=jdbc:postgresql://localhost:5432/caldb
+flyway.url=
 
 # Fully qualified classname of the jdbc driver (autodetected by default based on flyway.url)
 # flyway.driver=
 
 # User to use to connect to the database (default: <<null>>)
-flyway.user=caldba
+flyway.user=
 
 # Password to use to connect to the database (default: <<null>>)
-flyway.password=333BlackTower
+flyway.password=
 
 # Comma-separated list of schemas managed by Flyway. These schema names are case-sensitive.
 # (default: The default schema for the datasource connection)

@@ -1,2 +1,2 @@
 -- add calendar
-INSERT INTO cal."calendars" (icaltext, createdate) VALUES (:icaltext, :createdate)
+INSERT INTO cal."calendars" (idcalendar, icaltext, createdate) VALUES (:idcalendar, :icaltext, :createdate)

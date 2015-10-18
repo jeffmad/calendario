@@ -38,38 +38,54 @@ ALTER ROLE caldba  SET search_path = cal, caluser, tz, public;
 ALTER ROLE calweb  SET search_path = cal, caluser, tz, public;
 
 -- -----------------------------------------------------
--- Table caluser."calusers"
+-- Table caluser."expusers"
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS caluser."calusers" (
-  iduser SERIAL PRIMARY KEY,
-  calid UUID NOT NULL,
-  expuserid INTEGER NULL,
-  tpid INTEGER NOT NULL,
-  eapid INTEGER NOT NULL,
-  tuid INTEGER NOT NULL,
-  siteid INTEGER NOT NULL,
-  email VARCHAR(512),
-  parentiduser INTEGER NULL,
-  createdate TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
-  );
+CREATE TABLE IF NOT EXISTS caluser."expusers" (
+iduser SERIAL PRIMARY KEY,
+expuserid INTEGER NULL,
+email VARCHAR(512),
+createdate TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);
 
-ALTER TABLE caluser."calusers"
+ALTER TABLE caluser."expusers"
 OWNER TO caldba;
-
 
 -- -----------------------------------------------------
 -- Creating indexes
 -- -----------------------------------------------------
---CREATE UNIQUE INDEX email_idx ON caluser."calusers" ((LOWER(email)));
+CREATE UNIQUE INDEX expusers_email_idx ON caluser."expusers" ((LOWER(email)));
 
-CREATE UNIQUE INDEX expuserid_tpid_tuid_idx ON caluser."calusers" (expuserid, tpid, tuid);
+-- -----------------------------------------------------
+-- Table caluser."siteusers"
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS caluser."siteusers" (
+idsiteuser SERIAL PRIMARY KEY,
+iduser INTEGER REFERENCES caluser."expusers" (iduser),
+calid UUID NOT NULL,
+tpid INTEGER NOT NULL,
+eapid INTEGER NOT NULL,
+tuid INTEGER NOT NULL,
+siteid INTEGER NOT NULL,
+createdate TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE caluser."siteusers"
+OWNER TO caldba;
+
+-- -----------------------------------------------------
+-- Creating indexes
+-- -----------------------------------------------------
+
+CREATE UNIQUE INDEX siteusers_siteid_tuid_idx ON caluser."siteusers" (siteid, tuid);
+
+CREATE INDEX siteusers_iduser_idx ON caluser."siteusers" (iduser);
+CREATE INDEX siteusers_calid_idx ON caluser."siteusers" (calid);
 
 -- -----------------------------------------------------
 -- Table cal."calendars"
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS cal."calendars" (
   idcalendar SERIAL PRIMARY KEY,
-  --iduser INTEGER REFERENCES caluser.calusers (iduser),
   icaltext TEXT NULL,
   createdate TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
  );
@@ -78,20 +94,16 @@ ALTER TABLE cal."calendars"
 OWNER TO caldba;
 
 -- -----------------------------------------------------
--- Table cal."CalendarUser"
+-- Table cal."calendarsusers"
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS cal."calendarsusers" (
-   idcalendar INTEGER REFERENCES cal.calendars,
-   iduser INTEGER REFERENCES caluser.calusers,
+   idcalendar INTEGER REFERENCES cal.calendars (idcalendar),
+   idsiteuser INTEGER REFERENCES caluser.siteusers (idsiteuser),
    createdate TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
---CREATE UNIQUE INDEX calendaruser_iduser_idx ON cal."CalendarUser" idUser;
-
 ALTER TABLE cal."calendarsusers"
 OWNER TO caldba;
-
-
 
 CREATE TABLE cal.calendars_y2015m10 (
     CHECK ( createdate >= DATE '2015-10-01' AND createdate < DATE '2015-11-01' )
@@ -317,6 +329,7 @@ BEGIN
     ELSIF ( NEW.createdate >= DATE '2016-07-01' AND
             NEW.createdate < DATE '2016-08-01' ) THEN
         INSERT INTO cal.calendarsusers_y2016m07 VALUES (NEW.*);
+
     ELSIF ( NEW.createdate >= DATE '2016-08-01' AND
             NEW.createdate < DATE '2016-09-01' ) THEN
         INSERT INTO cal.calendarsusers_y2016m08 VALUES (NEW.*);

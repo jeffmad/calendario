@@ -1,39 +1,86 @@
 (ns calendario.calusers
   (:require [yesql.core :refer [defquery]]))
 
-(defquery user-by-expuserid "queries/user-by-expuserid.sql")
+(defquery user-by-email "queries/user-by-email.sql")
 (defquery reset-calendar! "queries/reset-calendar.sql")
-(defquery create-calendar-user<! "queries/create-calendar-user.sql")
 (defquery add-calendar<! "queries/add-calendar.sql")
+(defquery next-calendar-id "queries/next-calendar-id.sql")
 (defquery associate-cal-to-user<! "queries/assoc-cal-to-user.sql")
+(defquery latest-calendar-text-for-user "queries/latest-calendar-text-for-user.sql")
+(defquery add-expuser<! "queries/add-expuser.sql")
+(defquery add-siteuser<! "queries/add-siteuser.sql")
+(defquery expuser-by-email "queries/expuser-by-email.sql")
+(defquery siteuser-by-iduser "queries/siteuser-by-iduser-siteid.sql")
+(defquery uuid-by-email-siteid "queries/uuid-by-email-siteid.sql")
+(defquery check-user-exists "queries/check-user-exists.sql")
+
+; does siteuser have a calendar and if so, is it too old?
+; get latest cal - return nothing or old one, or good one, then decide.
+
 ; https://www.google.com/calendar/ical/jeffmad%40gmail.com/private-6e3b43617c56c81ece0d93886ec3800d/basic.ics
-; email doesn't work for us because one can change it and i don't want to call userprofile
-; expuserid-tpid-tuid ? or expuserid-siteid?
-; get latest calendar for user
-; select icaltext from caluser."calusers" u, cal."calendars" c, cal."calendarsusers" cu where u.expuserid = :expuserid and u.tpid = :tpid and u.tuid = :tuid and u.calid = :uuid and cu.iduser = u.iduser and cu.idcalendar = c.idcalendar and
-; or look at the hostname look up tpid tuid from platform site, then use email
 
-;select date_trunc('MONTH', DATE '2015-10-12');
-;select date_trunc('MONTH', CURRENT_DATE);
-;select idcalendar from cal."calendars" where createdate >= date_trunc('month', current_date) and createdate < date_trunc('month', current_date);
+(defn get-private-calendar-url [db email siteid]
+  (let [uuid (:calid (first (uuid-by-email-siteid {:email email :siteid siteid} {:connection db})))
+        enc-email (java.net.URLEncoder/encode email)]
+    (if uuid
+      (str "/calendar/ical/" enc-email "/private-" uuid "/trips.ics"))))
 
+;
 
-
-(defn get-private-calendar-url [db expuserid]
-  (user-by-expuserid {:expuserid expuserid} db))
-
-(defn reset-private-calendar [db expuserid]
-  (let [uuid (java.util.UUID/randomUUID)
-        rs (reset-calendar-url-for-user! {:uuid uuid :expuserid expuserid} db)]
-   uuid))
+;
 ; calendars: idcalendar iduser icaltext createdate
 ; calendarsusers idcalendar iduser createdate
-; calusers iduser calid expuserid tpid eapid tuid siteid email parentiduser createdate
+; expusers iduser  expuserid email  createdate
+; siteusers idsiteuser iduser calid  tpid eapid tuid siteid  createdate
+(defn calendar-for-user [tpid tuid]
+  (str "BEGIN: VCAL" tuid " " tpid " " (java.time.Instant/now) "END: VCAL"))
 
-(defn create-user [db uuid expuserid tpid eapid tuid siteid email createdate]
-  (create-calendar-user<! {:calid uuid :expuserid expuserid :tpid tpid :eapid eapid :tuid tuid :siteid siteid :email email :createdate createdate} db))
+(defn find-expuser [db email]
+  (first (expuser-by-email { :email email } {:connection db})))
 
-;(c/create-user {:connection (:spec (:db system))} (java.util.UUID/randomUUID) 577015 1 0 577015 1 "jmadynski@expedia.com" (java.sql.Timestamp/from (java.time.Instant/now)))
+; (c/find-siteuser (:spec (:db system)) 1)
+(defn find-siteuser [db iduser siteid]
+  (first (siteuser-by-iduser { :iduser iduser :siteid siteid} {:connection db})))
 
-                                        ;(c/create-user {:connection (:spec (:db system))} (java.util.UUID/randomUUID) 577016 1 0 577016 1 "jmadynski2@expedia.com" (java.sql.Timestamp/from (java.time.Instant/now)))
-                                        ;{:email "jmadynski2@expedia.com", :eapid 0, :iduser 3, :siteid 1, :expuserid 577016, :tuid 577016, :calid #uuid "e29dbeb5-2625-4cc5-9e4e-c06d0d9d79ef", :parentiduser nil, :tpid 1, :createdate #inst "2015-10-14T08:02:44.764000000-00:00"}
+(defn user-lookup [db email uuid]
+  (first (check-user-exists {:uuid uuid :email email} {:connection db})))
+
+(defn create-exp-user! [db expuserid email]
+  (add-expuser<! {:expuserid expuserid :email email :createdate (java.sql.Timestamp/from (java.time.Instant/now))} {:connection db}))
+
+(defn create-site-user! [db iduser uuid tpid eapid tuid siteid ]
+  (add-siteuser<! {:iduser iduser :calid uuid :tpid tpid :eapid eapid :tuid tuid :siteid siteid :createdate (java.sql.Timestamp/from (java.time.Instant/now))} {:connection db}))
+
+(defn create-user [db expuserid email tpid eapid tuid siteid]
+  (if-let [expuser (find-expuser db email)]
+    (if-let [siteuser (find-siteuser db (:iduser expuser) siteid)]
+      { :expuser expuser :siteuser siteuser}
+      { :expuser expuser :siteuser  (create-site-user! db (:iduser expuser) (java.util.UUID/randomUUID) tpid eapid tuid siteid)})
+    (let [expuser (create-exp-user! db expuserid email)]
+      { :expuser expuser :siteuser
+       (create-site-user! db (:iduser expuser) (java.util.UUID/randomUUID) tpid eapid tuid siteid)})))
+
+
+(defn add-calendar-for-user! [db icaltext idsiteuser]
+  (let [now (java.sql.Timestamp/from (java.time.Instant/now))
+        idcal (:nextval (first  (next-calendar-id {} {:connection db})))]
+    (if idcal
+      (clojure.java.jdbc/with-db-transaction [t-con db]
+        (add-calendar<! {:idcalendar idcal :icaltext icaltext :createdate now} {:connection t-con})
+        (associate-cal-to-user<! {:idcalendar idcal :idsiteuser idsiteuser :createdate now} {:connection  t-con}))
+      (throw (Exception. (str  "could not add calendar for user: " idsiteuser))))))
+
+(defn latest-calendar-for-user [db email uuid]
+  (if (user-lookup db email uuid)
+    (let [{:keys [icaltext createdate idsiteuser tpid tuid]} (first (latest-calendar-text-for-user {:email email :calid uuid} {:connection  db}))]
+      (if (and icaltext (neg? (compare (.plusSeconds (java.time.Instant/now) (* 60 60 -24)) (.toInstant createdate))))
+        icaltext
+        (let [cal (calendar-for-user tpid tuid)]
+          (add-calendar-for-user! db cal idsiteuser)
+          cal)))))
+
+(defn reset-private-calendar! [db email]
+  (let [expuser (find-expuser db email)
+        uuid (java.util.UUID/randomUUID)]
+    (when expuser
+      (reset-calendar! {:uuid uuid :email email} {:connection db}))))

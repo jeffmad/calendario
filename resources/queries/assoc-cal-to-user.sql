@@ -1,2 +1,2 @@
 -- assoc-cal-to-user
-INSERT INTO cal."calendarsusers" (idcalendar, iduser, createdate) VALUES (:idcalendar, :iduser, :createdate)
+INSERT INTO cal."calendarsusers" (idcalendar, idsiteuser, createdate) VALUES (:idcalendar, :idsiteuser, :createdate)

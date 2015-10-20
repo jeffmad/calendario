@@ -1,12 +1,12 @@
-(ns calendario.endpoint.example-test
+(ns calendario.endpoint.calapi-test
   (:require [com.stuartsierra.component :as component]
             [clojure.test :refer :all]
             [kerodon.core :refer :all]
             [kerodon.test :refer :all]
-            [calendario.endpoint.example :as example]))
+            [calendario.endpoint.calapi :as calapi]))
 
 (def handler
-  (example/example-endpoint {}))
+  (calapi/calapi-endpoint {}))
 
 (deftest smoke-test
   (testing "index page exists"

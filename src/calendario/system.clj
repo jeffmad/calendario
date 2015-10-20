@@ -7,7 +7,8 @@
             [meta-merge.core :refer [meta-merge]]
             [ring.component.jetty :refer [jetty-server]]
             [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
-            [calendario.endpoint.example :refer [example-endpoint]]))
+            [calendario.endpoint.calapi :refer [calapi-endpoint]]
+            [calendario.component.http-client :refer [http-client]]))
 
 (def base-config
   {:app {:middleware [[wrap-not-found :not-found]
@@ -20,11 +21,12 @@
     (-> (component/system-map
          :app  (handler-component (:app config))
          :http (jetty-server (:http config))
+         :http-client (http-client (:http-client config))
          :db   (hikaricp (:db config))
-         :example (endpoint-component example-endpoint)
+         :calapi (endpoint-component calapi-endpoint)
          )
         (component/system-using
          {:http [:app]
-          :app  [:example]
-          :example [:db]
+          :app  [:calapi]
+          :calapi [:db :http-client]
           }))))

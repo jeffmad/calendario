@@ -6,5 +6,6 @@
 
 (def environ
   {:http {:port (some-> env :port Integer.)}
+   :http-client {:timeout 4 :threads 3}
    :db   {:uri  (env :database-url)}
    :calusers {:utc true}})

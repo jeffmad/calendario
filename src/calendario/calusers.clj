@@ -47,18 +47,18 @@
 (defn create-exp-user! [db expuserid email now]
   (add-expuser<! {:expuserid expuserid :email email :createdate (java.sql.Timestamp/from now)} {:connection db}))
 
-(defn create-site-user! [db iduser uuid tpid eapid tuid siteid now ]
+(defn create-site-user! [db iduser uuid tpid eapid tuid siteid now]
   (add-siteuser<! {:iduser iduser :calid uuid :tpid tpid :eapid eapid :tuid tuid :siteid siteid :createdate (java.sql.Timestamp/from now)} {:connection db}))
 
-;(java.util.UUID/randomUUID)
-(defn create-user [db expuserid email tpid eapid tuid siteid uuid]
+;(java.util.UUID/randomUUID) (java.time.Instant/now)
+(defn create-user [db expuserid email tpid eapid tuid siteid uuid now]
   (if-let [expuser (find-expuser db email)]
     (if-let [siteuser (find-siteuser db (:iduser expuser) siteid)]
       { :expuser expuser :siteuser siteuser}
-      { :expuser expuser :siteuser  (create-site-user! db (:iduser expuser) uuid tpid eapid tuid siteid (java.time.Instant/now))})
-    (let [expuser (create-exp-user! db expuserid email (java.time.Instant/now))]
+      { :expuser expuser :siteuser  (create-site-user! db (:iduser expuser) uuid tpid eapid tuid siteid now)})
+    (let [expuser (create-exp-user! db expuserid email now)]
       { :expuser expuser :siteuser
-       (create-site-user! db (:iduser expuser) uuid tpid eapid tuid siteid (java.time.Instant/now))})))
+       (create-site-user! db (:iduser expuser) uuid tpid eapid tuid siteid now)})))
 
 ;(java.time.Instant/now)
 (defn add-calendar-for-user! [db icaltext idsiteuser now]
@@ -70,16 +70,22 @@
         (associate-cal-to-user<! {:idcalendar idcal :idsiteuser idsiteuser :createdate now} {:connection  t-con}))
       (throw (Exception. (str  "could not add calendar for user: " idsiteuser))))))
 
+(defn expired? [expire-time create-time]
+  (pos? (compare expire-time create-time)))
+
+(def valid? (complement expired?))
+
+#_(let [cal (calendar-for-user tpid tuid now)]
+  (add-calendar-for-user! db cal idsiteuser now)
+  cal)
 ;(java.time.Instant/now)
-(defn latest-calendar-for-user [db email uuid now]
+(defn latest-calendar-for-user [db email uuid expire-time]
   (if (user-lookup db email uuid)
     (let [{:keys [icaltext createdate idsiteuser tpid tuid]} (first (latest-calendar-text-for-user {:email email :calid uuid} {:connection db}))]
-      (if (and icaltext (neg? (compare (.plusSeconds now (* 60 60 -24)) (.toInstant createdate))))
+      (if (and icaltext (valid? expire-time (.toInstant createdate)))
         icaltext
-        (let [cal (calendar-for-user tpid tuid now)]
-          (add-calendar-for-user! db cal idsiteuser now)
-          cal)))))
-
+        :expired))))
+#_(let [c (c/latest-calendar-for-user (:spec (:db system)) "jeffmad@gmail.com" "6eb7f25d-4bbf-4753-aae2-72635fcd959b" (.plusSeconds (java.time.Instant/now) (* 60 60 -24)))] (cond (= :expired c) "yo expired" :else c))
 (defn reset-private-calendar! [db email uuid]
   (let [expuser (find-expuser db email)]
     (when expuser

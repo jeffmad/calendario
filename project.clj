@@ -13,7 +13,7 @@
                  [ring-jetty-component "0.3.0"]
                  [duct/hikaricp-component "0.1.0"]
                  [yesql "0.5.1"]
-                 [ring/ring-json "0.3.1"]
+                 [ring/ring-json "0.4.0"]
                  [org.postgresql/postgresql "9.4-1203-jdbc4"]
                  [clj-http "2.0.0"]]
   :plugins [[lein-environ "1.0.1"]
@@ -32,7 +32,7 @@
    :profiles/test {}
    :project/dev   {:source-paths ["dev"]
                    :repl-options {:init-ns user}
-                   :dependencies [[reloaded.repl "0.2.0"]
+                   :dependencies [[reloaded.repl "0.2.1"]
                                   [org.clojure/tools.namespace "0.2.11"]
                                   [eftest "0.1.0"]
                                   [kerodon "0.7.0"]]

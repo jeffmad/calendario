@@ -12,5 +12,5 @@
 (defn calapi-endpoint [{{db :spec} :db http-client :http-client}]
   (routes
    (wrap-json-response (wrap-json-body (GET "/isworking" [] (response {:version 1.0}))))
-   (GET "calendar/ical/:email/:token/trips.ics" [email token]
-        (header (response { :version 1.0 :email email :token token}) "Content-Type" "text/calendar; charset=utf-8"))))
+   (GET "/calendar/ical/:email/:token/trips.ics" [email token]
+        (header (response "BEGIN:VCALENDAR\r\nPRODID:-//Acme\\, Inc. //Acme Calendar V0.1//EN\r\nVERSION:2.0\r\nMETHOD:PUBLISH\r\nCALSCALE:GREGORIAN\r\nEND:VCALENDAR\r\n") "Content-Type" "text/calendar; charset=utf-8"))))

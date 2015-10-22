@@ -1,0 +1,585 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "81f501ec-8152-408c-ae4d-ec008d846384",
+    "webDetailsURL": "https://www.expedia.com/trips/1115913015028",
+    "tripNumber": 1115913015028,
+    "title": "Las Vegas",
+    "description": "",
+    "updateTripNameDescPathURL": "https://www.expedia.com/api/trips/81f501ec-8152-408c-ae4d-ec008d846384/updateTripNameDescription",
+    "startTime": {
+      "raw": "2015-10-05T18:35:00-07:00",
+      "localized": "Oct 5, 2015 6:35:00 PM",
+      "epochSeconds": 1444095300,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "10/5/2015",
+      "localizedMediumDate": "Oct 5",
+      "localizedFullDate": "Mon, Oct 5",
+      "localizedLongDate": "Oct 5, 2015"
+    },
+    "endTime": {
+      "raw": "2015-10-09T18:30:00-07:00",
+      "localized": "Oct 9, 2015 6:30:00 PM",
+      "epochSeconds": 1444440600,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "10/9/2015",
+      "localizedMediumDate": "Oct 9",
+      "localizedFullDate": "Fri, Oct 9",
+      "localizedLongDate": "Oct 9, 2015"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-03T00:12:07Z",
+      "localized": "Sep 3, 2015 12:12:07 AM",
+      "epochSeconds": 1441239127,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 3 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-26T22:46:40Z",
+      "localized": "Sep 26, 2015 10:46:40 PM",
+      "epochSeconds": 1443307600,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Sat, 26 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-26T22:46:59Z",
+      "localized": "Sep 26, 2015 10:46:59 PM",
+      "epochSeconds": 1443307619,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Sat, 26 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "rewards": {
+      "totalPoints": 1894,
+      "basePoints": 1456,
+      "bonusPoints": [
+        {
+          "m_pointValue": 438.00,
+          "m_pointType": "offerPoint",
+          "m_pointDescription": "+gold Bonus",
+          "m_status": "PENDING"
+        }
+      ],
+      "logoUrl": "/static/default/default/images/myrewards/RewardsLogo_193x76.png",
+      "viewStatementURL": "/user/rewards"
+    },
+    "sharableDetailsURL": "https://www.expedia.com/api/trips/shared/tvWxn8Cu_Bp5NeDbO5h3IlcaFMm3g03buJhKNG81IeCClsstB5_-aHOuwcuA7Icl",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ gold Dedicated Customer Care at 1-866-539-4149 or 1-702-939-2635.",
+        "For faster service, mention <strong>itinerary #1115913015028 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-539-4149",
+      "customerSupportPhoneNumberInternational": "+1 702-939-2635",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ gold Dedicated Customer Care at 1-866-539-4149 or 1-702-939-2635.",
+        "For faster service, mention <strong>itinerary #1115913015028 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "packages": [
+      {
+        "uniqueID": "63E16EFE-34BA-4E47-8981-C42C025EDE42",
+        "bookingStatus": "BOOKED",
+        "orderNumber": "8035383410471",
+        "orderLineNumber": "a590c317-9f20-4c10-9634-a729cf668bab",
+        "price": {
+          "currency": "USD",
+          "subTotal": "727.91",
+          "subTotalFormatted": "$727.91",
+          "total": "727.91",
+          "totalFormatted": "$727.91"
+        },
+        "flights": [
+          {
+            "uniqueID": "63E16EFE-34BA-4E47-8981-C42C025EDE42_a590c317-9f20-4c10-9634-a729cf668bab_1",
+            "bookingStatus": "BOOKED",
+            "bookingStatusText": "Confirmed",
+            "bookingStatusMessage": "Your reservation is booked and confirmed. There is no need to call us to reconfirm this reservation.",
+            "ticketingStatus": "COMPLETE",
+            "orderNumber": "8035383410471",
+            "updateFrequentFlyerPathURL": "https://www.expedia.com/api/trips/81f501ec-8152-408c-ae4d-ec008d846384/updateFrequentFlyerInformation",
+            "confirmationNumbers": [
+              {
+                "airlineName": "Virgin America",
+                "number": "MDBYHD"
+              }
+            ],
+            "paymentModel": "AGENCY",
+            "fareType": "PUBLISHED",
+            "flightType": "ROUND_TRIP",
+            "isInternational": false,
+            "isSplitTicket": false,
+            "fulfillmentMethod": "ETICKET",
+            "passengers": [
+              {
+                "typeCode": "ADULT",
+                "typeLocalized": "Adult",
+                "firstName": "Jeffrey",
+                "middleName": "Michael",
+                "lastName": "Madynski",
+                "fullName": "Jeffrey Michael Madynski",
+                "age": 44,
+                "gender": "Male",
+                "dateOfBirth": "1971-4-16",
+                "TSARedressNumber": "",
+                "phoneNumbers": [
+                  {
+                    "countryCode": "1",
+                    "phone": "4155050490"
+                  }
+                ],
+                "ticketNumbers": [
+                  "9847677669246"
+                ],
+                "frequentFlyerPlans": [],
+                "seats": [
+                  {
+                    "assigned": "17F",
+                    "seatPreference": "",
+                    "seatPreferenceLocalized": "Unknown",
+                    "smokingAllowed": false,
+                    "legIndex": 0,
+                    "segmentIndex": 0
+                  },
+                  {
+                    "assigned": "15A",
+                    "seatPreference": "",
+                    "seatPreferenceLocalized": "Unknown",
+                    "smokingAllowed": false,
+                    "legIndex": 1,
+                    "segmentIndex": 0
+                  }
+                ]
+              }
+            ],
+            "brandedFareFamilyName": "",
+            "legs": [
+              {
+                "type": "NONSTOP",
+                "state": "PRE_START_4",
+                "numberOfStops": 0,
+                "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smVX.gif",
+                "segments": [
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 37.61594,
+                      "longitude": -122.387996,
+                      "name": "San Francisco Intl.",
+                      "longName": "San Francisco, CA (SFO-San Francisco Intl.)",
+                      "airportCode": "SFO",
+                      "airportMetroCode": "QSF",
+                      "city": "San Francisco",
+                      "countryCode": "USA"
+                    },
+                    "departureTime": {
+                      "raw": "2015-10-05T18:35:00-07:00",
+                      "localized": "Oct 5, 2015 6:35:00 PM",
+                      "epochSeconds": 1444095300,
+                      "timeZoneOffsetSeconds": -25200,
+                      "localizedShortDate": "Mon, 5 Oct"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 36.085393,
+                      "longitude": -115.150098,
+                      "name": "McCarran Intl.",
+                      "longName": "Las Vegas (LAS-All Airports)",
+                      "airportCode": "LAS",
+                      "airportMetroCode": "LAS",
+                      "city": "Las Vegas",
+                      "countryCode": "USA"
+                    },
+                    "arrivalTime": {
+                      "raw": "2015-10-05T20:00:00-07:00",
+                      "localized": "Oct 5, 2015 8:00:00 PM",
+                      "epochSeconds": 1444100400,
+                      "timeZoneOffsetSeconds": -25200,
+                      "localizedShortDate": "Mon, 5 Oct"
+                    },
+                    "departureTerminal": "2",
+                    "arrivalTerminal": "3",
+                    "airlineCode": "VX",
+                    "externalAirlineCode": "VX",
+                    "airlineName": "Virgin America",
+                    "operatedByAirCarrierName": "",
+                    "confirmationAirline": "Virgin America",
+                    "confirmationNUmber": "MDBYHD",
+                    "flightNumber": "918",
+                    "equipmentCode": "319",
+                    "equipmentDescription": "Airbus A319",
+                    "distance": 424,
+                    "distanceUnits": "mi",
+                    "duration": "PT1H25M",
+                    "formattedDuration": "1h 25m",
+                    "bookingCode": "N",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "63E16EFE-34BA-4E47-8981-C42C025EDE42_a590c317-9f20-4c10-9634-a729cf668bab_1_L1_S1_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HK",
+                    "isHidden": false
+                  }
+                ],
+                "sharableFlightLegURL": "https://www.expedia.com/api/trips/shared/tvWxn8Cu_Bp5NeDbO5h3IlcaFMm3g03buJhKNG81IeC8v_YgJkBsLCZft53BSP99-CowJDcvRqMnlLRDk0PViVkpna6YJ-J5TRivCN5AZuIwBJyDwjMq06P4ZZuNiVsnOKkVDDn45tWEZh7COBdO8RthcJ8AK4Q-bvz5ekSBX_EEvWmhe0QEG6CyDWLvz_rc",
+                "duration": "PT1H25M"
+              },
+              {
+                "type": "NONSTOP",
+                "state": "PRE_START_4",
+                "numberOfStops": 0,
+                "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smVX.gif",
+                "segments": [
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 36.085393,
+                      "longitude": -115.150098,
+                      "name": "McCarran Intl.",
+                      "longName": "Las Vegas (LAS-All Airports)",
+                      "airportCode": "LAS",
+                      "airportMetroCode": "LAS",
+                      "city": "Las Vegas",
+                      "countryCode": "USA"
+                    },
+                    "departureTime": {
+                      "raw": "2015-10-09T17:00:00-07:00",
+                      "localized": "Oct 9, 2015 5:00:00 PM",
+                      "epochSeconds": 1444435200,
+                      "timeZoneOffsetSeconds": -25200,
+                      "localizedShortDate": "Fri, 9 Oct"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 37.61594,
+                      "longitude": -122.387996,
+                      "name": "San Francisco Intl.",
+                      "longName": "San Francisco, CA (SFO-San Francisco Intl.)",
+                      "airportCode": "SFO",
+                      "airportMetroCode": "QSF",
+                      "city": "San Francisco",
+                      "countryCode": "USA"
+                    },
+                    "arrivalTime": {
+                      "raw": "2015-10-09T18:30:00-07:00",
+                      "localized": "Oct 9, 2015 6:30:00 PM",
+                      "epochSeconds": 1444440600,
+                      "timeZoneOffsetSeconds": -25200,
+                      "localizedShortDate": "Fri, 9 Oct"
+                    },
+                    "departureTerminal": "3",
+                    "arrivalTerminal": "2",
+                    "airlineCode": "VX",
+                    "externalAirlineCode": "VX",
+                    "airlineName": "Virgin America",
+                    "operatedByAirCarrierName": "",
+                    "confirmationAirline": "Virgin America",
+                    "confirmationNUmber": "MDBYHD",
+                    "flightNumber": "919",
+                    "equipmentCode": "319",
+                    "equipmentDescription": "Airbus A319",
+                    "distance": 424,
+                    "distanceUnits": "mi",
+                    "duration": "PT1H30M",
+                    "formattedDuration": "1h 30m",
+                    "bookingCode": "U",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "63E16EFE-34BA-4E47-8981-C42C025EDE42_a590c317-9f20-4c10-9634-a729cf668bab_1_L2_S1_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HK",
+                    "isHidden": false
+                  }
+                ],
+                "sharableFlightLegURL": "https://www.expedia.com/api/trips/shared/tvWxn8Cu_Bp5NeDbO5h3IlcaFMm3g03buJhKNG81IeC8v_YgJkBsLCZft53BSP99-CowJDcvRqMnlLRDk0PViVkpna6YJ-J5TRivCN5AZuIwBJyDwjMq06P4ZZuNiVsnOKkVDDn45tWEZh7COBdO8RthcJ8AK4Q-bvz5ekSBX_EXh94gpP7IirNePacLM1SC",
+                "duration": "PT1H30M"
+              }
+            ],
+            "rules": {
+              "cancellationFeeLegalText": "A non-refundable administration fee will be applied for changes and cancellations of bookings. Customers will be informed of the administration fee by their Customer Support Centre Agent at the time of their call.",
+              "cancelChangeIntroductionText": "We understand that sometimes plans change. We do not charge a cancel or change fee. When the airline charges such fees in accordance with its own policies, the cost will be passed on to you.",
+              "feeChangeRefundIntroductionText": "When the airline charges any cancellation or change fees in accordance with its own policies, the cost will be passed on to you.",
+              "refundabilityText": "Tickets are nonrefundable, nontransferable and name changes are not allowed.",
+              "completePenaltyRules": {
+                "text": "Rules and restrictions as imposed by the airline will be applicable to your fare should you need to change or cancel your flight.",
+                "url": "https://www.expedia.com/Fare-Rules?tripid=81f501ec-8152-408c-ae4d-ec008d846384",
+                "textAndURL": "Please read the <a id=\"complete_penalty_rules_for_changes_and_cancellations_link\" href=\"https://www.expedia.com/Fare-Rules?tripid=81f501ec-8152-408c-ae4d-ec008d846384\" class=\"tooltip\" target=\"rulesAndRestrictions\">complete penalty rules for changes and cancellations <span class=\"visually-hidden\" style=\"display:none;\">(Opens a new window) </span> </a> applicable to this fare.",
+                "apiURL": "https://www.expedia.com/api/trips/1115913015028/items/63E16EFE-34BA-4E47-8981-C42C025EDE42_a590c317-9f20-4c10-9634-a729cf668bab_1/gdsFareRulesText?useCache=true"
+              },
+              "additionalAirlineFees": {
+                "text": "The airline may charge additional fees for checked baggage or other optional services.",
+                "url": "https://www.expedia.com/Flights-BagFees?originapt=SFO&destinationapt=LAS&cabinclass=3&mktgcarrier=VX&opcarrier=&farebasis=N14LASSP&bookingclass=N&travelDate=2015-10-05&flightNumber=918",
+                "textAndURL": "The airline may charge <a href=\"https://www.expedia.com/Flights-BagFees?originapt=SFO&destinationapt=LAS&cabinclass=3&mktgcarrier=VX&opcarrier=&farebasis=N14LASSP&bookingclass=N&travelDate=2015-10-05&flightNumber=918\" class=\"tooltip\" target=\"rulesAndRestrictions\">additional fees <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a> for checked baggage or other optional services."
+              },
+              "airlineLiabilityLimitations": {
+                "text": "Please read important information regarding airline liability limitations.",
+                "url": "https://www.expedia.com/p/info-main/warsaw?",
+                "textAndURL": "Please read important information regarding <a id=\"airline_liability_limitations_link\" href=\"https://www.expedia.com/p/info-main/warsaw?\" class=\"tooltip\" target=\"rulesAndRestrictions\">airline liability limitations <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a>."
+              },
+              "airlineCheckInInstructionText": "Remember to bring your itinerary and government-issued photo ID for airport check-in and security.",
+              "railFeederMessages": [],
+              "expediaChangeFeeChargeable": false
+            },
+            "sharableItemDetailURL": "https://www.expedia.com/api/trips/shared/tvWxn8Cu_Bp5NeDbO5h3IlcaFMm3g03buJhKNG81IeC8v_YgJkBsLCZft53BSP99-CowJDcvRqMnlLRDk0PViVkpna6YJ-J5TRivCN5AZuIwBJyDwjMq06P4ZZuNiVsnOKkVDDn45tWEZh7COBdO8ZLBvycRn7wFDxBZ16HZgBc",
+            "airRecordLocator": "226900467",
+            "isSeatMapAvailable": true,
+            "ticketingTime": {
+              "raw": "2015-09-02T17:15:00-07:00",
+              "localized": "Sep 2, 2015 5:15:00 PM",
+              "epochSeconds": 1441239300,
+              "timeZoneOffsetSeconds": -25200,
+              "localizedShortDate": "Wed, 2 Sep"
+            },
+            "bookingProvider": "SABRE",
+            "hasTrainTransfer": false,
+            "ticketingAirCarrierNames": [
+              "Virgin America"
+            ],
+            "isLccOrCharter": false
+          }
+        ],
+        "hotels": [
+          {
+            "uniqueID": "63E16EFE-34BA-4E47-8981-C42C025EDE42_a590c317-9f20-4c10-9634-a729cf668bab_0",
+            "hotelId": "13945",
+            "checkInDateTime": {
+              "raw": "2015-10-05T15:00:00-08:00",
+              "localized": "Oct 5, 2015 3:00:00 PM",
+              "epochSeconds": 1444086000,
+              "timeZoneOffsetSeconds": -28800,
+              "localizedShortDate": "10/5/2015",
+              "localizedMediumDate": "Oct 5",
+              "localizedFullDate": "Mon, Oct 5",
+              "localizedLongDate": "Oct 5, 2015"
+            },
+            "checkOutDateTime": {
+              "raw": "2015-10-09T11:00:00-08:00",
+              "localized": "Oct 9, 2015 11:00:00 AM",
+              "epochSeconds": 1444417200,
+              "timeZoneOffsetSeconds": -28800,
+              "localizedShortDate": "10/9/2015",
+              "localizedMediumDate": "Oct 9",
+              "localizedFullDate": "Fri, Oct 9",
+              "localizedLongDate": "Oct 9, 2015"
+            },
+            "checkInDate": "2015-10-05T15:00:00-08:00",
+            "checkOutDate": "2015-10-09T11:00:00-08:00",
+            "checkInDateLocalized": "Mon Oct/5/2015",
+            "checkOutDateLocalized": "Fri Oct/9/2015",
+            "numberOfNights": 4,
+            "bookingStatus": "BOOKED",
+            "bookingStatusText": "Confirmed",
+            "bookingStatusMessage": "We have confirmed your hotel reservation with the property.",
+            "inventoryType": "MERCHANT",
+            "inventorySource": "INTERNAL",
+            "paymentModel": "EXPEDIA_COLLECT",
+            "inventoryVisibility": "VISIBLE",
+            "orderNumber": "8035383410471",
+            "state": "PRE_START_4",
+            "infositeURL": "http://www.expedia.com/itin.h13945.Hotel-Information?langid=1033",
+            "hotelPropertyInfo": {
+              "address": {
+                "addressLine1": "3555 Las Vegas Blvd S",
+                "city": "Las Vegas",
+                "countrySubdivisionCode": "NV",
+                "postalCode": "89109",
+                "countryCode": "USA",
+                "countryName": " United States of America",
+                "fullAddress": "3555 Las Vegas Blvd S, Las Vegas, NV, 89109 United States of America",
+                "airportCode": "LAS"
+              },
+              "name": "Flamingo Las Vegas",
+              "starRating": "35",
+              "photoThumbnailURL": "/hotels/1000000/20000/14000/13945/13945_61_l.jpg",
+              "photoThumbnail500pixURL": "/hotels/1000000/20000/14000/13945/13945_61_y.jpg",
+              "photoThumbnail1000pixURL": "/hotels/1000000/20000/14000/13945/13945_61_z.jpg",
+              "localPhone": "1-702-733-3111",
+              "tollFreePhone": "1-800-732-2111",
+              "formattedPhoneNumbers": "Tel: 1 (702) 733-3111, Fax: 1 (702) 733-3353",
+              "checkInPolicies": [
+                "Minimum check-in age is 21",
+                "Check-in time starts at 4 PM"
+              ],
+              "checkInStartTimePolicy": {
+                "label": "Check-in time starts at",
+                "value": "4 PM"
+              },
+              "checkInEndTimePolicy": {},
+              "checkOutTimePolicy": {
+                "label": "Check-out time is",
+                "value": "11 AM"
+              },
+              "generalRules": [
+                "Check-out time is 11 AM",
+                "Maximum number of pets per room 2"
+              ],
+              "restrictionPolicies": [],
+              "fees": [
+                "The following fees and deposits are charged by the property at time of service, check-in, or check-out.<ul> <li>Breakfast fee: USD 9 per person (approximately)</li>  <li>Fee for in-room high-speed Internet (wired): USD 13.99 per 24-hour period (rates may vary)</li>            <li>Deposit: USD 100 per night</li>     <li>Refrigerator fee: USD 15.00 per night</li><li>Rollaway bed fee: USD 30.00 per night</li><li>Facilities fee: USD 10 and includes use of:</li>",
+                "- Fitness facilities  </ul>",
+                "The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+              ],
+              "mandatoryFees": [
+                "<p>You'll be asked to pay the following charges at the hotel:</p>",
+                "<ul><li>Resort fee: USD 28 per accommodation, per night</li></ul>",
+                "The hotel resort fee includes:<ul><li>Fitness center access</li><li>Internet access</li><li>Phone calls</li></ul>",
+                "<p>We have included all charges provided to us by the property. However, charges can vary, for example, based on length of stay or the room you book. </p>"
+              ],
+              "specialCheckInInstructions": [],
+              "latitude": 36.115316,
+              "longitude": -115.172766,
+              "isVipAccess": false,
+              "googleMapsLink": "//maps.google.com?q=89109+Las+Vegas,+3555+Las+Vegas+Blvd+S+",
+              "regionId": "800045"
+            },
+            "rules": {
+              "cancelChangeRulesIntroduction": "We understand that sometimes plans fall through. We do not charge a cancel or change fee. When the hotel charges such fees in accordance with its own policies, the cost will be passed on to you. Flamingo Las Vegas charges the following cancellation and change fees.",
+              "cancelChangeRules": [
+                "Cancellations or changes made after 11:59 AM (Pacific Daylight Time (US & Canada); Tijuana) on October 02, 2015 or no-shows are subject to a hotel fee equal to the first night's rate plus taxes and fees.",
+                "Prices and hotel availability are not guaranteed until full payment is received.If you would like to book multiple rooms, you must use a different name for each room. Otherwise, the duplicate reservation will be canceled by the hotel."
+              ],
+              "cancellationWindowTime": {
+                "raw": "2015-10-02T11:59:00-07:00",
+                "localized": "Oct 2, 2015 11:59:00 AM",
+                "epochSeconds": 1443812340,
+                "timeZoneOffsetSeconds": -25200,
+                "localizedShortDate": "Fri, 2 Oct"
+              },
+              "opaqueRules": [],
+              "opaquePolicies": [],
+              "lateArrivalInstructions": "Your room will be guaranteed for late arrival.",
+              "loyaltyPointsDisclaimer": "Hotel supplier loyalty points and/or airline miles may not be awarded when booking Expedia Special Rate hotels.",
+              "currencyDisclaimer": "Unless specified otherwise, <span class=\"rr-bold\">rates are quoted in </span><span class=\"rr-bold\" id=\"hotel_id-default-currency\">US dollars</span>.",
+              "extraGuestPolicies": [
+                "Availability of accommodation in the same property for extra guests is not guaranteed."
+              ],
+              "occupancyPolicies": [
+                "Base rate is for 2 guests.",
+                "This property considers guests of any age to be an adult."
+              ],
+              "paymentPolicies": [
+                "Your credit card is charged the total cost at time of purchase. Prices and room availability are not guaranteed until full payment is received.",
+                "Some hotels request that we wait to submit guest names until 7 days prior to check in. In such a case, your hotel room is reserved, but your name is not yet on file with the hotel."
+              ],
+              "roomRequestDisclaimer": "All special requests (such as in-room amenities, bed type, and smoking preference) are shared with the hotel, but requests are not guaranteed and may incur additional charges. We recommend you confirm them directly with the hotel before travel.",
+              "dualCurrencyText": "Rate quotes in USD are based on current exchange rates, which may vary at time of travel. Final payment will be settled in local currency directly with the hotel.",
+              "feesDisclaimer": "The list of fees presented may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+            },
+            "appliedCoupons": [],
+            "rooms": [
+              {
+                "uniqueID": "63E16EFE-34BA-4E47-8981-C42C025EDE42_a590c317-9f20-4c10-9634-a729cf668bab_0_573238351",
+                "roomRatePlanDescription": "FAB Deluxe 2 Queen High Roller View Non-Smoking",
+                "roomTypeCode": "200701749",
+                "ratePlanCode": "203486697",
+                "bookingStatus": "BOOKED",
+                "hotelConfirmationNumber": "422484151242",
+                "drrRateDiscountDescription": "Seasonal deal",
+                "orderLineNumber": "a590c317-9f20-4c10-9634-a729cf668bab",
+                "refundabilityStatus": "REFUNDABLE",
+                "availableOnAllDates": true,
+                "roomPreferences": {
+                  "primaryOccupant": {
+                    "firstName": "Jeffrey Michael",
+                    "fullName": "Jeffrey Michael Madynski",
+                    "email": "jeffmad@gmail.com",
+                    "phone": "1-415-5050490"
+                  },
+                  "otherOccupantInfo": {
+                    "adultCount": 1,
+                    "childCount": 0,
+                    "infantCount": 0,
+                    "childAndInfantCount": 0,
+                    "childAndInfantAges": []
+                  },
+                  "occupantSelectedRoomOptions": {
+                    "bedTypeName": "2 queen beds",
+                    "smokingPreference": "NONSMOKING_ROOM",
+                    "accessibilityOptions": [],
+                    "hasExtraBedAdult": false,
+                    "hasExtraBedChild": false,
+                    "hasExtraBedInfant": false,
+                    "isSmokingPreferenceSelected": true,
+                    "isRoomOptionsAvailable": true
+                  },
+                  "availableRoomOptions": {
+                    "bedTypes": [
+                      {
+                        "id": "23",
+                        "description": "2 queen beds",
+                        "selected": true
+                      }
+                    ],
+                    "accessibilityOptions": [
+                      {
+                        "id": "2424",
+                        "description": "Accessibility equipment for the deaf",
+                        "selected": false
+                      },
+                      {
+                        "id": "2420",
+                        "description": "Accessible bathroom",
+                        "selected": false
+                      },
+                      {
+                        "id": "2419",
+                        "description": "Accessible path of travel",
+                        "selected": false
+                      },
+                      {
+                        "id": "2425",
+                        "description": "Braille or raised signage",
+                        "selected": false
+                      },
+                      {
+                        "id": "2422",
+                        "description": "Accessible parking",
+                        "selected": false
+                      },
+                      {
+                        "id": "2423",
+                        "description": "In-room accessibility",
+                        "selected": false
+                      },
+                      {
+                        "id": "2421",
+                        "description": "Roll-in shower",
+                        "selected": false
+                      }
+                    ],
+                    "isSmokingRoomAvailable": false,
+                    "isNonSmokingRoomAvailable": true
+                  }
+                }
+              }
+            ],
+            "sharableItemDetailURL": "https://www.expedia.com/api/trips/shared/tvWxn8Cu_Bp5NeDbO5h3IlcaFMm3g03buJhKNG81IeC8v_YgJkBsLCZft53BSP99-CowJDcvRqMnlLRDk0PViVkpna6YJ-J5TRivCN5AZuIwBJyDwjMq06P4ZZuNiVsnOKkVDDn45tWEZh7COBdO8ezERDq3quyGtxtB-oJnBYI",
+            "isFreeCancellationAvailable": false,
+            "paymentsAndCreditFees": {
+              "paymentsHotelFeesAndDepositsDisclaimer": "The below fees and deposits only apply if they are not included in your selected room rate.",
+              "noFeesStaticText": "The price above DOES NOT include any applicable hotel service fees, charges for optional incidentals (such as minibar snacks or telephone calls), or regulatory surcharges. The hotel will assess these fees, charges, and surcharges upon check-out.",
+              "isDirectAgency": false,
+              "isGDS": false,
+              "isFullyCancelled": false,
+              "isAnyRoomCancelled": false,
+              "isDepositRequired": false,
+              "isPaymentsCreditsVisible": false
+            }
+          }
+        ]
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

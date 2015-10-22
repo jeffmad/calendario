@@ -35,7 +35,7 @@
 
 (defn find-expuser [db email]
   (first (expuser-by-email { :email email } {:connection db})))
-
+; find siteuser by siteid, tuid - join to expuser, return url
 ; (c/find-siteuser (:spec (:db system)) 1)
 (defn find-siteuser [db iduser siteid]
   (first (siteuser-by-iduser { :iduser iduser :siteid siteid} {:connection db})))

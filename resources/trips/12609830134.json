@@ -1,0 +1,291 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "ba8e4839-66b0-42a8-922e-ad0a2d132718",
+    "webDetailsURL": "https://wwwexpediacom.int-milan.sb.karmalab.net/trips/12609830134",
+    "tripNumber": 12609830134,
+    "title": "St. Louis, MO",
+    "description": "",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.int-milan.sb.karmalab.net/api/trips/ba8e4839-66b0-42a8-922e-ad0a2d132718/updateTripNameDescription",
+    "startTime": {
+      "raw": "2015-10-29T15:00:00-06:00",
+      "localized": "Oct 29, 2015 3:00:00 PM",
+      "epochSeconds": 1446152400,
+      "timeZoneOffsetSeconds": -21600,
+      "localizedShortDate": "10/29/2015",
+      "localizedMediumDate": "Oct 29",
+      "localizedFullDate": "Thu, Oct 29",
+      "localizedLongDate": "Oct 29, 2015"
+    },
+    "endTime": {
+      "raw": "2015-10-31T11:00:00-06:00",
+      "localized": "Oct 31, 2015 11:00:00 AM",
+      "epochSeconds": 1446310800,
+      "timeZoneOffsetSeconds": -21600,
+      "localizedShortDate": "10/31/2015",
+      "localizedMediumDate": "Oct 31",
+      "localizedFullDate": "Sat, Oct 31",
+      "localizedLongDate": "Oct 31, 2015"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-10-01T04:54:52Z",
+      "localized": "Oct 1, 2015 4:54:52 AM",
+      "epochSeconds": 1443675292,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 1 Oct"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-10-01T04:56:31Z",
+      "localized": "Oct 1, 2015 4:56:31 AM",
+      "epochSeconds": 1443675391,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 1 Oct"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-10-01T04:58:06Z",
+      "localized": "Oct 1, 2015 4:58:06 AM",
+      "epochSeconds": 1443675486,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 1 Oct"
+    },
+    "bookingStatus": "BOOKED",
+    "sharableDetailsURL": "https://wwwexpediacom.int-milan.sb.karmalab.net/api/trips/shared/yQO-MF01jSRIKvSQXIeGqETcQx6xa7ySM4d_5yki53YgulXtoTTWO3Ncks2yzgnq",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneNumberDomestic": "+1 800-397-3342",
+      "customerSupportPhoneNumberInternational": "+1 404-728-8787",
+      "customerSupportPhoneInfoForEmail": [
+        "Call us at 1-877-261-3523.",
+        "For faster service, mention <strong>itinerary #12609830134 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "packages": [
+      {
+        "uniqueID": "2BEDAA79-757D-4F79-A742-B304E546FF0D",
+        "bookingStatus": "BOOKED",
+        "price": {},
+        "flights": [],
+        "hotels": [
+          {
+            "uniqueID": "2BEDAA79-757D-4F79-A742-B304E546FF0D_Hotel_0",
+            "hotelId": "8131949",
+            "checkInDateTime": {
+              "raw": "2015-10-29T15:00:00-06:00",
+              "localized": "Oct 29, 2015 3:00:00 PM",
+              "epochSeconds": 1446152400,
+              "timeZoneOffsetSeconds": -21600,
+              "localizedShortDate": "10/29/2015",
+              "localizedMediumDate": "Oct 29",
+              "localizedFullDate": "Thu, Oct 29",
+              "localizedLongDate": "Oct 29, 2015"
+            },
+            "checkOutDateTime": {
+              "raw": "2015-10-31T11:00:00-06:00",
+              "localized": "Oct 31, 2015 11:00:00 AM",
+              "epochSeconds": 1446310800,
+              "timeZoneOffsetSeconds": -21600,
+              "localizedShortDate": "10/31/2015",
+              "localizedMediumDate": "Oct 31",
+              "localizedFullDate": "Sat, Oct 31",
+              "localizedLongDate": "Oct 31, 2015"
+            },
+            "checkInDate": "2015-10-29T15:00:00-06:00",
+            "checkOutDate": "2015-10-31T11:00:00-06:00",
+            "checkInDateLocalized": "Thu Oct/29/2015",
+            "checkOutDateLocalized": "Sat Oct/31/2015",
+            "numberOfNights": 2,
+            "bookingStatus": "BOOKED",
+            "bookingStatusText": "Booked",
+            "bookingStatusMessage": "Your reservation is booked. No need to call us to reconfirm this reservation.",
+            "inventoryType": "MERCHANT",
+            "inventorySource": "INTERNAL",
+            "paymentModel": "EXPEDIA_COLLECT",
+            "inventoryVisibility": "VISIBLE",
+            "state": "PRE_START_4",
+            "infositeURL": "http://wwwexpediacom.int-milan.sb.karmalab.net/itin.h8131949.Hotel-Information?langid=1033",
+            "hotelPropertyInfo": {
+              "address": {
+                "addressLine1": "421 N 8th St",
+                "city": "St. Louis",
+                "countrySubdivisionCode": "MO",
+                "postalCode": "63101",
+                "countryCode": "USA",
+                "countryName": " United States of America",
+                "fullAddress": "421 N 8th St, St. Louis, MO, 63101 United States of America",
+                "airportCode": "STL"
+              },
+              "name": "Magnolia Hotel St. Louis",
+              "starRating": "35",
+              "photoThumbnailURL": "/hotels/9000000/8140000/8132000/8131949/8131949_34_l.jpg",
+              "photoThumbnail500pixURL": "/hotels/9000000/8140000/8132000/8131949/8131949_34_y.jpg",
+              "photoThumbnail1000pixURL": "/hotels/9000000/8140000/8132000/8131949/8131949_34_z.jpg",
+              "localPhone": "1-314-436-9000",
+              "formattedPhoneNumbers": "Tel: 1 (314) 436-9000, Fax: 1 (314) 667-3435",
+              "checkInPolicies": [
+                "Minimum check-in age is 21"
+              ],
+              "checkInStartTimePolicy": {},
+              "checkInEndTimePolicy": {},
+              "checkOutTimePolicy": {
+                "label": "Check-out time is",
+                "value": "11 AM"
+              },
+              "generalRules": [
+                "Check-out time is 11 AM",
+                "Maximum number of pets per room 1"
+              ],
+              "restrictionPolicies": [],
+              "fees": [
+                "The following fees and deposits are charged by the property at time of service, check-in, or check-out.<ul>        <li>Valet parking fee: USD 28 per night (in/out privileges)</li>  <li>Pet deposit: USD 75 per stay</li>            </ul>",
+                "The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+              ],
+              "mandatoryFees": [],
+              "specialCheckInInstructions": [],
+              "latitude": 38.629808,
+              "longitude": -90.191934,
+              "isVipAccess": false,
+              "googleMapsLink": "//maps.google.com?q=63101+St.+Louis,+421+N+8th+St+",
+              "regionId": "800136"
+            },
+            "rules": {
+              "cancelChangeRulesIntroduction": "We understand that sometimes plans fall through. We do not charge a cancel or change fee. When the hotel charges such fees in accordance with its own policies, the cost will be passed on to you. Magnolia Hotel St. Louis charges the following cancellation and change fees.",
+              "cancelChangeRules": [
+                "Cancellations or changes made after 4:00 PM (Central Daylight Time (US & Canada)) on October 28, 2015 or no-shows are subject to a hotel fee equal to the first night's rate plus taxes and fees.",
+                "Prices and hotel availability are not guaranteed until full payment is received.If you would like to book multiple rooms, you must use a different name for each room. Otherwise, the duplicate reservation will be canceled by the hotel."
+              ],
+              "cancellationWindowTime": {
+                "raw": "2015-10-28T16:00:00-07:00",
+                "localized": "Oct 28, 2015 4:00:00 PM",
+                "epochSeconds": 1446073200,
+                "timeZoneOffsetSeconds": -25200,
+                "localizedShortDate": "Wed, 28 Oct"
+              },
+              "opaqueRules": [],
+              "opaquePolicies": [],
+              "lateArrivalInstructions": "Your room will be guaranteed for late arrival.",
+              "loyaltyPointsDisclaimer": "Hotel supplier loyalty points and/or airline miles may not be awarded when booking Expedia Special Rate hotels.",
+              "currencyDisclaimer": "Unless specified otherwise, <span class=\"rr-bold\">rates are quoted in </span><span class=\"rr-bold\" id=\"hotel_id-default-currency\">US dollars</span>.",
+              "extraGuestPolicies": [
+                "Availability of accommodation in the same property for extra guests is not guaranteed."
+              ],
+              "occupancyPolicies": [
+                "Base rate is for 2 guests.",
+                "This property considers guests of any age to be an adult."
+              ],
+              "paymentPolicies": [
+                "Your credit card is charged the total cost at time of purchase. Prices and room availability are not guaranteed until full payment is received.",
+                "Some hotels request that we wait to submit guest names until 7 days prior to check in. In such a case, your hotel room is reserved, but your name is not yet on file with the hotel."
+              ],
+              "roomRequestDisclaimer": "All special requests (such as in-room amenities, bed type, and smoking preference) are shared with the hotel, but requests are not guaranteed and may incur additional charges. We recommend you confirm them directly with the hotel before travel.",
+              "dualCurrencyText": "Rate quotes in USD are based on current exchange rates, which may vary at time of travel. Final payment will be settled in local currency directly with the hotel.",
+              "feesDisclaimer": "The list of fees presented may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+            },
+            "rooms": [
+              {
+                "uniqueID": "2BEDAA79-757D-4F79-A742-B304E546FF0D_Hotel_0_5585526",
+                "roomRatePlanDescription": "Deluxe Room, 1 King Bed, Accessible",
+                "roomTypeCode": "200695908",
+                "ratePlanCode": "203470891",
+                "bookingStatus": "BOOKED",
+                "drrRateDiscountDescription": "Special deal",
+                "refundabilityStatus": "REFUNDABLE",
+                "availableOnAllDates": true,
+                "roomPreferences": {
+                  "primaryOccupant": {
+                    "firstName": "ItinFiveMilanAmy",
+                    "fullName": "ItinFiveMilanAmy Wyman",
+                    "email": "itin5@expedia.com",
+                    "phone": "1-425-6797200"
+                  },
+                  "otherOccupantInfo": {
+                    "adultCount": 1,
+                    "childCount": 0,
+                    "infantCount": 0,
+                    "childAndInfantCount": 0,
+                    "childAndInfantAges": []
+                  },
+                  "occupantSelectedRoomOptions": {
+                    "bedTypeName": "1 king bed",
+                    "smokingPreference": "NONSMOKING_ROOM",
+                    "accessibilityOptions": [],
+                    "hasExtraBedAdult": false,
+                    "hasExtraBedChild": false,
+                    "hasExtraBedInfant": false,
+                    "isSmokingPreferenceSelected": true,
+                    "isRoomOptionsAvailable": true
+                  },
+                  "availableRoomOptions": {
+                    "bedTypes": [
+                      {
+                        "id": "14",
+                        "description": "1 king bed",
+                        "selected": true
+                      }
+                    ],
+                    "accessibilityOptions": [
+                      {
+                        "id": "2424",
+                        "description": "Accessibility equipment for the deaf",
+                        "selected": false
+                      },
+                      {
+                        "id": "2420",
+                        "description": "Accessible bathroom",
+                        "selected": false
+                      },
+                      {
+                        "id": "2419",
+                        "description": "Accessible path of travel",
+                        "selected": false
+                      },
+                      {
+                        "id": "2422",
+                        "description": "Accessible parking",
+                        "selected": false
+                      },
+                      {
+                        "id": "2423",
+                        "description": "In-room accessibility",
+                        "selected": false
+                      },
+                      {
+                        "id": "2421",
+                        "description": "Roll-in shower",
+                        "selected": false
+                      }
+                    ],
+                    "isSmokingRoomAvailable": false,
+                    "isNonSmokingRoomAvailable": true
+                  }
+                },
+                "amenities": [
+                  "Free Wireless Internet",
+                  "Breakfast Buffet"
+                ]
+              }
+            ],
+            "sharableItemDetailURL": "https://wwwexpediacom.int-milan.sb.karmalab.net/api/trips/shared/yQO-MF01jSRIKvSQXIeGqETcQx6xa7ySM4d_5yki53YxaKKD9BZip4Qz-8MRFeswth_itJ7f-CrpYrc991YPcDsw4xPWEYPsy33_MwCweYWAboeBMfI9KVjSd-3YT6Nx",
+            "isFreeCancellationAvailable": false,
+            "paymentsAndCreditFees": {
+              "paymentsHotelFeesAndDepositsDisclaimer": "The below fees and deposits only apply if they are not included in your selected room rate.",
+              "noFeesStaticText": "The price above DOES NOT include any applicable hotel service fees, charges for optional incidentals (such as minibar snacks or telephone calls), or regulatory surcharges. The hotel will assess these fees, charges, and surcharges upon check-out.",
+              "isDirectAgency": false,
+              "isGDS": false,
+              "isFullyCancelled": false,
+              "isAnyRoomCancelled": false,
+              "isDepositRequired": false,
+              "isPaymentsCreditsVisible": false
+            }
+          }
+        ]
+      }
+    ],
+    "readTripError": true,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

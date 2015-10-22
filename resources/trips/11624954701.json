@@ -1,0 +1,527 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "2369a4fb-843e-4b78-988d-92200b54384c",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11624954701",
+    "tripNumber": 11624954701,
+    "title": "Grand Hyatt Denver, Denver",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/2369a4fb-843e-4b78-988d-92200b54384c/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-04-10T15:00:00-07:00",
+      "localized": "Apr 10, 2016 3:00:00 PM",
+      "epochSeconds": 1460325600,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "4/10/2016",
+      "localizedMediumDate": "Apr 10",
+      "localizedFullDate": "Sun, Apr 10",
+      "localizedLongDate": "Apr 10, 2016"
+    },
+    "endTime": {
+      "raw": "2016-04-13T11:00:00-07:00",
+      "localized": "Apr 13, 2016 11:00:00 AM",
+      "epochSeconds": 1460570400,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "4/13/2016",
+      "localizedMediumDate": "Apr 13",
+      "localizedFullDate": "Wed, Apr 13",
+      "localizedLongDate": "Apr 13, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-30T01:31:34Z",
+      "localized": "Sep 30, 2015 1:31:34 AM",
+      "epochSeconds": 1443576694,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-30T01:34:40Z",
+      "localized": "Sep 30, 2015 1:34:40 AM",
+      "epochSeconds": 1443576880,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-30T01:36:19Z",
+      "localized": "Sep 30, 2015 1:36:19 AM",
+      "epochSeconds": 1443576979,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "rewards": {
+      "totalPoints": 2408,
+      "basePoints": 2189,
+      "bonusPoints": [
+        {
+          "m_pointValue": 219.00,
+          "m_pointType": "offerPoint",
+          "m_pointDescription": "+silver Bonus Offer",
+          "m_status": "PENDING"
+        }
+      ],
+      "logoUrl": "/static/default/default/images/myrewards/RewardsLogo_193x76.png",
+      "viewStatementURL": "/user/rewards"
+    },
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzq1hSmJWnxNLPkEfB9xu-ldAZfxz1G8wj00pWglfm9IZ",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11624954701 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11624954701 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "hotels": [
+      {
+        "uniqueID": "267B6CC6-4BB9-40E5-B9EA-3A3F88AF95DC_0",
+        "hotelId": "24031",
+        "checkInDateTime": {
+          "raw": "2016-04-10T15:00:00-07:00",
+          "localized": "Apr 10, 2016 3:00:00 PM",
+          "epochSeconds": 1460325600,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "4/10/2016",
+          "localizedMediumDate": "Apr 10",
+          "localizedFullDate": "Sun, Apr 10",
+          "localizedLongDate": "Apr 10, 2016"
+        },
+        "checkOutDateTime": {
+          "raw": "2016-04-13T11:00:00-07:00",
+          "localized": "Apr 13, 2016 11:00:00 AM",
+          "epochSeconds": 1460570400,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "4/13/2016",
+          "localizedMediumDate": "Apr 13",
+          "localizedFullDate": "Wed, Apr 13",
+          "localizedLongDate": "Apr 13, 2016"
+        },
+        "checkInDate": "2016-04-10T15:00:00-07:00",
+        "checkOutDate": "2016-04-13T11:00:00-07:00",
+        "checkInDateLocalized": "Sun Apr/10/2016",
+        "checkOutDateLocalized": "Wed Apr/13/2016",
+        "numberOfNights": 3,
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Booked",
+        "bookingStatusMessage": "Your reservation is booked. No need to call us to reconfirm this reservation.",
+        "inventoryType": "MERCHANT",
+        "inventorySource": "INTERNAL",
+        "paymentModel": "EXPEDIA_COLLECT",
+        "inventoryVisibility": "VISIBLE",
+        "orderNumber": "8024496011314",
+        "state": "PRE_START_4",
+        "infositeURL": "http://wwwexpediacom.integration.sb.karmalab.net/itin.h24031.Hotel-Information?langid=1033",
+        "hotelPropertyInfo": {
+          "address": {
+            "addressLine1": "1750 Welton St",
+            "city": "Denver",
+            "countrySubdivisionCode": "CO",
+            "postalCode": "80202",
+            "countryCode": "USA",
+            "countryName": " United States of America",
+            "fullAddress": "1750 Welton St, Denver, CO, 80202 United States of America",
+            "airportCode": "DEN"
+          },
+          "name": "Grand Hyatt Denver",
+          "starRating": "40",
+          "photoThumbnailURL": "/hotels/1000000/30000/24100/24031/24031_94_l.jpg",
+          "photoThumbnail500pixURL": "/hotels/1000000/30000/24100/24031/24031_94_y.jpg",
+          "photoThumbnail1000pixURL": "/hotels/1000000/30000/24100/24031/24031_94_z.jpg",
+          "localPhone": "1-303-295-1234",
+          "tollFreePhone": "1-800-233-1234",
+          "formattedPhoneNumbers": "Tel: 1 (303) 295-1234, Fax: 1 (303) 486-4314",
+          "checkInPolicies": [
+            "Check-in time starts at 3 PM"
+          ],
+          "checkInStartTimePolicy": {
+            "label": "Check-in time starts at",
+            "value": "3 PM"
+          },
+          "checkInEndTimePolicy": {},
+          "checkOutTimePolicy": {
+            "label": "Check-out time is",
+            "value": "noon"
+          },
+          "generalRules": [
+            "Check-out time is noon"
+          ],
+          "restrictionPolicies": [],
+          "fees": [
+            "The following fees and deposits are charged by the property at time of service, check-in, or check-out.<ul>        <li>Valet parking fee: USD 33 per day</li> <li>Pet fee: USD 100.00 per accommodation, per stay</li>           <li>Rollaway bed fee: USD 20.00 per stay</li>  </ul>",
+            "The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+          ],
+          "mandatoryFees": [],
+          "specialCheckInInstructions": [],
+          "latitude": 39.745869,
+          "longitude": -104.989537,
+          "isVipAccess": false,
+          "googleMapsLink": "//maps.google.com?q=80202+Denver,+1750+Welton+St+",
+          "regionId": "800030"
+        },
+        "totalPriceDetails": {
+          "primaryCurrencyCode": "USD",
+          "base": "954.00",
+          "baseFormatted": "$954.00",
+          "baseWithAdjustmentForDRRRateDiscount": "954.00",
+          "baseWithAdjustmentForDRRRateDiscountFormatted": "$954.00",
+          "taxesAndFees": "140.70",
+          "taxesAndFeesFormatted": "$140.70",
+          "drrRateDiscountDescription": "",
+          "subTotalBeforeCoupon": "1094.70",
+          "subTotalBeforeCouponFormatted": "$1,094.70",
+          "taxStatus": "ESTIMATED",
+          "total": "1094.70",
+          "totalFormatted": "$1,094.70",
+          "hasFees": true,
+          "expediaChangeFee": "0",
+          "expediaChangeFeeFormatted": "$0.00"
+        },
+        "rules": {
+          "cancelChangeRulesIntroduction": "We understand that sometimes plans fall through. We do not charge a cancel or change fee. When the hotel charges such fees in accordance with its own policies, the cost will be passed on to you. Grand Hyatt Denver charges the following cancellation and change fees.",
+          "cancelChangeRules": [
+            "Cancellations or changes made after 4:00 PM (Mountain Daylight Time (US & Canada)) on April 08, 2016 or no-shows are subject to a hotel fee equal to the first night's rate plus taxes and fees.",
+            "In the case of multiple rooms booked together, fees charged by the hotel apply to each room that is canceled or changed."
+          ],
+          "cancellationWindowTime": {
+            "raw": "2016-04-08T16:00:00-07:00",
+            "localized": "Apr 8, 2016 4:00:00 PM",
+            "epochSeconds": 1460156400,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Fri, 8 Apr"
+          },
+          "opaqueRules": [],
+          "opaquePolicies": [],
+          "lateArrivalInstructions": "Your room will be guaranteed for late arrival.",
+          "loyaltyPointsDisclaimer": "Hotel supplier loyalty points and/or airline miles may not be awarded when booking Expedia Special Rate hotels.",
+          "currencyDisclaimer": "Unless specified otherwise, <span class=\"rr-bold\">rates are quoted in </span><span class=\"rr-bold\" id=\"hotel_id-default-currency\">US dollars</span>.",
+          "extraGuestPolicies": [
+            "Availability of accommodation in the same property for extra guests is not guaranteed."
+          ],
+          "occupancyPolicies": [
+            "Base rate is for 2 guests.",
+            "This property considers guests of any age to be an adult."
+          ],
+          "paymentPolicies": [
+            "Your credit card is charged the total cost at time of purchase. Prices and room availability are not guaranteed until full payment is received.",
+            "Some hotels request that we wait to submit guest names until 7 days prior to check in. In such a case, your hotel room is reserved, but your name is not yet on file with the hotel."
+          ],
+          "roomRequestDisclaimer": "All special requests (such as in-room amenities, bed type, and smoking preference) are shared with the hotel, but requests are not guaranteed and may incur additional charges. We recommend you confirm them directly with the hotel before travel.",
+          "dualCurrencyText": "Rate quotes in USD are based on current exchange rates, which may vary at time of travel. Final payment will be settled in local currency directly with the hotel.",
+          "feesDisclaimer": "The list of fees presented may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+        },
+        "rooms": [
+          {
+            "uniqueID": "267B6CC6-4BB9-40E5-B9EA-3A3F88AF95DC_0_12680929",
+            "roomRatePlanDescription": "Guest Room, 2 Queen Beds",
+            "roomTypeCode": "200157994",
+            "ratePlanCode": "200890989",
+            "bookingStatus": "BOOKED",
+            "drrRateDiscountDescription": "",
+            "orderLineNumber": "5d5946ea-c82b-4751-9bed-1fcca76a85cd",
+            "refundabilityStatus": "REFUNDABLE",
+            "availableOnAllDates": true,
+            "roomCancelLink": "https://wwwexpediacom.integration.sb.karmalab.net/hotel-cancel-details?tripid=2369a4fb-843e-4b78-988d-92200b54384c&ordernumber=8024496011314&orderlineguid=5d5946ea-c82b-4751-9bed-1fcca76a85cd&roomNumber=0",
+            "roomChangeLink": "https://wwwexpediacom.integration.sb.karmalab.net/trips/2369a4fb-843e-4b78-988d-92200b54384c/ordernumber/8024496011314/orderlinenumber/5d5946ea-c82b-4751-9bed-1fcca76a85cd/change",
+            "totalPriceDetails": {
+              "primaryCurrencyCode": "USD",
+              "base": "477.00",
+              "baseFormatted": "$477.00",
+              "baseWithAdjustmentForDRRRateDiscount": "477.00",
+              "baseWithAdjustmentForDRRRateDiscountFormatted": "$477.00",
+              "taxesAndFees": "70.35",
+              "taxesAndFeesFormatted": "$70.35",
+              "subTotalBeforeCoupon": "547.35",
+              "subTotalBeforeCouponFormatted": "$547.35",
+              "total": "547.35",
+              "totalFormatted": "$547.35",
+              "averagePricePerDay": "159.00",
+              "averagePricePerDayFormatted": "$159.00",
+              "averageTaxPerDay": "23.45",
+              "averageTaxPerDayFormatted": "$23.45",
+              "priceDetailsPerDay": [
+                {
+                  "day": {
+                    "raw": "2016-04-10T15:00:00-07:00",
+                    "localized": "Apr 10, 2016 3:00:00 PM",
+                    "epochSeconds": 1460325600,
+                    "timeZoneOffsetSeconds": -25200,
+                    "localizedShortDate": "Sun, 10 Apr"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "159.00",
+                  "amountFormatted": "$159.00"
+                },
+                {
+                  "day": {
+                    "raw": "2016-04-11T15:00:00-07:00",
+                    "localized": "Apr 11, 2016 3:00:00 PM",
+                    "epochSeconds": 1460412000,
+                    "timeZoneOffsetSeconds": -25200,
+                    "localizedShortDate": "Mon, 11 Apr"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "159.00",
+                  "amountFormatted": "$159.00"
+                },
+                {
+                  "day": {
+                    "raw": "2016-04-12T15:00:00-07:00",
+                    "localized": "Apr 12, 2016 3:00:00 PM",
+                    "epochSeconds": 1460498400,
+                    "timeZoneOffsetSeconds": -25200,
+                    "localizedShortDate": "Tue, 12 Apr"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "159.00",
+                  "amountFormatted": "$159.00"
+                }
+              ],
+              "isSameRateForAllNights": true,
+              "expediaChangeFee": "0",
+              "expediaChangeFeeFormatted": "$0.00"
+            },
+            "roomPreferences": {
+              "primaryOccupant": {
+                "firstName": "Elmer",
+                "fullName": "Elmer Fudd",
+                "email": "jmadynski@expedia.com",
+                "phone": "1-415-5050490"
+              },
+              "otherOccupantInfo": {
+                "adultCount": 1,
+                "childCount": 0,
+                "infantCount": 0,
+                "childAndInfantCount": 0,
+                "childAndInfantAges": []
+              },
+              "occupantSelectedRoomOptions": {
+                "bedTypeName": "2 queen beds",
+                "smokingPreference": "NONSMOKING_ROOM",
+                "accessibilityOptions": [],
+                "hasExtraBedAdult": false,
+                "hasExtraBedChild": false,
+                "hasExtraBedInfant": false,
+                "isSmokingPreferenceSelected": true,
+                "isRoomOptionsAvailable": true
+              },
+              "availableRoomOptions": {
+                "bedTypes": [
+                  {
+                    "id": "23",
+                    "description": "2 queen beds",
+                    "selected": true
+                  }
+                ],
+                "accessibilityOptions": [
+                  {
+                    "id": "2419",
+                    "description": "Accessible path of travel",
+                    "selected": false
+                  },
+                  {
+                    "id": "2420",
+                    "description": "Accessible bathroom",
+                    "selected": false
+                  },
+                  {
+                    "id": "2421",
+                    "description": "Roll-in shower",
+                    "selected": false
+                  },
+                  {
+                    "id": "2422",
+                    "description": "Accessible parking",
+                    "selected": false
+                  },
+                  {
+                    "id": "2423",
+                    "description": "In-room accessibility",
+                    "selected": false
+                  },
+                  {
+                    "id": "2424",
+                    "description": "Accessibility equipment for the deaf",
+                    "selected": false
+                  },
+                  {
+                    "id": "2425",
+                    "description": "Braille or raised signage",
+                    "selected": false
+                  }
+                ],
+                "isSmokingRoomAvailable": false,
+                "isNonSmokingRoomAvailable": true
+              }
+            }
+          },
+          {
+            "uniqueID": "267B6CC6-4BB9-40E5-B9EA-3A3F88AF95DC_0_12680930",
+            "roomRatePlanDescription": "Guest Room, 2 Queen Beds",
+            "roomTypeCode": "200157994",
+            "ratePlanCode": "200890989",
+            "bookingStatus": "BOOKED",
+            "drrRateDiscountDescription": "",
+            "orderLineNumber": "904c461b-6c80-443c-90eb-bf933eda8bc7",
+            "refundabilityStatus": "REFUNDABLE",
+            "availableOnAllDates": true,
+            "roomCancelLink": "https://wwwexpediacom.integration.sb.karmalab.net/hotel-cancel-details?tripid=2369a4fb-843e-4b78-988d-92200b54384c&ordernumber=8024496011314&orderlineguid=904c461b-6c80-443c-90eb-bf933eda8bc7&roomNumber=1",
+            "roomChangeLink": "https://wwwexpediacom.integration.sb.karmalab.net/trips/2369a4fb-843e-4b78-988d-92200b54384c/ordernumber/8024496011314/orderlinenumber/904c461b-6c80-443c-90eb-bf933eda8bc7/change",
+            "totalPriceDetails": {
+              "primaryCurrencyCode": "USD",
+              "base": "477.00",
+              "baseFormatted": "$477.00",
+              "baseWithAdjustmentForDRRRateDiscount": "477.00",
+              "baseWithAdjustmentForDRRRateDiscountFormatted": "$477.00",
+              "taxesAndFees": "70.35",
+              "taxesAndFeesFormatted": "$70.35",
+              "subTotalBeforeCoupon": "547.35",
+              "subTotalBeforeCouponFormatted": "$547.35",
+              "total": "547.35",
+              "totalFormatted": "$547.35",
+              "averagePricePerDay": "159.00",
+              "averagePricePerDayFormatted": "$159.00",
+              "averageTaxPerDay": "23.45",
+              "averageTaxPerDayFormatted": "$23.45",
+              "priceDetailsPerDay": [
+                {
+                  "day": {
+                    "raw": "2016-04-10T15:00:00-07:00",
+                    "localized": "Apr 10, 2016 3:00:00 PM",
+                    "epochSeconds": 1460325600,
+                    "timeZoneOffsetSeconds": -25200,
+                    "localizedShortDate": "Sun, 10 Apr"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "159.00",
+                  "amountFormatted": "$159.00"
+                },
+                {
+                  "day": {
+                    "raw": "2016-04-11T15:00:00-07:00",
+                    "localized": "Apr 11, 2016 3:00:00 PM",
+                    "epochSeconds": 1460412000,
+                    "timeZoneOffsetSeconds": -25200,
+                    "localizedShortDate": "Mon, 11 Apr"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "159.00",
+                  "amountFormatted": "$159.00"
+                },
+                {
+                  "day": {
+                    "raw": "2016-04-12T15:00:00-07:00",
+                    "localized": "Apr 12, 2016 3:00:00 PM",
+                    "epochSeconds": 1460498400,
+                    "timeZoneOffsetSeconds": -25200,
+                    "localizedShortDate": "Tue, 12 Apr"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "159.00",
+                  "amountFormatted": "$159.00"
+                }
+              ],
+              "isSameRateForAllNights": true,
+              "expediaChangeFee": "0",
+              "expediaChangeFeeFormatted": "$0.00"
+            },
+            "roomPreferences": {
+              "primaryOccupant": {
+                "firstName": "Elmer",
+                "fullName": "Elmer Fudd",
+                "email": "jmadynski@expedia.com",
+                "phone": "1-415-5050490"
+              },
+              "otherOccupantInfo": {
+                "adultCount": 2,
+                "childCount": 0,
+                "infantCount": 0,
+                "childAndInfantCount": 0,
+                "childAndInfantAges": []
+              },
+              "occupantSelectedRoomOptions": {
+                "bedTypeName": "2 queen beds",
+                "smokingPreference": "NONSMOKING_ROOM",
+                "accessibilityOptions": [],
+                "hasExtraBedAdult": false,
+                "hasExtraBedChild": false,
+                "hasExtraBedInfant": false,
+                "isSmokingPreferenceSelected": true,
+                "isRoomOptionsAvailable": true
+              },
+              "availableRoomOptions": {
+                "bedTypes": [
+                  {
+                    "id": "23",
+                    "description": "2 queen beds",
+                    "selected": true
+                  }
+                ],
+                "accessibilityOptions": [
+                  {
+                    "id": "2419",
+                    "description": "Accessible path of travel",
+                    "selected": false
+                  },
+                  {
+                    "id": "2420",
+                    "description": "Accessible bathroom",
+                    "selected": false
+                  },
+                  {
+                    "id": "2421",
+                    "description": "Roll-in shower",
+                    "selected": false
+                  },
+                  {
+                    "id": "2422",
+                    "description": "Accessible parking",
+                    "selected": false
+                  },
+                  {
+                    "id": "2423",
+                    "description": "In-room accessibility",
+                    "selected": false
+                  },
+                  {
+                    "id": "2424",
+                    "description": "Accessibility equipment for the deaf",
+                    "selected": false
+                  },
+                  {
+                    "id": "2425",
+                    "description": "Braille or raised signage",
+                    "selected": false
+                  }
+                ],
+                "isSmokingRoomAvailable": false,
+                "isNonSmokingRoomAvailable": true
+              }
+            }
+          }
+        ],
+        "isFreeCancellationAvailable": false,
+        "paymentsAndCreditFees": {
+          "paymentsHotelFeesAndDepositsDisclaimer": "The below fees and deposits only apply if they are not included in your selected room rate.",
+          "noFeesStaticText": "The price above DOES NOT include any applicable hotel service fees, charges for optional incidentals (such as minibar snacks or telephone calls), or regulatory surcharges. The hotel will assess these fees, charges, and surcharges upon check-out.",
+          "isDirectAgency": false,
+          "isGDS": false,
+          "isFullyCancelled": false,
+          "isAnyRoomCancelled": false,
+          "isDepositRequired": false,
+          "isPaymentsCreditsVisible": false
+        }
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

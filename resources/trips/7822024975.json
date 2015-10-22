@@ -1,0 +1,324 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "5d55d77c-e395-4ccd-b462-230658a47d9b",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7822024975",
+    "tripNumber": 7822024975,
+    "title": "New York, United States",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/5d55d77c-e395-4ccd-b462-230658a47d9b/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-05-11T00:00:00-07:00",
+      "localized": "May 11, 2016 12:00:00 AM",
+      "epochSeconds": 1462950000,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "5/11/2016",
+      "localizedMediumDate": "May 11",
+      "localizedFullDate": "Wed, May 11",
+      "localizedLongDate": "May 11, 2016"
+    },
+    "endTime": {
+      "raw": "2016-06-09T00:00:00-07:00",
+      "localized": "Jun 9, 2016 12:00:00 AM",
+      "epochSeconds": 1465455600,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "6/9/2016",
+      "localizedMediumDate": "Jun 9",
+      "localizedFullDate": "Thu, Jun 9",
+      "localizedLongDate": "Jun 9, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-17T06:31:21Z",
+      "localized": "Sep 17, 2015 6:31:21 AM",
+      "epochSeconds": 1442471481,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-17T21:35:09Z",
+      "localized": "Sep 17, 2015 9:35:09 PM",
+      "epochSeconds": 1442525709,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-17T21:35:49Z",
+      "localized": "Sep 17, 2015 9:35:49 PM",
+      "epochSeconds": 1442525749,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "rewards": {
+      "totalPoints": 328,
+      "basePoints": 298,
+      "bonusPoints": [
+        {
+          "m_pointValue": 30.00,
+          "m_pointType": "offerPoint",
+          "m_pointDescription": "+silver Bonus Offer",
+          "m_status": "PENDING"
+        }
+      ],
+      "logoUrl": "/static/default/default/images/myrewards/RewardsLogo_193x76.png",
+      "viewStatementURL": "/user/rewards"
+    },
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsnxNtkr3WFabzhOsSgBZghXqc_6yixGy35BhOMnRnkn",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #7822024975 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #7822024975 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "activities": [
+      {
+        "uniqueID": "CA4B2A4E-A613-4314-AE1C-2DD2C92F28FD_0_182983_262929",
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Confirmed",
+        "bookingStatusMessage": "Your activity is booked. Please check your voucher for details.",
+        "supplierReferenceNumber": "11616646637",
+        "bookingDate": {
+          "raw": "2015-09-16T00:00:00-07:00",
+          "localized": "Sep 16, 2015 12:00:00 AM",
+          "epochSeconds": 1442386800,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "Wed, 16 Sep"
+        },
+        "startTime": {
+          "raw": "2016-05-11T00:00:00-07:00",
+          "localized": "May 11, 2016 12:00:00 AM",
+          "epochSeconds": 1462950000,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "5/11/2016",
+          "localizedMediumDate": "May 11",
+          "localizedFullDate": "Wed, May 11",
+          "localizedLongDate": "May 11, 2016"
+        },
+        "endTime": {
+          "raw": "2016-06-09T00:00:00-07:00",
+          "localized": "Jun 9, 2016 12:00:00 AM",
+          "epochSeconds": 1465455600,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "6/9/2016",
+          "localizedMediumDate": "Jun 9",
+          "localizedFullDate": "Thu, Jun 9",
+          "localizedLongDate": "Jun 9, 2016"
+        },
+        "paymentModel": "MERCHANT",
+        "price": {
+          "pricePerCategory": {
+            "Adult": {
+              "keyForCategory": "Adult",
+              "numberOfPassengers": 1,
+              "totalBasePrice": {
+                "amount": 149.00,
+                "currency": {
+                  "currencyCode": "USD"
+                }
+              },
+              "perPassengerBasePrice": {
+                "amount": 149.00,
+                "currency": {
+                  "currencyCode": "USD"
+                }
+              }
+            }
+          },
+          "localisedPriceAndPassengerCount": [
+            {
+              "totalBasePriceForSorting": {
+                "amount": 149.00,
+                "currency": {
+                  "currencyCode": "USD"
+                }
+              },
+              "localisedPassengerTypeAndCount": "1 Adult",
+              "localisedPrice": "$149.00"
+            }
+          ],
+          "currency": "USD",
+          "base": "149.0",
+          "baseFormatted": "$149.00",
+          "taxes": "0.0",
+          "taxesFormatted": "$0.00",
+          "total": "149.0",
+          "totalFormatted": "$149.00"
+        },
+        "activityCategoryID": 2,
+        "activityId": 182983,
+        "activityTitle": "Explorer Pass: Choose 3, 5, 7 or 10 Museums, Tours & Attractions: Explorer Pass - 7 Attractions & Tours",
+        "activityDescription": "Choose from over 55 of New York City's most amazing attractions, museums, and tours with this Explorer Pass and experience the city at your own pace. Enjoy access to famous locations as well as fast-track entry to some. \n\nGrab your camera and your walking shoes and immerse yourself in New York City. Use your pass & guidebook to craft your own itinerary and visit iconic locations throughout the town. Just a handful of the over 50 participating tours, museums, and attractions include the following, several of which offer front of the line privileges for Explorer Pass holders:\n\n- Top of the Rock Observation Decks\n- Empire State Building Observatory\n- Statue of Liberty & Ellis Island Ferry Ticket\n- 9/11 Tribute Center & Walking Tour\n- Hop-On Hop-Off Bus Tour by City Sights\n- Yankee Stadium: Classic Tour\n- Whitney Museum of American Art\n- Metropolitan Museum of Art (includes admission to the Cloisters)\n- American Museum of Natural History\n- Museum of Modern Art\n- Guggenheim Museum\n- Luna Park at Coney Island: 4-hour unlimited ride wristband\n- Saturday Night Live: The Exhibit\n- The Hunger Games: The Exhibition\n- Bike Tours and Rentals by Central Park Sightseeing \n- New York Water Taxi Hop On Hop Off All Day Pass\n- Circle Line Statue of Liberty Cruise\n- Intrepid Sea, Air & Space Museum\n- Radio City Music Hall Stage Door Tour\n- Rockefeller Center Tour\n- Bike & Roll: Guided Bike Tours & Rentals\n- Sex and the City Tour by On Location Tours\n- NY TV and Movie Sites Tour by On Location Tours\n- Woodbury Common Outlet Shopping Roundtrip Transportation\n- Hush Hip Hop Tours\n- The RIDE \n- The TOUR\n\nBest of all, your Explorer Pass is valid for 30 days from first activation. During this period, you may use it on any 3, 4, 5, 7 or 10 tours and attractions, depending which pass you purchase. This means you can truly explore and enjoy the city at your own pace no matter your length of stay in the Big Apple.",
+        "activityItemTitleEnglish": "Explorer Pass: Choose 3, 5, 7 or 10 Museums, Tours & Attractions: Explorer Pass - 7 Attractions & Tours",
+        "activityDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/lx/activity/182983/",
+        "activityLocation": {
+          "name1": "Central Park Sightseeing",
+          "latitude": 40.76327,
+          "longitude": -73.97713,
+          "addressLine1": "56 West 56th Street, near 6th Avenue",
+          "city": "New York",
+          "countrySubdivisionCode": "New York",
+          "postalCode": "10019",
+          "countryCode": "USA",
+          "fullAddress": "Central Park Sightseeing : 56 West 56th Street, near 6th Avenue, New York, New York, 10019, USA"
+        },
+        "redemptionLocations": [
+          {
+            "name1": "Central Park Sightseeing",
+            "latitude": 40.76327,
+            "longitude": -73.97713,
+            "addressLine1": "56 West 56th Street, near 6th Avenue",
+            "city": "New York",
+            "countrySubdivisionCode": "New York",
+            "postalCode": "10019",
+            "countryCode": "USA",
+            "fullAddress": "Central Park Sightseeing : 56 West 56th Street, near 6th Avenue, New York, New York, 10019, USA"
+          },
+          {
+            "name1": "Planet Hollywood - CitySights NY Desk",
+            "latitude": 40.75815,
+            "longitude": -73.98505,
+            "addressLine1": "1540 Broadway at 45th Street",
+            "city": "New York",
+            "countrySubdivisionCode": "NY",
+            "postalCode": "10036",
+            "countryCode": "USA",
+            "fullAddress": "Planet Hollywood - CitySights NY Desk : 1540 Broadway at 45th Street, New York, NY, 10036, USA"
+          },
+          {
+            "name1": "Discovery Times Square",
+            "latitude": 40.75766,
+            "longitude": -73.98711,
+            "addressLine1": "226 West 44th Street, near Broadway",
+            "city": "New York",
+            "countrySubdivisionCode": "NY",
+            "postalCode": "10036",
+            "countryCode": "USA",
+            "fullAddress": "Discovery Times Square : 226 West 44th Street, near Broadway, New York, NY, 10036, USA"
+          },
+          {
+            "name1": "Brooklyn Bridge Sightseeing",
+            "latitude": 40.70543,
+            "longitude": -74.00288,
+            "addressLine1": "110 South Streetnear South Street Seaport",
+            "city": "New York",
+            "countrySubdivisionCode": "New York",
+            "postalCode": "10038",
+            "countryCode": "USA",
+            "fullAddress": "Brooklyn Bridge Sightseeing : 110 South Streetnear South Street Seaport, New York, New York, 10038, USA"
+          },
+          {
+            "name1": "New York Water Taxi/Circle Line Downtown",
+            "latitude": 40.70715,
+            "longitude": -74.0021,
+            "addressLine1": "Circle Downtown Booth89 South Street Pier 16, South Street Seaport",
+            "city": "New York",
+            "countrySubdivisionCode": "New York",
+            "postalCode": "10038",
+            "countryCode": "USA",
+            "fullAddress": "New York Water Taxi/Circle Line Downtown : Circle Downtown Booth89 South Street Pier 16, South Street Seaport, New York, New York, 10038, USA"
+          }
+        ],
+        "travelerCount": 1,
+        "travelerCountDescription": "1 Adult",
+        "travelers": [
+          {
+            "isRedeemer": true,
+            "firstName": "Elmer",
+            "lastName": "Fudd",
+            "fullName": "Elmer Fudd"
+          }
+        ],
+        "vendorName": "Urban Adventures - CAD",
+        "vendorAccountingId": 0,
+        "vendorCustomerServiceOffices": [
+          {
+            "name": "Urban Adventures - CAD Customer Service",
+            "phoneCountryCode": "1",
+            "phoneNumber": "1 (800) 887 9103",
+            "phoneNumbers": [
+              {
+                "formatted": "1 (800) 887 9103",
+                "costText": "Toll-free",
+                "useText": "Business Hours"
+              }
+            ],
+            "hoursOfOperationText": "Mon, Tues, Wed, Thurs, Fri: 9:00 AM - 8:00 PM; Sat, Sun: 8:00 AM - 8:00 PM",
+            "hoursOfOperation": [
+              {
+                "day": "monday",
+                "startTime": "09:00:00",
+                "endTime": "20:00:00"
+              },
+              {
+                "day": "tuesday",
+                "startTime": "09:00:00",
+                "endTime": "20:00:00"
+              },
+              {
+                "day": "wednesday",
+                "startTime": "09:00:00",
+                "endTime": "20:00:00"
+              },
+              {
+                "day": "thursday",
+                "startTime": "09:00:00",
+                "endTime": "20:00:00"
+              },
+              {
+                "day": "friday",
+                "startTime": "09:00:00",
+                "endTime": "20:00:00"
+              },
+              {
+                "day": "saturday",
+                "startTime": "08:00:00",
+                "endTime": "20:00:00"
+              },
+              {
+                "day": "sunday",
+                "startTime": "08:00:00",
+                "endTime": "20:00:00"
+              }
+            ]
+          }
+        ],
+        "termsAndConditions": {
+          "instructions": "<b>How to Redeem Your Voucher:</b><br/>Upon arrival at one of the redemption locations, please present your confirmation/voucher and photo ID in exchange for your activity.<br/><br/><b>Know Before You Go:</b><ul><li>Hours of operation vary; please check before you go.</li><li>Advance reservations may be made for tours included on the pass; mention you are a New York Explorer Card holder.</li><li>Your Explorer Pass is valid for 30 days from first activation.</li><li>**Save 15% on Central Park Carriage Rides and 20% on Pedicab Rides valid for redemptions made through August 31, 2015 at Central Park Sightseeing.**</li></ul>",
+          "knowBeforeYouGo": "<b>Know Before You Go:</b><ul><li>Hours of operation vary; please check before you go.</li><li>Advance reservations may be made for tours included on the pass; mention you are a New York Explorer Card holder.</li><li>Your Explorer Pass is valid for 30 days from first activation.</li><li>**Save 15% on Central Park Carriage Rides and 20% on Pedicab Rides valid for redemptions made through August 31, 2015 at Central Park Sightseeing.**</li></ul>",
+          "howToRedeem": "<b>How to Redeem Your Voucher:</b><br/>Upon arrival at one of the redemption locations, please present your confirmation/voucher and photo ID in exchange for your activity.",
+          "terms": "<li><b>Cancellations and Changes:</b> You can cancel free of charge until 72 hours before the activity starts. After that time, no cancellations, changes or refunds will be made.</li>",
+          "minFreeCancellationHoursPackageV2": 0,
+          "freeCancellationAvailablePackageV2": false
+        },
+        "voucherPrintURL": "https://wwwexpediacom.integration.sb.karmalab.net/itinerary-print?tripid=5d55d77c-e395-4ccd-b462-230658a47d9b&itineraryNumber=11616646637",
+        "vouchers": [
+          {
+            "id": "0046461841",
+            "barcodeNumber": "0046461841",
+            "securityCode": "109121010001490708568",
+            "barcodeImageURL": "https://wwwexpediacom.integration.sb.karmalab.net/barcode/0046461841.png?encodingFormat=CODE_39",
+            "validForRedemerTypeLocalized": "1 Adult",
+            "validForRedemerTypeEnglish": "1 Adult",
+            "supplierReferenceCode": ""
+          }
+        ],
+        "webGetLXCancelDetailPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/getLXCancelDetail/CA4B2A4E-A613-4314-AE1C-2DD2C92F28FD/ordernumber/8016977349905/orderlinenumber/a8070f85-05e6-4e5c-bb98-09c045c9c22d",
+        "regionId": "2621",
+        "unbookedPackageV2": false
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

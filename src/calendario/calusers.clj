@@ -11,6 +11,7 @@
 (defquery add-siteuser<! "queries/add-siteuser.sql")
 (defquery expuser-by-email "queries/expuser-by-email.sql")
 (defquery siteuser-by-iduser "queries/siteuser-by-iduser-siteid.sql")
+(defquery user-by-siteid-tuid "queries/user-by-siteid-tuid.sql")
 (defquery uuid-by-email-siteid "queries/uuid-by-email-siteid.sql")
 (defquery check-user-exists "queries/check-user-exists.sql")
 
@@ -18,6 +19,12 @@
 ; get latest cal - return nothing or old one, or good one, then decide.
 
 ; https://www.google.com/calendar/ical/jeffmad%40gmail.com/private-6e3b43617c56c81ece0d93886ec3800d/basic.ics
+
+(defn get-private-calendar-url-by-tuid [db siteid tuid]
+  (let [user (first (user-by-siteid-tuid {:tuid tuid :siteid siteid} {:connection db}))]
+    (if user
+      (str "/calendar/ical/" (java.net.URLEncoder/encode (:email user)) "/private-" (:calid user) "/trips.ics")
+      )))
 
 (defn get-private-calendar-url [db email siteid]
   (let [uuid (:calid (first (uuid-by-email-siteid {:email email :siteid siteid} {:connection db})))

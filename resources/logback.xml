@@ -29,6 +29,7 @@
     <appender-ref ref="CAL_LOG_FILE" />
   </root>
   <logger name="com.zaxxer.hikari.pool.HikariPool" level="WARN" />
+  <logger name="calendario.trip-fetcher" level="DEBUG" />
 
   <!-- Make java.util.logging more efficient at disabled levels.
        See http://logback.qos.ch/manual/configuration.html#LevelChangePropagator -->

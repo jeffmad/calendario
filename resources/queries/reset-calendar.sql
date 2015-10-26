@@ -1,2 +1,2 @@
 --  reset-calendar
-update caluser."siteusers" set calid = :uuid where iduser = :iduser;
+update caluser."siteusers" set calid = :uuid where siteid = :siteid and tuid = :tuid;

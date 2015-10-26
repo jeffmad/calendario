@@ -17,7 +17,7 @@
                  [org.postgresql/postgresql "9.4-1203-jdbc4"]
                  [clj-http "2.0.0"]
                  [cheshire "5.5.0"]
-                 [org.clojars.jeffmad/clj-icalendar "0.1.1-SNAPSHOT"]
+                 [org.clojars.jeffmad/clj-icalendar "0.1.2-SNAPSHOT"]
                  [slingshot "0.12.2"]
                  [org.slf4j/log4j-over-slf4j "1.7.12"]
                  [org.slf4j/jcl-over-slf4j "1.7.12"]

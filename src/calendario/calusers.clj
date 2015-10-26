@@ -10,8 +10,10 @@
 (defquery add-expuser<! "queries/add-expuser.sql")
 (defquery add-siteuser<! "queries/add-siteuser.sql")
 (defquery expuser-by-email "queries/expuser-by-email.sql")
+(defquery expuser-by-siteid-tuid "queries/expuser-by-siteid-tuid.sql")
 (defquery siteuser-by-iduser "queries/siteuser-by-iduser-siteid.sql")
-(defquery user-by-siteid-tuid "queries/user-by-siteid-tuid.sql")
+(defquery siteusers-by-iduser "queries/siteusers-by-iduser.sql")
+(defquery siteuser-by-siteid-tuid "queries/siteuser-by-siteid-tuid.sql")
 (defquery uuid-by-email-siteid "queries/uuid-by-email-siteid.sql")
 (defquery check-user-exists "queries/check-user-exists.sql")
 
@@ -21,7 +23,7 @@
 ; https://www.google.com/calendar/ical/jeffmad%40gmail.com/private-6e3b43617c56c81ece0d93886ec3800d/basic.ics
 
 (defn get-private-calendar-url-by-tuid [db siteid tuid]
-  (let [user (first (user-by-siteid-tuid {:tuid tuid :siteid siteid} {:connection db}))]
+  (let [user (first (siteuser-by-siteid-tuid {:tuid tuid :siteid siteid} {:connection db}))]
     (if user
       (str "/calendar/ical/" (java.net.URLEncoder/encode (:email user)) "/private-" (:calid user) "/trips.ics")
       )))
@@ -42,10 +44,21 @@
 
 (defn find-expuser [db email]
   (first (expuser-by-email { :email email } {:connection db})))
-; find siteuser by siteid, tuid - join to expuser, return url
+
+(defn find-expuser-by-siteid-tuid [db siteid tuid]
+  (first (expuser-by-siteid-tuid {:siteid siteid :tuid tuid} {:connection db})))
+
+                                        ; find siteuser by siteid, tuid - join to expuser, return url
 ; (c/find-siteuser (:spec (:db system)) 1)
-(defn find-siteuser [db iduser siteid]
+
+#_(defn find-siteuser [db iduser siteid]
   (first (siteuser-by-iduser { :iduser iduser :siteid siteid} {:connection db})))
+
+(defn find-siteusers-by-iduser [db iduser]
+  (vec (siteusers-by-iduser { :iduser iduser } {:connection db})))
+
+(defn find-siteuser [db siteid tuid]
+  (first (siteuser-by-siteid-tuid { :tuid tuid :siteid siteid} {:connection db})))
 
 (defn user-lookup [db email uuid]
   (first (check-user-exists {:uuid uuid :email email} {:connection db})))
@@ -58,7 +71,7 @@
   (add-siteuser<! {:iduser iduser :calid uuid :tpid tpid :eapid eapid :tuid tuid :siteid siteid :createdate (java.sql.Timestamp/from now)} {:connection db}))
 
 ;(java.util.UUID/randomUUID) (java.time.Instant/now)
-(defn create-user [db expuserid email tpid eapid tuid siteid uuid now]
+#_(defn create-user [db expuserid email tpid eapid tuid siteid uuid now]
   (if-let [expuser (find-expuser db email)]
     (if-let [siteuser (find-siteuser db (:iduser expuser) siteid)]
       { :expuser expuser :siteuser siteuser}
@@ -93,7 +106,8 @@
         icaltext
         :expired))))
 #_(let [c (c/latest-calendar-for-user (:spec (:db system)) "jeffmad@gmail.com" "6eb7f25d-4bbf-4753-aae2-72635fcd959b" (.plusSeconds (java.time.Instant/now) (* 60 60 -24)))] (cond (= :expired c) "yo expired" :else c))
-(defn reset-private-calendar! [db email uuid]
-  (let [expuser (find-expuser db email)]
-    (when expuser
-      (reset-calendar! {:uuid uuid :email email} {:connection db}))))
+
+(defn reset-private-calendar! [db siteid tuid uuid]
+  (let [siteuser (find-siteuser db siteid tuid)]
+    (when siteuser
+      (reset-calendar! {:uuid uuid :siteid siteid :tuid tuid} {:connection db}))))

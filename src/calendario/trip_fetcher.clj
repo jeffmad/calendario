@@ -36,3 +36,9 @@
       (do (error (str "error retrieving trip " url " " (with-out-str (clojure.pprint/pprint resp))))
         nil)
       #_(throw (RuntimeException. (str  "could not get trip for user, status=" (:status resp) " url was: " url  " response:"  resp ))))))
+
+(defn get-json-trips [tuid site-id cm trip-numbers]
+  (let [trip-f (partial get-trip-for-user tuid site-id cm)
+        json-trips (remove nil?  (map trip-f trip-numbers))
+        _ (debug "For user " tuid " site: " site-id " upcoming trips:" (count trip-numbers) " successfully read: " (count json-trips))]
+    json-trips))

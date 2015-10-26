@@ -391,7 +391,12 @@
       (flight-standalone-event trip)
       (flight-package-event trip))))
 
-(defn create-events-from-trips [tuid site-id cm trip-numbers]
+(defn create-events-from-trips [json-trips]
+  (mapcat seq
+          (mapcat (juxt flights hotels cars activities)
+                  json-trips)))
+
+#_(defn create-events-from-trips [tuid site-id cm trip-numbers]
   (let [trip-f (partial get-trip-for-user tuid site-id cm)
         json-trips (remove nil?  (map trip-f trip-numbers))
         _ (debug "For user " tuid " site: " site-id " upcoming trips:" (count trip-numbers) " successfully read: " (count json-trips))]
@@ -417,14 +422,14 @@
         url (:url e)
         location (:location e)]
     (condp = (:event-type e)
-      :flight  (ical/create-event start end title  :unique-id unique-id :description desc :url url :location location)
-      :hotel-checkin  (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location)
-      :hotel-checkout  (ical/create-event-no-duration end title :unique-id unique-id :description desc :url url :location location)
-      :car-pickup (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location)
-      :car-dropoff (ical/create-event-no-duration end title  :unique-id unique-id :description desc :url url :location location)
-      :activity-start  (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location)
-      :activity-end  (ical/create-event-no-duration end title :unique-id unique-id :description desc :url url :location location)
-      :cruise  (ical/create-event start end title  :unique-id unique-id :description desc :url url :location location))))
+      :flight  (ical/create-event start end title  :unique-id unique-id :description desc :url url :location location :organizer url)
+      :hotel-checkin  (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location :organizer url)
+      :hotel-checkout  (ical/create-event-no-duration end title :unique-id unique-id :description desc :url url :location location :organizer url)
+      :car-pickup (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location :organizer url)
+      :car-dropoff (ical/create-event-no-duration end title  :unique-id unique-id :description desc :url url :location location :organizer url)
+      :activity-start  (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location :organizer url)
+      :activity-end  (ical/create-event-no-duration end title :unique-id unique-id :description desc :url url :location location :organizer url)
+      :cruise  (ical/create-event start end title  :unique-id unique-id :description desc :url url :location location :organizer url))))
 
 
 (defn create-ical
@@ -440,7 +445,13 @@
     (reduce (fn [c e] (ical/add-event! c e)) cal ical-events)
     cal))
 
-(defn cal-for [tuid siteid cm]
+(defn calendar-from-json-trips [json-trips]
+  (->> json-trips
+       create-events-from-trips
+       create-ical
+       ical/output-calendar))
+
+#_(defn cal-for [tuid siteid cm]
   (->> (get-booked-upcoming-trips tuid siteid cm)
        (create-events-from-trips tuid siteid cm)
        (create-ical)))

@@ -1,7 +1,6 @@
 (ns calendario.calendar
   (:require [clj-icalendar.core :as ical]))
 
-
 (defn package-lob?
   "given a trip and a line of business (LOB) keyword,
    return true if that LOB is contained in the package"
@@ -126,8 +125,6 @@
    :itin-num itin-num
    :event-type event-type
    :title title
-   ;:start (get-in activity [:startTime :raw])
-   ;:end   (get-in activity [:endTime :raw])
    :start (get-in activity [:startTime :epochSeconds])
    :end   (get-in activity [:endTime :epochSeconds])
    :location (activity-location activity)
@@ -201,8 +198,6 @@
    :itin-num itin-num
    :event-type event-type
    :title title
-   ;:start (get-in car [:pickupTime :raw])
-   ;:end   (get-in car [:dropOffTime :raw])
    :start (get-in car [:pickupTime :epochSeconds])
    :end   (get-in car [:dropOffTime :epochSeconds])
    :location (car-location car event-type)
@@ -268,8 +263,6 @@
      :itin-num itin-num
      :event-type event-type
      :title title
-     ;:start (get-in hotel [:checkInDateTime :raw])
-     ;:end   (get-in hotel [:checkOutDateTime :raw])
      :start (get-in hotel [:checkInDateTime :epochSeconds])
      :end   (get-in hotel [:checkOutDateTime :epochSeconds])
      :location (format "%s@%s,%s" hotel-address lat lon)
@@ -351,8 +344,6 @@
      :itin-num itin-num
      :event-type :flight
      :title (format "Flight: %s %s From %s To %s" (airline-name segment) (:flightNumber segment) depart-name arrive-name )
-     ;:start (get-in segment [:departureTime :raw])
-     ;:end   (get-in segment [:arrivalTime :raw])
      :start (get-in segment [:departureTime :epochSeconds])
      :end   (get-in segment [:arrivalTime :epochSeconds])
      :location (format "%s (%s)@%s,%s" depart-name depart-code lat lon)
@@ -414,8 +405,6 @@
 (defn create-ical-event [e i]
   (let [start (java.util.Date. (* 1000 (.longValue (:start e))))
         end (java.util.Date. (* 1000 (.longValue (:end e))))
-        ;start (->date (:start e))
-        ;end (->date (:end e))
         title (:title e)
         unique-id (str (:itin-num e) "_" i "@" (quot (System/currentTimeMillis) 1000))
         desc (:details e)

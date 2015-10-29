@@ -3,11 +3,11 @@
             [clojure.tools.logging :refer [log error warn debug]]
             [clojure.data.xml :as xml]
             [clojure.zip :as zip]
-            [clojure.data.zip.xml :as zx] ))
+            [clojure.data.zip.xml :as zx]))
 
 (def exp-account-template "<?xml version=\"1.0\" encoding=\"utf-8\"?><usr:listTUIDsForExpAccountRequest xmlns:usr=\"urn:com:expedia:www:services:user:messages:v3\" siteID=\"1\"><usr:expUser emailAddress=\"%s\" /><usr:messageInfo enableTraceLog=\"false\" clientName=\"localhost\" transactionGUID=\"a2192179-d5b7-4234-918c-8f662aaaf545\"/></usr:listTUIDsForExpAccountRequest>")
 
-                                        ;<?xml version="1.0" encoding="utf-8" standalone="yes"?><listTUIDsForExpAccountResponse success="true" xmlns="urn:com:expedia:www:services:user:messages:v3"><expUser id="301078" emailAddress="jmadynski@expedia.com"/><expUserTUIDMapping tpid="1" tuid="5363093" singleUse="true" updateDate="2014-04-25T09:55:00.000-07:00"/><expUserTUIDMapping tpid="1" tuid="577015" singleUse="false" updateDate="2014-05-30T22:26:00.000-07:00"/><authRealmID>1</authRealmID></listTUIDsForExpAccountResponse>
+;<?xml version="1.0" encoding="utf-8" standalone="yes"?><listTUIDsForExpAccountResponse success="true" xmlns="urn:com:expedia:www:services:user:messages:v3"><expUser id="301078" emailAddress="jmadynski@expedia.com"/><expUserTUIDMapping tpid="1" tuid="5363093" singleUse="true" updateDate="2014-04-25T09:55:00.000-07:00"/><expUserTUIDMapping tpid="1" tuid="577015" singleUse="false" updateDate="2014-05-30T22:26:00.000-07:00"/><authRealmID>1</authRealmID></listTUIDsForExpAccountResponse>
 
 
 (defn tuid-mapping [t]
@@ -24,13 +24,18 @@
        :tuidmappings (mapv tuid-mapping (zx/xml-> z :expUserTUIDMapping))}
       (error (str "profile response not successful " r)))))
 
+;{:expuserid "301078", :email "jmadynski@expedia.com", :tuidmappings [{:tpid "1", :tuid "5363093", :single-use "true"} {:tpid "1", :tuid "577015", :single-use "false"}]}
 ; "https://userservicev3.integration.karmalab.net:56783"
-(defn get-user-by-email [base-url email]
-  (let [url (str base-url "/exp-account/tuids")
+(defn get-user-by-email [http-client email]
+  (let [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} http-client
+        url (str user-service-endpoint "/exp-account/tuids")
         resp (client/post url {:body (format exp-account-template email)
                                :content-type :xml
                                :accept :xml
-                               :insecure? true})]
+                               :insecure? true
+                               :conn-timeout conn-timeout
+                               :socket-timeout socket-timeout
+                               :connection-manager conn-mgr })]
     (if (= 200 (:status resp))
       (accounts (:body resp))
       nil)))
@@ -49,12 +54,16 @@
 
 (def exp-profile-template "<?xml version=\"1.0\" encoding=\"utf-8\"?><usr:getUserProfileRequest xmlns:usr=\"urn:com:expedia:www:services:user:messages:v3\" siteID=\"%s\"><usr:user actAsTuid=\"%s\" loggedInTuid=\"%s\"/><usr:messageInfo enableTraceLog=\"false\" clientName=\"localhost\" transactionGUID=\"a2192179-d5b7-4234-918c-8f662aaaf545\"/></usr:getUserProfileRequest>")
 ;"https://userservicev3.integration.karmalab.net:56783"
-(defn get-user-profile [base-url site-id tuid]
-  (let [url (str base-url "/profile/get")
+(defn get-user-profile [http-client site-id tuid]
+  (let [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} http-client
+        url (str user-service-endpoint "/profile/get")
         resp (client/post url {:body (format exp-profile-template site-id tuid tuid)
                                :content-type :xml
                                :accept :xml
-                               :insecure? true})]
+                               :insecure? true
+                               :conn-timeout conn-timeout
+                               :socket-timeout socket-timeout
+                               :connection-manager conn-mgr })]
     (if (= 200 (:status resp))
       (profile (:body resp))
       nil)))

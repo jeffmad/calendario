@@ -6,9 +6,9 @@
   (cu/create-site-user! db iduser (java.util.UUID/randomUUID) tpid 0 tuid siteid now))
 
 (defn create-user [db http-client siteid tuid]
-  (let [up (us/get-user-profile "https://userservicev3.integration.karmalab.net:56783" siteid tuid)
+  (let [up (us/get-user-profile http-client siteid tuid)
         email (:email up)
-        user-accounts (us/get-user-by-email "https://userservicev3.integration.karmalab.net:56783" email)
+        user-accounts (us/get-user-by-email http-client email)
         now (java.time.Instant/now)
         expuser (cu/create-exp-user! db (Integer/parseInt (:expuserid user-accounts)) email now)
         iduser (:iduser expuser)

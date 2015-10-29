@@ -35,26 +35,26 @@
   (let [h (if (pos? hours) (-' hours) hours)]
     (.plusSeconds (java.time.Instant/now) (* 60 60 h))))
 
-(defn build-and-store-latest-calendar [db email uuid]
+(defn build-and-store-latest-calendar [db http-client email uuid]
   (let [user (user-lookup db email uuid)
         idsiteuser (:idsiteuser user)
-        cal-text (->> (tf/get-booked-upcoming-trips (:tuid user) (:siteid user) nil)
-                      (tf/get-json-trips (:tuid user) (:siteid user) nil)
+        cal-text (->> (tf/get-booked-upcoming-trips http-client (:tuid user) (:siteid user))
+                      (tf/get-json-trips http-client (:tuid user) (:siteid user))
                       c/calendar-from-json-trips)
         _ (add-calendar-for-user! db cal-text idsiteuser (java.time.Instant/now))]
     cal-text))
 
-(defn build-or-get-cached-calendar [db email uuid expire-time]
+(defn build-or-get-cached-calendar [db http-client email uuid expire-time]
   (let [latest (latest-calendar-for-user db email uuid expire-time)]
     (if (= :expired latest)
-      (build-and-store-latest-calendar db email uuid)
+      (build-and-store-latest-calendar db http-client email uuid)
       latest)))
 
-(defn calendar-for [db email token]
+(defn calendar-for [db http-client email token]
   (let [uuid (second (re-matches #"^private-([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})" token))
         expire-time (time-n-hours-ago 24)
         ;cal-text "BEGIN:VCALENDAR\r\nPRODID:-//Acme\\, Inc. //Acme Calendar V0.1//EN\r\nVERSION:2.0\r\nMETHOD:PUBLISH\r\nCALSCALE:GREGORIAN\r\nEND:VCALENDAR\r\n"
-        cal-text (build-or-get-cached-calendar db email uuid expire-time)]
+        cal-text (build-or-get-cached-calendar db http-client email uuid expire-time)]
     (-> (response cal-text)
         (content-type "text/calendar; charset=utf-8"))))
 
@@ -76,4 +76,4 @@
              (wrap-json-body
               (cal-mgmt-routes db http-client) {:keywords? true})))
    (GET "/calendar/ical/:email/:token/trips.ics" [email token]
-        (calendar-for db email token))))
+        (calendar-for db http-client email token))))

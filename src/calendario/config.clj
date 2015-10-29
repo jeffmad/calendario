@@ -6,6 +6,12 @@
 
 (def environ
   {:http {:port (some-> env :port Integer.)}
-   :http-client {:timeout 10 :threads 6 :default-per-route 4}
-   :db   {:uri  (env :database-url)}
-   :calusers {:utc true}})
+   :http-client {:timeout (some-> env :persistent-thread-timeout Integer.)
+                 :threads (some-> env :http-connection-mgr-thread-count Integer.)
+                 :default-per-route (some-> env :persistent-thread-default-per-route Integer.)
+                 :socket-timeout (some-> env :http-client-socket-timeout Integer.)
+                 :conn-timeout (some-> env :http-client-connection-timeout Integer.)
+                 :user-service-endpoint (some-> env :user-service-endpoint)
+                 :trip-service-endpoint (some-> env :trip-service-endpoint)}
+   :db   {:uri  (some-> env :database-url)}
+  })

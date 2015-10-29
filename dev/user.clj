@@ -12,7 +12,15 @@
             [calendario.system :as system]))
 
 (def dev-config
-  {:app {:middleware [wrap-stacktrace]}})
+  {:app {:middleware [wrap-stacktrace]}
+   :http-client {:timeout 10
+                 :threads 10
+                 :default-per-route 4
+                 :socket-timeout 20000
+                 :conn-timeout 1000
+                 :user-service-endpoint "https://userservicev3.integration.karmalab.net:56783"
+                 :trip-service-endpoint "http://wwwexpediacom.integration.sb.karmalab.net"}
+   :db {:uri "jdbc:postgresql://localhost/caldb"}})
 
 (def config
   (meta-merge config/defaults

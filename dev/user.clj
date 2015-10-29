@@ -20,7 +20,8 @@
                  :conn-timeout 1000
                  :user-service-endpoint "https://userservicev3.integration.karmalab.net:56783"
                  :trip-service-endpoint "http://wwwexpediacom.integration.sb.karmalab.net"}
-   :db {:uri "jdbc:postgresql://localhost/caldb"}})
+   :db {:uri "jdbc:postgresql://localhost/caldb"}
+   :calendar-service {:expires-in-hours 8}})
 
 (def config
   (meta-merge config/defaults

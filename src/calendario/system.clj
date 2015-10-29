@@ -8,7 +8,8 @@
             [ring.component.jetty :refer [jetty-server]]
             [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
             [calendario.endpoint.calapi :refer [calapi-endpoint]]
-            [calendario.component.http-client :refer [http-client]]))
+            [calendario.component.http-client :refer [http-client]]
+            [calendario.component.calendar-service :refer [calendar-service]]))
 
 (def base-config
   {:app {:middleware [[wrap-not-found :not-found]
@@ -24,9 +25,11 @@
          :http-client (http-client (:http-client config))
          :db   (hikaricp (:db config))
          :calapi (endpoint-component calapi-endpoint)
+         :calendar-service (calendar-service (:calendar-service config))
          )
         (component/system-using
          {:http [:app]
           :app  [:calapi]
-          :calapi [:db :http-client]
+          :calapi [:calendar-service]
+          :calendar-service [:db :http-client]
           }))))

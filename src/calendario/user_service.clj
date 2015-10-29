@@ -26,9 +26,8 @@
 
 ;{:expuserid "301078", :email "jmadynski@expedia.com", :tuidmappings [{:tpid "1", :tuid "5363093", :single-use "true"} {:tpid "1", :tuid "577015", :single-use "false"}]}
 ; "https://userservicev3.integration.karmalab.net:56783"
-(defn get-user-by-email [http-client email]
-  (let [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} http-client
-        url (str user-service-endpoint "/exp-account/tuids")
+(defn get-user-by-email [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} email]
+  (let [url (str user-service-endpoint "/exp-account/tuids")
         resp (client/post url {:body (format exp-account-template email)
                                :content-type :xml
                                :accept :xml
@@ -54,9 +53,8 @@
 
 (def exp-profile-template "<?xml version=\"1.0\" encoding=\"utf-8\"?><usr:getUserProfileRequest xmlns:usr=\"urn:com:expedia:www:services:user:messages:v3\" siteID=\"%s\"><usr:user actAsTuid=\"%s\" loggedInTuid=\"%s\"/><usr:messageInfo enableTraceLog=\"false\" clientName=\"localhost\" transactionGUID=\"a2192179-d5b7-4234-918c-8f662aaaf545\"/></usr:getUserProfileRequest>")
 ;"https://userservicev3.integration.karmalab.net:56783"
-(defn get-user-profile [http-client site-id tuid]
-  (let [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} http-client
-        url (str user-service-endpoint "/profile/get")
+(defn get-user-profile [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} site-id tuid]
+  (let [url (str user-service-endpoint "/profile/get")
         resp (client/post url {:body (format exp-profile-template site-id tuid tuid)
                                :content-type :xml
                                :accept :xml

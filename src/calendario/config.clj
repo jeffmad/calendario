@@ -14,4 +14,5 @@
                  :user-service-endpoint (some-> env :user-service-endpoint)
                  :trip-service-endpoint (some-> env :trip-service-endpoint)}
    :db   {:uri  (some-> env :database-url)}
+   :calendar-service {:expires-in-hours (some-> env :expires-in-hours)}
   })

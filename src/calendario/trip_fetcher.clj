@@ -3,9 +3,8 @@
             [cheshire.core :refer :all]
             [clojure.tools.logging :refer [log error warn debug]]))
 
-(defn get-trips-for-user [http-client tuid site-id]
-  (let [{:keys [trip-service-endpoint conn-timeout socket-timeout connection-manager]} http-client
-        url (format (str trip-service-endpoint "/api/users/%s/trips?siteid=%s") tuid site-id)
+(defn get-trips-for-user [{:keys [trip-service-endpoint conn-timeout socket-timeout conn-mgr]} tuid site-id]
+  (let [url (format (str trip-service-endpoint "/api/users/%s/trips?siteid=%s") tuid site-id)
         resp (client/get url {:conn-timeout conn-timeout
                               :socket-timeout socket-timeout
                               :connection-manager conn-mgr })]
@@ -29,9 +28,8 @@
  (catch [:status 503] {:keys [request-time headers body]}
    (log/warn "503" request-time headers)))
 ; java.net.SocketTimeoutException
-(defn get-trip-for-user [http-client tuid site-id itin-number]
-  (let [{:keys [trip-service-endpoint conn-timeout socket-timeout connection-manager]} http-client
-        url (format (str trip-service-endpoint "/api/users/%s/trips/%s?siteid=%s") tuid itin-number site-id)
+(defn get-trip-for-user [{:keys [trip-service-endpoint conn-timeout socket-timeout conn-mgr]} tuid site-id itin-number]
+  (let [url (format (str trip-service-endpoint "/api/users/%s/trips/%s?siteid=%s") tuid itin-number site-id)
         resp (client/get url {:throw-exceptions false
                               :conn-timeout conn-timeout
                               :socket-timeout socket-timeout

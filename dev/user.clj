@@ -16,7 +16,7 @@
    :http-client {:timeout 10
                  :threads 10
                  :default-per-route 4
-                 :socket-timeout 20000
+                 :socket-timeout 40000
                  :conn-timeout 1000
                  :user-service-endpoint "https://userservicev3.integration.karmalab.net:56783"
                  :trip-service-endpoint "http://wwwexpediacom.integration.sb.karmalab.net"}

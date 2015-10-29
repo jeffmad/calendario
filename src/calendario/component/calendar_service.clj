@@ -1,6 +1,6 @@
 (ns calendario.component.calendar-service
   (:require [com.stuartsierra.component :as component]
-            [calendario.calusers :refer [reset-private-calendar! create-exp-user! create-site-user! latest-calendar-for-user user-lookup add-calendar-for-user!]]
+            [calendario.calusers :refer [reset-private-calendar! create-exp-user! create-site-user! latest-calendar-for-user user-lookup add-calendar-for-user! user-lookup]]
             [calendario.user-manager :as um]
             [calendario.trip-fetcher :as tf]
             [calendario.calendar :as c]))
@@ -65,6 +65,13 @@
         _ (add-calendar-for-user! db cal-text idsiteuser (java.time.Instant/now))]
     cal-text))
 
+(def empty-cal "BEGIN:VCALENDAR
+PRODID:-//Expedia, Inc. //Trip Calendar V0.1//EN
+VERSION:2.0
+METHOD:PUBLISH
+CALSCALE:GREGORIAN
+END:VCALENDAR")
+
 (defn build-or-get-cached-calendar
   "get the latest calendar for the user. If it is expired, then build and store
    a new calendar, then return it"
@@ -74,10 +81,16 @@
       (build-and-store-latest-calendar calendar-service email uuid)
       latest)))
 
+; rebuild every calendar that has been accessed between >23 and <25 hours ago and
+; is expired
+
 (defn calendar-for
   "given an email and a guid token, return the cached or recently built
    calendar "
-  [calendar-service email token]
+  [{{db :spec} :db http-client :http-client :as calendar-service} email token]
   (let [uuid (second (re-matches #"^private-([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})" token))
-        expire-time (time-n-hours-ago (:expires-in-hours calendar-service))]
-    (build-or-get-cached-calendar calendar-service email uuid expire-time)))
+        expire-time (time-n-hours-ago (:expires-in-hours calendar-service))
+        user (user-lookup db email uuid)]
+    (if user
+      (build-or-get-cached-calendar calendar-service email uuid expire-time)
+      empty-cal)))

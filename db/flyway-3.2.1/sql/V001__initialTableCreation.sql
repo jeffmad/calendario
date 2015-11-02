@@ -66,6 +66,7 @@ tpid INTEGER NOT NULL,
 eapid INTEGER NOT NULL,
 tuid INTEGER NOT NULL,
 siteid INTEGER NOT NULL,
+locale VARCHAR(8),
 createdate TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -359,3 +360,136 @@ CREATE TRIGGER insert_calendarsusers_trigger
 --
 --
 --
+-- -----------------------------------------------------
+-- Table cal."calendaraccess"
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS cal."calendaraccess" (
+   idsiteuser INTEGER REFERENCES caluser.siteusers (idsiteuser),
+   lastaccess TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE cal."calendaraccess"
+OWNER TO caldba;
+
+CREATE TABLE cal.calendaraccess_y2015m10 (
+    CHECK ( lastaccess >= DATE '2015-10-01' AND lastaccess < DATE '2015-11-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2015m11 (
+    CHECK ( lastaccess >= DATE '2015-11-01' AND lastaccess < DATE '2015-12-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2015m12 (
+    CHECK ( lastaccess >= DATE '2015-12-01' AND lastaccess < DATE '2016-01-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m01 (
+    CHECK ( lastaccess >= DATE '2016-01-01' AND lastaccess < DATE '2016-02-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m02 (
+    CHECK ( lastaccess >= DATE '2016-02-01' AND lastaccess < DATE '2016-03-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m03 (
+    CHECK ( lastaccess >= DATE '2016-03-01' AND lastaccess < DATE '2016-04-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m04 (
+    CHECK ( lastaccess >= DATE '2016-04-01' AND lastaccess < DATE '2016-05-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m05 (
+    CHECK ( lastaccess >= DATE '2016-05-01' AND lastaccess < DATE '2016-06-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m06 (
+    CHECK ( lastaccess >= DATE '2016-06-01' AND lastaccess < DATE '2016-07-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m07 (
+    CHECK ( lastaccess >= DATE '2016-07-01' AND lastaccess < DATE '2016-08-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m08 (
+    CHECK ( lastaccess >= DATE '2016-08-01' AND lastaccess < DATE '2016-09-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m09 (
+    CHECK ( lastaccess >= DATE '2016-09-01' AND lastaccess < DATE '2016-10-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m10 (
+    CHECK ( lastaccess >= DATE '2016-10-01' AND lastaccess < DATE '2016-11-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m11 (
+    CHECK ( lastaccess >= DATE '2016-11-01' AND lastaccess < DATE '2016-12-01' )
+) INHERITS (cal.calendaraccess);
+CREATE TABLE cal.calendaraccess_y2016m12 (
+    CHECK ( lastaccess >= DATE '2016-12-01' AND lastaccess < DATE '2017-01-01' )
+) INHERITS (cal.calendaraccess);
+
+CREATE INDEX calendaraccess_y2015m10_lastaccess ON cal.calendaraccess_y2015m10 (lastaccess);
+CREATE INDEX calendaraccess_y2015m11_lastaccess ON cal.calendaraccess_y2015m11 (lastaccess);
+CREATE INDEX calendaraccess_y2015m12_lastaccess ON cal.calendaraccess_y2015m12 (lastaccess);
+CREATE INDEX calendaraccess_y2016m01_lastaccess ON cal.calendaraccess_y2016m01 (lastaccess);
+CREATE INDEX calendaraccess_y2016m02_lastaccess ON cal.calendaraccess_y2016m02 (lastaccess);
+CREATE INDEX calendaraccess_y2016m03_lastaccess ON cal.calendaraccess_y2016m03 (lastaccess);
+CREATE INDEX calendaraccess_y2016m04_lastaccess ON cal.calendaraccess_y2016m04 (lastaccess);
+CREATE INDEX calendaraccess_y2016m05_lastaccess ON cal.calendaraccess_y2016m05 (lastaccess);
+CREATE INDEX calendaraccess_y2016m06_lastaccess ON cal.calendaraccess_y2016m06 (lastaccess);
+CREATE INDEX calendaraccess_y2016m07_lastaccess ON cal.calendaraccess_y2016m07 (lastaccess);
+CREATE INDEX calendaraccess_y2016m08_lastaccess ON cal.calendaraccess_y2016m08 (lastaccess);
+CREATE INDEX calendaraccess_y2016m09_lastaccess ON cal.calendaraccess_y2016m09 (lastaccess);
+CREATE INDEX calendaraccess_y2016m10_lastaccess ON cal.calendaraccess_y2016m10 (lastaccess);
+CREATE INDEX calendaraccess_y2016m11_lastaccess ON cal.calendaraccess_y2016m11 (lastaccess);
+CREATE INDEX calendaraccess_y2016m12_lastaccess ON cal.calendaraccess_y2016m12 (lastaccess);
+
+
+CREATE OR REPLACE FUNCTION calendaraccess_insert_trigger()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF ( NEW.lastaccess >= DATE '2015-10-01' AND
+         NEW.lastaccess < DATE '2015-11-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2015m10 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2015-11-01' AND
+            NEW.lastaccess < DATE '2015-12-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2015m11 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2015-12-01' AND
+            NEW.lastaccess < DATE '2016-01-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2015m12 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-01-01' AND
+            NEW.lastaccess < DATE '2016-02-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m01 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-02-01' AND
+            NEW.lastaccess < DATE '2016-03-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m02 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-03-01' AND
+            NEW.lastaccess < DATE '2016-04-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m03 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-04-01' AND
+            NEW.lastaccess < DATE '2016-05-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m04 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-05-01' AND
+            NEW.lastaccess < DATE '2016-06-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m05 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-06-01' AND
+            NEW.lastaccess < DATE '2016-07-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m06 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-07-01' AND
+            NEW.lastaccess < DATE '2016-08-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m07 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-08-01' AND
+            NEW.lastaccess < DATE '2016-09-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m08 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-09-01' AND
+            NEW.lastaccess < DATE '2016-10-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m09 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-10-01' AND
+            NEW.lastaccess < DATE '2016-11-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m10 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-11-01' AND
+            NEW.lastaccess < DATE '2016-12-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m11 VALUES (NEW.*);
+    ELSIF ( NEW.lastaccess >= DATE '2016-12-01' AND
+            NEW.lastaccess < DATE '2017-01-01' ) THEN
+        INSERT INTO cal.calendaraccess_y2016m12 VALUES (NEW.*);
+    ELSE
+        RAISE EXCEPTION 'Date out of range.  Fix the calendaraccess_insert_trigger() function!';
+    END IF;
+    RETURN NULL;
+END;
+$$
+LANGUAGE plpgsql;
+
+CREATE TRIGGER insert_calendaraccess_trigger
+BEFORE INSERT ON cal.calendaraccess
+FOR EACH ROW EXECUTE PROCEDURE calendaraccess_insert_trigger();

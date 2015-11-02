@@ -2,13 +2,11 @@
 with latest_cals as (
 select a.idcalendar, a.idsiteuser, a.createdate from cal."calendarsusers" a inner join ( select idsiteuser, MAX(createdate) as d from cal."calendarsusers" group by idsiteuser ) b on a.idsiteuser = b.idsiteuser and a.createdate = b.d
 )
-select c.icaltext, c.createdate, s.idsiteuser, s.siteid, s.tuid
-from caluser."expusers" e,
-caluser."siteusers" s,
+select c.createdate
+from caluser."siteusers" s,
 latest_cals lc,
 cal."calendars" c
-where e.email = :email
-and s.calid = :calid::uuid
+where s.idsiteuser = :idsiteuser
 and s.idsiteuser = lc.idsiteuser
 and c.idcalendar = lc.idcalendar
 and c.createdate >= date_trunc('month', current_date)

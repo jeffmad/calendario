@@ -2,7 +2,7 @@
   (:require [clj-http.client :as client]
             [cheshire.core :refer :all]
             [clojure.tools.logging :refer [log error warn debug]]))
-
+; https://wwwexpediacom.integration.sb.karmalab.net/api/users/577015/trips?filterBookingStatus=BOOKED&filterTimePeriod=RECENTLY_COMPLETED&filterTimePeriod=UPCOMING&filterTimePeriod=INPROGRESS&getCachedDetails=10
 (defn get-trips-for-user [{:keys [trip-service-endpoint conn-timeout socket-timeout conn-mgr]} tuid site-id]
   (let [url (format (str trip-service-endpoint "/api/users/%s/trips?siteid=%s") tuid site-id)
         resp (client/get url {:conn-timeout conn-timeout
@@ -29,7 +29,7 @@
    (log/warn "503" request-time headers)))
 ; java.net.SocketTimeoutException
 (defn get-trip-for-user [{:keys [trip-service-endpoint conn-timeout socket-timeout conn-mgr]} tuid site-id itin-number]
-  (let [url (format (str trip-service-endpoint "/api/users/%s/trips/%s?siteid=%s") tuid itin-number site-id)
+  (let [url (format (str trip-service-endpoint "/api/users/%s/trips/%s?siteid=%s&useCache=true") tuid itin-number site-id)
         resp (client/get url {:throw-exceptions false
                               :conn-timeout conn-timeout
                               :socket-timeout socket-timeout

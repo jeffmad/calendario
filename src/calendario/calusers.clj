@@ -6,18 +6,30 @@
 (defquery next-calendar-id "queries/next-calendar-id.sql")
 (defquery associate-cal-to-user<! "queries/assoc-cal-to-user.sql")
 (defquery latest-calendar-text-for-user "queries/latest-calendar-text-for-user.sql")
+(defquery latest-calendar-created-for-user "queries/latest-calendar-createdate-for-user.sql")
 (defquery add-expuser<! "queries/add-expuser.sql")
 (defquery add-siteuser<! "queries/add-siteuser.sql")
 (defquery expuser-by-siteid-tuid "queries/expuser-by-siteid-tuid.sql")
 (defquery siteusers-by-iduser "queries/siteusers-by-iduser.sql")
 (defquery siteuser-by-siteid-tuid "queries/siteuser-by-siteid-tuid.sql")
 (defquery check-user-exists "queries/check-user-exists.sql")
-
+(defquery calendar-accessed-recently "queries/check-calendar-accessed.sql")
+(defquery record-calendar-access<! "queries/record-calendar-access.sql")
+(defquery find-active-users-with-expiring-calendars "queries/calendars-that-will-expire.sql")
 ;
 ; calendars: idcalendar iduser icaltext createdate
 ; calendarsusers idcalendar iduser createdate
 ; expusers iduser  expuserid email  createdate
 ; siteusers idsiteuser iduser calid  tpid eapid tuid siteid  createdate
+
+(defn calendar-was-recently-accessed? [db siteid tuid]
+  (> (:count (first (calendar-accessed-recently {:siteid siteid :tuid tuid} {:connection db}))) 0))
+
+(defn record-calendar-access-by-user! [db idsiteuser now]
+  (record-calendar-access<! {:idsiteuser idsiteuser :now (java.sql.Timestamp/from now)} {:connection db}))
+
+(defn users-need-fresh-calendars [db]
+  (vec (find-active-users-with-expiring-calendars {} {:connection db})))
 
 (defn find-expuser-by-siteid-tuid [db siteid tuid]
   (first (expuser-by-siteid-tuid {:siteid siteid :tuid tuid} {:connection db})))
@@ -53,10 +65,19 @@
 
 (def valid? (complement expired?))
 
+(defn record-access-if-not-present [db idsiteuser siteid tuid]
+  (if-not (calendar-was-recently-accessed? db siteid tuid)
+    (record-calendar-access-by-user! db idsiteuser (java.time.Instant/now))))
+
+(defn is-latest-calendar-older-than? [db idsiteuser ts]
+  (let [{:keys [createdate]} (first (latest-calendar-created-for-user {:idsiteuser idsiteuser} {:connection db}))]
+    (and createdate (neg? (compare (.toInstant createdate) ts)))))
+
 ;(java.time.Instant/now)
 (defn latest-calendar-for-user [db email uuid expire-time]
   (if (user-lookup db email uuid)
-    (let [{:keys [icaltext createdate idsiteuser tpid tuid]} (first (latest-calendar-text-for-user {:email email :calid uuid} {:connection db}))]
+    (let [{:keys [icaltext createdate idsiteuser siteid tuid]} (first (latest-calendar-text-for-user {:email email :calid uuid} {:connection db}))
+          _ (record-access-if-not-present db idsiteuser siteid tuid)]
       (if (and icaltext (valid? expire-time (.toInstant createdate)))
         icaltext
         :expired))))

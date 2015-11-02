@@ -1,10 +1,11 @@
 (ns calendario.component.calendar-service
   (:require [com.stuartsierra.component :as component]
-            [calendario.calusers :refer [reset-private-calendar! create-exp-user! create-site-user! latest-calendar-for-user user-lookup add-calendar-for-user! user-lookup]]
+            [calendario.calusers :refer [reset-private-calendar! create-exp-user! create-site-user! latest-calendar-for-user user-lookup add-calendar-for-user! user-lookup users-need-fresh-calendars is-latest-calendar-older-than?]]
             [calendario.user-manager :as um]
             [calendario.trip-fetcher :as tf]
             [calendario.calendar :as c]))
-
+; CURRENT_DATE - (? || ' days')::interval
+; > (CURRENT_DATE - ?::interval)
 (defrecord CalendarService [expires-in-hours db http-client]
   component/Lifecycle
   (start [this] this)
@@ -39,6 +40,13 @@
     (when (and expuser siteuser)
      {:siteid siteid :tuid tuid})))
 
+(defn refresh-stale-calendars [{{db :spec} :db :as calendar-service}]
+  (let [users (users-need-fresh-calendars db)
+        stale-users (partial is-latest-calendar-older-than? db)
+        stale (filter #(stale-users (:idsiteuser %) (time-n-hours-ago 20)) users)
+        build (partial build-and-store-calendar-for-user calendar-service)]
+    (map #(build (:idsiteuser %) (:siteid %) (:tuid %)) stale)))
+
 (defn reset-calendar-for-user
   "given a siteid and tuid and new uuid, lookup verify that the
    user exists, then reset their uuid to the uuid input param. "
@@ -53,17 +61,22 @@
   (let [h (if (pos? hours) (-' hours) hours)]
     (.plusSeconds (java.time.Instant/now) (* 60 60 h))))
 
-(defn build-and-store-latest-calendar
+(defn build-and-store-calendar-for-user
   "pull the booked upcoming trips, make calendar events for them,
    and store the calendar text in the database"
-  [{{db :spec} :db http-client :http-client} email uuid]
-  (let [user (user-lookup db email uuid)
-        idsiteuser (:idsiteuser user)
-        cal-text (->> (tf/get-booked-upcoming-trips http-client (:tuid user) (:siteid user))
-                      (tf/get-json-trips http-client (:tuid user) (:siteid user))
+  [{{db :spec} :db http-client :http-client} idsiteuser siteid tuid]
+  (let [cal-text (->> (tf/get-booked-upcoming-trips http-client tuid siteid)
+                      (tf/get-json-trips http-client tuid siteid)
                       c/calendar-from-json-trips)
         _ (add-calendar-for-user! db cal-text idsiteuser (java.time.Instant/now))]
     cal-text))
+
+(defn build-and-store-latest-calendar
+  "pull the booked upcoming trips, make calendar events for them,
+   and store the calendar text in the database"
+  [{{db :spec} :db http-client :http-client :as calendar-service} email uuid]
+  (let [user (user-lookup db email uuid)]
+    (build-and-store-calendar-for-user calendar-service (:idsiteuser user) (:siteid user) (:tuid user))))
 
 (def empty-cal "BEGIN:VCALENDAR
 PRODID:-//Expedia, Inc. //Trip Calendar V0.1//EN

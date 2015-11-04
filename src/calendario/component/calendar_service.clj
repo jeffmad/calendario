@@ -3,13 +3,28 @@
             [calendario.calusers :refer [reset-private-calendar! create-exp-user! create-site-user! latest-calendar-for-user user-lookup add-calendar-for-user! user-lookup users-need-fresh-calendars is-latest-calendar-older-than?]]
             [calendario.user-manager :as um]
             [calendario.trip-fetcher :as tf]
-            [calendario.calendar :as c]))
+            [calendario.calendar :as c]
+            [com.climate.claypoole :as cp]
+            [clojure.tools.logging :refer [error warn debug]]))
 ; CURRENT_DATE - (? || ' days')::interval
 ; > (CURRENT_DATE - ?::interval)
 (defrecord CalendarService [expires-in-hours db http-client]
   component/Lifecycle
-  (start [this] this)
-  (stop [this] this))
+  (start [this]
+    (let [add-net-pool (fn [m] (if (:net-pool m) m (assoc m :net-pool (cp/threadpool 20))))
+          add-cpu-pool (fn [m] (if (:cpu-pool m) m (assoc m :cpu-pool (cp/threadpool (cp/ncpus)))))]
+      (-> this
+          add-net-pool
+          add-cpu-pool)))
+
+  (stop [this]
+    (let [remove-net-pool (fn [m] (if (:net-pool m) (do (cp/shutdown (:net-pool m))
+                                                        (dissoc m :net-pool))))
+          remove-cpu-pool (fn [m] (if (:cpu-pool m) (do (cp/shutdown (:cpu-pool m))
+                                                        (dissoc m :cpu-pool))))]
+      (-> this
+          remove-net-pool
+          remove-cpu-pool))))
 
 (defn calendar-service [options]
   (map->CalendarService options))
@@ -40,12 +55,6 @@
     (when (and expuser siteuser)
      {:siteid siteid :tuid tuid})))
 
-(defn refresh-stale-calendars [{{db :spec} :db :as calendar-service}]
-  (let [users (users-need-fresh-calendars db)
-        stale-users (partial is-latest-calendar-older-than? db)
-        stale (filter #(stale-users (:idsiteuser %) (time-n-hours-ago 20)) users)
-        build (partial build-and-store-calendar-for-user calendar-service)]
-    (map #(build (:idsiteuser %) (:siteid %) (:tuid %)) stale)))
 
 (defn reset-calendar-for-user
   "given a siteid and tuid and new uuid, lookup verify that the
@@ -54,20 +63,21 @@
   (and (um/user-lookup db siteid tuid)
        (= 1 (reset-private-calendar! db siteid tuid uuid))))
 
-(defn time-n-hours-ago
-  "given an intger input representing hours, return the
-   current time GMT minus the input hours"
-  [hours]
-  (let [h (if (pos? hours) (-' hours) hours)]
-    (.plusSeconds (java.time.Instant/now) (* 60 60 h))))
-
+; is it worth it to keep an atom here to prevent generating calendar while it is being generated?
 (defn build-and-store-calendar-for-user
   "pull the booked upcoming trips, make calendar events for them,
    and store the calendar text in the database"
-  [{{db :spec} :db http-client :http-client} idsiteuser siteid tuid]
-  (let [cal-text (->> (tf/get-booked-upcoming-trips http-client tuid siteid)
-                      (tf/get-json-trips http-client tuid siteid)
-                      c/calendar-from-json-trips)
+  [{{db :spec} :db http-client :http-client net-pool :net-pool cpu-pool :cpu-pool} idsiteuser siteid tuid]
+  (let [_ (debug (str "building and storing a cal for tuid " tuid " siteid " siteid))
+        upcoming-trips (tf/get-booked-upcoming-trips http-client tuid siteid)
+        trip-f (partial tf/get-trip-for-user http-client tuid siteid)
+        trip-jsons (cp/upmap net-pool trip-f upcoming-trips)
+        events (cp/upmap cpu-pool c/create-events-for-trip (remove nil? trip-jsons))
+        _ (debug (str "created " (count events) " calendar events for " tuid " siteid " siteid))
+        cal-text (c/calendar-from-events (mapcat seq events))
+        ;cal-text (->> (tf/get-booked-upcoming-trips http-client tuid siteid)
+        ;              (tf/get-json-trips http-client tuid siteid)
+        ;              c/calendar-from-json-trips)
         _ (add-calendar-for-user! db cal-text idsiteuser (java.time.Instant/now))]
     cal-text))
 
@@ -78,12 +88,22 @@
   (let [user (user-lookup db email uuid)]
     (build-and-store-calendar-for-user calendar-service (:idsiteuser user) (:siteid user) (:tuid user))))
 
-(def empty-cal "BEGIN:VCALENDAR
-PRODID:-//Expedia, Inc. //Trip Calendar V0.1//EN
-VERSION:2.0
-METHOD:PUBLISH
-CALSCALE:GREGORIAN
-END:VCALENDAR")
+(defn time-n-hours-ago
+  "given an intger input representing hours, return the
+   current time GMT minus the input hours"
+  [hours]
+  (let [h (if (pos? hours) (-' hours) hours)]
+    (.plusSeconds (java.time.Instant/now) (* 60 60 h))))
+
+(defn refresh-stale-calendars [{{db :spec} :db net-pool :net-pool :as calendar-service}]
+  (let [users (users-need-fresh-calendars db)
+        _ (debug (str "found " (count users) " with recent access"))
+        stale-users-f (partial is-latest-calendar-older-than? db)
+        stales (filter #(stale-users-f (:idsiteuser %) (time-n-hours-ago 20)) users)
+        _ (debug (str (count stales) " users have stale calendars"))
+        build (partial build-and-store-calendar-for-user calendar-service)]
+    (when (seq stales)
+      (doall (cp/upmap net-pool #(build (:idsiteuser %) (:siteid %) (:tuid %)) stales)))))
 
 (defn build-or-get-cached-calendar
   "get the latest calendar for the user. If it is expired, then build and store
@@ -105,5 +125,4 @@ END:VCALENDAR")
         expire-time (time-n-hours-ago (:expires-in-hours calendar-service))
         user (user-lookup db email uuid)]
     (if user
-      (build-or-get-cached-calendar calendar-service email uuid expire-time)
-      empty-cal)))
+      (build-or-get-cached-calendar calendar-service email uuid expire-time))))

@@ -1,30 +1,30 @@
 (ns calendario.component.scheduler
   (:require [com.stuartsierra.component :as component]
-            [overtone.at-at :refer [mk-pool stop-and-reset-pool! show-schedule]]
-            [clojure.tools.logging :refer [log error warn debug]])
-  (​:import​ [java.util.concurrent Executors]))
+            [overtone.at-at :refer [mk-pool stop-and-reset-pool! show-schedule stop interspaced every]]
+            [clojure.tools.logging :refer [error warn debug]]
+            [calendario.component.calendar-service :refer [refresh-stale-calendars]]))
 
-(defrecord Scheduler []
+;(defn say-hello [] (debug (str "Hello, it is " (java.time.Instant/now))))
+
+(defrecord Scheduler [interval calendar-service]
   component/Lifecycle
-  (start [this] this)
-  (stop [this] this))
+  (start [this]
+    (let [pool (fn [m] (if (:pool m) m (assoc m :pool (mk-pool :cpu-count 1))))
+          refresh-stale (partial refresh-stale-calendars calendar-service)
+          job  (fn [m]
+                 (if (:job m)
+                   m
+                   (assoc m :job (interspaced interval refresh-stale (:pool m) :fixed-delay true :initial-delay 5000))))]
+      (-> this
+          pool
+          job)))
 
-(defn scheduler []
-  (->Scheduler))
+  (stop [this]
+    (let [stop-job (fn [m] (if (:job m) (do (stop (:job m))
+                                            (dissoc m :job))))
+          _ (debug "now stopping timer job")]
+      (-> this
+          stop-job))))
 
-;(def p (at/mk-pool :cpu-count 1))
-;(def j (at/every 1000 #(println (str  "Hi " (java.time.Instant/now))) p :fixed-delay true :initial-delay 5000))
-;(at/show-schedule p)
-;(at/stop j)
-
-; stop, kill take job or id pool
-;Returns a scheduled-fn which may be cancelled with cancel.
-;(every 1000 #(println "I am cool!") my-pool :fixed-delay true :initial-delay 2000)
-;(stop-and-reset-pool! my-pool :strategy :kill)
-
-; interspaced
-;(​import​ '[java.util.concurrent Executors])
-;(​def​ processors (​.​availableProcessors (Runtime/getRuntime)))
-;(​defonce​ executor (Executors/newFixedThreadPool processors))
-;(​defn​ submit-task [^Runnable task]
-;  (​.​submit executor task))
+(defn scheduler [options]
+  (map->Scheduler options))

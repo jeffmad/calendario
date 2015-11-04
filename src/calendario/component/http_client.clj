@@ -11,13 +11,14 @@
 (defrecord HttpClient [timeout threads default-per-route socket-timeout conn-timeout user-service-endpoint trip-service-endpoint]
   component/Lifecycle
   (start [this]
-    (if (:conn-mgr this)
-      this
-      (assoc this :conn-mgr (clj-http.conn-mgr/make-reusable-conn-manager (make-config this)))))
+    (if-not (:conn-mgr this)
+      (assoc this :conn-mgr (clj-http.conn-mgr/make-reusable-conn-manager (make-config this)))
+      this))
   (stop [this]
-    (if-let [conn-mgr (:conn-mgr this)]
-      (do (clj-http.conn-mgr/shutdown-manager conn-mgr)
-          (dissoc this :conn-mgr)))))
+    (if (:conn-mgr this)
+      (do (clj-http.conn-mgr/shutdown-manager (:conn-mgr this))
+          (dissoc this :conn-mgr))
+      this)))
 
 (defn http-client [options]
   (map->HttpClient options))

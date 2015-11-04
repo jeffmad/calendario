@@ -66,8 +66,9 @@
 (def valid? (complement expired?))
 
 (defn record-access-if-not-present [db idsiteuser siteid tuid]
-  (if-not (calendar-was-recently-accessed? db siteid tuid)
-    (record-calendar-access-by-user! db idsiteuser (java.time.Instant/now))))
+  (when idsiteuser
+    (if-not (calendar-was-recently-accessed? db siteid tuid)
+      (record-calendar-access-by-user! db idsiteuser (java.time.Instant/now)))))
 
 (defn is-latest-calendar-older-than? [db idsiteuser ts]
   (let [{:keys [createdate]} (first (latest-calendar-created-for-user {:idsiteuser idsiteuser} {:connection db}))]

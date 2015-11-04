@@ -1,5 +1,6 @@
 (ns calendario.calendar
-  (:require [clj-icalendar.core :as ical]))
+  (:require [clj-icalendar.core :as ical]
+            [clojure.tools.logging :refer [error warn debug]]))
 
 (defn package-lob?
   "given a trip and a line of business (LOB) keyword,
@@ -382,6 +383,9 @@
       (flight-standalone-event trip)
       (flight-package-event trip))))
 
+(defn create-events-for-trip [json-trip]
+  (mapcat seq ((juxt flights hotels cars activities) json-trip)))
+
 (defn create-events-from-trips [json-trips]
   (mapcat seq
           (mapcat (juxt flights hotels cars activities)
@@ -434,11 +438,26 @@
     (reduce (fn [c e] (ical/add-event! c e)) cal ical-events)
     cal))
 
+(def empty-cal "BEGIN:VCALENDAR
+  PRODID:-//Expedia, Inc. //Trip Calendar V0.1//EN
+  VERSION:2.0
+  METHOD:PUBLISH
+  CALSCALE:GREGORIAN
+  END:VCALENDAR")
+
 (defn calendar-from-json-trips [json-trips]
   (->> json-trips
        create-events-from-trips
        create-ical
        ical/output-calendar))
+
+(defn calendar-from-events [events]
+  (if (seq events)
+    (->> events
+         create-ical
+         ical/output-calendar)
+    (do  (debug "cannot create calendar with no events")
+         empty-cal)))
 
 #_(defn cal-for [tuid siteid cm]
   (->> (get-booked-upcoming-trips tuid siteid cm)

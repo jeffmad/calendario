@@ -9,7 +9,7 @@ cal."calendars" c
 where s.idsiteuser = :idsiteuser
 and s.idsiteuser = lc.idsiteuser
 and c.idcalendar = lc.idcalendar
-and c.createdate >= date_trunc('month', current_date)
+and c.createdate >= date_trunc('month', current_date - interval '2 days')
 and c.createdate < date_trunc('month', current_date)+'1month'
-and lc.createdate >= date_trunc('month', current_date)
+and lc.createdate >= date_trunc('month', current_date - interval '2 days')
 and lc.createdate < date_trunc('month', current_date)+'1month';

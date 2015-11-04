@@ -16,11 +16,12 @@
    :http-client {:timeout 10
                  :threads 10
                  :default-per-route 4
-                 :socket-timeout 40000
+                 :socket-timeout 60000
                  :conn-timeout 1000
                  :user-service-endpoint "https://userservicev3.integration.karmalab.net:56783"
                  :trip-service-endpoint "http://wwwexpediacom.integration.sb.karmalab.net"}
    :db {:uri "jdbc:postgresql://localhost/caldb"}
+   :scheduler {:interval (* 1000 60 5)}
    :calendar-service {:expires-in-hours 8}})
 
 (def config

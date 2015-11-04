@@ -13,9 +13,11 @@
       (throw (RuntimeException. (str  "could not get trips for user, status=" (:status resp) " tuid: " tuid " siteid: " site-id " response:" resp ))))))
 
 (defn get-booked-upcoming-trips [http-client tuid site-id]
-  (->> (get-trips-for-user http-client tuid site-id)
-      :responseData
-      (into [] (comp (filter #(= (:bookingStatus %) "BOOKED")) (filter #(not= (:timePeriod %) "COMPLETED")) (map #(% :tripNumber))))))
+  (let [trips (->> (get-trips-for-user http-client tuid site-id)
+                   :responseData
+                   (into [] (comp (filter #(= (:bookingStatus %) "BOOKED")) (filter #(not= (:timePeriod %) "COMPLETED")) (map #(% :tripNumber)))))
+        _ (debug (str "for user tuid: " tuid " siteid " site-id " tripcount: " (count trips)))]
+    trips))
 
 ;(def t [{:bookingStatus "BOOKED" :timePeriod "UPCOMING" :tripNumber 1}{:bookingStatus "CANCELLED" :timePeriod "UPCOMING" :tripNumber 2}{:bookingStatus "BOOKED" :timePeriod "COMPLETED" :tripNumber 3} ])
 (defn t-booked-upcoming [trip-summaries]
@@ -30,9 +32,10 @@
 ; java.net.SocketTimeoutException
 (defn get-trip-for-user [{:keys [trip-service-endpoint conn-timeout socket-timeout conn-mgr]} tuid site-id itin-number]
   (let [url (format (str trip-service-endpoint "/api/users/%s/trips/%s?siteid=%s&useCache=true") tuid itin-number site-id)
+        _ (debug (str "getting trip " itin-number " for tuid " tuid " siteid: " site-id))
         resp (client/get url {:throw-exceptions false
                               :conn-timeout conn-timeout
-                              :socket-timeout socket-timeout
+                              ;:socket-timeout socket-timeout
                               :connection-manager conn-mgr })]
     (if (= 200 (:status resp))
       (parse-string (:body resp) true)

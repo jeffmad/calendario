@@ -28,6 +28,7 @@
                  [org.clojure/data.xml "0.0.8"]
                  [overtone/at-at "1.2.0"]
                  [com.climate/claypoole "1.1.0"]
+                 [prismatic/schema "1.0.3"]
                  ]
   :plugins [[lein-environ "1.0.1"]
             [lein-gen "0.2.2"]]

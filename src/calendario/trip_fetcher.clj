@@ -1,11 +1,30 @@
 (ns calendario.trip-fetcher
   (:require [clj-http.client :as client]
             [cheshire.core :refer :all]
-            [clojure.tools.logging :refer [log error warn debug]]))
+            [clojure.tools.logging :refer [error warn debug]]
+            [slingshot.slingshot :refer [try+ throw+]]))
+(defn get-url [url {:keys [conn-timeout socket-timeout conn-mgr]}]
+  (try+
+   (client/get url {:throw-exceptions true
+                    :conn-timeout conn-timeout
+                    :socket-timeout socket-timeout
+                    :connection-manager conn-mgr })
+   (catch java.net.SocketTimeoutException ste
+     (error ste (str "socket timeout reading " url)))
+   (catch java.net.ConnectException ce
+     (error ce (str "connect exception to url " url)))
+   (catch [:status 400] {:keys [request-time headers body]}
+     (warn "400" (str "400 for url " url " time: " request-time " headers:" headers)))
+   (catch [:status 503] {:keys [request-time headers body]}
+     (warn "503" (str "503 for url " url " time: " request-time " headers:" headers)))
+   (catch Object _
+     (error (:throwable &throw-context) "unexpected error")
+     #_(throw+))))
+
 ; https://wwwexpediacom.integration.sb.karmalab.net/api/users/577015/trips?filterBookingStatus=BOOKED&filterTimePeriod=RECENTLY_COMPLETED&filterTimePeriod=UPCOMING&filterTimePeriod=INPROGRESS&getCachedDetails=10
 (defn get-trips-for-user [{:keys [trip-service-endpoint conn-timeout socket-timeout conn-mgr]} tuid site-id]
   (let [url (format (str trip-service-endpoint "/api/users/%s/trips?siteid=%s") tuid site-id)
-        resp (client/get url {:conn-timeout conn-timeout
+        resp (get-url url {:conn-timeout conn-timeout
                               :socket-timeout socket-timeout
                               :connection-manager conn-mgr })]
     (if (= 200 (:status resp))
@@ -23,25 +42,18 @@
 (defn t-booked-upcoming [trip-summaries]
   (into [] (comp (filter #(= (:bookingStatus %) "BOOKED")) (filter #(not= (:timePeriod %) "COMPLETED")) (map #(% :tripNumber))) trip-summaries))
 
-#_(try+
- (client/get url)
- (catch [:status 400] {:keys [request-time headers body]}
-   (log/warn "400" request-time headers))
- (catch [:status 503] {:keys [request-time headers body]}
-   (log/warn "503" request-time headers)))
-; java.net.SocketTimeoutException
 (defn get-trip-for-user [{:keys [trip-service-endpoint conn-timeout socket-timeout conn-mgr]} tuid site-id itin-number]
   (let [url (format (str trip-service-endpoint "/api/users/%s/trips/%s?siteid=%s&useCache=true") tuid itin-number site-id)
         _ (debug (str "getting trip " itin-number " for tuid " tuid " siteid: " site-id))
-        resp (client/get url {:throw-exceptions false
-                              :conn-timeout conn-timeout
-                              ;:socket-timeout socket-timeout
-                              :connection-manager conn-mgr })]
-    (if (= 200 (:status resp))
+        resp (get-url url {
+                       :conn-timeout conn-timeout
+                       :socket-timeout socket-timeout
+                       :connection-manager conn-mgr })
+        _ (debug (str "reading trip " itin-number " took " (:request-time resp)))]
+    (if (and resp (= 200 (:status resp)))
       (parse-string (:body resp) true)
       (do (error (str "error retrieving trip " url " " (with-out-str (clojure.pprint/pprint resp))))
-        nil)
-      #_(throw (RuntimeException. (str  "could not get trip for user, status=" (:status resp) " url was: " url  " response:"  resp ))))))
+        nil))))
 
 (defn get-json-trips [http-client tuid site-id trip-numbers]
   (let [trip-f (partial get-trip-for-user http-client tuid site-id)

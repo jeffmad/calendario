@@ -11,13 +11,13 @@
 ; email siteid / expuserid tpid eapid tuid / uuid now
 (defn cal-mgmt-routes [calendar-service]
   (routes
-   (GET  "/calendar/:siteid/:tuid" [siteid tuid]
+   (GET  "/calendar/:siteid{[0-9]+}/:tuid{[0-9]+}" [siteid tuid]
          (response { :url (cs/get-calendar-url-for-user calendar-service (Integer/parseInt siteid) (Integer/parseInt tuid))}))
    (POST "/user" request
          (if-let [user (cs/make-user calendar-service (:body request))]
            (created (cs/get-calendar-url-for-user calendar-service (:siteid user) (:tuid user)))
            { :status 500 :body {:error true :error-message "User not created. Error occurred."}}))
-   (PUT  "/reset-cal/:siteid/:tuid" [siteid tuid]
+   (PUT  "/reset-cal/:siteid{[0-9]+}/:tuid{[0-9]+}" [siteid tuid]
          (if (cs/reset-calendar-for-user calendar-service (Integer/parseInt siteid) (Integer/parseInt tuid) (java.util.UUID/randomUUID))
            (response {:url (cs/get-calendar-url-for-user calendar-service siteid tuid)})
              { :status 500 :body {:error true :error-message "Calendar not reset. Error occurred."}}))))

@@ -8,6 +8,18 @@
 ;curl -v -k -H "Content-Type: application/json" -X POST -d '{"expuserid": 600000, "email": "kurt@vonnegut.com", "tpid": 1, "eapid": 0, "tuid": 550000, "siteid": 1}' 'http://localhost:3000/api/user'
 ;curl -v -k  -X PUT 'http://localhost:3000/api/reset-cal/1/550000'
 
+
+#_(defn wrap-library-exception
+  [handler]
+  (fn [request]
+    (try
+      (handler request)
+      (catch clojure.lang.ExceptionInfo e
+        (let [cause (:cause (ex-info e))
+              status-code (status-code-for cause)]
+          {:status status-code :body (.getMessage e)})))))
+
+
 ; email siteid / expuserid tpid eapid tuid / uuid now
 (defn cal-mgmt-routes [calendar-service]
   (routes

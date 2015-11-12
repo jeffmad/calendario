@@ -7,7 +7,7 @@ from caluser."expusers" e,
 caluser."siteusers" s,
 latest_cals lc,
 cal."calendars" c
-where e.email = :email
+where e.email = LOWER(:email)
 and s.calid = :calid::uuid
 and s.idsiteuser = lc.idsiteuser
 and c.idcalendar = lc.idcalendar

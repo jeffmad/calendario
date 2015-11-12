@@ -1,2 +1,2 @@
 -- add siteuser
-INSERT INTO caluser."siteusers" (iduser, calid, tpid, eapid, tuid, siteid, createdate) VALUES (:iduser, :calid, :tpid, :eapid, :tuid, :siteid, :createdate)
+INSERT INTO caluser."siteusers" (iduser, calid, tpid, eapid, tuid, siteid, locale, createdate) VALUES (:iduser, :calid, :tpid, :eapid, :tuid, :siteid, :locale, :createdate)

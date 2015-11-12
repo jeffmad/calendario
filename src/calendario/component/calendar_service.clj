@@ -58,7 +58,7 @@
    :tuid s/Int
    :siteid s/Int
    })
-
+#_(defn validate [schema data] (try* (schema/validate schema data)))
 ; this will return nil if all good or something if there is an :error key
 #_(some-> (try (s/validate cs/User { :expuserid 17 :email "a@b.com" :tpid 1 :eapid 0 :tuid 577015 :siteid 1}) (catch clojure.lang.ExceptionInfo e (-> e ex-data :error))) :error)
 #_(try (s/validate cs/User { :expuserid 17 :email "a@b.com" :tpid "1" :eapid 0 :tuid 577015 :siteid 1}) (catch clojure.lang.ExceptionInfo e (-> e ex-data :error)))
@@ -73,8 +73,9 @@
         now (java.time.Instant/now)
         siteid (:siteid m)
         tuid (:tuid m)
+        locale (:locale m)
         expuser (create-exp-user! db (:expuserid m) (:email m) now)
-        siteuser (create-site-user! db (:iduser expuser) (java.util.UUID/randomUUID) (:tpid m) (:eapid m) tuid siteid now)]
+        siteuser (create-site-user! db (:iduser expuser) (java.util.UUID/randomUUID) (:tpid m) (:eapid m) tuid siteid locale now)]
     (when (and expuser siteuser)
      {:siteid siteid :tuid tuid})))
 

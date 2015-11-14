@@ -4,8 +4,6 @@
             [clojure.tools.logging :refer [error warn debug]]
             [calendario.component.calendar-service :refer [refresh-stale-calendars]]))
 
-;(defn say-hello [] (debug (str "Hello, it is " (java.time.Instant/now))))
-
 (defrecord Scheduler [interval calendar-service]
   component/Lifecycle
   (start [this]

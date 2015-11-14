@@ -10,12 +10,12 @@
 ;<?xml version="1.0" encoding="utf-8" standalone="yes"?><listTUIDsForExpAccountResponse success="true" xmlns="urn:com:expedia:www:services:user:messages:v3"><expUser id="301078" emailAddress="jmadynski@expedia.com"/><expUserTUIDMapping tpid="1" tuid="5363093" singleUse="true" updateDate="2014-04-25T09:55:00.000-07:00"/><expUserTUIDMapping tpid="1" tuid="577015" singleUse="false" updateDate="2014-05-30T22:26:00.000-07:00"/><authRealmID>1</authRealmID></listTUIDsForExpAccountResponse>
 
 
-(defn tuid-mapping [t]
+(defn- tuid-mapping [t]
   {:tpid (zx/xml1-> t (zx/attr :tpid))
    :tuid (zx/xml1-> t (zx/attr :tuid))
    :single-use (zx/xml1-> t (zx/attr :singleUse))})
 
-(defn accounts [r]
+(defn- accounts [r]
   (let [x (xml/parse (java.io.StringReader. r))
         z (zip/xml-zip x)]
     (if (= "true" (zx/xml1-> z (zx/attr :success)))
@@ -26,7 +26,8 @@
 
 ;{:expuserid "301078", :email "jmadynski@expedia.com", :tuidmappings [{:tpid "1", :tuid "5363093", :single-use "true"} {:tpid "1", :tuid "577015", :single-use "false"}]}
 ; "https://userservicev3.integration.karmalab.net:56783"
-(defn get-user-by-email [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} email]
+(defn get-user-by-email
+  [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} email]
   (let [url (str user-service-endpoint "/exp-account/tuids")
         resp (client/post url {:body (format exp-account-template email)
                                :content-type :xml
@@ -39,7 +40,7 @@
       (accounts (:body resp))
       nil)))
 
-(defn profile [r]
+(defn- profile [r]
   (let [x (xml/parse (java.io.StringReader. r))
         z (zip/xml-zip x)]
     (if (= "true" (zx/xml1-> z (zx/attr :success)))

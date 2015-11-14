@@ -1,3 +1,51 @@
 (ns calendario.calendar-test
   (:require [clojure.test :refer :all]
             [calendario.calendar :refer :all]))
+
+                                        ; package-hotel?
+                                        ; package-flight?
+                                        ; package-car?
+                                        ; package-activity?
+                                        ; flight?
+                                        ; hotel?
+                                        ; car?
+                                        ; activity?
+                                        ; cruise?
+                                        ; cruise details
+                                        ; create-cruise-event
+                                        ; create-cruise-events
+                                        ; cruise-standalone-event
+                                        ; cruises
+                                        ; activity-location
+                                        ; activity-details
+                                        ; create-activity-event
+                                        ; create-activity-events
+                                        ; activity-standalone-event
+                                        ; activity-package-event
+                                        ; activities
+                                        ; car-location
+                                        ; car-details
+                                        ; create-car-event
+                                        ; create-car-events
+                                        ; car-standalone-event
+                                        ; car-package-event
+                                        ; cars
+                                        ; hotel-details
+                                        ; create-hotel-event
+                                        ; create-hotel-events
+                                        ; hotel-standalone-events
+                                        ; hotel-package-events
+                                        ; hotels
+                                        ; airline-name
+                                        ; flight-details
+                                        ; create-flight-event
+                                        ; create-flight-events
+                                        ; flight-standalone-event
+                                        ; flight-package-event
+                                        ; flights
+                                        ; create-events-for-trip
+                                        ; create-events-from-trips
+                                        ; create-ical-event
+                                        ; create-ical
+                                        ; calendar-from-json-trips
+                                        ; calendar-from-events

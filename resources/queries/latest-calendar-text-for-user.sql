@@ -14,4 +14,5 @@ and c.idcalendar = lc.idcalendar
 and c.createdate >= date_trunc('month', current_date)
 and c.createdate < date_trunc('month', current_date)+'1month'
 and lc.createdate >= date_trunc('month', current_date)
-and lc.createdate < date_trunc('month', current_date)+'1month';
+and lc.createdate < date_trunc('month', current_date)+'1month'
+ORDER BY c.createdate DESC LIMIT 1

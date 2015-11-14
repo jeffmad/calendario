@@ -11,5 +11,5 @@
 (deftest smoke-test
   (testing "index page exists"
     (-> (session handler)
-        (visit "/")
+        (visit "/isworking")
         (has (status? 200) "page exists"))))

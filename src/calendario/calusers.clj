@@ -155,27 +155,34 @@
                     :createdate (java.sql.Timestamp/from now)}
                    {:connection db})))
 
+(defn add-calendar [t-con idcal icaltext idsiteuser now]
+  (try-pgsql
+   (let [now (java.sql.Timestamp/from now)]
+     (add-calendar<! {:idcalendar idcal
+                      :icaltext icaltext
+                      :createdate now}
+                     {:connection t-con})
+     (associate-cal-to-user<! {:idcalendar idcal
+                               :idsiteuser idsiteuser
+                               :createdate now}
+                              {:connection  t-con}))))
+
+(defn next-calendar-pk [db]
+  (-> (try-pgsql (next-calendar-id {} {:connection db}))
+      first
+      :nextval))
+
 ;(java.time.Instant/now)
 (defn add-calendar-for-user!
   "insert 1 row into calendars table and 1 row into calendarsusers table to
    associate the calendar to the user it belongs to. "
   [db icaltext idsiteuser now]
-  (let [now (java.sql.Timestamp/from now)
-        idcal (-> (try-pgsql (next-calendar-id {} {:connection db}))
-                  first
-                  :nextval)]
-    (if idcal
+  (try
+    (if-let [idcal (next-calendar-pk db)]
       (clojure.java.jdbc/with-db-transaction [t-con db]
-        (try-pgsql
-         (add-calendar<! {:idcalendar idcal
-                          :icaltext icaltext
-                          :createdate now}
-                         {:connection t-con})
-         (associate-cal-to-user<! {:idcalendar idcal
-                                   :idsiteuser idsiteuser
-                                   :createdate now}
-                                  {:connection  t-con})))
-      (throw (Exception. (str "could not add calendar for user: " idsiteuser))))))
+        (add-calendar t-con idcal icaltext idsiteuser now)))
+    (catch Exception ex
+      (error ex (str "could not add calendar for user: " idsiteuser)))))
 
 (defn expired?
   "return true if the expire time is less than

@@ -14,9 +14,11 @@
    (catch java.net.ConnectException ce
      (error ce (str "connect exception to url " url)))
    (catch [:status 400] {:keys [request-time headers body]}
-     (warn "400" (str "400 for url " url " time: " request-time " headers:" headers)))
+     (error (str "400 for url " url " time: " request-time " headers:" headers)))
+   (catch [:status 500] {:keys [request-time headers body]}
+     (error (str "500 for url " url " time: " request-time " headers:" headers)))
    (catch [:status 503] {:keys [request-time headers body]}
-     (warn "503" (str "503 for url " url " time: " request-time " headers:" headers)))
+     (error (str "503 for url " url " time: " request-time " headers:" headers)))
    (catch Object _
      (error (:throwable &throw-context) "unexpected error")
      #_(throw+))))

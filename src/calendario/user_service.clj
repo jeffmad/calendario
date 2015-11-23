@@ -3,8 +3,41 @@
             [clojure.tools.logging :refer [log error warn debug]]
             [clojure.data.xml :as xml]
             [clojure.zip :as zip]
-            [clojure.data.zip.xml :as zx]))
+            [clojure.data.zip.xml :as zx]
+            [slingshot.slingshot :refer [try+ throw+]]))
 
+(defn post-url [url {:keys [throw-exceptions
+                            body
+                            content-type
+                            accept
+                            insecure?
+                            conn-timeout
+                            socket-timeout
+                            conn-mgr]} meta-data]
+  (try+
+   (client/post url {:throw-exceptions throw-exceptions
+                     :body body
+                     :content-type content-type
+                     :accept accept
+                     :insecure? insecure?
+                     :conn-timeout conn-timeout
+                     :socket-timeout socket-timeout
+                     :connection-manager conn-mgr })
+   (catch java.net.SocketTimeoutException ste
+     (error ste (str "socket timeout reading " url))
+     (throw+ {:cause :service-unavailable :error {:reason (.getMessage ste)
+                                                  :data meta-data
+                                                  :url url}}
+             "encountered socket timeout"))
+   (catch java.net.ConnectException ce
+     (error ce (str "connect exception to url " url))
+     (throw+ {:cause :service-unavailable :error {:reason (.getMessage ce)
+                                                  :data meta-data
+                                                  :url url}}
+             "encountered connection exception"))
+   (catch Object _
+     (error (:throwable &throw-context) "unexpected error")
+     (throw+))))
 (def exp-account-template "<?xml version=\"1.0\" encoding=\"utf-8\"?><usr:listTUIDsForExpAccountRequest xmlns:usr=\"urn:com:expedia:www:services:user:messages:v3\" siteID=\"1\"><usr:expUser emailAddress=\"%s\" /><usr:messageInfo enableTraceLog=\"false\" clientName=\"localhost\" transactionGUID=\"a2192179-d5b7-4234-918c-8f662aaaf545\"/></usr:listTUIDsForExpAccountRequest>")
 
 ;<?xml version="1.0" encoding="utf-8" standalone="yes"?><listTUIDsForExpAccountResponse success="true" xmlns="urn:com:expedia:www:services:user:messages:v3"><expUser id="301078" emailAddress="jmadynski@expedia.com"/><expUserTUIDMapping tpid="1" tuid="5363093" singleUse="true" updateDate="2014-04-25T09:55:00.000-07:00"/><expUserTUIDMapping tpid="1" tuid="577015" singleUse="false" updateDate="2014-05-30T22:26:00.000-07:00"/><authRealmID>1</authRealmID></listTUIDsForExpAccountResponse>
@@ -29,13 +62,14 @@
 (defn get-user-by-email
   [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} email]
   (let [url (str user-service-endpoint "/exp-account/tuids")
-        resp (client/post url {:body (format exp-account-template email)
-                               :content-type :xml
-                               :accept :xml
-                               :insecure? true
-                               :conn-timeout conn-timeout
-                               :socket-timeout socket-timeout
-                               :connection-manager conn-mgr })]
+        resp (post-url url {:throw-exceptions true
+                            :body (format exp-account-template email)
+                            :content-type :xml
+                            :accept :xml
+                            :insecure? true
+                            :conn-timeout conn-timeout
+                            :socket-timeout socket-timeout
+                            :connection-manager conn-mgr } {:data {:email email}})]
     (if (= 200 (:status resp))
       (accounts (:body resp))
       nil)))
@@ -56,13 +90,15 @@
 ;"https://userservicev3.integration.karmalab.net:56783"
 (defn get-user-profile [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} site-id tuid]
   (let [url (str user-service-endpoint "/profile/get")
-        resp (client/post url {:body (format exp-profile-template site-id tuid tuid)
+        resp (post-url url {:throw-exceptions true
+                               :body (format exp-profile-template site-id tuid tuid)
                                :content-type :xml
                                :accept :xml
                                :insecure? true
                                :conn-timeout conn-timeout
                                :socket-timeout socket-timeout
-                               :connection-manager conn-mgr })]
+                               :connection-manager conn-mgr } {:data {:siteid site-id
+                                                                      :tuid tuid}})]
     (if (= 200 (:status resp))
       (profile (:body resp))
       nil)))

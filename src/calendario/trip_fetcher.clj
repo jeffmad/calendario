@@ -3,6 +3,7 @@
             [cheshire.core :refer :all]
             [clojure.tools.logging :refer [error warn debug]]
             [slingshot.slingshot :refer [try+ throw+]]))
+
 (defn get-url [url {:keys [conn-timeout socket-timeout conn-mgr]}]
   (try+
    (client/get url {:throw-exceptions true
@@ -31,22 +32,37 @@
                               :connection-manager conn-mgr })]
     (if (= 200 (:status resp))
       (parse-string  (:body resp) true)
-      (throw (RuntimeException. (str  "could not get trips for user, status=" (:status resp) " tuid: " tuid " siteid: " site-id " response:" resp ))))))
+      (throw (ex-info (str  "could not get trips for user, status="
+                            (:status resp) " tuid: " tuid
+                            " siteid: " site-id " response:" resp )
+                      {:cause :service-unavailable
+                       :error "did not get status 200 retrieving trips" })))))
 
 (defn get-booked-upcoming-trips [http-client tuid site-id]
   (let [trips (->> (get-trips-for-user http-client tuid site-id)
                    :responseData
-                   (into [] (comp (filter #(= (:bookingStatus %) "BOOKED")) (filter #(not= (:timePeriod %) "COMPLETED")) (map #(% :tripNumber)))))
-        _ (debug (str "for user tuid: " tuid " siteid " site-id " tripcount: " (count trips)))]
+                   (into [] (comp (filter #(= (:bookingStatus %) "BOOKED"))
+                                  (filter #(not= (:timePeriod %) "COMPLETED"))
+                                  (map #(% :tripNumber)))))
+        _ (debug (str "for user tuid: " tuid
+                      " siteid " site-id
+                      " tripcount: " (count trips)))]
     trips))
 
 ;(def t [{:bookingStatus "BOOKED" :timePeriod "UPCOMING" :tripNumber 1}{:bookingStatus "CANCELLED" :timePeriod "UPCOMING" :tripNumber 2}{:bookingStatus "BOOKED" :timePeriod "COMPLETED" :tripNumber 3} ])
-(defn t-booked-upcoming [trip-summaries]
+#_(defn t-booked-upcoming [trip-summaries]
   (into [] (comp (filter #(= (:bookingStatus %) "BOOKED")) (filter #(not= (:timePeriod %) "COMPLETED")) (map #(% :tripNumber))) trip-summaries))
 
-(defn get-trip-for-user [{:keys [trip-service-endpoint conn-timeout socket-timeout conn-mgr]} tuid site-id itin-number]
-  (let [url (format (str trip-service-endpoint "/api/users/%s/trips/%s?siteid=%s&useCache=true") tuid itin-number site-id)
-        _ (debug (str "getting trip " itin-number " for tuid " tuid " siteid: " site-id))
+(defn get-trip-for-user [{:keys [trip-service-endpoint
+                                 conn-timeout
+                                 socket-timeout
+                                 conn-mgr]} tuid site-id itin-number]
+  (let [url (format (str trip-service-endpoint
+                         "/api/users/%s/trips/%s?siteid=%s&useCache=true")
+                    tuid itin-number site-id)
+        _ (debug (str "getting trip " itin-number
+                      " for tuid " tuid
+                      " siteid: " site-id))
         resp (get-url url {
                        :conn-timeout conn-timeout
                        :socket-timeout socket-timeout
@@ -54,11 +70,19 @@
         _ (debug (str "reading trip " itin-number " took " (:request-time resp)))]
     (if (and resp (= 200 (:status resp)))
       (parse-string (:body resp) true)
-      (do (error (str "error retrieving trip " url " " (with-out-str (clojure.pprint/pprint resp))))
+      (do (error (str "error retrieving trip "
+                      url " "
+                      (with-out-str (clojure.pprint/pprint resp))))
         nil))))
 
-(defn get-json-trips [http-client tuid site-id trip-numbers]
+(defn get-json-trips
+  "given a user with siteid tuid and a list of trip numbers, retrieve the trip
+   json for each trip. return a list of trip jsons"
+  [http-client tuid site-id trip-numbers]
   (let [trip-f (partial get-trip-for-user http-client tuid site-id)
         json-trips (remove nil?  (map trip-f trip-numbers))
-        _ (debug "For user " tuid " site: " site-id " upcoming trips:" (count trip-numbers) " successfully read: " (count json-trips))]
+        _ (debug "For user " tuid
+                 " site: " site-id
+                 " upcoming trips:" (count trip-numbers)
+                 " successfully read: " (count json-trips))]
     json-trips))

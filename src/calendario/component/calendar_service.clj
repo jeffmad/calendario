@@ -7,6 +7,7 @@
             [com.climate.claypoole :as cp]
             [clojure.tools.logging :refer [error warn debug]]
             [schema.core :as s]))
+
 ; CURRENT_DATE - (? || ' days')::interval
 ; > (CURRENT_DATE - ?::interval)
 (defrecord CalendarService [expires-in-hours db http-client]
@@ -46,7 +47,8 @@
               (um/create-user db http-client siteid tuid))
         email (get-in u [:expuser :email])
         uuid (:calid (first (filter #(= tuid (:tuid %)) (:siteusers u))))]
-    (str "/calendar/ical/" (java.net.URLEncoder/encode email) "/private-" uuid "/trips.ics")))
+    (str "/calendar/ical/"
+         (java.net.URLEncoder/encode email) "/private-" uuid "/trips.ics")))
 
 ;curl -v -k -H "Content-Type: application/json" -X POST -d '{"expuserid": 600000, "email": "kurt@vonnegut.com", "tpid": 1, "eapid": 0, "tuid": 550000, "siteid": 1}' 'http://localhost:3000/api/user'
 
@@ -58,17 +60,22 @@
    :tuid s/Int
    :siteid s/Int
    })
+#_(defmacro try* [& body] `(try (do ~@body) (catch Exception e# e#)))
 #_(defn validate [schema data] (try* (schema/validate schema data)))
 ; this will return nil if all good or something if there is an :error key
-#_(some-> (try (s/validate cs/User { :expuserid 17 :email "a@b.com" :tpid 1 :eapid 0 :tuid 577015 :siteid 1}) (catch clojure.lang.ExceptionInfo e (-> e ex-data :error))) :error)
-#_(try (s/validate cs/User { :expuserid 17 :email "a@b.com" :tpid "1" :eapid 0 :tuid 577015 :siteid 1}) (catch clojure.lang.ExceptionInfo e (-> e ex-data :error)))
 
-
-(defn make-user
-  "take input json and create a user in the database.
-   normal users will not use this. It is a utility for testing
-   or manual."
-  [{{db :spec} :db http-client :http-client} m]
+; { :expuserid 17 :email "a@b.com" :tpid 1 :eapid 0 :tuid 577015 :siteid 1}
+(defn validate-user
+  "take a user map as input, validate it against the schema, and return nil
+   if it is valid or return the error if it is not valid"
+  [d]
+  (if-let [error (some->
+                  (try (s/validate User d)
+                       (catch clojure.lang.ExceptionInfo e
+                         (-> e ex-data))) :error)]
+    error
+    nil))
+(defn- create-user [{{db :spec} :db http-client :http-client} m]
   (let [_ (debug "creating a user: " m)
         now (java.time.Instant/now)
         siteid (:siteid m)
@@ -77,8 +84,19 @@
         expuser (cu/create-exp-user! db (:expuserid m) (:email m) now)
         siteuser (cu/create-site-user! db (:iduser expuser) (java.util.UUID/randomUUID) (:tpid m) (:eapid m) tuid siteid locale now)]
     (when (and expuser siteuser)
-     {:siteid siteid :tuid tuid})))
+      {:siteid siteid :tuid tuid})))
 
+(defn make-user
+  "take input json and create a user in the database.
+   normal users will not use this. It is a utility for testing
+   or manual."
+  [{{db :spec} :db http-client :http-client :as calendar-service} m]
+  (if-let [error (validate-user m)]
+    (throw (ex-info
+            "cannot create user, validation failed"
+            {:cause :malformed-request
+             :error error}))
+    (create-user calendar-service m)))
 
 (defn reset-calendar-for-user
   "given a siteid and tuid and new uuid, lookup verify that the
@@ -112,19 +130,23 @@
   (let [user (cu/user-lookup db email uuid)]
     (build-and-store-calendar-for-user calendar-service (:idsiteuser user) (:siteid user) (:tuid user))))
 
-(defn time-n-hours-ago
+(defn time-n-hours-before
   "given an intger input representing hours, return the
    current time GMT minus the input hours"
-  [hours]
+  [start-time hours]
   (let [h (if (pos? hours) (-' hours) hours)]
-    (.plusSeconds (java.time.Instant/now) (* 60 60 h))))
+    (.plusSeconds start-time (* 60 60 h))))
 
-(defn refresh-stale-calendars [{{db :spec} :db net-pool :net-pool :as calendar-service}]
+(defn refresh-stale-calendars
+  "method to run from a periodic timer to refresh calendars that need a refresh.
+   It needs a try catch to make sure nothing bad happens with the timer, and if
+   something does, the error gets logged."
+  [{{db :spec} :db net-pool :net-pool :as calendar-service}]
   (try
     (let [users (cu/users-need-fresh-calendars db)
           _ (debug (str "found " (count users) " with recent access"))
           stale-users-f (partial cu/is-latest-calendar-older-than? db)
-          stales (set (filter #(stale-users-f (:idsiteuser %) (time-n-hours-ago 20)) users))
+          stales (set (filter #(stale-users-f (:idsiteuser %) (time-n-hours-before (java.time.Instant/now) 20)) users))
           _ (debug (str (count stales) " users have stale calendars"))
           build (partial build-and-store-calendar-for-user calendar-service)]
       (when (seq stales)
@@ -152,7 +174,7 @@
    calendar "
   [{{db :spec} :db http-client :http-client :as calendar-service} email token]
   (let [uuid (second (re-matches #"^private-([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})" token))
-        expire-time (time-n-hours-ago (:expires-in-hours calendar-service))
+        expire-time (time-n-hours-before (java.time.Instant/now) (:expires-in-hours calendar-service))
         user (cu/user-lookup db email uuid)]
     (if user
       (build-or-get-cached-calendar calendar-service email uuid expire-time))))

@@ -11,7 +11,9 @@
         locale (:locale up)
         user-accounts (us/get-user-by-email http-client email)
         now (java.time.Instant/now)
-        expuser (cu/create-exp-user! db (Integer/parseInt (:expuserid user-accounts)) email now)
+        expuser (cu/create-exp-user!
+                 db
+                 (Integer/parseInt (:expuserid user-accounts)) email now)
         iduser (:iduser expuser)
         siteusers (mapv #(add-siteuser! db iduser (Integer/parseInt (:tpid %)) (Integer/parseInt (:tuid %)) siteid locale now) (:tuidmappings user-accounts))]
     { :expuser expuser
@@ -20,7 +22,5 @@
 (defn user-lookup [db siteid tuid]
   (if-let [su (cu/find-siteuser db siteid tuid)]
     (let [expuser (cu/find-expuser-by-siteid-tuid db siteid tuid)]
-      {
-       :expuser expuser
-       :siteusers (cu/find-siteusers-by-iduser db (:iduser expuser))
-       })))
+      {:expuser expuser
+       :siteusers (cu/find-siteusers-by-iduser db (:iduser expuser))})))

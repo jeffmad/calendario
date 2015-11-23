@@ -1,24 +1,10 @@
 (ns calendario.calusers
-  (:require [yesql.core :refer [defquery]]
+  (:require [yesql.core :refer [defqueries]]
             [clojure.tools.logging :refer [error warn debug]])
   (:import (org.postgresql.util PSQLException)
            (java.sql SQLException)))
 
-(defquery reset-calendar! "queries/reset-calendar.sql")
-(defquery add-calendar<! "queries/add-calendar.sql")
-(defquery next-calendar-id "queries/next-calendar-id.sql")
-(defquery associate-cal-to-user<! "queries/assoc-cal-to-user.sql")
-(defquery latest-calendar-text-for-user "queries/latest-calendar-text-for-user.sql")
-(defquery latest-calendar-created-for-user "queries/latest-calendar-createdate-for-user.sql")
-(defquery add-expuser<! "queries/add-expuser.sql")
-(defquery add-siteuser<! "queries/add-siteuser.sql")
-(defquery expuser-by-siteid-tuid "queries/expuser-by-siteid-tuid.sql")
-(defquery siteusers-by-iduser "queries/siteusers-by-iduser.sql")
-(defquery siteuser-by-siteid-tuid "queries/siteuser-by-siteid-tuid.sql")
-(defquery check-user-exists "queries/check-user-exists.sql")
-(defquery calendar-accessed-recently "queries/check-calendar-accessed.sql")
-(defquery record-calendar-access<! "queries/record-calendar-access.sql")
-(defquery find-active-users-with-expiring-calendars "queries/calendars-that-will-expire.sql")
+(defqueries "queries/calendar-queries.sql")
 ;
 ; calendars: idcalendar iduser icaltext createdate
 ; calendarsusers idcalendar iduser createdate
@@ -32,17 +18,65 @@
   (let [_ (error exception "Exception during database call")
         message (.getMessage exception)
         not-null #"null value in column \"(\w+)\" violates not-null constraint"
-        positive-page-count #"new row for relation \"books\" violates check constraint \"positive_page_count\""]
+        db-timeout #"Timeout after \d+ms of waiting for a connection."
+        syntax-error #"syntax error at or near"
+        duplicate-key #"duplicate key value violates unique constraint"
+        foreign-key-constraint #"insert or update on table \"\w+\" violates foreign key constraint"
+        non-null-constraint #"null value in column \"\w+\" violates not-null constraint"
+        wrong-data-type #"cannot cast type \w+ to \w+"
+        table-or-column-does-not-exist #"(?:relation|column) \"\w+\" (?:of relation )?does not exist"
+        type-mismatch #"column \"\w+\" is of type \w+ but expression is of type"
+        db-connection #"Connection to \w+:\d+ refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections."]
+    (when (re-find db-connection message)
+      (throw
+       (ex-info
+        "Unable to connect to database."
+        {:cause :service-unavailable})))
+    (when (re-find type-mismatch message)
+      (throw
+       (ex-info
+        "type mismatch in statement. you need to rewrite or cast the expression"
+        {:cause :service-unavailable})))
+    (when (re-find table-or-column-does-not-exist message)
+      (throw
+       (ex-info
+        "table or column does not exist"
+        {:cause :service-unavailable})))
+    (when (re-find wrong-data-type message)
+      (throw
+       (ex-info
+        "argument is not correct type, cannot cast"
+        {:cause :service-unavailable})))
+    (when (re-find non-null-constraint message)
+      (throw
+       (ex-info
+        "Non null constraint violation"
+        {:cause :service-unavailable})))
+    (when (re-find foreign-key-constraint message)
+      (throw
+       (ex-info
+        "Foreign key constraint violation"
+        {:cause :service-unavailable})))
+    (when (re-find db-timeout message)
+      (throw
+       (ex-info
+        "Error: Timed out waiting for a database connection"
+        {:cause :service-unavailable})))
     (when-let [[_ field] (re-find not-null message)]
       (throw
        (ex-info
         (format "%s field cannot be blank" field)
-        {})))
-    (when (re-find positive-page-count message)
+        {:cause :service-unavailable})))
+    (when (re-find duplicate-key message)
       (throw
        (ex-info
-        "Books must have a positive page count"
-        {})))
+        "duplicate key value violates unique key constraint"
+        {:cause :resource-exists})))
+    (when (re-find syntax-error message)
+      (throw
+       (ex-info
+        "sql syntax error"
+        {:cause :service-unavailable})))
     (throw exception)))
 
 (defmacro try-pgsql
@@ -185,10 +219,10 @@
       (error ex (str "could not add calendar for user: " idsiteuser)))))
 
 (defn expired?
-  "return true if the expire time is less than
+  "return true if the expire time is greater than
    the create time. "
   [expire-time create-time]
-  (neg? (compare expire-time create-time)))
+  (pos? (compare expire-time create-time)))
 
 (def valid? (complement expired?))
 

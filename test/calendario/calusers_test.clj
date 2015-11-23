@@ -72,13 +72,13 @@
 
 (deftest expired?-test
   (testing "method to check if calendar is expired"
-    (is (= false (expired? (java.time.Instant/now) (.plusSeconds (java.time.Instant/now) (* 60 60 -24)))))
-    (is (= true (expired? (.plusSeconds (java.time.Instant/now) (* 60 60 -24)) (java.time.Instant/now))))))
+    (is (= true (expired? (java.time.Instant/now) (.plusSeconds (java.time.Instant/now) (* 60 60 -24)))))
+    (is (= false (expired? (.plusSeconds (java.time.Instant/now) (* 60 60 -24)) (java.time.Instant/now))))))
 
 (deftest valid?-test
   (testing "method to check if calendar is still valid"
-    (is (= false (valid? (.plusSeconds (java.time.Instant/now) (* 60 60 -24)) (java.time.Instant/now))))
-    (is (= true (valid? (java.time.Instant/now) (.plusSeconds (java.time.Instant/now) (* 60 60 -24)))))))
+    (is (= true (valid? (.plusSeconds (java.time.Instant/now) (* 60 60 -24)) (java.time.Instant/now))))
+    (is (= false (valid? (java.time.Instant/now) (.plusSeconds (java.time.Instant/now) (* 60 60 -24)))))))
 
 (deftest record-access-test
   (testing "verify that a row is inserted to record that user accessed calendar"
@@ -104,8 +104,8 @@
                   record-calendar-access<! (fn [p c] nil)
                   check-user-exists (fn [p c] u) ]
       (is (= "BEGIN:VCALENDAR\nPRODID:-//Expedia\\, Inc. //Trip Calendar V0.1//EN\nVERSION:2.0\nMETHOD:PUBLISH\nCALSCALE:GREGORIAN\nEND:VCALENDAR\n"
-             (latest-calendar-for-user {:db "yes"} "a@b.com" "DEADBEEF" (java.time.Instant/now))))
-      (is (= :expired (latest-calendar-for-user {:db "yes"} "a@b.com" "DEADBEEF" (.toInstant #inst "2015-11-10T16:59:58.147000000-00:00") )))))))
+             (latest-calendar-for-user {:db "yes"} "a@b.com" "DEADBEEF" (.toInstant #inst "2015-11-10T16:59:58.147000000-00:00"))))
+      (is (= :expired (latest-calendar-for-user {:db "yes"} "a@b.com" "DEADBEEF" (java.time.Instant/now))))))))
 
 (deftest reset-private-calendar-test
   (testing "able to assign new uuid to user"

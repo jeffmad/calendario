@@ -383,10 +383,13 @@
       (flight-standalone-event trip)
       (flight-package-event trip))))
 
-(defn create-events-for-trip [json-trip]
+(defn create-events-for-trip
+  "given a json trip, extract the events for each line of business.
+   cruise is not included because the start date is in the wrong format"
+  [json-trip]
   (mapcat seq ((juxt flights hotels cars activities) json-trip)))
 
-(defn create-events-from-trips [json-trips]
+#_(defn create-events-from-trips [json-trips]
   (mapcat seq
           (mapcat (juxt flights hotels cars activities)
                   json-trips)))
@@ -415,15 +418,53 @@
         url (:url e)
         location (:location e)]
     (condp = (:event-type e)
-      :flight  (ical/create-event start end title  :unique-id unique-id :description desc :url url :location location :organizer url)
-      :hotel-checkin  (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location :organizer url)
-      :hotel-checkout  (ical/create-event-no-duration end title :unique-id unique-id :description desc :url url :location location :organizer url)
-      :car-pickup (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location :organizer url)
-      :car-dropoff (ical/create-event-no-duration end title  :unique-id unique-id :description desc :url url :location location :organizer url)
-      :activity-start  (ical/create-event-no-duration start title :unique-id unique-id :description desc :url url :location location :organizer url)
-      :activity-end  (ical/create-event-no-duration end title :unique-id unique-id :description desc :url url :location location :organizer url)
-      :cruise  (ical/create-event start end title  :unique-id unique-id :description desc :url url :location location :organizer url))))
-
+      :flight  (ical/create-event start end title
+                                  :unique-id unique-id
+                                  :description desc
+                                  :url url
+                                  :location location
+                                  :organizer url)
+      :hotel-checkin  (ical/create-event-no-duration start title
+                                                     :unique-id unique-id
+                                                     :description desc :url url
+                                                     :location location
+                                                     :organizer url)
+      :hotel-checkout  (ical/create-event-no-duration end title
+                                                      :unique-id unique-id
+                                                      :description desc
+                                                      :url url
+                                                      :location location
+                                                      :organizer url)
+      :car-pickup (ical/create-event-no-duration start title
+                                                 :unique-id unique-id
+                                                 :description desc
+                                                 :url url
+                                                 :location location
+                                                 :organizer url)
+      :car-dropoff (ical/create-event-no-duration end title
+                                                  :unique-id unique-id
+                                                  :description desc
+                                                  :url url
+                                                  :location location
+                                                  :organizer url)
+      :activity-start  (ical/create-event-no-duration start title
+                                                      :unique-id unique-id
+                                                      :description desc
+                                                      :url url
+                                                      :location location
+                                                      :organizer url)
+      :activity-end  (ical/create-event-no-duration end title
+                                                    :unique-id unique-id
+                                                    :description desc
+                                                    :url url
+                                                    :location location
+                                                    :organizer url)
+      :cruise  (ical/create-event start end title
+                                  :unique-id unique-id
+                                  :description desc
+                                  :url url
+                                  :location location
+                                  :organizer url))))
 
 (defn create-ical
   "create an ical object given a collection of events.
@@ -445,7 +486,7 @@
   CALSCALE:GREGORIAN
   END:VCALENDAR")
 
-(defn calendar-from-json-trips [json-trips]
+#_(defn calendar-from-json-trips [json-trips]
   (->> json-trips
        create-events-from-trips
        create-ical

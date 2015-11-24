@@ -2,8 +2,9 @@
   (:require [compojure.core :refer :all]
             [clojure.java.io :as io]
             [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
-            [ring.util.response :refer [response created header content-type]]
+            [ring.util.response :refer [response status created header content-type]]
             [calendario.component.calendar-service :as cs]
+            [cheshire.core :refer [generate-string]]
             [clojure.tools.logging :refer [error warn debug]]))
 
 ;curl -v -k -H "Content-Type: application/json" -X POST -d '{"expuserid": 600000, "email": "kurt@vonnegut.com", "tpid": 1, "eapid": 0, "tuid": 550000, "siteid": 1}' 'http://localhost:3000/api/user'
@@ -87,4 +88,7 @@
                           email))
             (let [cause (:cause (ex-data e))
                   status-code (status-code-for cause)]
-              {:status status-code :body {:error true :error-message (.getMessage e)}}))))))
+              (-> (response (generate-string
+                             {:error true :error-message (.getMessage e)}))
+                  (content-type "application/json; charset=utf-8")
+                  (status status-code))))))))

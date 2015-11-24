@@ -95,7 +95,7 @@
     (throw (ex-info
             "cannot create user, validation failed"
             {:cause :malformed-request
-             :error error}))
+             :error (str error)}))
     (create-user calendar-service m)))
 
 (defn reset-calendar-for-user

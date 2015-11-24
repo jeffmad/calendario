@@ -73,3 +73,9 @@ select s.iduser, s.idsiteuser, s.tuid, s.tpid, s.eapid, s.siteid, s.calid, s.loc
 -- name: siteusers-by-iduser
 -- return all siteusers by iduser
 select s.iduser, s.idsiteuser, s.tuid, s.tpid, s.eapid, s.siteid, s.calid, s.locale, s.createdate from caluser."siteusers" s where s.iduser = :iduser
+-- name: get-lock
+-- more than one instance of calendario can run, but only one should refresh calendars. In order to limit access, each node must first grab the advisory lock
+select pg_try_advisory_lock(1)
+-- name: release-lock
+-- let go of the advisory lock after the job is finished
+select pg_advisory_unlock(1)

@@ -13,6 +13,7 @@
                  :conn-timeout (some-> env :http-client-connection-timeout Integer.)
                  :user-service-endpoint (some-> env :user-service-endpoint)
                  :trip-service-endpoint (some-> env :trip-service-endpoint)}
-   :db   {:uri  (some-> env :database-url)}
+   :db   {:uri  (some-> env :database-url)
+          :conn-timeout (some-> env :db-conn-timeout)}
    :calendar-service {:expires-in-hours (some-> env :expires-in-hours)}
   })

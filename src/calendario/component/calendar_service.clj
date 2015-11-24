@@ -143,19 +143,21 @@
    something does, the error gets logged."
   [{{db :spec} :db net-pool :net-pool :as calendar-service}]
   (try
-    (let [users (cu/users-need-fresh-calendars db)
-          _ (debug (str "found " (count users) " with recent access"))
-          stale-users-f (partial cu/is-latest-calendar-older-than? db)
-          stales (set (filter #(stale-users-f (:idsiteuser %) (time-n-hours-before (java.time.Instant/now) 20)) users))
-          _ (debug (str (count stales) " users have stale calendars"))
-          build (partial build-and-store-calendar-for-user calendar-service)]
-      (when (seq stales)
-        (do
-          (debug "now beginning preemptive update of stale calendars.")
-          (doall (cp/upmap net-pool #(build (:idsiteuser %) (:siteid %) (:tuid %)) stales))
-          (debug "finished preemptively updating stale calendars."))))
+    (when (cu/get-advisory-lock db)
+      (let [users (cu/users-need-fresh-calendars db)
+            _ (debug (str "found " (count users) " with recent access"))
+            stale-users-f (partial cu/is-latest-calendar-older-than? db)
+            stales (set (filter #(stale-users-f (:idsiteuser %) (time-n-hours-before (java.time.Instant/now) 20)) users))
+            _ (debug (str (count stales) " users have stale calendars"))
+            build (partial build-and-store-calendar-for-user calendar-service)]
+        (when (seq stales)
+          (do
+            (debug "now beginning preemptive update of stale calendars.")
+            (doall (cp/upmap net-pool #(build (:idsiteuser %) (:siteid %) (:tuid %)) stales))
+            (debug "finished preemptively updating stale calendars.")))))
     (catch Exception ex
-      (error ex "caught exception while refreshing stale calendars"))))
+      (error ex "caught exception while refreshing stale calendars"))
+    (finally (cu/release-advisory-lock db))))
 
 (defn build-or-get-cached-calendar
   "get the latest calendar for the user. If it is expired, then build and store

@@ -278,3 +278,15 @@
                        :siteid siteid
                        :tuid tuid}
                       {:connection db}))))
+
+(defn get-advisory-lock? [db]
+  (try-pgsql
+   (-> (get-lock {} {:connection db})
+       first
+       :pg_try_advisory_lock)))
+
+(defn release-advisory-lock [db]
+  (try-pgsql
+   (->  (release-lock {} {:connection db})
+        first
+        :pg_advisory_unlock)))

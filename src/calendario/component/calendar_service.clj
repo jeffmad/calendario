@@ -143,7 +143,7 @@
    something does, the error gets logged."
   [{{db :spec} :db net-pool :net-pool :as calendar-service}]
   (try
-    (when (cu/get-advisory-lock db)
+    (when (cu/get-advisory-lock? db)
       (let [users (cu/users-need-fresh-calendars db)
             _ (debug (str "found " (count users) " with recent access"))
             stale-users-f (partial cu/is-latest-calendar-older-than? db)

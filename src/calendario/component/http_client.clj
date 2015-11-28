@@ -8,11 +8,18 @@
    :default-per-route (or default-per-route 5)
    :insecure? true})
 
-(defrecord HttpClient [timeout threads default-per-route socket-timeout conn-timeout user-service-endpoint trip-service-endpoint]
+(defrecord HttpClient [timeout
+                       threads
+                       default-per-route
+                       socket-timeout
+                       conn-timeout
+                       user-service-endpoint
+                       trip-service-endpoint]
   component/Lifecycle
   (start [this]
     (if-not (:conn-mgr this)
-      (assoc this :conn-mgr (clj-http.conn-mgr/make-reusable-conn-manager (make-config this)))
+      (assoc this :conn-mgr
+             (clj-http.conn-mgr/make-reusable-conn-manager (make-config this)))
       this))
   (stop [this]
     (if (:conn-mgr this)

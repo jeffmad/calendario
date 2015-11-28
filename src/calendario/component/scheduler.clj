@@ -15,7 +15,11 @@
           job  (fn [m]
                  (if (:job m)
                    m
-                   (assoc m :job (interspaced interval refresh-stale (:pool m) :fixed-delay true :initial-delay 5000))))]
+                   (assoc m :job (interspaced interval
+                                              refresh-stale
+                                              (:pool m)
+                                              :fixed-delay true
+                                              :initial-delay 5000))))]
       (-> this
           pool
           job)))

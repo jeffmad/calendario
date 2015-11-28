@@ -41,7 +41,7 @@
                                    :socket-timeout 10
                                 :conn-mgr true} 1 577015)))))
   (testing "retrieve user profile but exception occurs"
-    (with-redefs [post-url (fn [url opts meta-data] (throw (ex-info "could not connect to user service" {:cause :service-unavailable :error {:reason (.getMessage ce)
+    (with-redefs [post-url (fn [url opts meta-data] (throw (ex-info "could not connect to user service" {:cause :service-unavailable :error {:reason "something bad happened"
                                                                                                                                              :data meta-data
                                                                                                                                              :url url}})))]
       (is (thrown? clojure.lang.ExceptionInfo

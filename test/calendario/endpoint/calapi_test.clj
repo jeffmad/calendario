@@ -20,12 +20,6 @@
           (has (status? 200) "page exists")))))
 
 ;curl -v -k -H "Content-Type: application/json" -X POST -d '{"expuserid": 600000, "email": "kurt@vonnegut.com", "tpid": 1, "eapid": 0, "tuid": 550000, "siteid": 1}' 'http://localhost:3000/api/user'
-(deftest test-json-body
-  (testing "json body"
-    (let [request  {:headers {"content-type" "application/json; charset=UTF-8"}
-                    :body (string-input-stream "{\"expuserid\": 600000, \"email\": \"kurt@vonnegut.com\", \"tpid\": 1, \"eapid\": 0, \"tuid\": 550000, \"siteid\": 1}")}
-          response (handler request)]
-      (is (= {"foo" "bar"} (:body response))))))
 
 (deftest calendar-for-user-test
   (testing "do a get for a user's calendar, receive the url in json."

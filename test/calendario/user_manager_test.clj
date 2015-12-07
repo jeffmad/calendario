@@ -2,8 +2,6 @@
   (:require [clojure.test :refer :all]
             [calendario.user-manager :refer :all]))
 
-
-
                                         ; add-siteuser!
                                         ; create-user
                                         ; user-lookup
@@ -13,10 +11,10 @@
 (deftest create-user-test
   (testing "create a new user"
     (with-redefs [calendario.user-service/get-user-profile
-                  (fn [http-client siteid tuid] {:email "jeffmad@gmail.com"
+                  (fn [http-client metric-registry siteid tuid] {:email "jeffmad@gmail.com"
                                                  :locale "en_US"})
                   calendario.user-service/get-user-by-email
-                  (fn [http-client email] {:expuserid "301078"
+                  (fn [http-client metric-registry email] {:expuserid "301078"
                                            :email "jmadynski@expedia.com"
                                            :tuidmappings [{:tpid "1"
                                                            :tuid "5363093"
@@ -61,7 +59,7 @@
                            :calid #uuid "6eb7f25d-4bbf-4753-aae2-72635fcd959b"
                            :locale "en_US"
                            :createdate #inst "2015-10-18T05:31:17.532000000-00:00"}]}
-             (create-user {:db 1} {:http-client 1} 1 577015))))))
+             (create-user {:db 1} {:http-client 1} {} 1 577015))))))
 
 (deftest user-lookup-test
   (testing "user lookup test"

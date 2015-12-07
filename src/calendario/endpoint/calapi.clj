@@ -5,7 +5,10 @@
             [ring.util.response :refer [response status created header content-type]]
             [calendario.component.calendar-service :as cs]
             [cheshire.core :refer [generate-string]]
-            [clojure.tools.logging :refer [error warn debug]]))
+            [clojure.tools.logging :refer [error warn debug]]
+            [metrics.ring.instrument :refer [instrument]]
+            [metrics.counters :refer [inc!]]
+            [metrics.counters :refer [counter]]))
 
 ;curl -v -k -H "Content-Type: application/json" -X POST -d '{"expuserid": 600000, "email": "kurt@vonnegut.com", "tpid": 1, "eapid": 0, "tuid": 550000, "siteid": 1}' 'http://localhost:3000/api/user'
 ;curl -v -k  -X PUT 'http://localhost:3000/api/reset-cal/1/550000'
@@ -31,15 +34,17 @@
     400))
 
 ; email siteid / expuserid tpid eapid tuid / uuid now
-(defn cal-mgmt-routes [calendar-service]
+(defn cal-mgmt-routes [calendar-service reg]
   (routes
    (GET  "/calendar/:siteid{[0-9]+}/:tuid{[0-9]+}" [siteid tuid]
          (try
-           (response
-            {:url (cs/get-calendar-url-for-user
-                   calendar-service
-                   (Integer/parseInt siteid)
-                   (Integer/parseInt tuid))})
+           (let [r (response
+                    {:url (cs/get-calendar-url-for-user
+                           calendar-service
+                           (Integer/parseInt siteid)
+                           (Integer/parseInt tuid))})]
+             (inc! (counter  reg ["calendario" "api" "calurl"]))
+             r)
            (catch clojure.lang.ExceptionInfo e
              (error e (str "caught exception getting calendar url for siteid: "
                            siteid " tuid:" tuid))
@@ -61,9 +66,11 @@
    (PUT  "/reset-cal/:siteid{[0-9]+}/:tuid{[0-9]+}" [siteid tuid]
          (try
            (let [s (Integer/parseInt siteid)
-                 t (Integer/parseInt tuid)]
-             (cs/reset-calendar-for-user calendar-service s t (java.util.UUID/randomUUID))
-             (response {:url (cs/get-calendar-url-for-user calendar-service s t)}))
+                 t (Integer/parseInt tuid)
+                 _ (cs/reset-calendar-for-user calendar-service s t (java.util.UUID/randomUUID))
+                 r (response {:url (cs/get-calendar-url-for-user calendar-service s t)})]
+             (inc! (counter reg ["calendario" "api" "calreset"]))
+             r)
            (catch clojure.lang.ExceptionInfo e
              (error e (str "caught exception resetting calendar for siteid: "
                            siteid " tuid: " tuid))
@@ -72,23 +79,26 @@
                {:status status-code :body {:error true :error-message (.getMessage e)}})))
          )))
 
-(defn calapi-endpoint [{calendar-service :calendar-service}]
-  (routes
-   (wrap-json-response (GET "/isworking" [] (response {:version 1.0})))
-   (context "/api" []
-            (wrap-json-response
-             (wrap-json-body
-              (cal-mgmt-routes calendar-service) {:keywords? true})))
-   (GET "/calendar/ical/:email/:token/trips.ics" [email token]
-        (try
-          (-> (response (cs/calendar-for calendar-service email token))
-              (content-type "text/calendar; charset=utf-8"))
-          (catch clojure.lang.ExceptionInfo e
-            (error e (str "caught exception serving calendar for email: "
-                          email))
-            (let [cause (:cause (ex-data e))
-                  status-code (status-code-for cause)]
-              (-> (response (generate-string
-                             {:error true :error-message (.getMessage e)}))
-                  (content-type "application/json; charset=utf-8")
-                  (status status-code))))))))
+(defn calapi-endpoint [{calendar-service :calendar-service {reg :registry} :metrics}]
+  (instrument (routes
+               (wrap-json-response (GET "/isworking" [] (response {:version 1.0})))
+               (context "/api" []
+                        (wrap-json-response
+                         (wrap-json-body
+                          (cal-mgmt-routes calendar-service reg) {:keywords? true})))
+               (GET "/calendar/ical/:email/:token/trips.ics" [email token]
+                    (try
+                      (let [r (-> (response (cs/calendar-for calendar-service email token))
+                                  (content-type "text/calendar; charset=utf-8"))]
+                        (inc! (counter reg ["calendario" "api" "calaccess"]))
+                        r)
+                      (catch clojure.lang.ExceptionInfo e
+                        (error e (str "caught exception serving calendar for email: "
+                                      email))
+                        (let [cause (:cause (ex-data e))
+                              status-code (status-code-for cause)]
+                          (-> (response (generate-string
+                                         {:error true :error-message (.getMessage e)}))
+                              (content-type "application/json; charset=utf-8")
+                              (status status-code)))))))
+              reg))

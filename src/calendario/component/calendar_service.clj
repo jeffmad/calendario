@@ -6,11 +6,13 @@
             [calendario.calendar :as c]
             [com.climate.claypoole :as cp]
             [clojure.tools.logging :refer [error warn debug]]
-            [schema.core :as s]))
+            [schema.core :as s]
+            [metrics.counters :refer [inc! counter]]
+            [metrics.histograms :refer [update! histogram]]))
 
 ; CURRENT_DATE - (? || ' days')::interval
 ; > (CURRENT_DATE - ?::interval)
-(defrecord CalendarService [expires-in-hours db http-client]
+(defrecord CalendarService [expires-in-hours db http-client metrics]
   component/Lifecycle
   (start [this]
     (let [add-net-pool (fn [m] (if (:net-pool m) m (assoc m :net-pool (cp/threadpool 20))))
@@ -41,10 +43,10 @@
    Anyone who has this url can see the user's booked upcoming trips.
    If the user has shared the url with others and no longer wants
    those individuals to have access, the user must reset the calendar url."
-  [{{db :spec} :db http-client :http-client} siteid tuid]
+  [{{db :spec} :db http-client :http-client {reg :registry} :metrics} siteid tuid]
   (let [_ (debug (str "Getting calendar for user with siteid " siteid " tuid:" tuid))
         u (or (um/user-lookup db siteid tuid)
-              (um/create-user db http-client siteid tuid))
+              (um/create-user db http-client reg siteid tuid))
         email (get-in u [:expuser :email])
         uuid (:calid (first (filter #(= tuid (:tuid %)) (:siteusers u))))]
     (str "/calendar/ical/"
@@ -109,10 +111,10 @@
 (defn build-and-store-calendar-for-user
   "pull the booked upcoming trips, make calendar events for them,
    and store the calendar text in the database"
-  [{{db :spec} :db http-client :http-client net-pool :net-pool cpu-pool :cpu-pool} idsiteuser siteid tuid]
+  [{{db :spec} :db http-client :http-client {reg :registry} :metrics net-pool :net-pool cpu-pool :cpu-pool} idsiteuser siteid tuid]
   (let [_ (debug (str "building and storing a cal for tuid " tuid " siteid " siteid))
-        upcoming-trips (tf/get-booked-upcoming-trips http-client tuid siteid)
-        trip-f (partial tf/get-trip-for-user http-client tuid siteid)
+        upcoming-trips (tf/get-booked-upcoming-trips http-client reg tuid siteid)
+        trip-f (partial tf/get-trip-for-user http-client reg tuid siteid)
         trip-jsons (cp/upmap net-pool trip-f upcoming-trips)
         events (cp/upmap cpu-pool c/create-events-for-trip (remove nil? trip-jsons))
         _ (debug (str "created " (count events) " calendar events for " tuid " siteid " siteid))
@@ -141,7 +143,9 @@
   "method to run from a periodic timer to refresh calendars that need a refresh.
    It needs a try catch to make sure nothing bad happens with the timer, and if
    something does, the error gets logged."
-  [{{db :spec} :db net-pool :net-pool :as calendar-service}]
+  [{{db :spec} :db
+    net-pool :net-pool
+    {registry :registry} :metrics :as calendar-service}]
   (try
     (when (cu/get-advisory-lock? db)
       (let [users (cu/users-need-fresh-calendars db)
@@ -149,6 +153,7 @@
             stale-users-f (partial cu/is-latest-calendar-older-than? db)
             stales (set (filter #(stale-users-f (:idsiteuser %) (time-n-hours-before (java.time.Instant/now) 20)) users))
             _ (debug (str (count stales) " users have stale calendars"))
+            _ (update! (histogram registry ["calendario" "trip" "stalefound"]) (count stales))
             build (partial build-and-store-calendar-for-user calendar-service)]
         (when (seq stales)
           (do

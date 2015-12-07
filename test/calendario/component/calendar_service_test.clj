@@ -14,7 +14,7 @@
       (is (= "/calendar/ical/jeffmad%40gmail.com/private-6eb7f25d-4bbf-4753-aae2-72635fcd959b/trips.ics" (get-calendar-url-for-user {:db "yes"} 1 577015))))
     )
   (testing "happy nonexisting user"
-    (with-redefs [calendario.user-manager/create-user (fn [db h siteid tuid] {:expuser {:iduser 1, :expuserid 12345, :email "jeffmad@gmail.com", :createdate #inst "2015-10-18T05:29:23.504000000-00:00"}, :siteusers [{:iduser 1, :idsiteuser 1, :tuid 577015, :tpid 1, :eapid 0, :siteid 1, :calid #uuid "6eb7f25d-4bbf-4753-aae2-72635fcd959b", :locale nil, :createdate #inst "2015-10-18T05:31:17.532000000-00:00"}]})
+    (with-redefs [calendario.user-manager/create-user (fn [db http reg siteid tuid] {:expuser {:iduser 1, :expuserid 12345, :email "jeffmad@gmail.com", :createdate #inst "2015-10-18T05:29:23.504000000-00:00"}, :siteusers [{:iduser 1, :idsiteuser 1, :tuid 577015, :tpid 1, :eapid 0, :siteid 1, :calid #uuid "6eb7f25d-4bbf-4753-aae2-72635fcd959b", :locale nil, :createdate #inst "2015-10-18T05:31:17.532000000-00:00"}]})
                   calendario.user-manager/user-lookup (fn [db siteid tuid] nil)]
       (is (= "/calendar/ical/jeffmad%40gmail.com/private-6eb7f25d-4bbf-4753-aae2-72635fcd959b/trips.ics" (get-calendar-url-for-user {:db "yes"} 1 577015)))))
   (testing "test for problems with userservice and db"

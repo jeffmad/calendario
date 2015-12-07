@@ -7,10 +7,11 @@
             [ring.middleware.json :refer :all]
             [ring.mock.request :as mock]
             [cheshire.core :refer [parse-string generate-string]]
-            [calendario.endpoint.calapi :as calapi]))
+            [calendario.endpoint.calapi :as calapi]
+            [metrics.core :refer [new-registry]]))
 
 (def handler
-  (calapi/calapi-endpoint {}))
+  (calapi/calapi-endpoint { :metrics {:registry (new-registry)}}))
 
 (deftest isworking-test
   (testing "isworking exists"

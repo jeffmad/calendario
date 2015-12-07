@@ -4,7 +4,10 @@
             [clojure.data.xml :as xml]
             [clojure.zip :as zip]
             [clojure.data.zip.xml :as zx]
-            [slingshot.slingshot :refer [try+ throw+]]))
+            [slingshot.slingshot :refer [try+ throw+]]
+            [metrics.counters :refer [inc! counter]]
+            [metrics.histograms :refer [update! histogram]]
+            ))
 
 (defn post-url [url {:keys [throw-exceptions
                             body
@@ -13,7 +16,7 @@
                             insecure?
                             conn-timeout
                             socket-timeout
-                            conn-mgr]} meta-data]
+                            conn-mgr]} meta-data metrics-registry]
   (try+
    (client/post url {:throw-exceptions throw-exceptions
                      :body body
@@ -25,6 +28,7 @@
                      :connection-manager conn-mgr })
    (catch java.net.SocketTimeoutException ste
      (error ste (str "socket timeout reading " url))
+     (inc! (counter metrics-registry ["calendario" "us" "readtimeout"]))
      (throw+ {:cause :service-unavailable
               :error {:reason (.getMessage ste)
                       :data meta-data
@@ -32,6 +36,7 @@
              "encountered socket timeout"))
    (catch java.net.ConnectException ce
      (error ce (str "connect exception to url " url))
+     (inc! (counter metrics-registry ["calendario" "us" "connecttimeout"]))
      (throw+ {:cause :service-unavailable
               :error {:reason (.getMessage ce)
                       :data meta-data
@@ -57,6 +62,13 @@
        :tuidmappings (mapv tuid-mapping (zx/xml-> z :expUserTUIDMapping))}
       (error (str "profile response not successful " r)))))
 
+(defn update-metrics-user-by-email-success! [metrics-registry time]
+  (inc! (counter metrics-registry ["calendario" "us" "acctsaccess"]))
+  (update! (histogram metrics-registry ["calendario" "us" "acctstime"]) time))
+
+(defn update-metrics-user-by-email-error! [metrics-registry]
+  (inc! (counter metrics-registry ["calendario" "us" "acctserror"])))
+
 ;{:expuserid "301078", :email "jmadynski@expedia.com", :tuidmappings [{:tpid "1", :tuid "5363093", :single-use "true"} {:tpid "1", :tuid "577015", :single-use "false"}]}
 ; "https://userservicev3.integration.karmalab.net:56783"
 (defn get-user-by-email
@@ -65,7 +77,10 @@
    is a problem messaging the user service, an exception is thrown. If the
    xml response does not indicate success = true, nil is returned. If the http
    status of the response is not 200, nil is returned. "
-  [{:keys [user-service-endpoint conn-timeout socket-timeout conn-mgr]} email]
+  [{:keys [user-service-endpoint
+           conn-timeout
+           socket-timeout
+           conn-mgr]} metrics-registry email]
   (let [url (str user-service-endpoint "/exp-account/tuids")
         resp (post-url url {:throw-exceptions true
                             :body (format exp-account-template email)
@@ -74,10 +89,16 @@
                             :insecure? true
                             :conn-timeout conn-timeout
                             :socket-timeout socket-timeout
-                            :connection-manager conn-mgr } {:data {:email email}})]
+                            :connection-manager conn-mgr }
+                       {:data {:email email}}
+                       metrics-registry)]
     (if (= 200 (:status resp))
-      (accounts (:body resp))
-      nil)))
+      (do
+        (update-metrics-user-by-email-success! metrics-registry (:request-time resp))
+        (accounts (:body resp)))
+      (do
+        (update-metrics-user-by-email-error! metrics-registry)
+        nil))))
 
 (defn- profile
   "take the raw xml response, parse it, and return a map containing the required
@@ -96,6 +117,13 @@
 
 (def exp-profile-template "<?xml version=\"1.0\" encoding=\"utf-8\"?><usr:getUserProfileRequest xmlns:usr=\"urn:com:expedia:www:services:user:messages:v3\" siteID=\"%s\"><usr:user actAsTuid=\"%s\" loggedInTuid=\"%s\"/><usr:messageInfo enableTraceLog=\"false\" clientName=\"localhost\" transactionGUID=\"a2192179-d5b7-4234-918c-8f662aaaf545\"/></usr:getUserProfileRequest>")
 
+(defn update-metrics-user-profile-success! [metrics-registry time]
+  (inc! (counter metrics-registry ["calendario" "us" "profaccess"]))
+  (update! (histogram metrics-registry ["calendario" "us" "profiletime"]) time))
+
+(defn update-metrics-user-profile-error! [metrics-registry]
+  (inc! (counter metrics-registry ["calendario" "us" "proferror"])))
+
 ;"https://userservicev3.integration.karmalab.net:56783"
 (defn get-user-profile
   "given http client and siteid tuid, return profile. An exception will be
@@ -105,7 +133,7 @@
   [{:keys [user-service-endpoint
                                 conn-timeout
                                 socket-timeout
-                                conn-mgr]} site-id tuid]
+                                conn-mgr]} metrics-registry site-id tuid]
   (let [url (str user-service-endpoint "/profile/get")
         resp (post-url url {:throw-exceptions true
                             :body (format exp-profile-template site-id tuid tuid)
@@ -116,7 +144,11 @@
                             :socket-timeout socket-timeout
                             :connection-manager conn-mgr }
                        {:data {:siteid site-id
-                        :tuid tuid}})]
+                        :tuid tuid}} metrics-registry)]
     (if (= 200 (:status resp))
-      (profile (:body resp))
-      nil)))
+      (do
+        (update-metrics-user-profile-success! metrics-registry (:request-time resp))
+        (profile (:body resp)))
+      (do
+        (update-metrics-user-profile-error! metrics-registry)
+        nil))))

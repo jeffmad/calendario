@@ -10,7 +10,8 @@
             [calendario.endpoint.calapi :refer [calapi-endpoint]]
             [calendario.component.http-client :refer [http-client]]
             [calendario.component.calendar-service :refer [calendar-service]]
-            [calendario.component.scheduler :refer [scheduler]]))
+            [calendario.component.scheduler :refer [scheduler]]
+            [calendario.component.metrics :refer [metrics]]))
 
 (def base-config
   {:app {:middleware [[wrap-not-found :not-found]
@@ -26,13 +27,14 @@
          :http-client (http-client (:http-client config))
          :db   (hikaricp (:db config))
          :scheduler (scheduler (:scheduler config))
+         :metrics (metrics (:metrics config))
          :calapi (endpoint-component calapi-endpoint)
          :calendar-service (calendar-service (:calendar-service config))
          )
         (component/system-using
          {:http [:app]
           :app  [:calapi]
-          :calapi [:calendar-service]
+          :calapi [:calendar-service :metrics]
           :scheduler [:calendar-service]
-          :calendar-service [:db :http-client]
+          :calendar-service [:db :http-client :metrics]
           }))))

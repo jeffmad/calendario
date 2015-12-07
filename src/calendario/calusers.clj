@@ -1,6 +1,8 @@
 (ns calendario.calusers
   (:require [yesql.core :refer [defqueries]]
-            [clojure.tools.logging :refer [error warn debug]])
+            [clojure.tools.logging :refer [error warn debug]]
+            [metrics.counters :refer [inc! counter]]
+            [metrics.histograms :refer [update! histogram]])
   (:import (org.postgresql.util PSQLException)
            (java.sql SQLException)))
 

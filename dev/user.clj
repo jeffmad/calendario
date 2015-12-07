@@ -24,6 +24,9 @@
         :conn-timeout 10000
         }
    :scheduler {:interval (* 1000 60 5)}
+   :metrics {:host "localhost"
+             :port 8125
+             :reporting-interval 15}
    :calendar-service {:expires-in-hours 8}})
 
 (def config

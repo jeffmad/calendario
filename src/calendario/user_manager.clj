@@ -11,11 +11,11 @@
   "call user service to get profile, then call user service to get all
    siteid/tuids for that email. Finally create the users in the
    database."
-  [db http-client siteid tuid]
-  (let [up (us/get-user-profile http-client siteid tuid)
+  [db http-client metrics-registry siteid tuid]
+  (let [up (us/get-user-profile http-client metrics-registry siteid tuid)
         email (:email up)
         locale (:locale up)
-        user-accounts (us/get-user-by-email http-client email)
+        user-accounts (us/get-user-by-email http-client metrics-registry email)
         now (java.time.Instant/now)
         expuser (cu/create-exp-user!
                  db

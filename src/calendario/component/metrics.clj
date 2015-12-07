@@ -78,8 +78,7 @@
   (start [this]
     (let [reg (new-registry)
           ;reporter (statsd-reporter reg host port)
-          reporter (console-reporter reg)
-          ]
+          reporter (console-reporter reg)]
       (instrument-jvm reg)
       (init-metrics reg)
       (r/start reporter reporting-interval)

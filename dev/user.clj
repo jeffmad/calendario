@@ -22,6 +22,7 @@
                  :trip-service-endpoint "http://wwwexpediacom.integration.sb.karmalab.net"}
    :db {:uri "jdbc:postgresql://localhost/caldb"
         :conn-timeout 10000
+        :pool-name "pgsql"
         }
    :scheduler {:interval (* 1000 60 5)}
    :metrics {:host "localhost"

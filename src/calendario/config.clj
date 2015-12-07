@@ -14,7 +14,8 @@
                  :user-service-endpoint (some-> env :user-service-endpoint)
                  :trip-service-endpoint (some-> env :trip-service-endpoint)}
    :db   {:uri  (some-> env :database-url)
-          :conn-timeout (some-> env :db-conn-timeout)}
+          :conn-timeout (some-> env :db-conn-timeout)
+          :pool-name (some-> env :pool-name)}
    :metrics {:host (some-> env :statsd-host)
              :port (some-> env :statsd-port Integer.)
              :reporting-interval (some-> env :statsd-interval Integer.)}

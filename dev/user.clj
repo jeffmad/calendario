@@ -28,7 +28,7 @@
    :metrics {:host "localhost"
              :port 8125
              :reporting-interval 15}
-   :calendar-service {:expires-in-hours 8}})
+   :calendar-service {:expires-in-hours 8 :net-pool-size 20}})
 
 (def config
   (meta-merge config/defaults

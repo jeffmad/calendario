@@ -12,11 +12,16 @@
 
 ; CURRENT_DATE - (? || ' days')::interval
 ; > (CURRENT_DATE - ?::interval)
-(defrecord CalendarService [expires-in-hours db http-client metrics]
+(defrecord CalendarService [expires-in-hours net-pool-size db http-client metrics]
   component/Lifecycle
   (start [this]
-    (let [add-net-pool (fn [m] (if (:net-pool m) m (assoc m :net-pool (cp/threadpool 20))))
-          add-cpu-pool (fn [m] (if (:cpu-pool m) m (assoc m :cpu-pool (cp/threadpool (cp/ncpus)))))]
+    (let [add-net-pool (fn [m]
+                         (if (:net-pool m)
+                           m
+                           (assoc m :net-pool (cp/threadpool net-pool-size))))
+          add-cpu-pool (fn [m] (if (:cpu-pool m)
+                                 m
+                                 (assoc m :cpu-pool (cp/threadpool (cp/ncpus)))))]
       (-> this
           add-net-pool
           add-cpu-pool)))

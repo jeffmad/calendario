@@ -5,7 +5,7 @@
             [meta-merge.core :refer [meta-merge]]
             [calendario.config :as config]
             [calendario.system :refer [new-system]]
-            [clojure.tools.logging :refer [find-factory get-logger]])
+            [clojure.tools.logging.impl :refer [find-factory get-logger]])
   (:import (org.slf4j.bridge SLF4JBridgeHandler)))
 
 (defn bridge-jul->slf4j
@@ -37,6 +37,6 @@
 (defn -main [& args]
   (let [system (new-system config)]
     (bridge-jul->slf4j)
-    (set-default-uncaught-exception-handler (get-logger find-factory *ns*))
+    (set-default-uncaught-exception-handler (get-logger (find-factory) *ns*))
     (println "Starting HTTP server on port" (-> system :http :port))
     (component/start system)))

@@ -1,6 +1,6 @@
-(defproject calendario "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject calendario "0.1.0"
+  :description "web app that generates a user icalendar subscription"
+  :url "http://ewegithub.sb.karmalab.net/EWE/calendario"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [com.stuartsierra/component "0.3.0"]

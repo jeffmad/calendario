@@ -54,8 +54,8 @@
   "return a string suitable for an event calendar
    describing the details of a cruise booking"
   [cruise url]
-  (let [start-time (:departureDate cruise)
-        end-time (:returnDate cruise)
+  (let [start-time (get-in cruise [:startTime :localized])
+        end-time (get-in cruise [:endTime :localized])
         cruise-line (:cruiseLineName cruise)
         ship-name (:shipName cruise)
         conf-num (:cruiseLineBkgConfNumber cruise)
@@ -72,8 +72,8 @@
   { :url url
    :event-type :cruise
    :title title
-   :start (:departureDate cruise)
-   :end   (:returnDate cruise)
+   :start (get-in cruise [:startTime :epochSeconds])
+   :end   (get-in cruise [:endTime :epochSeconds])
    :location title
    :details (cruise-details cruise url)})
 
@@ -387,7 +387,7 @@
   "given a json trip, extract the events for each line of business.
    cruise is not included because the start date is in the wrong format"
   [json-trip]
-  (mapcat seq ((juxt flights hotels cars activities) json-trip)))
+  (mapcat seq ((juxt flights hotels cars activities cruises) json-trip)))
 
 #_(defn create-events-from-trips [json-trips]
   (mapcat seq

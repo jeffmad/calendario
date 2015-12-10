@@ -21,7 +21,7 @@
 (def file-based-trips [11613235441 11616639117 7822022514
                        11616506271 11616643514 7822024975
                        11616506364 11617273915 7822027698
-                       1115913015028 7828048848 7834616605
+                       1115913015028 7880803534 7834616605
                        11624796803 11624954701 11624965146
                        7835454236 11624970813 11625930503])
 
@@ -38,17 +38,18 @@
   (let [f (slurp (clojure.java.io/resource file-name))]
     (parse-string f true)))
 
-(def a-cruise-event '({:details "Your Cruise: \r\nStart Time:  Oct 2, 2016 4:00 PM\r\nEnd Time: Oct 9, 2016 8:00 AM\r\nCruise Line: Norwegian Cruise Line\r\nShip Name: Norwegian Getaway\r\nConfirmation Number: 29225136\r\n\r\nView the full details of your booking at https://wwwexpedia-aarpcom.trunk.sb.karmalab.net/trips/1062225501?email=aalee@expedia.com\r\n\r\n",
-                       :end "Oct 9, 2016 8:00 AM",
+(def a-cruise-event '({:details "Your Cruise: \r\nStart Time:  Apr 10, 2016 4:00:00 PM\r\nEnd Time: May 15, 2016 7:00:00 AM\r\nCruise Line: Princess Cruises\r\nShip Name: Sea Princess\r\nConfirmation Number: DVCQ4X\r\n\r\nView the full details of your booking at https://wwwexpediacom.integration.sb.karmalab.net/trips/11652191660\r\n\r\n",
+                       :end 1463295600,
                        :event-type :cruise,
-                       :location "7-night Cruise from MIAMI",
-                       :start "Oct 2, 2016 4:00 PM",
-                       :title "7-night Cruise from MIAMI",
-                       :url "https://wwwexpedia-aarpcom.trunk.sb.karmalab.net/trips/1062225501?email=aalee@expedia.com"}))
+                       :location "35-night Cruise from SYDNEY",
+                       :start 1460304000,
+                       :title "35-night Cruise from SYDNEY",
+                       :url "https://wwwexpediacom.integration.sb.karmalab.net/trips/11652191660"}
+                      ))
 
 (deftest cruises-test
   (testing "events can be created for cruises"
-    (let [cruise-trip (-> "7828048848"
+    (let [cruise-trip (-> "7880803534"
                           build-file-name
                           read-trip-from-file)]
       (is (= a-cruise-event (cruises cruise-trip))))))
@@ -380,14 +381,14 @@
   :title "Flight: United 910 From O'Hare Intl. To LaGuardia",
   :url "https://wwwexpediacom.integration.sb.karmalab.net/trips/11624970813"}))
 
-; start is in the wrong format in the trips api
-(def cruise-events '({:details "Your Cruise: \r\nStart Time:  Oct 2, 2016 4:00 PM\r\nEnd Time: Oct 9, 2016 8:00 AM\r\nCruise Line: Norwegian Cruise Line\r\nShip Name: Norwegian Getaway\r\nConfirmation Number: 29225136\r\n\r\nView the full details of your booking at https://wwwexpedia-aarpcom.trunk.sb.karmalab.net/trips/1062225501?email=aalee@expedia.com\r\n\r\n",
-                      :end "Oct 9, 2016 8:00 AM",
+(def cruise-events '({:details "Your Cruise: \r\nStart Time:  Apr 10, 2016 4:00:00 PM\r\nEnd Time: May 15, 2016 7:00:00 AM\r\nCruise Line: Princess Cruises\r\nShip Name: Sea Princess\r\nConfirmation Number: DVCQ4X\r\n\r\nView the full details of your booking at https://wwwexpediacom.integration.sb.karmalab.net/trips/11652191660\r\n\r\n",
+                      :end 1463295600,
                       :event-type :cruise,
-                      :location "7-night Cruise from MIAMI",
-                      :start "Oct 2, 2016 4:00 PM",
-                      :title "7-night Cruise from MIAMI",
-                      :url "https://wwwexpedia-aarpcom.trunk.sb.karmalab.net/trips/1062225501?email=aalee@expedia.com"}))
+                      :location "35-night Cruise from SYDNEY",
+                      :start 1460304000,
+                      :title "35-night Cruise from SYDNEY",
+                      :url "https://wwwexpediacom.integration.sb.karmalab.net/trips/11652191660"}
+                     ))
 
 (defn events-for-trip [itin-num]
   (-> itin-num
@@ -404,8 +405,7 @@
     (is (= flight-hotel-events (events-for-trip "11624965146")))
     (is (= multi-room-hotel-events (events-for-trip "11624954701")))
     (is (= split-ticket-events (events-for-trip "11624970813")))
-    ; cruises is commented out until startdate has proper format
-    #_(is (= cruise-events (events-for-trip "7828048848")))))
+    (is (= cruise-events (events-for-trip "7880803534")))))
 
 
 
@@ -418,7 +418,7 @@
 
 (def activity-calendar #"BEGIN:VCALENDAR\nPRODID:-//Expedia\\, Inc. //Trip Calendar V0.1//EN\nVERSION:2.0\nMETHOD:PUBLISH\nCALSCALE:GREGORIAN\nBEGIN:VEVENT\nDTSTAMP:(\w+)\nDTSTART:20160805T123000Z\nSUMMARY:Narita\\, Japan\nUID:7822027698_0@(\d+)\nORGANIZER:https://wwwexpediacom.trunk.sb.karmalab.net/trips/7822027698\nURL:https://wwwexpediacom.trunk.sb.karmalab.net/trips/7822027698\nLOCATION:Narita International Airport : 1-1 Furugome\\, Narita\\, Chiba\\, J\n PN@35.77199\\,140.39286\nDESCRIPTION:Activity Start Time\\nVendor: Urban Adventures - CAD\\nSupplier\n  Ref Num: 11616648817\\nLocation: Narita International Airport : 1-1 Furu\n gome\\, Narita\\, Chiba\\, JPN@35.77199\\,140.39286\\n\\nView the full details\n  of your booking at https://wwwexpediacom.trunk.sb.karmalab.net/trips/78\n 22027698\\n\\n\nEND:VEVENT\nBEGIN:VEVENT\nDTSTAMP:(\w+)\nDTSTART:20160805T140000Z\nSUMMARY:Narita\\, Japan\nUID:7822027698_1@(\d+)\nORGANIZER:https://wwwexpediacom.trunk.sb.karmalab.net/trips/7822027698\nURL:https://wwwexpediacom.trunk.sb.karmalab.net/trips/7822027698\nLOCATION:Narita International Airport : 1-1 Furugome\\, Narita\\, Chiba\\, J\n PN@35.77199\\,140.39286\nDESCRIPTION:Activity End Time\\nVendor: Urban Adventures - CAD\\nSupplier R\n ef Num: 11616648817\\nLocation: Narita International Airport : 1-1 Furugo\n me\\, Narita\\, Chiba\\, JPN@35.77199\\,140.39286\\n\\nView the full details o\n f your booking at https://wwwexpediacom.trunk.sb.karmalab.net/trips/7822\n 027698\\n\\n\nEND:VEVENT\nEND:VCALENDAR\n")
 
-(def cruise-calendar #"")
+(def cruise-calendar #"BEGIN:VCALENDAR\nPRODID:-//Expedia\\, Inc. //Trip Calendar V0.1//EN\nVERSION:2.0\nMETHOD:PUBLISH\nCALSCALE:GREGORIAN\nBEGIN:VEVENT\nDTSTAMP:(\w+)\nDTSTART:20160410T160000Z\nDTEND:20160515T070000Z\nSUMMARY:35-night Cruise from SYDNEY\nUID:_0@(\d+)\nORGANIZER:https://wwwexpediacom.integration.sb.karmalab.net/trips/1165219\n 1660\nURL:https://wwwexpediacom.integration.sb.karmalab.net/trips/11652191660\nLOCATION:35-night Cruise from SYDNEY\nDESCRIPTION:Your Cruise: \\nStart Time:  Apr 10\\, 2016 4:00:00 PM\\nEnd Tim\n e: May 15\\, 2016 7:00:00 AM\\nCruise Line: Princess Cruises\\nShip Name: S\n ea Princess\\nConfirmation Number: DVCQ4X\\n\\nView the full details of you\n r booking at https://wwwexpediacom.integration.sb.karmalab.net/trips/116\n 52191660\\n\\n\nEND:VEVENT\nEND:VCALENDAR\n")
 
 (deftest create-calendar-from-events-test
   (testing "create calendars exercising flights hotels cars activities cruises"
@@ -426,6 +426,5 @@
     (is (re-matches hotel-calendar (calendar-from-events (events-for-trip "11616506271"))))
     (is (re-matches flight-calendar (calendar-from-events (events-for-trip "11617273915"))))
     (is (re-matches activity-calendar (calendar-from-events (events-for-trip "7822027698"))))
-    ; cruise will not work until the start date in teh trip JSON api is in the correct format
-    #_(is (re-matches cruise-calendar (calendar-from-events (events-for-trip "7828048848"))))
+    (is (re-matches cruise-calendar (calendar-from-events (events-for-trip "7880803534"))))
     ))

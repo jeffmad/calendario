@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<monitor>
+    <publishList>
+        <publish name="JMImplementation:type=MBeanServerDelegate">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="MBeanServerId" isCounter="false" type="MBeanServerDelegate"/>
+                <metric attribute="SpecificationName" isCounter="false" type="MBeanServerDelegate"/>
+                <metric attribute="SpecificationVersion" isCounter="false" type="MBeanServerDelegate"/>
+                <metric attribute="SpecificationVendor" isCounter="false" type="MBeanServerDelegate"/>
+                <metric attribute="ImplementationName" isCounter="false" type="MBeanServerDelegate"/>
+                <metric attribute="ImplementationVersion" isCounter="false" type="MBeanServerDelegate"/>
+                <metric attribute="ImplementationVendor" isCounter="false" type="MBeanServerDelegate"/>
+            </include>
+        </publish>
+        <publish name="com.sun.management:type=HotSpotDiagnostic">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="DiagnosticOptions" isCounter="false" type="HotSpotDiagnostic"/>
+                <metric attribute="ObjectName" isCounter="false" type="HotSpotDiagnostic"/>
+            </include>
+        </publish>
+        <publish name="io.dropwizard:type=Logging">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Statuses" isCounter="false" type="Logging"/>
+                <metric attribute="LoggerList" isCounter="false" type="Logging"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=ClassLoading">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="TotalLoadedClassCount" isCounter="false" type="ClassLoading"/>
+                <metric attribute="LoadedClassCount" isCounter="false" type="ClassLoading"/>
+                <metric attribute="UnloadedClassCount" isCounter="false" type="ClassLoading"/>
+                <metric attribute="Verbose" isCounter="false" type="ClassLoading"/>
+                <metric attribute="ObjectName" isCounter="false" type="ClassLoading"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=Compilation">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="CompilationTimeMonitoringSupported" isCounter="false" type="Compilation"/>
+                <metric attribute="TotalCompilationTime" isCounter="false" type="Compilation"/>
+                <metric attribute="Name" isCounter="false" type="Compilation"/>
+                <metric attribute="ObjectName" isCounter="false" type="Compilation"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=GarbageCollector,name=Copy">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="LastGcInfo" compositeEntry="GcThreadCount" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="duration" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="endTime" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="id" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="memoryUsageAfterGc" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="memoryUsageBeforeGc" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="startTime" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="CollectionCount" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="CollectionTime" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="MemoryPoolNames" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="Name" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="Valid" isCounter="false" name="Copy" type="GarbageCollector"/>
+                <metric attribute="ObjectName" isCounter="false" name="Copy" type="GarbageCollector"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=GarbageCollector,name=MarkSweepCompact">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="LastGcInfo" compositeEntry="GcThreadCount" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="duration" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="endTime" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="id" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="memoryUsageAfterGc" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="memoryUsageBeforeGc" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="LastGcInfo" compositeEntry="startTime" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="CollectionCount" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="CollectionTime" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="MemoryPoolNames" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="Name" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="Valid" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+                <metric attribute="ObjectName" isCounter="false" name="MarkSweepCompact" type="GarbageCollector"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=Memory">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="ObjectPendingFinalizationCount" isCounter="false" type="Memory"/>
+                <metric attribute="HeapMemoryUsage" compositeEntry="committed" isCounter="false" type="Memory"/>
+                <metric attribute="HeapMemoryUsage" compositeEntry="init" isCounter="false" type="Memory"/>
+                <metric attribute="HeapMemoryUsage" compositeEntry="max" isCounter="false" type="Memory"/>
+                <metric attribute="HeapMemoryUsage" compositeEntry="used" isCounter="false" type="Memory"/>
+                <metric attribute="NonHeapMemoryUsage" compositeEntry="committed" isCounter="false" type="Memory"/>
+                <metric attribute="NonHeapMemoryUsage" compositeEntry="init" isCounter="false" type="Memory"/>
+                <metric attribute="NonHeapMemoryUsage" compositeEntry="max" isCounter="false" type="Memory"/>
+                <metric attribute="NonHeapMemoryUsage" compositeEntry="used" isCounter="false" type="Memory"/>
+                <metric attribute="Verbose" isCounter="false" type="Memory"/>
+                <metric attribute="ObjectName" isCounter="false" type="Memory"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=MemoryManager,name=CodeCacheManager">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="MemoryPoolNames" isCounter="false" name="CodeCacheManager" type="MemoryManager"/>
+                <metric attribute="Name" isCounter="false" name="CodeCacheManager" type="MemoryManager"/>
+                <metric attribute="Valid" isCounter="false" name="CodeCacheManager" type="MemoryManager"/>
+                <metric attribute="ObjectName" isCounter="false" name="CodeCacheManager" type="MemoryManager"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=MemoryPool,name=Code Cache">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Usage" compositeEntry="committed" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="init" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="max" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="used" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="committed" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="init" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="max" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="used" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="MemoryManagerNames" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="UsageThreshold" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="UsageThresholdExceeded" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="UsageThresholdCount" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="UsageThresholdSupported" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdSupported" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="Name" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="Type" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="Valid" isCounter="false" name="Code Cache" type="MemoryPool"/>
+                <metric attribute="ObjectName" isCounter="false" name="Code Cache" type="MemoryPool"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=MemoryPool,name=Eden Space">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Usage" compositeEntry="committed" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="init" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="max" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="used" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="committed" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="init" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="max" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="used" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="MemoryManagerNames" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="UsageThresholdSupported" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThreshold" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdExceeded" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdCount" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="committed" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="init" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="max" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="used" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdSupported" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="Name" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="Type" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="Valid" isCounter="false" name="Eden Space" type="MemoryPool"/>
+                <metric attribute="ObjectName" isCounter="false" name="Eden Space" type="MemoryPool"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=MemoryPool,name=Perm Gen">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Usage" compositeEntry="committed" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="init" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="max" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="used" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="committed" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="init" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="max" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="used" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="MemoryManagerNames" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="UsageThreshold" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="UsageThresholdExceeded" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="UsageThresholdCount" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="UsageThresholdSupported" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThreshold" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdExceeded" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdCount" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="committed" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="init" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="max" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="used" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdSupported" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="Name" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="Type" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="Valid" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+                <metric attribute="ObjectName" isCounter="false" name="Perm Gen" type="MemoryPool"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=MemoryPool,name=Survivor Space">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Usage" compositeEntry="committed" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="init" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="max" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="used" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="committed" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="init" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="max" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="used" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="MemoryManagerNames" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="UsageThresholdSupported" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThreshold" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdExceeded" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdCount" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="committed" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="init" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="max" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="used" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdSupported" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="Name" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="Type" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="Valid" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+                <metric attribute="ObjectName" isCounter="false" name="Survivor Space" type="MemoryPool"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=MemoryPool,name=Tenured Gen">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Usage" compositeEntry="committed" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="init" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="max" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="Usage" compositeEntry="used" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="committed" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="init" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="max" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="PeakUsage" compositeEntry="used" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="MemoryManagerNames" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="UsageThreshold" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="UsageThresholdExceeded" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="UsageThresholdCount" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="UsageThresholdSupported" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThreshold" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdExceeded" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdCount" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="committed" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="init" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="max" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsage" compositeEntry="used" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="CollectionUsageThresholdSupported" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="Name" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="Type" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="Valid" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+                <metric attribute="ObjectName" isCounter="false" name="Tenured Gen" type="MemoryPool"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=OperatingSystem">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="OpenFileDescriptorCount" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="MaxFileDescriptorCount" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="CommittedVirtualMemorySize" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="FreeSwapSpaceSize" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="TotalSwapSpaceSize" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="ProcessCpuTime" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="FreePhysicalMemorySize" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="TotalPhysicalMemorySize" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="SystemCpuLoad" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="ProcessCpuLoad" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="AvailableProcessors" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="Version" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="SystemLoadAverage" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="Arch" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="Name" isCounter="false" type="OperatingSystem"/>
+                <metric attribute="ObjectName" isCounter="false" type="OperatingSystem"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=Runtime">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="BootClassPathSupported" isCounter="false" type="Runtime"/>
+                <metric attribute="VmName" isCounter="false" type="Runtime"/>
+                <metric attribute="VmVendor" isCounter="false" type="Runtime"/>
+                <metric attribute="VmVersion" isCounter="false" type="Runtime"/>
+                <metric attribute="LibraryPath" isCounter="false" type="Runtime"/>
+                <metric attribute="BootClassPath" isCounter="false" type="Runtime"/>
+                <metric attribute="StartTime" isCounter="false" type="Runtime"/>
+                <metric attribute="ManagementSpecVersion" isCounter="false" type="Runtime"/>
+                <metric attribute="InputArguments" isCounter="false" type="Runtime"/>
+                <metric attribute="SpecVendor" isCounter="false" type="Runtime"/>
+                <metric attribute="SpecVersion" isCounter="false" type="Runtime"/>
+                <metric attribute="SpecName" isCounter="false" type="Runtime"/>
+                <metric attribute="Uptime" isCounter="false" type="Runtime"/>
+                <metric attribute="SystemProperties" isCounter="false" type="Runtime"/>
+                <metric attribute="Name" isCounter="false" type="Runtime"/>
+                <metric attribute="ClassPath" isCounter="false" type="Runtime"/>
+                <metric attribute="ObjectName" isCounter="false" type="Runtime"/>
+            </include>
+        </publish>
+        <publish name="java.lang:type=Threading">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="ThreadAllocatedMemorySupported" isCounter="false" type="Threading"/>
+                <metric attribute="ThreadAllocatedMemoryEnabled" isCounter="false" type="Threading"/>
+                <metric attribute="ThreadContentionMonitoringSupported" isCounter="false" type="Threading"/>
+                <metric attribute="CurrentThreadCpuTimeSupported" isCounter="false" type="Threading"/>
+                <metric attribute="ObjectMonitorUsageSupported" isCounter="false" type="Threading"/>
+                <metric attribute="SynchronizerUsageSupported" isCounter="false" type="Threading"/>
+                <metric attribute="ThreadContentionMonitoringEnabled" isCounter="false" type="Threading"/>
+                <metric attribute="ThreadCpuTimeEnabled" isCounter="false" type="Threading"/>
+                <metric attribute="PeakThreadCount" isCounter="false" type="Threading"/>
+                <metric attribute="DaemonThreadCount" isCounter="false" type="Threading"/>
+                <metric attribute="TotalStartedThreadCount" isCounter="false" type="Threading"/>
+                <metric attribute="AllThreadIds" isCounter="false" type="Threading"/>
+                <metric attribute="ThreadCount" isCounter="false" type="Threading"/>
+                <metric attribute="CurrentThreadCpuTime" isCounter="false" type="Threading"/>
+                <metric attribute="CurrentThreadUserTime" isCounter="false" type="Threading"/>
+                <metric attribute="ThreadCpuTimeSupported" isCounter="false" type="Threading"/>
+                <metric attribute="ObjectName" isCounter="false" type="Threading"/>
+            </include>
+        </publish>
+        <publish name="java.nio:type=BufferPool,name=direct">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Count" isCounter="false" name="direct" type="BufferPool"/>
+                <metric attribute="MemoryUsed" isCounter="false" name="direct" type="BufferPool"/>
+                <metric attribute="TotalCapacity" isCounter="false" name="direct" type="BufferPool"/>
+                <metric attribute="Name" isCounter="false" name="direct" type="BufferPool"/>
+                <metric attribute="ObjectName" isCounter="false" name="direct" type="BufferPool"/>
+            </include>
+        </publish>
+        <publish name="java.nio:type=BufferPool,name=mapped">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Count" isCounter="false" name="mapped" type="BufferPool"/>
+                <metric attribute="MemoryUsed" isCounter="false" name="mapped" type="BufferPool"/>
+                <metric attribute="TotalCapacity" isCounter="false" name="mapped" type="BufferPool"/>
+                <metric attribute="Name" isCounter="false" name="mapped" type="BufferPool"/>
+                <metric attribute="ObjectName" isCounter="false" name="mapped" type="BufferPool"/>
+            </include>
+        </publish>
+        <publish name="java.util.logging:type=Logging">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="ObjectName" isCounter="false" type="Logging"/>
+                <metric attribute="LoggerNames" isCounter="false" type="Logging"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.gc.MarkSweepCompact.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.gc.MarkSweepCompact.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.gc.MarkSweepCompact.time">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.gc.MarkSweepCompact.time"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.heap.committed">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.heap.committed"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.heap.init">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.heap.init"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.heap.max">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.heap.max"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.heap.usage">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.heap.usage"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.heap.used">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.heap.used"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.non-heap.committed">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.non-heap.committed"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.non-heap.init">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.non-heap.init"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.non-heap.max">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.non-heap.max"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.non-heap.usage">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.non-heap.usage"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.non-heap.used">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.non-heap.used"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.pools.Code-Cache.usage">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.pools.Code-Cache.usage"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.pools.Eden-Space.usage">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.pools.Eden-Space.usage"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.pools.Perm-Gen.usage">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.pools.Perm-Gen.usage"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.pools.Survivor-Space.usage">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.pools.Survivor-Space.usage"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.pools.Tenured-Gen.usage">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.pools.Tenured-Gen.usage"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.total.committed">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.total.committed"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.total.init">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.total.init"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.total.max">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.total.max"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.memory.total.used">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.memory.total.used"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.blocked.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.blocked.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.daemon.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.daemon.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.deadlocks">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.deadlocks"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.new.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.new.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.runnable.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.runnable.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.terminated.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.terminated.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.timed_waiting.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.timed_waiting.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=jvm.threads.waiting.count">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="jvm.threads.waiting.count"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=org.eclipse.jetty.server.HttpConnectionFactory.8080.connections">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Max" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="DurationUnit" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="Mean" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="StdDev" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="75thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="95thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="98thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="99thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="999thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="Min" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="50thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="Count" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="RateUnit" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="MeanRate" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="OneMinuteRate" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="FiveMinuteRate" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+                <metric attribute="FifteenMinuteRate" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8080.connections"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=org.eclipse.jetty.server.HttpConnectionFactory.8081.connections">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Max" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="DurationUnit" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="Mean" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="StdDev" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="75thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="95thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="98thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="99thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="999thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="Min" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="50thPercentile" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="Count" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="RateUnit" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="MeanRate" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="OneMinuteRate" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="FiveMinuteRate" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+                <metric attribute="FifteenMinuteRate" isCounter="false" name="org.eclipse.jetty.server.HttpConnectionFactory.8081.connections"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=org.eclipse.jetty.util.thread.QueuedThreadPool.dw.jobs">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="org.eclipse.jetty.util.thread.QueuedThreadPool.dw.jobs"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=org.eclipse.jetty.util.thread.QueuedThreadPool.dw.size">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="org.eclipse.jetty.util.thread.QueuedThreadPool.dw.size"/>
+            </include>
+        </publish>
+        <publish name="metrics:name=org.eclipse.jetty.util.thread.QueuedThreadPool.dw.utilization">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+            <include>
+                <metric attribute="Value" isCounter="false" name="org.eclipse.jetty.util.thread.QueuedThreadPool.dw.utilization"/>
+            </include>
+        </publish>
+    </publishList>
+</monitor>

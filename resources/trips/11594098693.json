@@ -1,0 +1,891 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "14fc48b6-97ed-47f2-b9bb-c5f3cf9809e2",
+    "webDetailsURL": "https://wwwexpediacom.trunk.sb.karmalab.net/trips/11594098693",
+    "tripNumber": 11594098693,
+    "title": "Cancun",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/14fc48b6-97ed-47f2-b9bb-c5f3cf9809e2/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-04-04T11:45:00+02:00",
+      "localized": "Apr 4, 2016 11:45:00 AM",
+      "epochSeconds": 1459763100,
+      "timeZoneOffsetSeconds": 7200,
+      "localizedShortDate": "4/4/2016",
+      "localizedMediumDate": "Apr 4",
+      "localizedFullDate": "Mon, Apr 4",
+      "localizedLongDate": "Apr 4, 2016"
+    },
+    "endTime": {
+      "raw": "2016-04-21T19:35:00+02:00",
+      "localized": "Apr 21, 2016 7:35:00 PM",
+      "epochSeconds": 1461260100,
+      "timeZoneOffsetSeconds": 7200,
+      "localizedShortDate": "4/21/2016",
+      "localizedMediumDate": "Apr 21",
+      "localizedFullDate": "Thu, Apr 21",
+      "localizedLongDate": "Apr 21, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-07-30T06:52:41Z",
+      "localized": "Jul 30, 2015 6:52:41 AM",
+      "epochSeconds": 1438239161,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 30 Jul"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-07-30T06:58:16Z",
+      "localized": "Jul 30, 2015 6:58:16 AM",
+      "epochSeconds": 1438239496,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 30 Jul"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-07-30T06:58:16Z",
+      "localized": "Jul 30, 2015 6:58:16 AM",
+      "epochSeconds": 1438239496,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 30 Jul"
+    },
+    "bookingStatus": "BOOKED",
+    "rewards": {
+      "totalPoints": 6414,
+      "basePoints": 6414,
+      "bonusPoints": [],
+      "logoUrl": "/static/default/default/images/myrewards/RewardsLogo_193x76.png",
+      "viewStatementURL": "/user/rewards"
+    },
+    "sharableDetailsURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/shared/dQuHY_mXh-5GVsKfg_bxOiVqm_OoCK3qQ08vmHswzmtao4k2aXln1sm5-Wp2DNG5",
+    "customerSupport": {
+      "customerSupportURL": "http://www.expedia.com/service/",
+      "customerSupportPhoneNumberDomestic": "+1-877-787-3117",
+      "customerSupportPhoneNumberInternational": "+1-877-787-3117",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ blue Customer Care at 1-877-787-3117.",
+        "For faster service, mention <strong>itinerary #11594098693 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "activities": [
+      {
+        "uniqueID": "3B24E1F2-4012-4E6B-ACF5-6B03A3E70D28_0_46527_164398",
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Confirmed",
+        "bookingStatusMessage": "Your reservation is confirmed.  No need to call us to reconfirm this reservation.",
+        "supplierReferenceNumber": "11594098693",
+        "bookingDate": {
+          "raw": "2015-07-29T00:00:00-07:00",
+          "localized": "Jul 29, 2015 12:00:00 AM",
+          "epochSeconds": 1438153200,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "Wed, 29 Jul"
+        },
+        "startTime": {
+          "raw": "2016-04-05T00:00:00-07:00",
+          "localized": "Apr 5, 2016 12:00:00 AM",
+          "epochSeconds": 1459839600,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "4/5/2016",
+          "localizedMediumDate": "Apr 5",
+          "localizedFullDate": "Tue, Apr 5",
+          "localizedLongDate": "Apr 5, 2016"
+        },
+        "endTime": {
+          "raw": "2016-04-05T00:00:00-07:00",
+          "localized": "Apr 5, 2016 12:00:00 AM",
+          "epochSeconds": 1459839600,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "4/5/2016",
+          "localizedMediumDate": "Apr 5",
+          "localizedFullDate": "Tue, Apr 5",
+          "localizedLongDate": "Apr 5, 2016"
+        },
+        "paymentModel": "MERCHANT",
+        "price": {
+          "localisedPriceAndPassengerCount": [],
+          "currency": "USD",
+          "total": "178.5",
+          "totalFormatted": "$178.50"
+        },
+        "activityCategoryID": 1,
+        "activityId": 46527,
+        "activityTitle": "Private Transportation: Cancun International Airport to Hotel via Minivan",
+        "activityDescription": "Travel by private airport transfer between Cancun International Airport and your Cancun hotel. Each minivan accommodates up to 10 passengers.",
+        "activityItemTitle": "Private Transfers",
+        "voucherless": false,
+        "image": {
+          "url": "https://s3.amazonaws.com/mediavault.le/media/42086d585dae7b49deedf1aa440baa5381b3a0f9.jpeg",
+          "caption": "",
+          "creditString": ""
+        },
+        "activityDetailsURL": "https://wwwexpediacom.trunk.sb.karmalab.net/dx/content?activityId=46527",
+        "travelerCount": 3,
+        "travelerCountDescription": "3 Minivans",
+        "travelers": [
+          {
+            "isRedeemer": true,
+            "firstName": "ItinFourMaui",
+            "lastName": "Selfserve",
+            "fullName": "ItinFourMaui Selfserve"
+          }
+        ],
+        "vendorName": "Best Day Travel-Cancun",
+        "vendorAccountingId": 275,
+        "vendorCustomerServiceOffices": [
+          {
+            "name": "Best Day Tours Offices",
+            "phoneCountryCode": "52",
+            "phoneNumber": "52 (998) 8-81-13-61",
+            "hoursOfOperationText": "Daily, 7AM-10PM (CST)"
+          },
+          {
+            "name": "",
+            "phoneCountryCode": "1",
+            "phoneNumber": "1 ",
+            "hoursOfOperationText": ""
+          }
+        ],
+        "termsAndConditions": {
+          "instructions": "<b>Know Before You Go:</b><ul><li> If you miss your flight or change your itinerary, you much immediately contact Best Day Travel to reschedule your transfer.</li><li> If you have trouble locating your driver, please call the number on this voucher.</li><li> A Best Day Travel staff member—wearing navy blue pants or a skirt and a white shirt with navy blue short sleeves—will be waiting for you outside the terminal.</li><li>On arrival, you can call the local customer service number if you have any questions, doubts, or inconveniences regarding your transportation.<li> Your representative will give you a pack with your return voucher; his or her name and contact information; and the date, time, and location of your transportation back to the airport on your departure date.</li><li> Please note that before you are greeted by a Best Day Travel staff member, you may encounter representatives from other companies.</li></ul><b>Hours of Operation:</b><br />\nDaily; 7 AM--10 PM<br /><br /><b>Airport Pick-Up:</b> Upon arrival, please collect your baggage and proceed through customs. A uniformed Best Day Travel agent will be waiting for you outside the terminal.<br /><br /><b>Hotel Pick-Up:</b> Your driver meets you at your hotel and provides departure time and pick-up details for your return transfer, if applicable.<br /><br /><b>Exchange Your Voucher(s) for Transfer :</b><br />\nPlease present voucher(s) and photo ID to the driver upon pick-up.<br /><br />",
+          "terms": "<b>Cancellations and Changes:</b> This transfer can be changed or cancelled without penalty at any time prior to 48 hours before the scheduled start of your trip. The scheduled start of your trip is defined as your hotel check-in date or your flight departure date/pick-up time.",
+          "minFreeCancellationHoursPackageV2": 0,
+          "freeCancellationAvailablePackageV2": false
+        },
+        "voucherPrintURL": "https://wwwexpediacom.trunk.sb.karmalab.net/itinerary-print-vouchers/11594098693",
+        "vouchers": [
+          {
+            "id": "0046448368",
+            "barcodeNumber": "0046448368",
+            "securityCode": "067841010001785836976",
+            "barcodeImageURL": "https://wwwexpediacom.trunk.sb.karmalab.net/barcode/0046448368.png?encodingFormat=CODE_39",
+            "validForRedemerTypeLocalized": "1 Minivan",
+            "validForRedemerTypeEnglish": "",
+            "supplierReferenceCode": ""
+          },
+          {
+            "id": "0046448369",
+            "barcodeNumber": "0046448369",
+            "securityCode": "067841010001785836976",
+            "barcodeImageURL": "https://wwwexpediacom.trunk.sb.karmalab.net/barcode/0046448369.png?encodingFormat=CODE_39",
+            "validForRedemerTypeLocalized": "1 Minivan",
+            "validForRedemerTypeEnglish": "",
+            "supplierReferenceCode": ""
+          },
+          {
+            "id": "0046448370",
+            "barcodeNumber": "0046448370",
+            "securityCode": "067841010001785836976",
+            "barcodeImageURL": "https://wwwexpediacom.trunk.sb.karmalab.net/barcode/0046448370.png?encodingFormat=CODE_39",
+            "validForRedemerTypeLocalized": "1 Minivan",
+            "validForRedemerTypeEnglish": "",
+            "supplierReferenceCode": ""
+          }
+        ],
+        "unbookedPackageV2": false
+      }
+    ],
+    "packages": [
+      {
+        "uniqueID": "D48975A1-76DD-450E-BBAA-095D31BDEC07",
+        "bookingStatus": "BOOKED",
+        "orderNumber": "8001887929436",
+        "orderLineNumber": "1a62f7b4-4e2f-4e6f-9736-cef1a073c70f",
+        "price": {
+          "currency": "USD",
+          "subTotal": "3035.36",
+          "subTotalFormatted": "$3,035.36",
+          "insurance": "158.0",
+          "insuranceFormatted": "$158.00",
+          "total": "3371.86",
+          "totalFormatted": "$3,371.86"
+        },
+        "flights": [
+          {
+            "uniqueID": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_1",
+            "bookingStatus": "BOOKED",
+            "bookingStatusText": "Booked",
+            "bookingStatusMessage": "Your ticket is not yet confirmed. We are confirming it with the airline and will update your online itinerary within 24 hours.",
+            "ticketingStatus": "INPROGRESS",
+            "orderNumber": "8001887929436",
+            "updateFrequentFlyerPathURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/14fc48b6-97ed-47f2-b9bb-c5f3cf9809e2/updateFrequentFlyerInformation",
+            "confirmationNumbers": [
+              {
+                "airlineName": "British Airways",
+                "number": "YSETF8"
+              }
+            ],
+            "paymentModel": "AGENCY",
+            "fareType": "PUBLISHED",
+            "flightType": "ROUND_TRIP",
+            "isInternational": true,
+            "isSplitTicket": false,
+            "fulfillmentMethod": "ETICKET",
+            "passengers": [
+              {
+                "typeCode": "ADULT",
+                "typeLocalized": "Adult",
+                "firstName": "ItinFourMaui",
+                "lastName": "Selfserve",
+                "fullName": "ItinFourMaui Selfserve",
+                "age": 62,
+                "gender": "Male",
+                "dateOfBirth": "1954-2-13",
+                "TSARedressNumber": "",
+                "passportNumber": "",
+                "passportCountryCode": "US",
+                "phoneNumbers": [
+                  {
+                    "countryCode": "1",
+                    "phone": "4256797200"
+                  }
+                ],
+                "specialAssistanceOptions": [
+                  null
+                ],
+                "ticketNumbers": [],
+                "frequentFlyerPlans": [],
+                "seats": [
+                  {
+                    "assigned": "19C",
+                    "seatPreference": "",
+                    "seatPreferenceLocalized": "Unknown",
+                    "smokingAllowed": false,
+                    "legIndex": 0,
+                    "segmentIndex": 2
+                  }
+                ]
+              }
+            ],
+            "brandedFareFamilyName": "",
+            "legs": [
+              {
+                "type": "MULTISTOP",
+                "state": "PRE_START_4",
+                "numberOfStops": 2,
+                "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smBA.gif",
+                "segments": [
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 41.795617,
+                      "longitude": 12.251165,
+                      "name": "Leonardo Da Vinci",
+                      "longName": "Rome, Italy (FCO-Leonardo Da Vinci)",
+                      "airportCode": "FCO",
+                      "airportMetroCode": "ROM",
+                      "city": "Rome",
+                      "countryCode": "ITA"
+                    },
+                    "departureTime": {
+                      "raw": "2016-04-04T11:45:00+02:00",
+                      "localized": "Apr 4, 2016 11:45:00 AM",
+                      "epochSeconds": 1459763100,
+                      "timeZoneOffsetSeconds": 7200,
+                      "localizedShortDate": "Mon, 4 Apr"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 51.470878,
+                      "longitude": -0.449753,
+                      "name": "Heathrow",
+                      "longName": "London, England, UK (LHR-Heathrow)",
+                      "airportCode": "LHR",
+                      "airportMetroCode": "LON",
+                      "city": "London",
+                      "countryCode": "GBR"
+                    },
+                    "arrivalTime": {
+                      "raw": "2016-04-04T13:25:00+01:00",
+                      "localized": "Apr 4, 2016 1:25:00 PM",
+                      "epochSeconds": 1459772700,
+                      "timeZoneOffsetSeconds": 3600,
+                      "localizedShortDate": "Mon, 4 Apr"
+                    },
+                    "departureTerminal": "3",
+                    "arrivalTerminal": "5",
+                    "airlineCode": "BA",
+                    "externalAirlineCode": "BA",
+                    "airlineName": "British Airways",
+                    "operatedByAirCarrierName": "",
+                    "confirmationAirline": "British Airways",
+                    "confirmationNUmber": "YSETF8",
+                    "flightNumber": "553",
+                    "equipmentCode": "767",
+                    "equipmentDescription": "Boeing 767",
+                    "layoverDuration": "PT4H",
+                    "distance": 894,
+                    "distanceUnits": "mi",
+                    "duration": "PT2H40M",
+                    "formattedDuration": "2h 40m",
+                    "bookingCode": "S",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_1_L1_S1_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HK",
+                    "isHidden": false
+                  },
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 51.470878,
+                      "longitude": -0.449753,
+                      "name": "Heathrow",
+                      "longName": "London, England, UK (LHR-Heathrow)",
+                      "airportCode": "LHR",
+                      "airportMetroCode": "LON",
+                      "city": "London",
+                      "countryCode": "GBR"
+                    },
+                    "departureTime": {
+                      "raw": "2016-04-04T17:25:00+01:00",
+                      "localized": "Apr 4, 2016 5:25:00 PM",
+                      "epochSeconds": 1459787100,
+                      "timeZoneOffsetSeconds": 3600,
+                      "localizedShortDate": "Mon, 4 Apr"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 39.877451,
+                      "longitude": -75.240781,
+                      "name": "Philadelphia Intl.",
+                      "longName": "Philadelphia, PA (PHL-Philadelphia Intl.)",
+                      "airportCode": "PHL",
+                      "airportMetroCode": "PHL",
+                      "city": "Philadelphia",
+                      "countryCode": "USA"
+                    },
+                    "arrivalTime": {
+                      "raw": "2016-04-04T20:10:00-04:00",
+                      "localized": "Apr 4, 2016 8:10:00 PM",
+                      "epochSeconds": 1459815000,
+                      "timeZoneOffsetSeconds": -14400,
+                      "localizedShortDate": "Mon, 4 Apr"
+                    },
+                    "departureTerminal": "5",
+                    "arrivalTerminal": "A",
+                    "airlineCode": "BA",
+                    "externalAirlineCode": "BA",
+                    "airlineName": "British Airways",
+                    "operatedByAirCarrierName": "",
+                    "confirmationAirline": "British Airways",
+                    "confirmationNUmber": "YSETF8",
+                    "flightNumber": "69",
+                    "equipmentCode": "788",
+                    "equipmentDescription": "Boeing 787-8",
+                    "layoverDuration": "PT11H35M",
+                    "distance": 3552,
+                    "distanceUnits": "mi",
+                    "duration": "PT7H45M",
+                    "formattedDuration": "7h 45m",
+                    "bookingCode": "O",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_1_L1_S2_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HK",
+                    "isHidden": false
+                  },
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 39.877451,
+                      "longitude": -75.240781,
+                      "name": "Philadelphia Intl.",
+                      "longName": "Philadelphia, PA (PHL-Philadelphia Intl.)",
+                      "airportCode": "PHL",
+                      "airportMetroCode": "PHL",
+                      "city": "Philadelphia",
+                      "countryCode": "USA"
+                    },
+                    "departureTime": {
+                      "raw": "2016-04-05T07:45:00-04:00",
+                      "localized": "Apr 5, 2016 7:45:00 AM",
+                      "epochSeconds": 1459856700,
+                      "timeZoneOffsetSeconds": -14400,
+                      "localizedShortDate": "Tue, 5 Apr"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 21.040397,
+                      "longitude": -86.874322,
+                      "name": "Cancun Intl.",
+                      "longName": "Cancun, Quintana Roo, Mexico (CUN-Cancun Intl.)",
+                      "airportCode": "CUN",
+                      "city": "Cancun",
+                      "countryCode": "MEX"
+                    },
+                    "arrivalTime": {
+                      "raw": "2016-04-05T10:45:00-05:00",
+                      "localized": "Apr 5, 2016 10:45:00 AM",
+                      "epochSeconds": 1459871100,
+                      "timeZoneOffsetSeconds": -18000,
+                      "localizedShortDate": "Tue, 5 Apr"
+                    },
+                    "departureTerminal": "A",
+                    "arrivalTerminal": "3",
+                    "airlineCode": "BA",
+                    "externalAirlineCode": "BA",
+                    "airlineName": "British Airways",
+                    "operatedByAirCarrierName": "AMERICAN AIRLINES",
+                    "confirmationAirline": "British Airways",
+                    "confirmationNUmber": "YSETF8",
+                    "flightNumber": "6772",
+                    "equipmentCode": "321",
+                    "equipmentDescription": "Airbus A321",
+                    "distance": 1462,
+                    "distanceUnits": "mi",
+                    "duration": "PT4H",
+                    "formattedDuration": "4h",
+                    "bookingCode": "O",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "checkinAirlineCode": "AA",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_1_L1_S3_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HK",
+                    "isHidden": false
+                  }
+                ],
+                "sharableFlightLegURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/shared/dQuHY_mXh-5GVsKfg_bxOiVqm_OoCK3qQ08vmHswzmu6ZWFXOPcteWJ9ebGL33P6m_AKs3jVoup-TZfjzNmJZdz9BSBSef2rONjGH9DpTzmzys1VV4SCzA1P-ZrQUQTHJNVRvffbhEhAi1gOHyIeVZ8cVtugjqwb_HROVy_Z2sc_g2hkgOoTi81HaAsUea_p",
+                "duration": "P1DT6H"
+              },
+              {
+                "type": "ONESTOP",
+                "state": "PRE_START_4",
+                "numberOfStops": 1,
+                "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smBA.gif",
+                "segments": [
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 21.040397,
+                      "longitude": -86.874322,
+                      "name": "Cancun Intl.",
+                      "longName": "Cancun, Quintana Roo, Mexico (CUN-Cancun Intl.)",
+                      "airportCode": "CUN",
+                      "city": "Cancun",
+                      "countryCode": "MEX"
+                    },
+                    "departureTime": {
+                      "raw": "2016-04-20T17:35:00-05:00",
+                      "localized": "Apr 20, 2016 5:35:00 PM",
+                      "epochSeconds": 1461191700,
+                      "timeZoneOffsetSeconds": -18000,
+                      "localizedShortDate": "Wed, 20 Apr"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 51.156026,
+                      "longitude": -0.16458,
+                      "name": "Gatwick",
+                      "longName": "London, England, UK (LGW-Gatwick)",
+                      "airportCode": "LGW",
+                      "airportMetroCode": "LON",
+                      "city": "London",
+                      "countryCode": "GBR"
+                    },
+                    "arrivalTime": {
+                      "raw": "2016-04-21T08:55:00+01:00",
+                      "localized": "Apr 21, 2016 8:55:00 AM",
+                      "epochSeconds": 1461225300,
+                      "timeZoneOffsetSeconds": 3600,
+                      "localizedShortDate": "Thu, 21 Apr"
+                    },
+                    "departureTerminal": "2",
+                    "arrivalTerminal": "N",
+                    "airlineCode": "BA",
+                    "externalAirlineCode": "BA",
+                    "airlineName": "British Airways",
+                    "operatedByAirCarrierName": "",
+                    "confirmationAirline": "British Airways",
+                    "confirmationNUmber": "YSETF8",
+                    "flightNumber": "2202",
+                    "equipmentCode": "777",
+                    "equipmentDescription": "Boeing 777",
+                    "layoverDuration": "PT7H5M",
+                    "distance": 4949,
+                    "distanceUnits": "mi",
+                    "duration": "PT9H20M",
+                    "formattedDuration": "9h 20m",
+                    "bookingCode": "O",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_1_L2_S1_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HK",
+                    "isHidden": false
+                  },
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 51.156026,
+                      "longitude": -0.16458,
+                      "name": "Gatwick",
+                      "longName": "London, England, UK (LGW-Gatwick)",
+                      "airportCode": "LGW",
+                      "airportMetroCode": "LON",
+                      "city": "London",
+                      "countryCode": "GBR"
+                    },
+                    "departureTime": {
+                      "raw": "2016-04-21T16:00:00+01:00",
+                      "localized": "Apr 21, 2016 4:00:00 PM",
+                      "epochSeconds": 1461250800,
+                      "timeZoneOffsetSeconds": 3600,
+                      "localizedShortDate": "Thu, 21 Apr"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 41.795617,
+                      "longitude": 12.251165,
+                      "name": "Leonardo Da Vinci",
+                      "longName": "Rome, Italy (FCO-Leonardo Da Vinci)",
+                      "airportCode": "FCO",
+                      "airportMetroCode": "ROM",
+                      "city": "Rome",
+                      "countryCode": "ITA"
+                    },
+                    "arrivalTime": {
+                      "raw": "2016-04-21T19:35:00+02:00",
+                      "localized": "Apr 21, 2016 7:35:00 PM",
+                      "epochSeconds": 1461260100,
+                      "timeZoneOffsetSeconds": 7200,
+                      "localizedShortDate": "Thu, 21 Apr"
+                    },
+                    "departureTerminal": "N",
+                    "arrivalTerminal": "3",
+                    "airlineCode": "BA",
+                    "externalAirlineCode": "BA",
+                    "airlineName": "British Airways",
+                    "operatedByAirCarrierName": "",
+                    "confirmationAirline": "British Airways",
+                    "confirmationNUmber": "YSETF8",
+                    "flightNumber": "2540",
+                    "equipmentCode": "319",
+                    "equipmentDescription": "Airbus A319",
+                    "distance": 894,
+                    "distanceUnits": "mi",
+                    "duration": "PT2H35M",
+                    "formattedDuration": "2h 35m",
+                    "bookingCode": "S",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_1_L2_S2_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HK",
+                    "isHidden": false
+                  }
+                ],
+                "sharableFlightLegURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/shared/dQuHY_mXh-5GVsKfg_bxOiVqm_OoCK3qQ08vmHswzmu6ZWFXOPcteWJ9ebGL33P6m_AKs3jVoup-TZfjzNmJZdz9BSBSef2rONjGH9DpTzmzys1VV4SCzA1P-ZrQUQTHJNVRvffbhEhAi1gOHyIeVZ8cVtugjqwb_HROVy_Z2sfM_v_7G7-uemcOimOMSzUp",
+                "duration": "PT19H"
+              }
+            ],
+            "rules": {
+              "cancellationFeeLegalText": "A non-refundable administration fee will be applied for changes and cancellations of bookings. Customers will be informed of the administration fee by their Customer Support Centre Agent at the time of their call.",
+              "faresNotGuaranteedText": "Fares are not guaranteed until ticketed.",
+              "cancelChangeIntroductionText": "We understand that sometimes plans change. We do not charge a cancel or change fee. When the airline charges such fees in accordance with its own policies, the cost will be passed on to you.",
+              "feeChangeRefundIntroductionText": "When the airline charges any cancellation or change fees in accordance with its own policies, the cost will be passed on to you.",
+              "refundabilityText": "Tickets are nonrefundable, nontransferable and name changes are not allowed.",
+              "completePenaltyRules": {
+                "text": "Rules and restrictions as imposed by the airline will be applicable to your fare should you need to change or cancel your flight.",
+                "url": "https://wwwexpediacom.trunk.sb.karmalab.net/Fare-Rules?tripid=14fc48b6-97ed-47f2-b9bb-c5f3cf9809e2",
+                "textAndURL": "Please read the <a id=\"complete_penalty_rules_for_changes_and_cancellations_link\" href=\"https://wwwexpediacom.trunk.sb.karmalab.net/Fare-Rules?tripid=14fc48b6-97ed-47f2-b9bb-c5f3cf9809e2\" class=\"tooltip\" target=\"rulesAndRestrictions\">complete penalty rules for changes and cancellations <span class=\"visually-hidden\" style=\"display:none;\">(Opens a new window) </span> </a> applicable to this fare.",
+                "apiURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/11594098693/items/D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_1/gdsFareRulesText?useCache=true"
+              },
+              "insuranceTerms": {
+                "text": "View the complete terms and the condition of the description of coverage.",
+                "url": "http://www.expedia.com/daily/promos/travel_protection_plans/vacation_waiver.asp?opt=1_2",
+                "textAndURL": "View the complete terms and the condition of the <a href=\"http://www.expedia.com/daily/promos/travel_protection_plans/vacation_waiver.asp?opt=1_2\" class=\"tooltip\" target=\"rulesAndRestrictions\">description of coverage. <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a>"
+              },
+              "additionalAirlineFees": {
+                "text": "The airline may charge additional fees for checked baggage or other optional services.",
+                "url": "https://wwwexpediacom.trunk.sb.karmalab.net/Flights-BagFees?originapt=FCO&destinationapt=CUN&cabinclass=3&mktgcarrier=BA&opcarrier=&farebasis=ONN0U0Z1&bookingclass=S&travelDate=2016-04-04&flightNumber=553",
+                "textAndURL": "The airline may charge <a href=\"https://wwwexpediacom.trunk.sb.karmalab.net/Flights-BagFees?originapt=FCO&destinationapt=CUN&cabinclass=3&mktgcarrier=BA&opcarrier=&farebasis=ONN0U0Z1&bookingclass=S&travelDate=2016-04-04&flightNumber=553\" class=\"tooltip\" target=\"rulesAndRestrictions\">additional fees <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a> for checked baggage or other optional services."
+              },
+              "airlineLiabilityLimitations": {
+                "text": "Please read important information regarding airline liability limitations.",
+                "url": "https://wwwexpediacom.trunk.sb.karmalab.net/p/info-main/warsaw?",
+                "textAndURL": "Please read important information regarding <a id=\"airline_liability_limitations_link\" href=\"https://wwwexpediacom.trunk.sb.karmalab.net/p/info-main/warsaw?\" class=\"tooltip\" target=\"rulesAndRestrictions\">airline liability limitations <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a>."
+              },
+              "airlineCheckInInstructionText": "Remember to bring your itinerary and government-issued photo ID for airport check-in and security.",
+              "travelingToUSText": "All passengers traveling to the US must provide valid travel documents and details of their full US destination address for US Immigration.",
+              "internationalPassportNoteText": "Proof of citizenship is required for international travel.  Be sure to bring all necessary documentation (e.g. passport, visa, transit permit). To learn more, visit our <a href=\"http://visacentral.com/index.php?login=85001&utm_campaign=Expedia&utm_medium=1&utm_source=US&rfrr=FLT.Itin.VisaSite\" class=\"tooltip\" >Visa and Passport page <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span></a>.",
+              "railFeederMessages": [],
+              "expediaChangeFeeChargeable": false
+            },
+            "sharableItemDetailURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/shared/dQuHY_mXh-5GVsKfg_bxOiVqm_OoCK3qQ08vmHswzmu6ZWFXOPcteWJ9ebGL33P6m_AKs3jVoup-TZfjzNmJZdz9BSBSef2rONjGH9DpTzmzys1VV4SCzA1P-ZrQUQTHJNVRvffbhEhAi1gOHyIeVXXYmzEaMZturK9KKtV8N0c",
+            "airRecordLocator": "100458387",
+            "isSeatMapAvailable": true,
+            "bookingProvider": "SABRE",
+            "hasTrainTransfer": false,
+            "ticketingAirCarrierNames": [
+              "British Airways"
+            ],
+            "isLccOrCharter": false
+          }
+        ],
+        "hotels": [
+          {
+            "uniqueID": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_0",
+            "hotelId": "522481",
+            "checkInDateTime": {
+              "raw": "2016-04-05T15:00:00-06:00",
+              "localized": "Apr 5, 2016 3:00:00 PM",
+              "epochSeconds": 1459890000,
+              "timeZoneOffsetSeconds": -21600,
+              "localizedShortDate": "4/5/2016",
+              "localizedMediumDate": "Apr 5",
+              "localizedFullDate": "Tue, Apr 5",
+              "localizedLongDate": "Apr 5, 2016"
+            },
+            "checkOutDateTime": {
+              "raw": "2016-04-20T11:00:00-06:00",
+              "localized": "Apr 20, 2016 11:00:00 AM",
+              "epochSeconds": 1461171600,
+              "timeZoneOffsetSeconds": -21600,
+              "localizedShortDate": "4/20/2016",
+              "localizedMediumDate": "Apr 20",
+              "localizedFullDate": "Wed, Apr 20",
+              "localizedLongDate": "Apr 20, 2016"
+            },
+            "checkInDate": "2016-04-05T15:00:00-06:00",
+            "checkOutDate": "2016-04-20T11:00:00-06:00",
+            "checkInDateLocalized": "Apr 5, 2016",
+            "checkOutDateLocalized": "Apr 20, 2016",
+            "numberOfNights": 15,
+            "bookingStatus": "BOOKED",
+            "bookingStatusText": "Booked",
+            "bookingStatusMessage": "Your reservation is booked. No need to call us to reconfirm this reservation.",
+            "inventoryType": "MERCHANT",
+            "inventorySource": "INTERNAL",
+            "paymentModel": "EXPEDIA_COLLECT",
+            "inventoryVisibility": "VISIBLE",
+            "orderNumber": "8001887929436",
+            "state": "PRE_START_4",
+            "infositeURL": "http://wwwexpediacom.trunk.sb.karmalab.net/itin.h522481.Hotel-Information?langid=1033",
+            "hotelPropertyInfo": {
+              "address": {
+                "addressLine1": "Blvd. Kukulcan, Km. 17, Lote 50",
+                "addressLine2": "Zona Hotelera",
+                "city": "Cancun",
+                "countrySubdivisionCode": "QROO",
+                "postalCode": "77500",
+                "countryCode": "MEX",
+                "countryName": " Mexico",
+                "fullAddress": "Blvd. Kukulcan, Km. 17, Lote 50, Cancun, QROO, 77500 Mexico",
+                "airportCode": "CUN"
+              },
+              "name": "The Royal Islander - An All Suites Resort",
+              "starRating": "35",
+              "photoThumbnailURL": "/hotels/1000000/530000/522500/522481/522481_160_l.jpg",
+              "photoThumbnail500pixURL": "/hotels/1000000/530000/522500/522481/522481_160_y.jpg",
+              "photoThumbnail1000pixURL": "/hotels/1000000/530000/522500/522481/522481_160_z.jpg",
+              "localPhone": "52-998-8810100",
+              "tollFreePhone": "1-800-53-SUITE",
+              "formattedPhoneNumbers": "Tel: 52 (998) 8810100, Fax: 52 (998) 7309647",
+              "checkInPolicies": [
+                "Check-in time ends at Midnight",
+                "Check-in time starts at 4 PM",
+                "Minimum check-in age is 25"
+              ],
+              "checkInStartTimePolicy": {
+                "label": "Check-in time starts at",
+                "value": "4 PM"
+              },
+              "checkInEndTimePolicy": {
+                "label": "Check-in time ends at",
+                "value": "Midnight"
+              },
+              "checkOutTimePolicy": {
+                "label": "Check-out time is",
+                "value": "11 AM"
+              },
+              "generalRules": [
+                "Check-out time is 11 AM",
+                "No rollaway/extra beds available"
+              ],
+              "restrictionPolicies": [],
+              "fees": [
+                "The following fees and deposits are charged by the property at time of service, check-in, or check-out.<ul> <li>Breakfast fee: MXN 200 per person (approximately)</li>    <li>Airport shuttle fee: MXN 250 per person (roundtrip)</li>         <li>Late check-out fee: MXN 1500</li> <li>Deposit: MXN 1500 per night</li>       </ul>",
+                "The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+              ],
+              "mandatoryFees": [
+                "&nbsp;",
+                "&nbsp;",
+                "&nbsp;",
+                "<p>The charges below are included in your overall room price:</p><ul><li>Resort fee</li></ul>",
+                "&nbsp;",
+                "<p>We have included all charges provided to us by the property. However, charges can vary, for example, based on length of stay or the room you book. </p>"
+              ],
+              "specialCheckInInstructions": [],
+              "latitude": 21.07046,
+              "longitude": -86.778314,
+              "isVipAccess": false,
+              "googleMapsLink": "//maps.google.com?q=77500+Cancun,+Blvd.+Kukulcan,+Km.+17,+Lote+50+Zona+Hotelera",
+              "regionId": "800022"
+            },
+            "rules": {
+              "cancelChangeRulesIntroduction": "We understand that sometimes plans fall through. We do not charge a cancel or change fee. When the hotel charges such fees in accordance with its own policies, the cost will be passed on to you. The Royal Islander - An All Suites Resort charges the following cancellation and change fees.",
+              "cancelChangeRules": [
+                "Cancellations or changes made after 1:00 AM (Central America Daylight Time) on Apr 4, 2016 or no-shows are subject to a hotel fee equal to the first night's rate plus taxes and fees.",
+                "Prices and hotel availability are not guaranteed until full payment is received.If you would like to book multiple rooms, you must use a different name for each room. Otherwise, the duplicate reservation will be canceled by the hotel."
+              ],
+              "cancellationWindowTime": {
+                "raw": "2016-04-04T01:00:00-07:00",
+                "localized": "Apr 4, 2016 1:00:00 AM",
+                "epochSeconds": 1459756800,
+                "timeZoneOffsetSeconds": -25200,
+                "localizedShortDate": "Mon, 4 Apr"
+              },
+              "opaqueRules": [],
+              "opaquePolicies": [],
+              "lateArrivalInstructions": "Your room will be guaranteed for late arrival.",
+              "loyaltyPointsDisclaimer": "Hotel supplier loyalty points and/or airline miles may not be awarded when booking Expedia Special Rate hotels.",
+              "currencyDisclaimer": "Unless specified otherwise, <span class=\"rr-bold\">rates are quoted in </span><span class=\"rr-bold\" id=\"hotel_id-default-currency\">US dollars</span>.",
+              "extraGuestPolicies": [
+                "Availability of accommodation in the same property for extra guests is not guaranteed."
+              ],
+              "occupancyPolicies": [
+                "Base rate is for 4 guests.",
+                "This property considers guests of any age to be an adult."
+              ],
+              "paymentPolicies": [
+                "Your credit card is charged the total cost at time of purchase. Prices and room availability are not guaranteed until full payment is received.",
+                "Some hotels request that we wait to submit guest names until 7 days prior to check in. In such a case, your hotel room is reserved, but your name is not yet on file with the hotel."
+              ],
+              "roomRequestDisclaimer": "All special requests (such as in-room amenities, bed type, and smoking preference) are shared with the hotel, but requests are not guaranteed and may incur additional charges. We recommend you confirm them directly with the hotel before travel.",
+              "dualCurrencyText": "Rate quotes in USD are based on current exchange rates, which may vary at time of travel. Final payment will be settled in local currency directly with the hotel.",
+              "feesDisclaimer": "The list of fees presented may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+            },
+            "appliedCoupons": [],
+            "rooms": [
+              {
+                "uniqueID": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1a62f7b4-4e2f-4e6f-9736-cef1a073c70f_0_12472604",
+                "roomRatePlanDescription": "Suite, 1 Bedroom - Separate living & dining",
+                "roomTypeCode": "507429",
+                "ratePlanCode": "2069969",
+                "bookingStatus": "BOOKED",
+                "drrRateDiscountDescription": "Book now and save",
+                "orderLineNumber": "1a62f7b4-4e2f-4e6f-9736-cef1a073c70f",
+                "refundabilityStatus": "REFUNDABLE",
+                "availableOnAllDates": true,
+                "roomPreferences": {
+                  "primaryOccupant": {
+                    "firstName": "ItinFourMaui",
+                    "fullName": "ItinFourMaui Selfserve",
+                    "email": "itin4@expedia.com",
+                    "phone": "1-425-6797200"
+                  },
+                  "otherOccupantInfo": {
+                    "adultCount": 1,
+                    "childCount": 0,
+                    "infantCount": 0,
+                    "childAndInfantCount": 0,
+                    "childAndInfantAges": []
+                  },
+                  "occupantSelectedRoomOptions": {
+                    "bedTypeName": "1 king and 2 single beds",
+                    "smokingPreference": "NONSMOKING_ROOM",
+                    "accessibilityOptions": [],
+                    "hasExtraBedAdult": false,
+                    "hasExtraBedChild": false,
+                    "hasExtraBedInfant": false,
+                    "isSmokingPreferenceSelected": true,
+                    "isRoomOptionsAvailable": true
+                  },
+                  "availableRoomOptions": {
+                    "bedTypes": [
+                      {
+                        "id": "64",
+                        "description": "1 king and 2 single beds",
+                        "selected": true
+                      }
+                    ],
+                    "isSmokingRoomAvailable": false,
+                    "isNonSmokingRoomAvailable": true
+                  }
+                },
+                "amenities": [
+                  "Free Wireless Internet",
+                  "Full Kitchen"
+                ]
+              }
+            ],
+            "sharableItemDetailURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/shared/dQuHY_mXh-5GVsKfg_bxOiVqm_OoCK3qQ08vmHswzmu6ZWFXOPcteWJ9ebGL33P6m_AKs3jVoup-TZfjzNmJZdz9BSBSef2rONjGH9DpTzmzys1VV4SCzA1P-ZrQUQTHJNVRvffbhEhAi1gOHyIeVXs4EGsX0E_J7r8wadfmCHQ",
+            "isFreeCancellationAvailable": false,
+            "paymentsAndCreditFees": {
+              "paymentsHotelFeesAndDepositsDisclaimer": "The below fees and deposits only apply if they are not included in your selected room rate.",
+              "noFeesStaticText": "The price above DOES NOT include any applicable hotel service fees, charges for optional incidentals (such as minibar snacks or telephone calls), or regulatory surcharges. The hotel will assess these fees, charges, and surcharges upon check-out.",
+              "isDirectAgency": false,
+              "isGDS": false,
+              "isFullyCancelled": false,
+              "isAnyRoomCancelled": false,
+              "isDepositRequired": false,
+              "isPaymentsCreditsVisible": false
+            }
+          }
+        ]
+      }
+    ],
+    "insurance": [
+      {
+        "uniqueID": "EF86018E-060B-4358-8F9C-F5A3778BCF43",
+        "policyID": "",
+        "insuredItemUniqueID": "D48975A1-76DD-450E-BBAA-095D31BDEC07_1",
+        "name": "Cancellation Only - Vacation Waiver",
+        "displayName": "Travel Protection – Vacation Waiver",
+        "lineOfBusiness": "PACKAGE",
+        "bookingStatus": "BOOKED",
+        "orderNumber": "8001887929436",
+        "orderLineNumber": "f76387cd-4742-4ab5-8230-58925635a0f1",
+        "termsURL": "http://www.expedia.com/daily/promos/travel_protection_plans/vacation_waiver.asp?opt=1_2",
+        "coverageQuoteTime": {
+          "raw": "2015-07-29T23:58:12-07:00",
+          "localized": "Jul 29, 2015 11:58:12 PM",
+          "epochSeconds": 1438239492,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "Wed, 29 Jul"
+        },
+        "coverageStartTime": {
+          "raw": "2016-04-04T11:45:00+02:00",
+          "localized": "Apr 4, 2016 11:45:00 AM",
+          "epochSeconds": 1459763100,
+          "timeZoneOffsetSeconds": 7200,
+          "localizedShortDate": "Mon, 4 Apr"
+        },
+        "coverageEndTime": {
+          "raw": "2016-04-21T19:35:00+02:00",
+          "localized": "Apr 21, 2016 7:35:00 PM",
+          "epochSeconds": 1461260100,
+          "timeZoneOffsetSeconds": 7200,
+          "localizedShortDate": "Thu, 21 Apr"
+        },
+        "price": {
+          "currency": "USD",
+          "base": "158.0",
+          "baseFormatted": "$158.00",
+          "total": "158.0",
+          "totalFormatted": "$158.00"
+        },
+        "insuranceTypeId": 100004
+      }
+    ],
+    "readTripError": true,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

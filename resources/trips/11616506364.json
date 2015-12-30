@@ -1,0 +1,437 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "ebfbb9ff-8851-4e00-9d70-389dee44c8c9",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11616506364",
+    "tripNumber": 11616506364,
+    "title": "Shibuya Creston Hotel, Tokyo",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/ebfbb9ff-8851-4e00-9d70-389dee44c8c9/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-08-05T15:00:00+09:00",
+      "localized": "Aug 5, 2016 3:00:00 PM",
+      "epochSeconds": 1470376800,
+      "timeZoneOffsetSeconds": 32400,
+      "localizedShortDate": "8/5/2016",
+      "localizedMediumDate": "Aug 5",
+      "localizedFullDate": "Fri, Aug 5",
+      "localizedLongDate": "Aug 5, 2016"
+    },
+    "endTime": {
+      "raw": "2016-08-13T11:00:00+09:00",
+      "localized": "Aug 13, 2016 11:00:00 AM",
+      "epochSeconds": 1471053600,
+      "timeZoneOffsetSeconds": 32400,
+      "localizedShortDate": "8/13/2016",
+      "localizedMediumDate": "Aug 13",
+      "localizedFullDate": "Sat, Aug 13",
+      "localizedLongDate": "Aug 13, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-16T22:56:34Z",
+      "localized": "Sep 16, 2015 10:56:34 PM",
+      "epochSeconds": 1442444194,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 16 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-17T06:34:03Z",
+      "localized": "Sep 17, 2015 6:34:03 AM",
+      "epochSeconds": 1442471643,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-17T21:28:14Z",
+      "localized": "Sep 17, 2015 9:28:14 PM",
+      "epochSeconds": 1442525294,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBznGAAxUQA-CoOR_kzqr7LjoCpEuV1WOSleaegBpLiaE4",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11616506364 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11616506364 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "hotels": [
+      {
+        "uniqueID": "688B1D69-63BB-4687-B4CE-E683D6166850_0",
+        "hotelId": "4047539",
+        "checkInDateTime": {
+          "raw": "2016-08-05T15:00:00+09:00",
+          "localized": "Aug 5, 2016 3:00:00 PM",
+          "epochSeconds": 1470376800,
+          "timeZoneOffsetSeconds": 32400,
+          "localizedShortDate": "8/5/2016",
+          "localizedMediumDate": "Aug 5",
+          "localizedFullDate": "Fri, Aug 5",
+          "localizedLongDate": "Aug 5, 2016"
+        },
+        "checkOutDateTime": {
+          "raw": "2016-08-13T11:00:00+09:00",
+          "localized": "Aug 13, 2016 11:00:00 AM",
+          "epochSeconds": 1471053600,
+          "timeZoneOffsetSeconds": 32400,
+          "localizedShortDate": "8/13/2016",
+          "localizedMediumDate": "Aug 13",
+          "localizedFullDate": "Sat, Aug 13",
+          "localizedLongDate": "Aug 13, 2016"
+        },
+        "checkInDate": "2016-08-05T15:00:00+09:00",
+        "checkOutDate": "2016-08-13T11:00:00+09:00",
+        "checkInDateLocalized": "Fri Aug/5/2016",
+        "checkOutDateLocalized": "Sat Aug/13/2016",
+        "numberOfNights": 8,
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Booked",
+        "bookingStatusMessage": "Your reservation is booked. No need to call us to reconfirm this reservation.",
+        "inventoryType": "MERCHANT",
+        "inventorySource": "INTERNAL",
+        "paymentModel": "EXPEDIA_COLLECT",
+        "inventoryVisibility": "VISIBLE",
+        "orderNumber": "8051433144599",
+        "state": "PRE_START_4",
+        "infositeURL": "http://wwwexpediacom.integration.sb.karmalab.net/itin.h4047539.Hotel-Information?langid=1033",
+        "hotelPropertyInfo": {
+          "address": {
+            "addressLine1": "10-8, Kamiyama-Cho",
+            "addressLine2": "Shibuya-ku",
+            "city": "Tokyo",
+            "countrySubdivisionCode": "Tokyo-to",
+            "postalCode": "150-0047",
+            "countryCode": "JPN",
+            "countryName": " Japan",
+            "fullAddress": "10-8, Kamiyama-Cho, Tokyo, Tokyo-to, 150-0047 Japan",
+            "airportCode": "NRT"
+          },
+          "name": "Shibuya Creston Hotel",
+          "starRating": "30",
+          "photoThumbnailURL": "/hotels/5000000/4050000/4047600/4047539/4047539_16_l.jpg",
+          "photoThumbnail500pixURL": "/hotels/5000000/4050000/4047600/4047539/4047539_16_y.jpg",
+          "photoThumbnail1000pixURL": "/hotels/5000000/4050000/4047600/4047539/4047539_16_z.jpg",
+          "localPhone": "81-3-34815800",
+          "formattedPhoneNumbers": "Tel: 81 (3) 34815800, Fax: 81 (3) 34815515",
+          "checkInPolicies": [
+            "Check-in time starts at 3 PM",
+            "Minimum check-in age is 18"
+          ],
+          "checkInStartTimePolicy": {
+            "label": "Check-in time starts at",
+            "value": "3 PM"
+          },
+          "checkInEndTimePolicy": {},
+          "checkOutTimePolicy": {
+            "label": "Check-out time is",
+            "value": "11 AM"
+          },
+          "generalRules": [
+            "Check-out time is 11 AM",
+            "Cash Deposit Required"
+          ],
+          "restrictionPolicies": [],
+          "fees": [
+            "The following fees and deposits are charged by the property at time of service, check-in, or check-out.<ul> <li>Fee for continental breakfast: JPY 1080 per person (approximately)</li>                     </ul>",
+            "The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+          ],
+          "mandatoryFees": [],
+          "specialCheckInInstructions": [],
+          "latitude": 35.663169,
+          "longitude": 139.694972,
+          "isVipAccess": false,
+          "googleMapsLink": "http://maps.google.com?q=150-0047+Tokyo,+10-8,+Kamiyama-Cho+Shibuya-ku",
+          "regionId": "179167"
+        },
+        "totalPriceDetails": {
+          "primaryCurrencyCode": "USD",
+          "base": "1061.33",
+          "baseFormatted": "$1,061.33",
+          "baseWithAdjustmentForDRRRateDiscount": "1061.33",
+          "baseWithAdjustmentForDRRRateDiscountFormatted": "$1,061.33",
+          "taxesAndFees": "199.53",
+          "taxesAndFeesFormatted": "$199.53",
+          "drrRateDiscountDescription": "",
+          "subTotalBeforeCoupon": "1260.86",
+          "subTotalBeforeCouponFormatted": "$1,260.86",
+          "taxStatus": "ESTIMATED",
+          "total": "1260.86",
+          "totalFormatted": "$1,260.86",
+          "hasFees": true,
+          "expediaChangeFee": "0",
+          "expediaChangeFeeFormatted": "$0.00"
+        },
+        "rules": {
+          "cancelChangeRulesIntroduction": "We understand that sometimes plans fall through. We do not charge a cancel or change fee. When the hotel charges such fees in accordance with its own policies, the cost will be passed on to you. Shibuya Creston Hotel charges the following cancellation and change fees.",
+          "cancelChangeRules": [
+            "Cancellations or changes made after 11:59 PM (Tokyo Standard Time) on August 04, 2016 or no-shows are subject to a hotel fee equal to the first night's rate plus taxes and fees."
+          ],
+          "cancellationWindowTime": {
+            "raw": "2016-08-04T23:59:00-07:00",
+            "localized": "Aug 4, 2016 11:59:00 PM",
+            "epochSeconds": 1470380340,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Thu, 4 Aug"
+          },
+          "opaqueRules": [],
+          "opaquePolicies": [],
+          "lateArrivalInstructions": "Your room will be guaranteed for late arrival.",
+          "loyaltyPointsDisclaimer": "Hotel supplier loyalty points and/or airline miles may not be awarded when booking Expedia Special Rate hotels.",
+          "currencyDisclaimer": "Unless specified otherwise, <span class=\"rr-bold\">rates are quoted in </span><span class=\"rr-bold\" id=\"hotel_id-default-currency\">US dollars</span>.",
+          "extraGuestPolicies": [
+            "Availability of accommodation in the same property for extra guests is not guaranteed."
+          ],
+          "occupancyPolicies": [
+            "Base rate is for 1 guest.",
+            "This property considers guests of any age to be an adult."
+          ],
+          "paymentPolicies": [
+            "Your credit card is charged the total cost at time of purchase. Prices and room availability are not guaranteed until full payment is received.",
+            "Some hotels request that we wait to submit guest names until 7 days prior to check in. In such a case, your hotel room is reserved, but your name is not yet on file with the hotel."
+          ],
+          "roomRequestDisclaimer": "All special requests (such as in-room amenities, bed type, and smoking preference) are shared with the hotel, but requests are not guaranteed and may incur additional charges. We recommend you confirm them directly with the hotel before travel.",
+          "dualCurrencyText": "Rate quotes in USD are based on current exchange rates, which may vary at time of travel. Final payment will be settled in local currency directly with the hotel.",
+          "feesDisclaimer": "The list of fees presented may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+        },
+        "rooms": [
+          {
+            "uniqueID": "688B1D69-63BB-4687-B4CE-E683D6166850_0_12654934",
+            "roomRatePlanDescription": "Double Room",
+            "roomTypeCode": "200028873",
+            "ratePlanCode": "200141907",
+            "bookingStatus": "BOOKED",
+            "drrRateDiscountDescription": "",
+            "orderLineNumber": "f2706f0a-2c90-4f1f-9a2c-41a03228ca8b",
+            "refundabilityStatus": "REFUNDABLE",
+            "availableOnAllDates": true,
+            "roomCancelLink": "https://wwwexpediacom.integration.sb.karmalab.net/hotel-cancel-details?tripid=ebfbb9ff-8851-4e00-9d70-389dee44c8c9&ordernumber=8051433144599&orderlineguid=f2706f0a-2c90-4f1f-9a2c-41a03228ca8b&roomNumber=0",
+            "roomChangeLink": "https://wwwexpediacom.integration.sb.karmalab.net/trips/ebfbb9ff-8851-4e00-9d70-389dee44c8c9/ordernumber/8051433144599/orderlinenumber/f2706f0a-2c90-4f1f-9a2c-41a03228ca8b/change",
+            "totalPriceDetails": {
+              "primaryCurrencyCode": "USD",
+              "base": "1061.33",
+              "baseFormatted": "$1,061.33",
+              "baseWithAdjustmentForDRRRateDiscount": "1061.33",
+              "baseWithAdjustmentForDRRRateDiscountFormatted": "$1,061.33",
+              "taxesAndFees": "199.53",
+              "taxesAndFeesFormatted": "$199.53",
+              "subTotalBeforeCoupon": "1260.86",
+              "subTotalBeforeCouponFormatted": "$1,260.86",
+              "total": "1260.86",
+              "totalFormatted": "$1,260.86",
+              "averagePricePerDay": "132.67",
+              "averagePricePerDayFormatted": "$132.67",
+              "averageTaxPerDay": "24.94",
+              "averageTaxPerDayFormatted": "$24.94",
+              "priceDetailsPerDay": [
+                {
+                  "day": {
+                    "raw": "2016-08-05T15:00:00+09:00",
+                    "localized": "Aug 5, 2016 3:00:00 PM",
+                    "epochSeconds": 1470376800,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Fri, 5 Aug"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "130.69",
+                  "amountFormatted": "$130.69"
+                },
+                {
+                  "day": {
+                    "raw": "2016-08-06T15:00:00+09:00",
+                    "localized": "Aug 6, 2016 3:00:00 PM",
+                    "epochSeconds": 1470463200,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Sat, 6 Aug"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "146.50",
+                  "amountFormatted": "$146.50"
+                },
+                {
+                  "day": {
+                    "raw": "2016-08-07T15:00:00+09:00",
+                    "localized": "Aug 7, 2016 3:00:00 PM",
+                    "epochSeconds": 1470549600,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Sun, 7 Aug"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "130.69",
+                  "amountFormatted": "$130.69"
+                },
+                {
+                  "day": {
+                    "raw": "2016-08-08T15:00:00+09:00",
+                    "localized": "Aug 8, 2016 3:00:00 PM",
+                    "epochSeconds": 1470636000,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Mon, 8 Aug"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "130.69",
+                  "amountFormatted": "$130.69"
+                },
+                {
+                  "day": {
+                    "raw": "2016-08-09T15:00:00+09:00",
+                    "localized": "Aug 9, 2016 3:00:00 PM",
+                    "epochSeconds": 1470722400,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Tue, 9 Aug"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "130.69",
+                  "amountFormatted": "$130.69"
+                },
+                {
+                  "day": {
+                    "raw": "2016-08-10T15:00:00+09:00",
+                    "localized": "Aug 10, 2016 3:00:00 PM",
+                    "epochSeconds": 1470808800,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Wed, 10 Aug"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "130.69",
+                  "amountFormatted": "$130.69"
+                },
+                {
+                  "day": {
+                    "raw": "2016-08-11T15:00:00+09:00",
+                    "localized": "Aug 11, 2016 3:00:00 PM",
+                    "epochSeconds": 1470895200,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Thu, 11 Aug"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "130.69",
+                  "amountFormatted": "$130.69"
+                },
+                {
+                  "day": {
+                    "raw": "2016-08-12T15:00:00+09:00",
+                    "localized": "Aug 12, 2016 3:00:00 PM",
+                    "epochSeconds": 1470981600,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Fri, 12 Aug"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "130.69",
+                  "amountFormatted": "$130.69"
+                }
+              ],
+              "isSameRateForAllNights": false,
+              "expediaChangeFee": "0",
+              "expediaChangeFeeFormatted": "$0.00"
+            },
+            "roomPreferences": {
+              "primaryOccupant": {
+                "firstName": "Elmer",
+                "fullName": "Elmer Fudd",
+                "email": "jmadynski@expedia.com",
+                "phone": "1-415-5050490"
+              },
+              "otherOccupantInfo": {
+                "adultCount": 1,
+                "childCount": 0,
+                "infantCount": 0,
+                "childAndInfantCount": 0,
+                "childAndInfantAges": []
+              },
+              "occupantSelectedRoomOptions": {
+                "bedTypeName": "1 double bed",
+                "smokingPreference": "NONSMOKING_ROOM",
+                "accessibilityOptions": [],
+                "hasExtraBedAdult": false,
+                "hasExtraBedChild": false,
+                "hasExtraBedInfant": false,
+                "isSmokingPreferenceSelected": true,
+                "isRoomOptionsAvailable": true
+              },
+              "availableRoomOptions": {
+                "bedTypes": [
+                  {
+                    "id": "13",
+                    "description": "1 double bed",
+                    "selected": true
+                  }
+                ],
+                "isSmokingRoomAvailable": true,
+                "isNonSmokingRoomAvailable": true
+              }
+            },
+            "amenities": [
+              "Free Wireless Internet"
+            ]
+          }
+        ],
+        "isFreeCancellationAvailable": false,
+        "paymentsAndCreditFees": {
+          "paymentsHotelFeesAndDepositsDisclaimer": "The below fees and deposits only apply if they are not included in your selected room rate.",
+          "noFeesStaticText": "The price above DOES NOT include any applicable hotel service fees, charges for optional incidentals (such as minibar snacks or telephone calls), or regulatory surcharges. The hotel will assess these fees, charges, and surcharges upon check-out.",
+          "isDirectAgency": false,
+          "isGDS": false,
+          "isFullyCancelled": false,
+          "isAnyRoomCancelled": false,
+          "isDepositRequired": false,
+          "isPaymentsCreditsVisible": false
+        }
+      }
+    ],
+    "paymentDetails": {
+      "localisedTotalPriceForThisBooking": "$1,260.86",
+      "totalPriceForThisBooking": {
+        "amount": 1260.86,
+        "currency": {
+          "currencyCode": "USD"
+        }
+      },
+      "totalRefundedPrice": {
+        "amount": 0.00,
+        "currency": {
+          "currencyCode": "USD"
+        }
+      },
+      "localisedTotalRealPriceRefunded": "$0.00",
+      "netPricePaidForThisBooking": {
+        "amount": 1260.86,
+        "currency": {
+          "currencyCode": "USD"
+        }
+      },
+      "localizedNetPricePaidForThisBooking": "$1,260.86",
+      "priceByFormOfPayment": {
+        "CreditCard": {
+          "paymentType": "CreditCard",
+          "pricePaidUsingThisPaymentType": {
+            "amount": 1260.86,
+            "currency": {
+              "currencyCode": "USD"
+            }
+          },
+          "priceRefundedToThisPaymentType": {
+            "amount": 0.00,
+            "currency": {
+              "currencyCode": "USD"
+            }
+          },
+          "refundedLocalizedPrice": "$0.00",
+          "paidLocalizedPrice": "$1,260.86"
+        }
+      }
+    },
+    "readTripError": false,
+    "isMRP": false
+  }
+}

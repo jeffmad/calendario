@@ -1,0 +1,347 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "6380acef-4099-4c46-9604-1c9f7ac482c6",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11616643514",
+    "tripNumber": 11616643514,
+    "title": "Hilton Tokyo, Tokyo",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/6380acef-4099-4c46-9604-1c9f7ac482c6/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-02-03T15:00:00+09:00",
+      "localized": "Feb 3, 2016 3:00:00 PM",
+      "epochSeconds": 1454479200,
+      "timeZoneOffsetSeconds": 32400,
+      "localizedShortDate": "2/3/2016",
+      "localizedMediumDate": "Feb 3",
+      "localizedFullDate": "Wed, Feb 3",
+      "localizedLongDate": "Feb 3, 2016"
+    },
+    "endTime": {
+      "raw": "2016-02-06T11:00:00+09:00",
+      "localized": "Feb 6, 2016 11:00:00 AM",
+      "epochSeconds": 1454724000,
+      "timeZoneOffsetSeconds": 32400,
+      "localizedShortDate": "2/6/2016",
+      "localizedMediumDate": "Feb 6",
+      "localizedFullDate": "Sat, Feb 6",
+      "localizedLongDate": "Feb 6, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-17T06:22:44Z",
+      "localized": "Sep 17, 2015 6:22:44 AM",
+      "epochSeconds": 1442470964,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-17T16:09:49Z",
+      "localized": "Sep 17, 2015 4:09:49 PM",
+      "epochSeconds": 1442506189,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-17T21:24:39Z",
+      "localized": "Sep 17, 2015 9:24:39 PM",
+      "epochSeconds": 1442525079,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzmGqKCAUdpIKh-K5zpvBrQYgYcDzVXkFaI_bjMDQ1jcz",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11616643514 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11616643514 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "hotels": [
+      {
+        "uniqueID": "CA438BE4-06E3-477F-BA5F-22DE23494D90_0",
+        "hotelId": "22597",
+        "checkInDateTime": {
+          "raw": "2016-02-03T15:00:00+09:00",
+          "localized": "Feb 3, 2016 3:00:00 PM",
+          "epochSeconds": 1454479200,
+          "timeZoneOffsetSeconds": 32400,
+          "localizedShortDate": "2/3/2016",
+          "localizedMediumDate": "Feb 3",
+          "localizedFullDate": "Wed, Feb 3",
+          "localizedLongDate": "Feb 3, 2016"
+        },
+        "checkOutDateTime": {
+          "raw": "2016-02-06T11:00:00+09:00",
+          "localized": "Feb 6, 2016 11:00:00 AM",
+          "epochSeconds": 1454724000,
+          "timeZoneOffsetSeconds": 32400,
+          "localizedShortDate": "2/6/2016",
+          "localizedMediumDate": "Feb 6",
+          "localizedFullDate": "Sat, Feb 6",
+          "localizedLongDate": "Feb 6, 2016"
+        },
+        "checkInDate": "2016-02-03T15:00:00+09:00",
+        "checkOutDate": "2016-02-06T11:00:00+09:00",
+        "checkInDateLocalized": "Wed Feb/3/2016",
+        "checkOutDateLocalized": "Sat Feb/6/2016",
+        "numberOfNights": 3,
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Booked",
+        "bookingStatusMessage": "Your reservation is booked. No need to call us to reconfirm this reservation.",
+        "inventoryType": "MERCHANT",
+        "inventorySource": "INTERNAL",
+        "paymentModel": "EXPEDIA_COLLECT",
+        "inventoryVisibility": "VISIBLE",
+        "orderNumber": "8020096746848",
+        "state": "PRE_START_4",
+        "infositeURL": "http://wwwexpediacom.integration.sb.karmalab.net/itin.h22597.Hotel-Information?langid=1033",
+        "hotelPropertyInfo": {
+          "address": {
+            "addressLine1": "6-6-2, Nishi-Shinjuku, Shinjuku-ku",
+            "city": "Tokyo",
+            "countrySubdivisionCode": "Tokyo-to",
+            "postalCode": "160-0023",
+            "countryCode": "JPN",
+            "countryName": " Japan",
+            "fullAddress": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023 Japan",
+            "airportCode": "NRT"
+          },
+          "name": "Hilton Tokyo",
+          "starRating": "45",
+          "photoThumbnailURL": "/hotels/1000000/30000/22600/22597/22597_395_l.jpg",
+          "photoThumbnail500pixURL": "/hotels/1000000/30000/22600/22597/22597_395_y.jpg",
+          "photoThumbnail1000pixURL": "/hotels/1000000/30000/22600/22597/22597_395_z.jpg",
+          "localPhone": "81-33-3445111",
+          "tollFreePhone": "1-800-445-8667",
+          "formattedPhoneNumbers": "Tel: 81 (33) 3445111, Fax: 81 (33) 3456094",
+          "checkInPolicies": [
+            "Check-in time starts at 2 PM"
+          ],
+          "checkInStartTimePolicy": {
+            "label": "Check-in time starts at",
+            "value": "2 PM"
+          },
+          "checkInEndTimePolicy": {},
+          "checkOutTimePolicy": {
+            "label": "Check-out time is",
+            "value": "11 AM"
+          },
+          "generalRules": [
+            "Check-out time is 11 AM"
+          ],
+          "restrictionPolicies": [],
+          "fees": [
+            "The following fees and deposits are charged by the property at time of service, check-in, or check-out.<ul> <li>Breakfast fee: between JPY 1557 and JPY 3114 per person (approximately)</li>  <li>Fee for in-room wireless Internet: JPY 0 per night (rates may vary)</li> <li>Fee for in-room high-speed Internet (wired): JPY 0 per night (rates may vary)</li>    <li>Self parking fee: JPY 1500 per night</li>             <li>Rollaway bed fee: JPY 7128 per night</li>  </ul>",
+            "The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+          ],
+          "mandatoryFees": [],
+          "specialCheckInInstructions": [],
+          "latitude": 35.69226,
+          "longitude": 139.69159,
+          "isVipAccess": false,
+          "googleMapsLink": "http://maps.google.com?q=160-0023+Tokyo,+6-6-2,+Nishi-Shinjuku,+Shinjuku-ku+",
+          "regionId": "179168"
+        },
+        "totalPriceDetails": {
+          "primaryCurrencyCode": "USD",
+          "base": "598.53",
+          "baseFormatted": "$598.53",
+          "baseWithAdjustmentForDRRRateDiscount": "598.53",
+          "baseWithAdjustmentForDRRRateDiscountFormatted": "$598.53",
+          "taxesAndFees": "122.49",
+          "taxesAndFeesFormatted": "$122.49",
+          "drrRateDiscountDescription": "",
+          "subTotalBeforeCoupon": "721.02",
+          "subTotalBeforeCouponFormatted": "$721.02",
+          "taxStatus": "ESTIMATED",
+          "total": "721.02",
+          "totalFormatted": "$721.02",
+          "hasFees": true,
+          "expediaChangeFee": "0",
+          "expediaChangeFeeFormatted": "$0.00"
+        },
+        "rules": {
+          "cancelChangeWarning": "This reservation is non-refundable and cannot be cancelled or changed.",
+          "cancelChangeRulesIntroduction": "We understand that sometimes plans fall through. We do not charge a cancel or change fee. When the hotel charges such fees in accordance with its own policies, the cost will be passed on to you. Hilton Tokyo charges the following cancellation and change fees.",
+          "cancelChangeRules": [
+            "<span class=\"rr-bold\">The room type and rate selected are non-refundable.</span> Should you change or cancel this reservation for any reason, your payment will not be refunded.",
+            "No refunds will be issued for late check-in or early check-out.",
+            "Stay extensions require a new reservation."
+          ],
+          "cancellationWindowTime": {
+            "raw": "2015-12-23T23:00:00-08:00",
+            "localized": "Dec 23, 2015 11:00:00 PM",
+            "epochSeconds": 1450940400,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Wed, 23 Dec"
+          },
+          "opaqueRules": [],
+          "opaquePolicies": [],
+          "lateArrivalInstructions": "Your room will be guaranteed for late arrival.",
+          "loyaltyPointsDisclaimer": "Hotel supplier loyalty points and/or airline miles may not be awarded when booking Expedia Special Rate hotels.",
+          "currencyDisclaimer": "Unless specified otherwise, <span class=\"rr-bold\">rates are quoted in </span><span class=\"rr-bold\" id=\"hotel_id-default-currency\">US dollars</span>.",
+          "extraGuestPolicies": [
+            "Availability of accommodation in the same property for extra guests is not guaranteed."
+          ],
+          "occupancyPolicies": [
+            "Base rate is for 1 guest.",
+            "This property considers guests of any age to be an adult."
+          ],
+          "paymentPolicies": [
+            "Your credit card is charged the total cost at time of purchase. Prices and room availability are not guaranteed until full payment is received.",
+            "Some hotels request that we wait to submit guest names until 7 days prior to check in. In such a case, your hotel room is reserved, but your name is not yet on file with the hotel."
+          ],
+          "roomRequestDisclaimer": "All special requests (such as in-room amenities, bed type, and smoking preference) are shared with the hotel, but requests are not guaranteed and may incur additional charges. We recommend you confirm them directly with the hotel before travel.",
+          "dualCurrencyText": "Rate quotes in USD are based on current exchange rates, which may vary at time of travel. Final payment will be settled in local currency directly with the hotel.",
+          "feesDisclaimer": "The list of fees presented may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+        },
+        "rooms": [
+          {
+            "uniqueID": "CA438BE4-06E3-477F-BA5F-22DE23494D90_0_12654900",
+            "roomRatePlanDescription": "Twin Hilton - Book Early & Save  BB",
+            "roomTypeCode": "164584",
+            "ratePlanCode": "544976",
+            "bookingStatus": "BOOKED",
+            "drrRateDiscountDescription": "",
+            "orderLineNumber": "9bdf95f9-22b0-402c-af74-dd6bf0e8e8ff",
+            "refundabilityStatus": "NONREFUNDABLE_RATE",
+            "availableOnAllDates": true,
+            "roomChangeLink": "https://wwwexpediacom.integration.sb.karmalab.net/trips/6380acef-4099-4c46-9604-1c9f7ac482c6/ordernumber/8020096746848/orderlinenumber/9bdf95f9-22b0-402c-af74-dd6bf0e8e8ff/change",
+            "totalPriceDetails": {
+              "primaryCurrencyCode": "USD",
+              "base": "598.53",
+              "baseFormatted": "$598.53",
+              "baseWithAdjustmentForDRRRateDiscount": "598.53",
+              "baseWithAdjustmentForDRRRateDiscountFormatted": "$598.53",
+              "taxesAndFees": "122.49",
+              "taxesAndFeesFormatted": "$122.49",
+              "subTotalBeforeCoupon": "721.02",
+              "subTotalBeforeCouponFormatted": "$721.02",
+              "total": "721.02",
+              "totalFormatted": "$721.02",
+              "averagePricePerDay": "199.51",
+              "averagePricePerDayFormatted": "$199.51",
+              "averageTaxPerDay": "40.83",
+              "averageTaxPerDayFormatted": "$40.83",
+              "priceDetailsPerDay": [
+                {
+                  "day": {
+                    "raw": "2016-02-03T15:00:00+09:00",
+                    "localized": "Feb 3, 2016 3:00:00 PM",
+                    "epochSeconds": 1454479200,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Wed, 3 Feb"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "199.51",
+                  "amountFormatted": "$199.51"
+                },
+                {
+                  "day": {
+                    "raw": "2016-02-04T15:00:00+09:00",
+                    "localized": "Feb 4, 2016 3:00:00 PM",
+                    "epochSeconds": 1454565600,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Thu, 4 Feb"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "199.51",
+                  "amountFormatted": "$199.51"
+                },
+                {
+                  "day": {
+                    "raw": "2016-02-05T15:00:00+09:00",
+                    "localized": "Feb 5, 2016 3:00:00 PM",
+                    "epochSeconds": 1454652000,
+                    "timeZoneOffsetSeconds": 32400,
+                    "localizedShortDate": "Fri, 5 Feb"
+                  },
+                  "primaryCurrencyCode": "USD",
+                  "amount": "199.51",
+                  "amountFormatted": "$199.51"
+                }
+              ],
+              "isSameRateForAllNights": true,
+              "expediaChangeFee": "0",
+              "expediaChangeFeeFormatted": "$0.00"
+            },
+            "roomPreferences": {
+              "primaryOccupant": {
+                "firstName": "Elmer",
+                "fullName": "Elmer Fudd",
+                "email": "jmadynski@expedia.com",
+                "phone": "1-415-5050490"
+              },
+              "otherOccupantInfo": {
+                "adultCount": 1,
+                "childCount": 0,
+                "infantCount": 0,
+                "childAndInfantCount": 0,
+                "childAndInfantAges": []
+              },
+              "occupantSelectedRoomOptions": {
+                "bedTypeName": "2 single beds",
+                "smokingPreference": "NONSMOKING_ROOM",
+                "accessibilityOptions": [],
+                "hasExtraBedAdult": false,
+                "hasExtraBedChild": false,
+                "hasExtraBedInfant": false,
+                "isSmokingPreferenceSelected": true,
+                "isRoomOptionsAvailable": true
+              },
+              "availableRoomOptions": {
+                "bedTypes": [
+                  {
+                    "id": "43",
+                    "description": "2 single beds",
+                    "selected": true
+                  }
+                ],
+                "accessibilityOptions": [
+                  {
+                    "id": "2419",
+                    "description": "Accessible path of travel",
+                    "selected": false
+                  },
+                  {
+                    "id": "2422",
+                    "description": "Accessible parking",
+                    "selected": false
+                  }
+                ],
+                "isSmokingRoomAvailable": false,
+                "isNonSmokingRoomAvailable": true
+              }
+            },
+            "amenities": [
+              "Full Breakfast"
+            ]
+          }
+        ],
+        "isFreeCancellationAvailable": false,
+        "paymentsAndCreditFees": {
+          "paymentsHotelFeesAndDepositsDisclaimer": "The below fees and deposits only apply if they are not included in your selected room rate.",
+          "noFeesStaticText": "The price above DOES NOT include any applicable hotel service fees, charges for optional incidentals (such as minibar snacks or telephone calls), or regulatory surcharges. The hotel will assess these fees, charges, and surcharges upon check-out.",
+          "isDirectAgency": false,
+          "isGDS": false,
+          "isFullyCancelled": false,
+          "isAnyRoomCancelled": false,
+          "isDepositRequired": false,
+          "isPaymentsCreditsVisible": false
+        }
+      }
+    ],
+    "readTripError": false,
+    "isMRP": false
+  }
+}

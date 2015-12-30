@@ -1,0 +1,352 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "de60f174-bc74-4a0f-8685-ca1c08fe35f1",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7822022514",
+    "tripNumber": 7822022514,
+    "title": "Car rental in Barcelona",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/de60f174-bc74-4a0f-8685-ca1c08fe35f1/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-03-10T10:30:00+02:00",
+      "localized": "Mar 10, 2016 10:30:00 AM",
+      "epochSeconds": 1457598600,
+      "timeZoneOffsetSeconds": 7200,
+      "localizedShortDate": "3/10/2016",
+      "localizedMediumDate": "Mar 10",
+      "localizedFullDate": "Thu, Mar 10",
+      "localizedLongDate": "Mar 10, 2016"
+    },
+    "endTime": {
+      "raw": "2016-03-13T10:30:00+02:00",
+      "localized": "Mar 13, 2016 10:30:00 AM",
+      "epochSeconds": 1457857800,
+      "timeZoneOffsetSeconds": 7200,
+      "localizedShortDate": "3/13/2016",
+      "localizedMediumDate": "Mar 13",
+      "localizedFullDate": "Sun, Mar 13",
+      "localizedLongDate": "Mar 13, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-17T06:29:03Z",
+      "localized": "Sep 17, 2015 6:29:03 AM",
+      "epochSeconds": 1442471343,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-17T21:32:11Z",
+      "localized": "Sep 17, 2015 9:32:11 PM",
+      "epochSeconds": 1442525531,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-17T21:32:44Z",
+      "localized": "Sep 17, 2015 9:32:44 PM",
+      "epochSeconds": 1442525564,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBztJa6DQ_YG1k8FfTQ300V-30zeXLuvxhesy-HuGBbyau",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #7822022514 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #7822022514 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "cars": [
+      {
+        "uniqueID": "885AB0C6-585F-4AAC-8CDD-13E7E2E114EF_0",
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Confirmed",
+        "bookingStatusMessage": "Your reservation is booked and confirmed. No need to call us to reconfirm this reservation.",
+        "state": "PRE_START_4",
+        "orderNumber": 8014707925876,
+        "orderLineNumber": "1e27a4ed-1d71-411a-9c58-07fae8860393",
+        "paymentModel": "EXPEDIA_COLLECT",
+        "reservationGuaranteePolicy": "RESERVATION_GUARANTEE_OPTIONAL",
+        "price": {
+          "rateTerm": "DAILY",
+          "rateTermLocalized": "day",
+          "rate": "55.05",
+          "rateFormatted": "$55.05",
+          "mileageChargesDescription": "Unlimited mileage",
+          "isTotalRate": true,
+          "totalContainsTaxesAndFees": true,
+          "taxesAreEstimated": false,
+          "insuranceIncluded": false,
+          "currency": "USD",
+          "total": "55.05",
+          "totalFormatted": "$55.05"
+        },
+        "confirmationNumber": "1801185418COUNT",
+        "webCancelPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/cancelCarBooking/de60f174-bc74-4a0f-8685-ca1c08fe35f1",
+        "webGetCarCancelDetailPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/de60f174-bc74-4a0f-8685-ca1c08fe35f1/ordernumber/8014707925876/orderlinenumber/1e27a4ed-1d71-411a-9c58-07fae8860393/isMerchant/true/getCarCancelDetail",
+        "webCarRulesPageURL": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1",
+        "bookingId": "161612",
+        "travelers": [
+          {
+            "firstName": "ELMER",
+            "lastName": "FUDD"
+          }
+        ],
+        "pickupTime": {
+          "raw": "2016-03-10T10:30:00+02:00",
+          "localized": "Mar 10, 2016 10:30:00 AM",
+          "epochSeconds": 1457598600,
+          "timeZoneOffsetSeconds": 7200,
+          "localizedShortDate": "3/10/2016",
+          "localizedMediumDate": "Mar 10",
+          "localizedFullDate": "Thu, Mar 10",
+          "localizedLongDate": "Mar 10, 2016"
+        },
+        "dropOffTime": {
+          "raw": "2016-03-13T10:30:00+02:00",
+          "localized": "Mar 13, 2016 10:30:00 AM",
+          "epochSeconds": 1457857800,
+          "timeZoneOffsetSeconds": 7200,
+          "localizedShortDate": "3/13/2016",
+          "localizedMediumDate": "Mar 13",
+          "localizedFullDate": "Sun, Mar 13",
+          "localizedLongDate": "Mar 13, 2016"
+        },
+        "pickupLocation": {
+          "locationType": "COUNTER_AND_CAR_IN_AIRPORT_TERMINAL",
+          "locationDescription": "Barcelona (BCN)",
+          "airportInstructions": "Counter and car in terminal",
+          "latitude": 41.303706,
+          "longitude": 2.077613,
+          "addressLine1": "Aeropuerto De Barcelona.",
+          "cityName": "Barcelona",
+          "countryCode": "ESP",
+          "locationCode": "BCN",
+          "regionId": 179746
+        },
+        "dropOffLocation": {
+          "locationType": "COUNTER_AND_CAR_IN_AIRPORT_TERMINAL",
+          "locationDescription": "Barcelona (BCN)",
+          "latitude": 41.303706,
+          "longitude": 2.077613,
+          "addressLine1": "Aeropuerto De Barcelona.",
+          "cityName": "Barcelona",
+          "countryCode": "ESP",
+          "locationCode": "BCN",
+          "regionId": 179746
+        },
+        "pickupDateOpenHoursSummaryString": "Midnight - 1:00am, 7:00am - Midnight",
+        "pickupDateOpenHours": [
+          {
+            "openingDateTime": {
+              "raw": "2016-03-10T00:00:00+02:00",
+              "localized": "Mar 10, 2016 12:00:00 AM",
+              "epochSeconds": 1457560800,
+              "timeZoneOffsetSeconds": 7200,
+              "localizedShortDate": "3/10/2016",
+              "localizedMediumDate": "Mar 10",
+              "localizedFullDate": "Thu, Mar 10",
+              "localizedLongDate": "Mar 10, 2016"
+            },
+            "closingDateTime": {
+              "raw": "2016-03-10T01:00:00+02:00",
+              "localized": "Mar 10, 2016 1:00:00 AM",
+              "epochSeconds": 1457564400,
+              "timeZoneOffsetSeconds": 7200,
+              "localizedShortDate": "3/10/2016",
+              "localizedMediumDate": "Mar 10",
+              "localizedFullDate": "Thu, Mar 10",
+              "localizedLongDate": "Mar 10, 2016"
+            }
+          },
+          {
+            "openingDateTime": {
+              "raw": "2016-03-10T07:00:00+02:00",
+              "localized": "Mar 10, 2016 7:00:00 AM",
+              "epochSeconds": 1457586000,
+              "timeZoneOffsetSeconds": 7200,
+              "localizedShortDate": "3/10/2016",
+              "localizedMediumDate": "Mar 10",
+              "localizedFullDate": "Thu, Mar 10",
+              "localizedLongDate": "Mar 10, 2016"
+            },
+            "closingDateTime": {
+              "raw": "2016-03-10T23:59:59+02:00",
+              "localized": "Mar 10, 2016 11:59:59 PM",
+              "epochSeconds": 1457647199,
+              "timeZoneOffsetSeconds": 7200,
+              "localizedShortDate": "3/10/2016",
+              "localizedMediumDate": "Mar 10",
+              "localizedFullDate": "Thu, Mar 10",
+              "localizedLongDate": "Mar 10, 2016"
+            }
+          }
+        ],
+        "dropOffDateOpenHoursSummaryString": "Midnight - 1:00am, 7:00am - Midnight",
+        "dropOffDateOpenHours": [
+          {
+            "openingDateTime": {
+              "raw": "2016-03-13T00:00:00+02:00",
+              "localized": "Mar 13, 2016 12:00:00 AM",
+              "epochSeconds": 1457820000,
+              "timeZoneOffsetSeconds": 7200,
+              "localizedShortDate": "3/13/2016",
+              "localizedMediumDate": "Mar 13",
+              "localizedFullDate": "Sun, Mar 13",
+              "localizedLongDate": "Mar 13, 2016"
+            },
+            "closingDateTime": {
+              "raw": "2016-03-13T01:00:00+02:00",
+              "localized": "Mar 13, 2016 1:00:00 AM",
+              "epochSeconds": 1457823600,
+              "timeZoneOffsetSeconds": 7200,
+              "localizedShortDate": "3/13/2016",
+              "localizedMediumDate": "Mar 13",
+              "localizedFullDate": "Sun, Mar 13",
+              "localizedLongDate": "Mar 13, 2016"
+            }
+          },
+          {
+            "openingDateTime": {
+              "raw": "2016-03-13T07:00:00+02:00",
+              "localized": "Mar 13, 2016 7:00:00 AM",
+              "epochSeconds": 1457845200,
+              "timeZoneOffsetSeconds": 7200,
+              "localizedShortDate": "3/13/2016",
+              "localizedMediumDate": "Mar 13",
+              "localizedFullDate": "Sun, Mar 13",
+              "localizedLongDate": "Mar 13, 2016"
+            },
+            "closingDateTime": {
+              "raw": "2016-03-13T23:59:59+02:00",
+              "localized": "Mar 13, 2016 11:59:59 PM",
+              "epochSeconds": 1457906399,
+              "timeZoneOffsetSeconds": 7200,
+              "localizedShortDate": "3/13/2016",
+              "localizedMediumDate": "Mar 13",
+              "localizedFullDate": "Sun, Mar 13",
+              "localizedLongDate": "Mar 13, 2016"
+            }
+          }
+        ],
+        "carVendor": {
+          "longName": "Enterprise",
+          "code": "ET",
+          "shortName": "Enterprise",
+          "logoURL": "https://images.trvl-media.com/cars/logos/ET.png",
+          "phoneNumber": "34 902 100 515",
+          "localPhoneNumber": "34 935219095"
+        },
+        "carCategoryImageURL": "https://images.trvl-media.com/cars%2F15%2FToyotaAygoEBMR_ET_ESP_20141107_s.jpg",
+        "carCategory": "Economy",
+        "carCategoryLocalized": "Economy",
+        "carType": "ThreeDoorCar",
+        "carTypeLocalized": "Toyota Aygo",
+        "carTypeAttributes": {
+          "vehicleTypeLocalized": "2 or 3-Door Car",
+          "fuelType": "UNKNOWN",
+          "airConditioningType": "AIR_CONDITIONING",
+          "airConditioningTypeLocalized": "Air conditioning",
+          "transmissionType": "MANUAL_TRANSMISSION",
+          "transmissionTypeLocalized": "Manual transmission",
+          "wheelDriveType": "TWO_WHEEL_DRIVE",
+          "wheelDriveTypeLocalized": "2-wheel drive"
+        },
+        "rules": [
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "INFORMATION_PROVIDED_BY_VENDOR_POLICY",
+            "text": "The following rules and restrictions are provided by the car rental company."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "PAYMENT_CARD_REQUIRED_AT_PICKUP",
+            "text": "The driver must present a valid driver's license and credit card in their name upon pick-up.",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES",
+            "textAndURL": "The driver must present a valid <a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES\">driver's license</a> and credit card in their name upon pick-up. The credit card is required as a deposit when renting any vehicle. The deposit amount is held by the car rental company. Please ensure sufficient funds are available on the card."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "AGE_RESTRICTIONS",
+            "text": "International rentals may have different driver license requirements. An international driving license is required if the drivers' license is non-roman alphabet."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "AGE_RESTRICTIONS",
+            "text": "Additional charges or restrictions may apply for drivers under 25.",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES",
+            "textAndURL": "<a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES\">Additional charges or restrictions</a> may apply for drivers under 25 or over 65."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "CONDITIONAL_CHARGES",
+            "text": "Charges for refueling, additional drivers, etc. are not included in the total price.",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES",
+            "textAndURL": "Charges for <a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES\">refueling</a>, additional drivers, etc. are not included in the total price."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "OPTIONAL_SERVICES",
+            "text": "Special equipment, such as child seats and GPS, can be purchased upon pick-up (if available).",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES",
+            "textAndURL": "<a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES\">Special equipment</a>, such as child seats and GPS, can be purchased upon pick-up (if available)."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "GEOGRAPHICAL_RESTRICTIONS_MAY_APPLY",
+            "text": "Geographical restrictions may apply, even for rental contracts that feature unlimited mileage. Some car rental companies do not allow you to take their vehicles across certain domestic or international borders, or may apply an additional charge to do so."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "CONDITIONAL_CHARGES",
+            "text": "Your rental may have mandatory insurance requirements that result in additional charges at the time of rental.",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES",
+            "textAndURL": "Your rental may have <a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=de60f174-bc74-4a0f-8685-ca1c08fe35f1#MERCHANT_RULES\">mandatory, local insurance requirements</a> that result in additional charges at the time of rental."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "CANCELLATION_AND_REFUND",
+            "text": "Cancellations can be made free of charge up to and including the day prior to your pickup date, and your card will be refunded in full."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "NO_REFUND_FOR_UNUSED_DAYS",
+            "text": "No refunds will be offered on unused rental days."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "TAXES_AND_FEES_INCLUDED",
+            "text": "The total price includes all mandatory taxes and fees."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "TIME_OF_PAYMENT",
+            "text": "Your card will be charged the total price upon booking."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "TIME_OF_PAYMENT",
+            "text": "Rental fees are due at pick-up."
+          }
+        ],
+        "pickUpInstructions": [
+          "COUNTER LOCATED IN TERMINAL. CARS ARE WITHIN WALKING\nDISTANCE.\n"
+        ],
+        "fuelPolicy": "Unknown",
+        "inCancelAllowedWindow": true
+      }
+    ],
+    "readTripError": false,
+    "isMRP": false
+  }
+}

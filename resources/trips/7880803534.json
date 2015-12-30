@@ -1,0 +1,157 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "0be2b4f8-d5c9-47a2-93f6-3b78595d11d2",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11652191660",
+    "tripNumber": 7880803534,
+    "title": "35-night Cruise from SYDNEY",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/0be2b4f8-d5c9-47a2-93f6-3b78595d11d2/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-04-10T00:00:00Z",
+      "localized": "Apr 10, 2016 12:00:00 AM",
+      "epochSeconds": 1460246400,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "4/10/16",
+      "localizedMediumDate": "Apr 10, 2016",
+      "localizedFullDate": "Sunday, April 10, 2016",
+      "localizedLongDate": "April 10, 2016"
+    },
+    "endTime": {
+      "raw": "2016-05-15T00:00:00Z",
+      "localized": "May 15, 2016 12:00:00 AM",
+      "epochSeconds": 1463270400,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "5/15/16",
+      "localizedMediumDate": "May 15, 2016",
+      "localizedFullDate": "Sunday, May 15, 2016",
+      "localizedLongDate": "May 15, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-12-09T20:14:29Z",
+      "localized": "Dec 9, 2015 8:14:29 PM",
+      "epochSeconds": 1449692069,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 9 Dec"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-12-09T20:18:54Z",
+      "localized": "Dec 9, 2015 8:18:54 PM",
+      "epochSeconds": 1449692334,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 9 Dec"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-12-09T20:19:32Z",
+      "localized": "Dec 9, 2015 8:19:32 PM",
+      "epochSeconds": 1449692372,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 9 Dec"
+    },
+    "bookingStatus": "BOOKED",
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/dYQI3jzPNMjAWnLg8AYIzcCAa9eHFLBy8X6i8ROJA57YwG6c5kehwusmQ1oc4lFOhwwXztYiokUv25f_oOPY2d_X",
+    "customerSupport": {
+      "customerSupportURL": "http://www.expedia.com/service/",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #7880803534 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #7880803534 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "cruises": [
+      {
+        "bookingStatus": "BOOKED",
+        "invoiceNumber": "100001-2015-124260",
+        "cruiseLineName": "Princess Cruises",
+        "shipName": "Sea Princess",
+        "departureDate": "Apr 10, 2016 4:00 PM",
+        "returnDate": "May 15, 2016 7:00 AM",
+        "startTime": {
+          "raw": "2016-04-10T16:00:00Z",
+          "localized": "Apr 10, 2016 4:00:00 PM",
+          "epochSeconds": 1460304000,
+          "timeZoneOffsetSeconds": 0,
+          "localizedShortDate": "Sun, 10 Apr"
+        },
+        "endTime": {
+          "raw": "2016-05-15T07:00:00Z",
+          "localized": "May 15, 2016 7:00:00 AM",
+          "epochSeconds": 1463295600,
+          "timeZoneOffsetSeconds": 0,
+          "localizedShortDate": "Sun, 15 May"
+        },
+        "promotions": [
+          {
+            "promotionId": 151204001,
+            "promotionCode": "151204001",
+            "campaignId": 0,
+            "name": "Friday Rewards on Select sailings (1204 miles)",
+            "fullDescription": "EARN up to 1028 Aeroplan® Miles\n\n=Description===\nEarn and Redeem Your Aeroplan Miles\nWith Expedia CruiseShipCenters and Aeroplan®, you're never far from your next travel adventure. Earn AND Redeem Aeroplan Miles to use toward your next exciting cruise vacation to the destination you have been dreaming of and it gets even better; you will continue to earn miles on the cruise that you redeem for!\nDon't miss out on this fantastic opportunity to use your hard earned Aeroplan Miles to purchase your next dream getaway! Apply your miles toward a cruise aboard one of the best ships in the world. Booking is simple with Expedia CruiseShipCenters. Call anytime to book your reward cruise or visit www.aeroplan.com to redeem your Expedia CruiseShipCenters certificates. Visit the many magnificent destinations of the world on your next cruise. Escape to the Caribbean, set sail to Hawaii, discover Alaska, engross yourself in the rich culture and history of Europe…these cruises as well as many other appealing destinations are available for your cruising pleasure through Aeroplan and Expedia CruiseShipCenters.\n\n*® Aeroplan and the Aeroplan logo are registered trademarks of Aimia Canada Inc. Aeroplan",
+            "termsAndConditions": "=Term & Conditions===\nHow to Redeem Aeroplan Miles\nWith Expedia CruiseShipCenters you can both, earn and redeem, Aeroplan Miles to make your next exciting cruise vacation a reality! Plus, you continue to earn miles on the cruise that you redeem for too! To take advantage of this amazing reward program follow these easy steps.\nUse the Expedia CruiseShipCenters' cruise search tool to find out about exciting cruise vacations available using your Aeroplan Miles. There are no restrictions, only thousands of cruises available from the best of the best in the cruise industry.\nLog into your Aeroplan account and select the Vacations Packages category under the Travel tab and select the certificates you would like, or, click on one of the links below. Add them to your cart and proceed to the check out! There is no limit to how many certificates you can purchase with the miles that you have earned.\nJust a few moments after completing your mileage redemption check your e-mail inbox to find an Aeroplan message outlining your PIN number. Be sure to keep this for your records.\nGo to your local Expedia CruiseShipCenters location and use the PIN as a credit payment towards your dream vacation at least 30 days prior to your final payment date!\nNow, all that's left before you can set sail on the ultimate escape is to pack your bags!\n\n*® Aeroplan and the Aeroplan logo are registered trademarks of Aimia Canada Inc. Aeroplan Miles awarded are based on a cruise fare up to $1,500 maximum per passenger.\n\nEligible on minimum 3-night cruises\n\"Gold 7-Seas\" members also earn 1 mile/2 dollars spent up to a maximum of 750 miles\n\"Platinum 7-Seas\" members earn 1 mile/1.5 dollars spent up to a maximum of 1000 miles\n\"Diamond 7-Seas\" members earn 1 mile/1 dollar spent up to a maximum of 1500 miles\nMiles awarded per dollars spent will vary depending on CruiseShipCenters’ 7SEAS® Club level. Aeroplan Miles awarded do not include taxes, government fees and NCCF's. Aeroplan Miles are awarded on Cruise sailing date. Some restrictions apply. When redeeming gift cards on a Cruise, Aeroplan Members must present the PIN number (provided by Aeroplan upon check-out of the redemption process) to their CruiseShipCenters Cruise Consultant 30 days prior to Cruise supplier final payment.",
+            "rank": 0
+          },
+          {
+            "promotionId": 1959506,
+            "promotionCode": "1959506",
+            "campaignId": 0,
+            "name": "Manns_INT_ExpWeb SignOff_External Promotion Name",
+            "fullDescription": "Manns_INT_ExpWeb SignOff Description",
+            "termsAndConditions": "Manns_INT_ExpWeb SignOff\n\nTerms and Conditions",
+            "rank": 0
+          }
+        ],
+        "pricingSummary": {
+          "baseAmount": 9317.4,
+          "formattedBaseAmount": "$9,317.40",
+          "taxesAndFees": 335.0,
+          "formattedTaxesAndFees": "$335.00",
+          "totalAmount": 9652.4,
+          "formattedTotalAmount": "$9,652.40",
+          "prepaidGratuities": 0.0,
+          "formattedPrepaidGratuities": "$0.00",
+          "insurance": 0,
+          "formattedInsurance": "$0.00"
+        },
+        "cruiseLineBkgConfNumber": "DVCQ4X",
+        "adultPassengers": [
+          {
+            "passengerNumber": 0,
+            "firstName": "Barry",
+            "lastName": "Obama",
+            "birthDate": "04/01/1960",
+            "gender": "M",
+            "citizenship": "US"
+          }
+        ],
+        "cabinDetails": "Interior (ID)",
+        "isGuaranteed": true,
+        "email": "jmadynski@expedia.com",
+        "customerCareNumber": "1-866-203-5449",
+        "rulesAndRestrictionsLink": "/Checkout/CruiseRulesAndRestrictions?tripid=0be2b4f8-d5c9-47a2-93f6-3b78595d11d2",
+        "cruiseLineWebsiteLink": "http://www.princess.com",
+        "subsequentPaymentEnabled": true,
+        "destination": "South Pacific",
+        "shipImageUrl": "https://s3.amazonaws.com/mediavault.le/media/bbd930df50aa26f5ab907f9536c1a4f04ee585b2.jpeg",
+        "passengerPricing": [
+          "$9,652.40"
+        ],
+        "photoIdInformationUrl": "/service/#/article/12657",
+        "passportInformationUrl": "/service/#/articles/402/51/13073",
+        "cruiseChecklistUrl": "/cruise-guide#section-tab6-checklist",
+        "rewardsUrl": "/user/signin",
+        "duration": 35
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

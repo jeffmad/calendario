@@ -1,0 +1,486 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "01070a87-377d-4b7d-894c-35ae02be1581",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11617273915",
+    "tripNumber": 11617273915,
+    "title": "Miami",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/01070a87-377d-4b7d-894c-35ae02be1581/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-08-07T06:10:00-07:00",
+      "localized": "Aug 7, 2016 6:10:00 AM",
+      "epochSeconds": 1470575400,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "8/7/2016",
+      "localizedMediumDate": "Aug 7",
+      "localizedFullDate": "Sun, Aug 7",
+      "localizedLongDate": "Aug 7, 2016"
+    },
+    "endTime": {
+      "raw": "2016-08-10T19:56:00-07:00",
+      "localized": "Aug 10, 2016 7:56:00 PM",
+      "epochSeconds": 1470884160,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "8/10/2016",
+      "localizedMediumDate": "Aug 10",
+      "localizedFullDate": "Wed, Aug 10",
+      "localizedLongDate": "Aug 10, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-17T21:46:49Z",
+      "localized": "Sep 17, 2015 9:46:49 PM",
+      "epochSeconds": 1442526409,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-17T21:47:39Z",
+      "localized": "Sep 17, 2015 9:47:39 PM",
+      "epochSeconds": 1442526459,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-17T21:48:21Z",
+      "localized": "Sep 17, 2015 9:48:21 PM",
+      "epochSeconds": 1442526501,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsf7Y_CLNIhqbjNQLKrnj91iRbjGuE8U2u6unHdPqqG9",
+    "airAttachQualificationInfo": {
+      "airAttachQualified": true,
+      "offerExpires": "2015-10-07T14:46:49.100-07:00",
+      "offerExpiresTime": {
+        "raw": "2015-10-07T14:46:49-07:00",
+        "localized": "Oct 7, 2015 2:46:49 PM",
+        "epochSeconds": 1444254409,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "10/7/15",
+        "localizedMediumDate": "Oct 7, 2015",
+        "localizedFullDate": "Wednesday, October 7, 2015",
+        "localizedLongDate": "October 7, 2015"
+      }
+    },
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11617273915 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11617273915 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "flights": [
+      {
+        "uniqueID": "C702AFD0-F9D7-47A6-9803-29845E44A7F1_0",
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Booked",
+        "bookingStatusMessage": "Your ticket is not yet confirmed. We are confirming it with the airline and will update your online itinerary within 24 hours.",
+        "ticketingStatus": "INPROGRESS",
+        "orderNumber": "8045817915400",
+        "updateFrequentFlyerPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/01070a87-377d-4b7d-894c-35ae02be1581/updateFrequentFlyerInformation",
+        "orderLineNumber": "c77ecf8a-1567-4ef9-a9e4-6484ccc79167",
+        "confirmationNumbers": [
+          {
+            "airlineName": "Delta",
+            "number": "GLKIER"
+          }
+        ],
+        "paymentModel": "AGENCY",
+        "fareType": "PUBLISHED",
+        "flightType": "ROUND_TRIP",
+        "isInternational": false,
+        "fareTotal": {
+          "subTotal": "842.4",
+          "subTotalFormatted": "$842.40",
+          "currency": "USD",
+          "base": "741.58",
+          "baseFormatted": "$741.58",
+          "taxes": "100.82",
+          "taxesFormatted": "$100.82",
+          "total": "842.4",
+          "totalFormatted": "$842.40"
+        },
+        "farePerPassenger": [
+          {
+            "passengerIndex": 0,
+            "passengerTypeCode": "ADULT",
+            "passengerTypeCodeLocalized": "Adult",
+            "currency": "USD",
+            "base": "741.58",
+            "baseFormatted": "$741.58",
+            "taxes": "100.82",
+            "taxesFormatted": "$100.82",
+            "fees": [
+              {
+                "localizedName": "Transportation Tax",
+                "amount": "55.62",
+                "amountFormatted": "$55.62"
+              },
+              {
+                "localizedName": "Flight Segment Tax",
+                "amount": "16.0",
+                "amountFormatted": "$16.00"
+              },
+              {
+                "localizedName": "Passenger Civil Aviation Security Service Fee",
+                "amount": "11.2",
+                "amountFormatted": "$11.20"
+              },
+              {
+                "localizedName": "Passenger Facility Charge",
+                "amount": "18.0",
+                "amountFormatted": "$18.00"
+              }
+            ],
+            "total": "842.4",
+            "totalFormatted": "$842.40"
+          }
+        ],
+        "isSplitTicket": false,
+        "fulfillmentMethod": "ETICKET",
+        "passengers": [
+          {
+            "typeCode": "ADULT",
+            "typeLocalized": "Adult",
+            "firstName": "Elmer",
+            "lastName": "Fudd",
+            "fullName": "Elmer Fudd",
+            "age": 36,
+            "gender": "Male",
+            "dateOfBirth": "1980-1-1",
+            "TSARedressNumber": "",
+            "phoneNumbers": [
+              {
+                "countryCode": "1",
+                "phone": "4155050490"
+              }
+            ],
+            "ticketNumbers": [],
+            "frequentFlyerPlans": [],
+            "seats": []
+          }
+        ],
+        "brandedFareFamilyName": "",
+        "legs": [
+          {
+            "type": "ONESTOP",
+            "state": "PRE_START_4",
+            "numberOfStops": 1,
+            "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smDL.gif",
+            "segments": [
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 37.61594,
+                  "longitude": -122.387996,
+                  "name": "San Francisco Intl.",
+                  "longName": "San Francisco, CA (SFO-San Francisco Intl.)",
+                  "airportCode": "SFO",
+                  "airportMetroCode": "QSF",
+                  "city": "San Francisco",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2016-08-07T06:10:00-07:00",
+                  "localized": "Aug 7, 2016 6:10:00 AM",
+                  "epochSeconds": 1470575400,
+                  "timeZoneOffsetSeconds": -25200,
+                  "localizedShortDate": "Sun, 7 Aug"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 33.640785,
+                  "longitude": -84.446036,
+                  "name": "Hartsfield-Jackson Atlanta Intl.",
+                  "longName": "Atlanta, GA (ATL-Hartsfield-Jackson Atlanta Intl.)",
+                  "airportCode": "ATL",
+                  "airportMetroCode": "ATL",
+                  "city": "Atlanta",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2016-08-07T14:04:00-04:00",
+                  "localized": "Aug 7, 2016 2:04:00 PM",
+                  "epochSeconds": 1470593040,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Sun, 7 Aug"
+                },
+                "departureTerminal": "1",
+                "arrivalTerminal": "S",
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "",
+                "confirmationAirline": "Delta",
+                "confirmationNUmber": "GLKIER",
+                "flightNumber": "1210",
+                "equipmentCode": "752",
+                "equipmentDescription": "Boeing 757-200",
+                "layoverDuration": "PT56M",
+                "distance": 2135,
+                "distanceUnits": "mi",
+                "duration": "PT4H54M",
+                "formattedDuration": "4h 54m",
+                "bookingCode": "L",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "C702AFD0-F9D7-47A6-9803-29845E44A7F1_0_L1_S1_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "HK",
+                "isHidden": false
+              },
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 33.640785,
+                  "longitude": -84.446036,
+                  "name": "Hartsfield-Jackson Atlanta Intl.",
+                  "longName": "Atlanta, GA (ATL-Hartsfield-Jackson Atlanta Intl.)",
+                  "airportCode": "ATL",
+                  "airportMetroCode": "ATL",
+                  "city": "Atlanta",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2016-08-07T15:00:00-04:00",
+                  "localized": "Aug 7, 2016 3:00:00 PM",
+                  "epochSeconds": 1470596400,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Sun, 7 Aug"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 25.79509,
+                  "longitude": -80.27843,
+                  "name": "Miami Intl.",
+                  "longName": "Miami, FL (MIA-Miami Intl.)",
+                  "airportCode": "MIA",
+                  "city": "Miami",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2016-08-07T17:05:00-04:00",
+                  "localized": "Aug 7, 2016 5:05:00 PM",
+                  "epochSeconds": 1470603900,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Sun, 7 Aug"
+                },
+                "departureTerminal": "S",
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "",
+                "confirmationAirline": "Delta",
+                "confirmationNUmber": "GLKIER",
+                "flightNumber": "1998",
+                "equipmentCode": "M88",
+                "equipmentDescription": "BOEING (DOUGLAS) MD-88",
+                "distance": 596,
+                "distanceUnits": "mi",
+                "duration": "PT2H5M",
+                "formattedDuration": "2h 5m",
+                "bookingCode": "L",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "C702AFD0-F9D7-47A6-9803-29845E44A7F1_0_L1_S2_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "HK",
+                "isHidden": false
+              }
+            ],
+            "sharableFlightLegURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsf7Y_CLNIhqbjNQLKrnj93ECMqO8W-wFyANlNaqV9CdwpvpiEOLeg2O1XWy53ncNtliUUKCF_ez4dqqIj5KumM3VORxPjb5BlDKTW57Qysi",
+            "duration": "PT7H55M"
+          },
+          {
+            "type": "ONESTOP",
+            "state": "PRE_START_4",
+            "numberOfStops": 1,
+            "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smDL.gif",
+            "segments": [
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 25.79509,
+                  "longitude": -80.27843,
+                  "name": "Miami Intl.",
+                  "longName": "Miami, FL (MIA-Miami Intl.)",
+                  "airportCode": "MIA",
+                  "city": "Miami",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2016-08-10T14:00:00-04:00",
+                  "localized": "Aug 10, 2016 2:00:00 PM",
+                  "epochSeconds": 1470852000,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Wed, 10 Aug"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 33.640785,
+                  "longitude": -84.446036,
+                  "name": "Hartsfield-Jackson Atlanta Intl.",
+                  "longName": "Atlanta, GA (ATL-Hartsfield-Jackson Atlanta Intl.)",
+                  "airportCode": "ATL",
+                  "airportMetroCode": "ATL",
+                  "city": "Atlanta",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2016-08-10T16:13:00-04:00",
+                  "localized": "Aug 10, 2016 4:13:00 PM",
+                  "epochSeconds": 1470859980,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Wed, 10 Aug"
+                },
+                "arrivalTerminal": "S",
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "",
+                "confirmationAirline": "Delta",
+                "confirmationNUmber": "GLKIER",
+                "flightNumber": "2173",
+                "equipmentCode": "M90",
+                "equipmentDescription": "MDC MD90",
+                "layoverDuration": "PT1H32M",
+                "distance": 596,
+                "distanceUnits": "mi",
+                "duration": "PT2H13M",
+                "formattedDuration": "2h 13m",
+                "bookingCode": "H",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "C702AFD0-F9D7-47A6-9803-29845E44A7F1_0_L2_S1_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "HK",
+                "isHidden": false
+              },
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 33.640785,
+                  "longitude": -84.446036,
+                  "name": "Hartsfield-Jackson Atlanta Intl.",
+                  "longName": "Atlanta, GA (ATL-Hartsfield-Jackson Atlanta Intl.)",
+                  "airportCode": "ATL",
+                  "airportMetroCode": "ATL",
+                  "city": "Atlanta",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2016-08-10T17:45:00-04:00",
+                  "localized": "Aug 10, 2016 5:45:00 PM",
+                  "epochSeconds": 1470865500,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Wed, 10 Aug"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 37.61594,
+                  "longitude": -122.387996,
+                  "name": "San Francisco Intl.",
+                  "longName": "San Francisco, CA (SFO-San Francisco Intl.)",
+                  "airportCode": "SFO",
+                  "airportMetroCode": "QSF",
+                  "city": "San Francisco",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2016-08-10T19:56:00-07:00",
+                  "localized": "Aug 10, 2016 7:56:00 PM",
+                  "epochSeconds": 1470884160,
+                  "timeZoneOffsetSeconds": -25200,
+                  "localizedShortDate": "Wed, 10 Aug"
+                },
+                "departureTerminal": "S",
+                "arrivalTerminal": "1",
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "",
+                "confirmationAirline": "Delta",
+                "confirmationNUmber": "GLKIER",
+                "flightNumber": "2145",
+                "equipmentCode": "763",
+                "equipmentDescription": "Boeing 767-300",
+                "distance": 2135,
+                "distanceUnits": "mi",
+                "duration": "PT5H11M",
+                "formattedDuration": "5h 11m",
+                "bookingCode": "H",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "C702AFD0-F9D7-47A6-9803-29845E44A7F1_0_L2_S2_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "HK",
+                "isHidden": false
+              }
+            ],
+            "sharableFlightLegURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsf7Y_CLNIhqbjNQLKrnj93ECMqO8W-wFyANlNaqV9CdwpvpiEOLeg2O1XWy53ncNtliUUKCF_ez4dqqIj5KumNJMJqD1kKjeO9h8vKe94gO",
+            "duration": "PT8H56M"
+          }
+        ],
+        "rules": {
+          "cancellationFeeLegalText": "A non-refundable administration fee will be applied for changes and cancellations of bookings. Customers will be informed of the administration fee by their Customer Support Centre Agent at the time of their call.",
+          "faresNotGuaranteedText": "Fares are not guaranteed until ticketed.",
+          "cancelChangeIntroductionText": "We understand that sometimes plans change. We do not charge a cancel or change fee. When the airline charges such fees in accordance with its own policies, the cost will be passed on to you.",
+          "feeChangeRefundIntroductionText": "When the airline charges any cancellation or change fees in accordance with its own policies, the cost will be passed on to you.",
+          "refundabilityText": "Tickets are nonrefundable, nontransferable and name changes are not allowed.",
+          "completePenaltyRules": {
+            "text": "Rules and restrictions as imposed by the airline will be applicable to your fare should you need to change or cancel your flight.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/Fare-Rules?tripid=01070a87-377d-4b7d-894c-35ae02be1581",
+            "textAndURL": "Please read the <a id=\"complete_penalty_rules_for_changes_and_cancellations_link\" href=\"https://wwwexpediacom.integration.sb.karmalab.net/Fare-Rules?tripid=01070a87-377d-4b7d-894c-35ae02be1581\" class=\"tooltip\" target=\"rulesAndRestrictions\">complete penalty rules for changes and cancellations <span class=\"visually-hidden\" style=\"display:none;\">(Opens a new window) </span> </a> applicable to this fare.",
+            "apiURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11617273915/items/C702AFD0-F9D7-47A6-9803-29845E44A7F1_0/gdsFareRulesText?useCache=true"
+          },
+          "additionalAirlineFees": {
+            "text": "The airline may charge additional fees for checked baggage or other optional services.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/Flights-BagFees?originapt=SFO&destinationapt=MIA&cabinclass=3&mktgcarrier=DL&opcarrier=&farebasis=LA07A0UD&bookingclass=L&travelDate=2016-08-07&flightNumber=1210",
+            "textAndURL": "The airline may charge <a href=\"https://wwwexpediacom.integration.sb.karmalab.net/Flights-BagFees?originapt=SFO&destinationapt=MIA&cabinclass=3&mktgcarrier=DL&opcarrier=&farebasis=LA07A0UD&bookingclass=L&travelDate=2016-08-07&flightNumber=1210\" class=\"tooltip\" target=\"rulesAndRestrictions\">additional fees <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a> for checked baggage or other optional services."
+          },
+          "airlineLiabilityLimitations": {
+            "text": "Please read important information regarding airline liability limitations.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/p/info-main/warsaw?",
+            "textAndURL": "Please read important information regarding <a id=\"airline_liability_limitations_link\" href=\"https://wwwexpediacom.integration.sb.karmalab.net/p/info-main/warsaw?\" class=\"tooltip\" target=\"rulesAndRestrictions\">airline liability limitations <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a>."
+          },
+          "airlineCheckInInstructionText": "Remember to bring your itinerary and government-issued photo ID for airport check-in and security.",
+          "railFeederMessages": [],
+          "expediaChangeFeeChargeable": false
+        },
+        "sharableItemDetailURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsf7Y_CLNIhqbjNQLKrnj93ECMqO8W-wFyANlNaqV9CdwpvpiEOLeg2O1XWy53ncNtliUUKCF_ez4dqqIj5KumM-gIv0kjnr93b5dYz_gKu_",
+        "airRecordLocator": "100483321",
+        "isSeatMapAvailable": true,
+        "webChangePathURL": "https://wwwexpediacom.integration.sb.karmalab.net/flight-change-gds?itinnumber=11617273915&arl=100483321&cname=Delta",
+        "bookingProvider": "SABRE",
+        "hasTrainTransfer": false,
+        "ticketingAirCarrierNames": [
+          "Delta"
+        ],
+        "isLccOrCharter": false,
+        "destinationRegionId": 6000414
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

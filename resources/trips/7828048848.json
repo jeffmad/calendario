@@ -1,0 +1,144 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "2a303c12-79e1-4f44-ae3c-06fe48156617",
+    "webDetailsURL": "https://wwwexpedia-aarpcom.trunk.sb.karmalab.net/trips/1062225501?email=aalee@expedia.com",
+    "tripNumber": 7828048848,
+    "title": "7-night Cruise from MIAMI",
+    "updateTripNameDescPathURL": "https://wwwexpedia-aarpcom.trunk.sb.karmalab.net/api/trips/2a303c12-79e1-4f44-ae3c-06fe48156617/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-10-02T00:00:00Z",
+      "localized": "Oct 2, 2016 12:00:00 AM",
+      "epochSeconds": 1475366400,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "10/2/16",
+      "localizedMediumDate": "Oct 2, 2016",
+      "localizedFullDate": "Sunday, October 2, 2016",
+      "localizedLongDate": "October 2, 2016"
+    },
+    "endTime": {
+      "raw": "2016-10-09T00:00:00Z",
+      "localized": "Oct 9, 2016 12:00:00 AM",
+      "epochSeconds": 1475971200,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "10/9/16",
+      "localizedMediumDate": "Oct 9, 2016",
+      "localizedFullDate": "Sunday, October 9, 2016",
+      "localizedLongDate": "October 9, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-23T17:46:55Z",
+      "localized": "Sep 23, 2015 5:46:55 PM",
+      "epochSeconds": 1443030415,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 23 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-23T20:32:32Z",
+      "localized": "Sep 23, 2015 8:32:32 PM",
+      "epochSeconds": 1443040352,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 23 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-23T20:32:32Z",
+      "localized": "Sep 23, 2015 8:32:32 PM",
+      "epochSeconds": 1443040352,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 23 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "sharableDetailsURL": "https://wwwexpedia-aarpcom.trunk.sb.karmalab.net/api/trips/shared/OVMFHFNJN8E42OeKCvYOiIlXhEbiHBbhd-Sc5P0rxmO11cg-4pH65O52eTMChhA7",
+    "customerSupport": {
+      "customerSupportURL": "http://www.expedia-aarp.com/p/support.htm?mcicid=0-30029.footer.htx.sup",
+      "customerSupportPhoneInfo": [
+        "Or call AARP Travel Center at 1-800-675-4318. For International calls, contact 1-949-333-4391",
+        "For faster service, mention <strong>itinerary #7828048848 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1 800-675-4318",
+      "customerSupportPhoneNumberInternational": "+1 949-333-4391",
+      "customerSupportPhoneInfoForEmail": [
+        "Or call AARP Travel Center at 1-800-675-4318",
+        "For faster service, mention <strong>itinerary #7828048848 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "cruises": [
+      {
+        "bookingStatus": "BOOKED",
+        "invoiceNumber": "130029-2015-003810",
+        "cruiseLineName": "Norwegian Cruise Line",
+        "shipName": "Norwegian Getaway",
+        "departureDate": "Oct 2, 2016 4:00 PM",
+        "returnDate": "Oct 9, 2016 8:00 AM",
+        "promotions": [
+          {
+            "promotionId": 2506,
+            "promotionCode": "2506",
+            "campaignId": 0,
+            "name": "Expedia rewards Points",
+            "fullDescription": "Earn Expedia+ rewards points on cruises! Expedia+ rewards members earn 2 Expedia+ rewards points per $1 for cruises. To earn your points, please book your cruise with the same email address you use for your Expedia account or create an Expedia account and sign up for Expedia+ rewards using the same email address used to book your cruise any time after purchase has been made, but prior to sailing start date. Restrictions may apply; please see full terms and conditions for complete details.",
+            "termsAndConditions": "Expedia Rewards members who book a cruise on Expedia.com can earn 2 Expedia+ rewards Points per $1 USD spent. Point earn is not available on the following cruise lines Avalon Waterways; Azamara Club Cruises; Crystal Cruises; Oceania Cruises; Paul Gauguin Cruises; Regent Seven Seas Cruises; Seabourn; Uniworld; Viking River Cruises; and Windstar Cruises. On eligible cruises, Expedia+ rewards points will be awarded for the total transaction amount including cruise fare, government fees and taxes for all guests in the cabin. It does not include other charges such as insurance, prepaid gratuities, or other similar charges or fees. To receive points for your cruise, you must be an Expedia+ rewards member and use the same email address associated to your enrolled Expedia Account at the time of booking or enroll in Expedia+ rewards using the same email address used to book your cruise any time after purchase has been made, but prior to sailing start date. Your Expedia account email can be found in the Account Overview section of your Expedia Account. Points earned for cruise purchases will not appear as pending on your Expedia+ rewards Activity Page; they will post to your account 4-6 weeks after travel is complete, and will appear as bonus points on your statement.",
+            "rank": 0
+          },
+          {
+            "promotionId": 1247668,
+            "promotionCode": "1247668",
+            "campaignId": 0,
+            "name": "$50 onboard credit",
+            "fullDescription": "Book and receive a $50 onboard credit per cabin. Offer valid on select sailings. Onboard credit is per cabin, not per person. Offer is based on limited availability and may withdrawn at any time. Restrictions may apply; please see full terms and conditions for complete details.",
+            "termsAndConditions": "Receive a $50 Onboard Credit per cabin. Singles paying 200% of the cruise rate are eligible for the full onboard credit amount per cabin. Guest who purchased into category T1 / Studio will receive half of the onboard credit. Onboard credit offer is capacity controlled and may be withdrawn or modified at anytime without prior notice. Onboard credit is applied to your onboard account. Offer is for new bookings only – guests who cancel and rebook, must accept this promotion’s terms and conditions and pay any applicable cancellation or change charges. All itineraries and prices are subject to change without notice. Onboard credit is in U.S. dollars, has no cash value, is not redeemable for cash and is not transferable. Offer may not be combinable with certain promotions, including, but not limited to Travel Agent, Interline or Travel Zoo rates. Cruise rates are in U.S. dollars, per person and based on double occupancy. Cruise rates do not include airfare, government taxes or fees. Certain restriction may apply. Government taxes and fees are additional. Ships registry: The Bahamas and USA.",
+            "rank": 0
+          }
+        ],
+        "pricingSummary": {
+          "baseAmount": 1098.00,
+          "taxesAndFees": 268.06,
+          "totalAmount": 1366.06,
+          "prepaidGratuities": 0.0,
+          "insurance": 0
+        },
+        "cruiseLineBkgConfNumber": "29225136",
+        "adultPassengers": [
+          {
+            "passengerNumber": 0,
+            "firstName": "TestAARPaaron",
+            "lastName": "TestAARPLee",
+            "birthDate": "03/29/1981",
+            "gender": "M",
+            "citizenship": "US"
+          },
+          {
+            "passengerNumber": 0,
+            "firstName": "TestAARPSuzie",
+            "lastName": "TestAARPqueue",
+            "birthDate": "04/15/1985",
+            "gender": "F",
+            "citizenship": "US"
+          }
+        ],
+        "cabinDetails": "Family Inside Stateroom (I1)",
+        "cabinNumber": "12479",
+        "isGuaranteed": false,
+        "email": "aalee@expedia.com",
+        "customerCareNumber": "1-800-509-2217",
+        "rulesAndRestrictionsLink": "/Checkout/CruiseRulesAndRestrictions?tripid=2a303c12-79e1-4f44-ae3c-06fe48156617",
+        "cruiseLineWebsiteLink": "http://www.ncl.com/",
+        "paymentHistory": {
+          "amountPaid": 0.0,
+          "paymentPending": 500.0,
+          "totalAmountReceivedInd": "N",
+          "currency": "USD",
+          "remainingBalance": 1366.06,
+          "finalPaymentDueDate": "07/19/2016"
+        }
+      }
+    ],
+    "readTripError": true,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

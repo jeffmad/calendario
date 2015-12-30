@@ -1,0 +1,41 @@
+<!-- Logback Configuration. See http://logback.qos.ch/ -->
+<configuration>
+  <!-- The log file configuration -->
+  <appender name="CAL_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+    <!-- Default encoder is ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+    <encoder>
+      <pattern>%date{HH:mm:ss.SSS} %-5level %logger{25}: %msg %X thread=%thread%n</pattern>
+    </encoder>
+
+    <!-- Default location of log file is log/dev.log -->
+    <file>log/calendario.log</file>
+
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- Roll over log files daily -->
+      <fileNamePattern>log/calendario.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+
+      <!-- or when size reaches 64 MB -->
+      <timeBasedFileNamingAndTriggeringPolicy
+          class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+          <maxFileSize>50MB</maxFileSize>
+      </timeBasedFileNamingAndTriggeringPolicy>
+      <maxHistory>10</maxHistory>
+    </rollingPolicy>
+  </appender>
+
+  <!-- Write only WARN and above log messages to a file -->
+  <root level="WARN">
+    <appender-ref ref="CAL_LOG_FILE" />
+  </root>
+  <logger name="com.zaxxer.hikari.pool.HikariPool" level="WARN" />
+  <logger name="calendario.trip-fetcher" level="DEBUG" />
+  <logger name="calendario.component.calendar-service" level="DEBUG" />
+  <logger name="calendario.component.scheduler" level="DEBUG" />
+
+  <!-- Make java.util.logging more efficient at disabled levels.
+       See http://logback.qos.ch/manual/configuration.html#LevelChangePropagator -->
+  <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+    <resetJUL>true</resetJUL>
+  </contextListener>
+</configuration>

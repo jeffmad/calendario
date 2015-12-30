@@ -1,0 +1,282 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "bb6c9ad1-3f0f-44bf-bd78-f0681fe70bd8",
+    "webDetailsURL": "https://wwwexpediacom.trunk.sb.karmalab.net/trips/7822027698",
+    "tripNumber": 7822027698,
+    "title": "Narita, Japan",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/bb6c9ad1-3f0f-44bf-bd78-f0681fe70bd8/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-08-05T05:30:00-07:00",
+      "localized": "Aug 5, 2016 5:30:00 AM",
+      "epochSeconds": 1470400200,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "8/5/2016",
+      "localizedMediumDate": "Aug 5",
+      "localizedFullDate": "Fri, Aug 5",
+      "localizedLongDate": "Aug 5, 2016"
+    },
+    "endTime": {
+      "raw": "2016-08-05T07:00:00-07:00",
+      "localized": "Aug 5, 2016 7:00:00 AM",
+      "epochSeconds": 1470405600,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "8/5/2016",
+      "localizedMediumDate": "Aug 5",
+      "localizedFullDate": "Fri, Aug 5",
+      "localizedLongDate": "Aug 5, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-17T06:34:43Z",
+      "localized": "Sep 17, 2015 6:34:43 AM",
+      "epochSeconds": 1442471683,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-17T21:37:18Z",
+      "localized": "Sep 17, 2015 9:37:18 PM",
+      "epochSeconds": 1442525838,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-17T21:37:41Z",
+      "localized": "Sep 17, 2015 9:37:41 PM",
+      "epochSeconds": 1442525861,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Thu, 17 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "rewards": {
+      "totalPoints": 86,
+      "basePoints": 78,
+      "bonusPoints": [
+        {
+          "m_pointValue": 8.00,
+          "m_pointType": "offerPoint",
+          "m_pointDescription": "+silver Bonus Offer",
+          "m_status": "PENDING"
+        }
+      ],
+      "logoUrl": "/static/default/default/images/myrewards/RewardsLogo_193x76.png",
+      "viewStatementURL": "/user/rewards"
+    },
+    "sharableDetailsURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsjDf0udYh3SJO9kA9VRPCVAr7iYL54NiAtHje33qyBh",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneNumberDomestic": "+1 800-397-3342",
+      "customerSupportPhoneNumberInternational": "+1 404-728-8787",
+      "customerSupportPhoneInfoForEmail": [
+        "Call us at 1-877-261-3523.",
+        "For faster service, mention <strong>itinerary #7822027698 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "activities": [
+      {
+        "uniqueID": "FF9E5B5D-248D-474D-8BD4-618FFFC8C825_0_246909_251819",
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Confirmed",
+        "bookingStatusMessage": "Your activity is booked. Please check your voucher for details.",
+        "supplierReferenceNumber": "11616648817",
+        "bookingDate": {
+          "raw": "2015-09-16T00:00:00-07:00",
+          "localized": "Sep 16, 2015 12:00:00 AM",
+          "epochSeconds": 1442386800,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "Wed, 16 Sep"
+        },
+        "startTime": {
+          "raw": "2016-08-05T05:30:00-07:00",
+          "localized": "Aug 5, 2016 5:30:00 AM",
+          "epochSeconds": 1470400200,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "8/5/2016",
+          "localizedMediumDate": "Aug 5",
+          "localizedFullDate": "Fri, Aug 5",
+          "localizedLongDate": "Aug 5, 2016"
+        },
+        "endTime": {
+          "raw": "2016-08-05T07:00:00-07:00",
+          "localized": "Aug 5, 2016 7:00:00 AM",
+          "epochSeconds": 1470405600,
+          "timeZoneOffsetSeconds": -25200,
+          "localizedShortDate": "8/5/2016",
+          "localizedMediumDate": "Aug 5",
+          "localizedFullDate": "Fri, Aug 5",
+          "localizedLongDate": "Aug 5, 2016"
+        },
+        "paymentModel": "MERCHANT",
+        "price": {
+          "pricePerCategory": {
+            "Adult": {
+              "keyForCategory": "Adult",
+              "numberOfPassengers": 1,
+              "totalBasePrice": {
+                "amount": 39.23,
+                "currency": {
+                  "currencyCode": "USD"
+                }
+              },
+              "perPassengerBasePrice": {
+                "amount": 39.23,
+                "currency": {
+                  "currencyCode": "USD"
+                }
+              }
+            }
+          },
+          "localisedPriceAndPassengerCount": [
+            {
+              "totalBasePriceForSorting": {
+                "amount": 39.23,
+                "currency": {
+                  "currencyCode": "USD"
+                }
+              },
+              "localisedPassengerTypeAndCount": "1 Adult",
+              "localisedPrice": "$39.23"
+            }
+          ],
+          "currency": "USD",
+          "base": "39.23",
+          "baseFormatted": "$39.23",
+          "taxes": "0.0",
+          "taxesFormatted": "$0.00",
+          "total": "39.23",
+          "totalFormatted": "$39.23"
+        },
+        "activityCategoryID": 1,
+        "activityId": 246909,
+        "activityTitle": "Airport Limousine - Shared Coach: Narita International Airport (NRT) - Tokyo: Roundtrip for Hotels in Zone 1",
+        "activityDescription": "Enjoy convenient and cost-effective shared transportation between Narita International Airport and your hotel aboard a coach. For transfers to and from Narita International Airport, the zones to select from include:\n\n**Zone 1**\nSelect this option for destinations located in Zone 1. \n\n**Haneda Airport**\nAvailable destinations:\n- Haneda Airport International Terminal, Haneda Airport Terminal 1, Haneda Airport Terminal 2 \n- Tokyo City Air Terminal (TCAT)\n\n**Tokyo Station Nihonbashi**\nAvailable destinations:\n- Mandarin Oriental Tokyo, Shangri-La Hotel Tokyo, Marunouchi Hotel\n- Tokyo Station (Marunouchi North Entrance), Tokyo Station (Yaesu South Entrance)\n\n**Shinjuku**\nAvailable destinations:\n- Hilton Tokyo, Hotel Century Southern Tower, Hotel Sunroute Plaza Shinjuku, Hyatt Regency Tokyo\n- Keio Plaza Hotel Tokyo, Park Hyatt Tokyo, Shinjuku Station, Shinjuku Washington Hotel\n\n**Ikebukuro**\nAvailable destinations:\n- Hotel Metropolitan Tokyo, Sunshine City Prince Hotel\n\n**Mejiro Korakuen**\nAvailable destinations:\n- Hotel Chinzanso Tokyo, Tokyo Dome Hotel\n\n**Kudan**\nAvailable destinations:\n- Hotel Grand Palace\n\n**Ginza Shiodome**\nAvailable destinations:\n- Conrad Tokyo, Courtyard by Marriott Tokyo Ginza Hotel, Dai-ichi Hotel Tokyo, Imperial Hotel\n- Mitsui Garden Hotel Ginza Premier, Palace Hotel Tokyo, Park Hotel Tokyo\n- Royal Park Hotel The Shiodome Tokyo, Sukiyabashi (Narita Departure Only), The Peninsula Tokyo\n\n**Akasaka**\nAvailable destinations:\n- Akasaka Excel Hotel Tokyu, ANA Intercontinental Tokyo, Grand Hyatt Tokyo, Hotel New Otani\n- Hotel Okura Tokyo, The Capitol Hotel Tokyu, The Ritz-Carlton, Tokyo\n\n**Shiba**\nAvailable destinations:\n- Andaz Tokyo, Celestine Hotel, Shiba Park Hotel, Tokyo Prince Hotel, The Prince Park Tower Tokyo\n\n**Shibuya**\nAvailable destinations:\n- Cerulean Tower Tokyu Hotel, Shibuya Excel Hotel Tokyu (Shibuya Mark City)\n\n**Futako Tamagawa**\nAvailable destinations:\n- Futako Tamagawa Station\n\n**Shinagawa/Ebisu**\nAvailable destinations:\n- Grand Prince Hotel New Takanawa, Grand Prince Hotel Takanawa, Keikyu EX Inn Shinagawa-Ekimae\n- Sheraton Miyako Hotel Tokyo, Shinagawa Prince Hotel, Shinagawa Station (Konan Entrance)\n- The New Sanno, The Prince Sakura Tower Tokyo, The Strings by InterContinental Tokyo\n- The Westin Tokyo, Tokyo Mariott Hotel\n\n**Takeshiba**\nAvailable destinations:\n- Hotel Intercontinental Tokyo Bay, Tennozu Isle (Dai-ichi Hotel Tokyo Seafort)\n\n\n**Zone 2**\nSelect this option for destinations located in Zone 2. \n\n**Takeshiba/Fukutoshin**\nAvailable destinations:\n- Grand Pacific Le Daiba, Hotel Nikko Tokyo, Hotel Sunroute Ariake, Tokyo Bay Ariake Washington Hotel\n\n**Kinshicho/Toyocho**\nAvailable destinations:\n- Hotel East 21 Tokyo , Tobu Hotel Levant Tokyo\n\n**Toyosu**\nAvailable destinations:\n-Toyosu Station\n\n**Asakusa**\nAvailable destinations:\n- Asakusa View Hotel\n\n**Shinkiba**\nAvailable destinations:\n- Shinkiba Station (Narita Departure Only)",
+        "activityItemTitleEnglish": "Airport Limousine - Shared Coach: Narita International Airport (NRT) - Tokyo: Roundtrip for Hotels in Zone 1",
+        "activityDetailsURL": "https://wwwexpediacom.trunk.sb.karmalab.net/lx/activity/246909/",
+        "activityLocation": {
+          "name1": "Narita International Airport",
+          "latitude": 35.77199,
+          "longitude": 140.39286,
+          "addressLine1": "1-1 Furugome",
+          "city": "Narita",
+          "countrySubdivisionCode": "Chiba",
+          "countryCode": "JPN",
+          "fullAddress": "Narita International Airport : 1-1 Furugome, Narita, Chiba, JPN"
+        },
+        "redemptionLocations": [
+          {
+            "name1": "Narita International Airport",
+            "latitude": 35.77199,
+            "longitude": 140.39286,
+            "addressLine1": "1-1 Furugome",
+            "city": "Narita",
+            "countrySubdivisionCode": "Chiba",
+            "countryCode": "JPN",
+            "fullAddress": "Narita International Airport : 1-1 Furugome, Narita, Chiba, JPN"
+          },
+          {
+            "name1": "Tokyo City Center (Hotel Pickup)",
+            "latitude": 35.70903,
+            "longitude": 139.732,
+            "city": "Tokyo",
+            "countryCode": "JPN",
+            "fullAddress": "Tokyo City Center (Hotel Pickup) : Tokyo, JPN"
+          }
+        ],
+        "travelerCount": 1,
+        "travelerCountDescription": "1 Adult",
+        "travelers": [
+          {
+            "isRedeemer": true,
+            "firstName": "Elmer",
+            "lastName": "Fudd",
+            "fullName": "Elmer Fudd"
+          }
+        ],
+        "vendorName": "Urban Adventures - CAD",
+        "vendorAccountingId": 0,
+        "vendorCustomerServiceOffices": [
+          {
+            "name": "Urban Adventures - CAD Customer Service",
+            "phoneCountryCode": "81",
+            "phoneNumber": "81 336657220",
+            "phoneNumbers": [
+              {
+                "formatted": "81 336657220",
+                "costText": "Local",
+                "useText": "Information Hotline"
+              }
+            ],
+            "hoursOfOperationText": "Daily: 9:00 AM - 6:00 PM",
+            "hoursOfOperation": [
+              {
+                "day": "monday",
+                "startTime": "09:00:00",
+                "endTime": "18:00:00"
+              },
+              {
+                "day": "tuesday",
+                "startTime": "09:00:00",
+                "endTime": "18:00:00"
+              },
+              {
+                "day": "wednesday",
+                "startTime": "09:00:00",
+                "endTime": "18:00:00"
+              },
+              {
+                "day": "thursday",
+                "startTime": "09:00:00",
+                "endTime": "18:00:00"
+              },
+              {
+                "day": "friday",
+                "startTime": "09:00:00",
+                "endTime": "18:00:00"
+              },
+              {
+                "day": "saturday",
+                "startTime": "09:00:00",
+                "endTime": "18:00:00"
+              },
+              {
+                "day": "sunday",
+                "startTime": "09:00:00",
+                "endTime": "18:00:00"
+              }
+            ]
+          }
+        ],
+        "termsAndConditions": {
+          "instructions": "<b>How to Redeem Your Voucher:</b><br/>**Airport Pickup:**  Upon arrival, please collect your baggage and proceed through customs. Head toward the Airport Limousine counter at the Terminal building. Please present your confirmation/voucher for your transfer at the Airport Limousine customer service desk.\n\n**Hotel Pickup:** Please request from hotel staff to contact Airport Limousine to reserve your transfer.<br/><br/><b>Know Before You Go:</b><ul><li>Partial cancellation is not available for roundtrip transfers.</li><li>1 standard-size bag is allowed per person.</li><li>Gratuity is not included and is left to individual discretion.</li><li>Additional or overweight baggage (such as surfboards, bicycles, etc.) is subject to space availability and incur an extra surcharge, which is payable to your driver at the time of service.</li><li>Toll charges is included.</li><li>This transfer operates between 5:30 AM and 10:30 PM; please verify your flight times prior to selecting this option.</li><li>You don’t need to reconfirm your booking.</li></ul>",
+          "knowBeforeYouGo": "<b>Know Before You Go:</b><ul><li>Partial cancellation is not available for roundtrip transfers.</li><li>1 standard-size bag is allowed per person.</li><li>Gratuity is not included and is left to individual discretion.</li><li>Additional or overweight baggage (such as surfboards, bicycles, etc.) is subject to space availability and incur an extra surcharge, which is payable to your driver at the time of service.</li><li>Toll charges is included.</li><li>This transfer operates between 5:30 AM and 10:30 PM; please verify your flight times prior to selecting this option.</li><li>You don’t need to reconfirm your booking.</li></ul>",
+          "howToRedeem": "<b>How to Redeem Your Voucher:</b><br/>**Airport Pickup:**  Upon arrival, please collect your baggage and proceed through customs. Head toward the Airport Limousine counter at the Terminal building. Please present your confirmation/voucher for your transfer at the Airport Limousine customer service desk.\n\n**Hotel Pickup:** Please request from hotel staff to contact Airport Limousine to reserve your transfer.",
+          "terms": "Rate is per person and is valid for shared coach transfers between Narita International Airport and Tokyo hotels only. If your hotel falls outside the zone you booked, you may need to pay an additional charge directly to the driver at the time of service. Partial cancellation is not available for roundtrip transfers.\n\nPhotographs are meant to illustrate vehicle type only; your vehicle may differ from what is pictured.<li><b>Cancellations and Changes:</b> You can cancel free of charge until 72 hours before the activity starts. After that time, no cancellations, changes or refunds will be made.</li>",
+          "minFreeCancellationHoursPackageV2": 0,
+          "freeCancellationAvailablePackageV2": false
+        },
+        "voucherPrintURL": "https://wwwexpediacom.trunk.sb.karmalab.net/itinerary-print?tripid=bb6c9ad1-3f0f-44bf-bd78-f0681fe70bd8&itineraryNumber=11616648817",
+        "vouchers": [
+          {
+            "id": "0046461842",
+            "barcodeNumber": "0046461842",
+            "securityCode": "105333010003923708568",
+            "barcodeImageURL": "https://wwwexpediacom.trunk.sb.karmalab.net/barcode/0046461842.png?encodingFormat=CODE_39",
+            "validForRedemerTypeLocalized": "1 Adult",
+            "validForRedemerTypeEnglish": "1 Adult",
+            "supplierReferenceCode": ""
+          }
+        ],
+        "webGetLXCancelDetailPathURL": "https://wwwexpediacom.trunk.sb.karmalab.net/api/getLXCancelDetail/FF9E5B5D-248D-474D-8BD4-618FFFC8C825/ordernumber/8001517069457/orderlinenumber/7c597b76-33d0-434c-a913-88acdd69bfb1",
+        "regionId": "8900",
+        "unbookedPackageV2": false
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

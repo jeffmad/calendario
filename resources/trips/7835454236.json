@@ -1,0 +1,312 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "1c723be7-b896-4e54-99f0-a81098f496e7",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7835454236",
+    "tripNumber": 7835454236,
+    "title": "Car rental in Chicago",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/1c723be7-b896-4e54-99f0-a81098f496e7/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-06-10T08:00:00-05:00",
+      "localized": "Jun 10, 2016 8:00:00 AM",
+      "epochSeconds": 1465563600,
+      "timeZoneOffsetSeconds": -18000,
+      "localizedShortDate": "6/10/2016",
+      "localizedMediumDate": "Jun 10",
+      "localizedFullDate": "Fri, Jun 10",
+      "localizedLongDate": "Jun 10, 2016"
+    },
+    "endTime": {
+      "raw": "2016-06-12T07:00:00-05:00",
+      "localized": "Jun 12, 2016 7:00:00 AM",
+      "epochSeconds": 1465732800,
+      "timeZoneOffsetSeconds": -18000,
+      "localizedShortDate": "6/12/2016",
+      "localizedMediumDate": "Jun 12",
+      "localizedFullDate": "Sun, Jun 12",
+      "localizedLongDate": "Jun 12, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-30T01:54:58Z",
+      "localized": "Sep 30, 2015 1:54:58 AM",
+      "epochSeconds": 1443578098,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-30T01:55:55Z",
+      "localized": "Sep 30, 2015 1:55:55 AM",
+      "epochSeconds": 1443578155,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-30T01:57:48Z",
+      "localized": "Sep 30, 2015 1:57:48 AM",
+      "epochSeconds": 1443578268,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzrRdzC_Pi5uuX1xYBWq86kHhelNtJr-PUThwr9s4l8JA",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #7835454236 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #7835454236 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "cars": [
+      {
+        "uniqueID": "4935A186-91FE-4C14-9F45-7623C617EFA5_0",
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Confirmed",
+        "bookingStatusMessage": "Your reservation is booked and confirmed. No need to call us to reconfirm this reservation.",
+        "state": "PRE_START_4",
+        "orderNumber": 8018169112209,
+        "orderLineNumber": "3d76974b-23b5-41dd-aa29-c13de9163fd9",
+        "paymentModel": "EXPEDIA_COLLECT",
+        "reservationGuaranteePolicy": "RESERVATION_GUARANTEE_OPTIONAL",
+        "price": {
+          "rateTerm": "DAILY",
+          "rateTermLocalized": "day",
+          "rate": "58.72",
+          "rateFormatted": "$58.72",
+          "mileageChargesDescription": "Unlimited mileage",
+          "isTotalRate": true,
+          "totalContainsTaxesAndFees": true,
+          "taxesAreEstimated": false,
+          "insuranceIncluded": false,
+          "currency": "USD",
+          "total": "58.72",
+          "totalFormatted": "$58.72"
+        },
+        "confirmationNumber": "1203965970COUNT",
+        "webCancelPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/cancelCarBooking/1c723be7-b896-4e54-99f0-a81098f496e7",
+        "webGetCarCancelDetailPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/1c723be7-b896-4e54-99f0-a81098f496e7/ordernumber/8018169112209/orderlinenumber/3d76974b-23b5-41dd-aa29-c13de9163fd9/isMerchant/true/getCarCancelDetail",
+        "webCarRulesPageURL": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7",
+        "bookingId": "163209",
+        "travelers": [
+          {
+            "firstName": "ELMER",
+            "lastName": "FUDD"
+          }
+        ],
+        "pickupTime": {
+          "raw": "2016-06-10T08:00:00-05:00",
+          "localized": "Jun 10, 2016 8:00:00 AM",
+          "epochSeconds": 1465563600,
+          "timeZoneOffsetSeconds": -18000,
+          "localizedShortDate": "6/10/2016",
+          "localizedMediumDate": "Jun 10",
+          "localizedFullDate": "Fri, Jun 10",
+          "localizedLongDate": "Jun 10, 2016"
+        },
+        "dropOffTime": {
+          "raw": "2016-06-12T07:00:00-05:00",
+          "localized": "Jun 12, 2016 7:00:00 AM",
+          "epochSeconds": 1465732800,
+          "timeZoneOffsetSeconds": -18000,
+          "localizedShortDate": "6/12/2016",
+          "localizedMediumDate": "Jun 12",
+          "localizedFullDate": "Sun, Jun 12",
+          "localizedLongDate": "Jun 12, 2016"
+        },
+        "pickupLocation": {
+          "locationType": "AIRPORT_SHUTTLE_TO_CAR_AND_COUNTER",
+          "locationDescription": "Chicago (ORD)",
+          "airportInstructions": "Shuttle to counter and car",
+          "latitude": 41.979629,
+          "longitude": -87.904565,
+          "addressLine1": "OHARE INTL AIRPORT",
+          "cityName": "Chicago",
+          "provinceStateName": "IL",
+          "countryCode": "USA",
+          "locationCode": "ORD",
+          "regionId": 829
+        },
+        "dropOffLocation": {
+          "locationType": "AIRPORT_SHUTTLE_TO_CAR_AND_COUNTER",
+          "locationDescription": "Chicago (ORD)",
+          "latitude": 41.979629,
+          "longitude": -87.904565,
+          "addressLine1": "OHARE INTL AIRPORT",
+          "cityName": "Chicago",
+          "provinceStateName": "IL",
+          "countryCode": "USA",
+          "locationCode": "ORD",
+          "regionId": 829
+        },
+        "pickupDateOpenHoursSummaryString": "24 hours",
+        "pickupDateOpenHours": [
+          {
+            "openingDateTime": {
+              "raw": "2016-06-10T00:00:00-05:00",
+              "localized": "Jun 10, 2016 12:00:00 AM",
+              "epochSeconds": 1465534800,
+              "timeZoneOffsetSeconds": -18000,
+              "localizedShortDate": "6/10/2016",
+              "localizedMediumDate": "Jun 10",
+              "localizedFullDate": "Fri, Jun 10",
+              "localizedLongDate": "Jun 10, 2016"
+            },
+            "closingDateTime": {
+              "raw": "2016-06-10T23:59:59-05:00",
+              "localized": "Jun 10, 2016 11:59:59 PM",
+              "epochSeconds": 1465621199,
+              "timeZoneOffsetSeconds": -18000,
+              "localizedShortDate": "6/10/2016",
+              "localizedMediumDate": "Jun 10",
+              "localizedFullDate": "Fri, Jun 10",
+              "localizedLongDate": "Jun 10, 2016"
+            }
+          }
+        ],
+        "dropOffDateOpenHoursSummaryString": "24 hours",
+        "dropOffDateOpenHours": [
+          {
+            "openingDateTime": {
+              "raw": "2016-06-12T00:00:00-05:00",
+              "localized": "Jun 12, 2016 12:00:00 AM",
+              "epochSeconds": 1465707600,
+              "timeZoneOffsetSeconds": -18000,
+              "localizedShortDate": "6/12/2016",
+              "localizedMediumDate": "Jun 12",
+              "localizedFullDate": "Sun, Jun 12",
+              "localizedLongDate": "Jun 12, 2016"
+            },
+            "closingDateTime": {
+              "raw": "2016-06-12T23:59:59-05:00",
+              "localized": "Jun 12, 2016 11:59:59 PM",
+              "epochSeconds": 1465793999,
+              "timeZoneOffsetSeconds": -18000,
+              "localizedShortDate": "6/12/2016",
+              "localizedMediumDate": "Jun 12",
+              "localizedFullDate": "Sun, Jun 12",
+              "localizedLongDate": "Jun 12, 2016"
+            }
+          }
+        ],
+        "carVendor": {
+          "longName": "Alamo",
+          "code": "AL",
+          "shortName": "Alamo",
+          "logoURL": "https://images.trvl-media.com/cars/logos/AL.png",
+          "phoneNumber": "1-800-327-9633",
+          "localPhoneNumber": "1-773-694-4640"
+        },
+        "carCategoryImageURL": "https://images.trvl-media.com/cars%2F6%2FCCARNissanVersaNote_AL_USA_20150217_s.jpg",
+        "carCategory": "Compact",
+        "carCategoryLocalized": "Compact",
+        "carType": "TwoDoorCar",
+        "carTypeLocalized": "Nissan Versa Note",
+        "carTypeAttributes": {
+          "vehicleTypeLocalized": "2 or 4-Door Car",
+          "fuelType": "UNKNOWN",
+          "airConditioningType": "AIR_CONDITIONING",
+          "airConditioningTypeLocalized": "Air conditioning",
+          "transmissionType": "AUTOMATIC_TRANSMISSION",
+          "transmissionTypeLocalized": "Automatic transmission",
+          "wheelDriveType": "TWO_WHEEL_DRIVE",
+          "wheelDriveTypeLocalized": "2-wheel drive"
+        },
+        "rules": [
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "INFORMATION_PROVIDED_BY_VENDOR_POLICY",
+            "text": "The following rules and restrictions are provided by the car rental company."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "PAYMENT_CARD_REQUIRED_AT_PICKUP",
+            "text": "The driver must present a valid driver's license and credit card in their name upon pick-up.",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES",
+            "textAndURL": "The driver must present a valid <a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES\">driver's license</a> and credit card in their name upon pick-up. The credit card is required as a deposit when renting any vehicle. The deposit amount is held by the car rental company. Please ensure sufficient funds are available on the card."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "AGE_RESTRICTIONS",
+            "text": "International rentals may have different driver license requirements. An international driving license is required if the drivers' license is non-roman alphabet."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "AGE_RESTRICTIONS",
+            "text": "Additional charges or restrictions may apply for drivers under 25.",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES",
+            "textAndURL": "<a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES\">Additional charges or restrictions</a> may apply for drivers under 25 or over 65."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "CONDITIONAL_CHARGES",
+            "text": "Charges for refueling, additional drivers, etc. are not included in the total price.",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES",
+            "textAndURL": "Charges for <a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES\">refueling</a>, additional drivers, etc. are not included in the total price."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "OPTIONAL_SERVICES",
+            "text": "Special equipment, such as child seats and GPS, can be purchased upon pick-up (if available).",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES",
+            "textAndURL": "<a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES\">Special equipment</a>, such as child seats and GPS, can be purchased upon pick-up (if available)."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "GEOGRAPHICAL_RESTRICTIONS_MAY_APPLY",
+            "text": "Geographical restrictions may apply, even for rental contracts that feature unlimited mileage. Some car rental companies do not allow you to take their vehicles across certain domestic or international borders, or may apply an additional charge to do so."
+          },
+          {
+            "ruleType": "TEXT_AND_URL",
+            "ruleName": "CONDITIONAL_CHARGES",
+            "text": "Your rental may have mandatory insurance requirements that result in additional charges at the time of rental.",
+            "url": "http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES",
+            "textAndURL": "Your rental may have <a href=\"http://wwwexpediacom.integration.sb.karmalab.net/Checkout/CarRulesAndRestrictions?tripid=1c723be7-b896-4e54-99f0-a81098f496e7#MERCHANT_RULES\">mandatory, local insurance requirements</a> that result in additional charges at the time of rental."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "CANCELLATION_AND_REFUND",
+            "text": "Cancellations can be made free of charge up to and including the day prior to your pickup date, and your card will be refunded in full."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "NO_REFUND_FOR_UNUSED_DAYS",
+            "text": "No refunds will be offered on unused rental days."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "TAXES_AND_FEES_INCLUDED",
+            "text": "The total price includes all mandatory taxes and fees."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "TIME_OF_PAYMENT",
+            "text": "Your card will be charged the total price upon booking."
+          },
+          {
+            "ruleType": "TEXT_ONLY",
+            "ruleName": "TIME_OF_PAYMENT",
+            "text": "Rental fees are due at pick-up."
+          }
+        ],
+        "pickUpInstructions": [
+          "  SEE SHUTTLE POLICY FOR ARRIVAL INFORMATION.\n",
+          "DUE TO CONSTRUCTION IN AND AROUND THE AIRPORT\nALLOW EXTRA TIME FOR RENTALS\n.\n************ ALAMO*S RENTAL COUNTER *****************\n   AIRPORT - OHARE INTL\n   COUNTER - CONSOLIDATED ALAMO/NATIONAL COUNTERS\n   LOCATED THROUGHOUT THE AIRPORT IN LOWER LEVEL\n   BAGGAGE CLAIM AREAS. WHEN RENTAL IS PROCESSED\n   PROCEED TO ALAMO/NATIONAL SHUTTLE BUS.\n.\n   WHEN COUNTERS ARE UNMANNED - PROCEED TO SHUTTLE.\n.\n*********** ALAMO*S SHUTTLE SERVICE *****************\n   SHUTTLE - ARRIVES FROM 11PM-7AM. USE COURTESY\n   PHONE AT COUNTER TO CALL FOR SHUTTLE BUS.\n- BOARD ALAMO/NATIONAL SHUTTLE BUS\n- RUNS EVERY 5 MINUTES\n- INTL TERMINAL ARRIVALS USE COURTESY PHONE AND\n  CALL 694-4640 FOR ALAMO/NATIONAL SHUTTLE SERVICE.\n"
+        ],
+        "fuelPolicy": "FullToFull",
+        "inCancelAllowedWindow": true
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

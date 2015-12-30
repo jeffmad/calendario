@@ -1,0 +1,1273 @@
+
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_SUMMARY",
+  "responseData": [
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "c64165d2-ea63-4026-9fdc-559b2b4cfd3b",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11613235441",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11613235441",
+      "tripNumber": 11613235441,
+      "title": "Denver",
+      "description": "",
+      "startTime": {
+        "raw": "2015-12-06T10:30:00-08:00",
+        "localized": "Dec 6, 2015 10:30:00 AM",
+        "epochSeconds": 1449426600,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Sun, 6 Dec"
+      },
+      "endTime": {
+        "raw": "2015-12-20T11:59:00-08:00",
+        "localized": "Dec 20, 2015 11:59:00 AM",
+        "epochSeconds": 1450641540,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Sun, 20 Dec"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-09-09T00:04:26Z",
+        "localized": "Sep 9, 2015 12:04:26 AM",
+        "epochSeconds": 1441757066,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Wed, 9 Sep"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-09-16T22:27:51Z",
+        "localized": "Sep 16, 2015 10:27:51 PM",
+        "epochSeconds": 1442442471,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Wed, 16 Sep"
+      },
+      "bookingStatus": "CANCELLED",
+      "timePeriod": "UPCOMING",
+      "hotels": [],
+      "flights": [
+        {
+          "bookingStatus": "CANCELLED",
+          "startTime": {
+            "raw": "2015-12-06T10:30:00-08:00",
+            "localized": "Dec 6, 2015 10:30:00 AM",
+            "epochSeconds": 1449426600,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Sun, 6 Dec"
+          },
+          "endTime": {
+            "raw": "2015-12-20T11:59:00-08:00",
+            "localized": "Dec 20, 2015 11:59:00 AM",
+            "epochSeconds": 1450641540,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Sun, 20 Dec"
+          },
+          "isInternational": false,
+          "isSplitTicket": false,
+          "brandedFareFamilyName": "",
+          "startDate": "2015-12-06T10:30:00-08:00",
+          "endDate": "2015-12-20T11:59:00-08:00",
+          "isLccOrCharter": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "6380acef-4099-4c46-9604-1c9f7ac482c6",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11616643514",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11616643514",
+      "tripNumber": 11616643514,
+      "title": "Hilton Tokyo, Tokyo",
+      "description": "",
+      "startTime": {
+        "raw": "2016-02-03T15:00:00-08:00",
+        "localized": "Feb 3, 2016 3:00:00 PM",
+        "epochSeconds": 1454540400,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Wed, 3 Feb"
+      },
+      "endTime": {
+        "raw": "2016-02-06T11:00:00-08:00",
+        "localized": "Feb 6, 2016 11:00:00 AM",
+        "epochSeconds": 1454785200,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Sat, 6 Feb"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-09-17T06:22:44Z",
+        "localized": "Sep 17, 2015 6:22:44 AM",
+        "epochSeconds": 1442470964,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-09-17T21:24:39Z",
+        "localized": "Sep 17, 2015 9:24:39 PM",
+        "epochSeconds": 1442525079,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "UPCOMING",
+      "hotels": [
+        {
+          "startTime": {
+            "raw": "2016-02-03T15:00:00-08:00",
+            "localized": "Feb 3, 2016 3:00:00 PM",
+            "epochSeconds": 1454540400,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Wed, 3 Feb"
+          },
+          "endTime": {
+            "raw": "2016-02-06T11:00:00-08:00",
+            "localized": "Feb 6, 2016 11:00:00 AM",
+            "epochSeconds": 1454785200,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Sat, 6 Feb"
+          },
+          "checkInDate": "2016-02-03T15:00:00-08:00",
+          "checkOutDate": "2016-02-06T11:00:00-08:00",
+          "bookingStatus": "BOOKED"
+        }
+      ],
+      "flights": [],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "b1d7931c-457d-4d49-8fe3-6af794c2a5c3",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11616506271",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11616506271",
+      "tripNumber": 11616506271,
+      "title": "Sea Cliff House And Motel, Old Orchard Beach",
+      "description": "",
+      "startTime": {
+        "raw": "2016-07-09T15:00:00-07:00",
+        "localized": "Jul 9, 2016 3:00:00 PM",
+        "epochSeconds": 1468101600,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Sat, 9 Jul"
+      },
+      "endTime": {
+        "raw": "2016-07-13T11:00:00-07:00",
+        "localized": "Jul 13, 2016 11:00:00 AM",
+        "epochSeconds": 1468432800,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Wed, 13 Jul"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-09-16T22:55:01Z",
+        "localized": "Sep 16, 2015 10:55:01 PM",
+        "epochSeconds": 1442444101,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Wed, 16 Sep"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-09-17T21:27:15Z",
+        "localized": "Sep 17, 2015 9:27:15 PM",
+        "epochSeconds": 1442525235,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "UPCOMING",
+      "hotels": [
+        {
+          "startTime": {
+            "raw": "2016-07-09T15:00:00-07:00",
+            "localized": "Jul 9, 2016 3:00:00 PM",
+            "epochSeconds": 1468101600,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Sat, 9 Jul"
+          },
+          "endTime": {
+            "raw": "2016-07-13T11:00:00-07:00",
+            "localized": "Jul 13, 2016 11:00:00 AM",
+            "epochSeconds": 1468432800,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Wed, 13 Jul"
+          },
+          "checkInDate": "2016-07-09T15:00:00-07:00",
+          "checkOutDate": "2016-07-13T11:00:00-07:00",
+          "bookingStatus": "BOOKED"
+        }
+      ],
+      "flights": [],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "ebfbb9ff-8851-4e00-9d70-389dee44c8c9",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11616506364",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11616506364",
+      "tripNumber": 11616506364,
+      "title": "Shibuya Creston Hotel, Tokyo",
+      "description": "",
+      "startTime": {
+        "raw": "2016-08-05T15:00:00-07:00",
+        "localized": "Aug 5, 2016 3:00:00 PM",
+        "epochSeconds": 1470434400,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Fri, 5 Aug"
+      },
+      "endTime": {
+        "raw": "2016-08-13T11:00:00-07:00",
+        "localized": "Aug 13, 2016 11:00:00 AM",
+        "epochSeconds": 1471111200,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Sat, 13 Aug"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-09-16T22:56:34Z",
+        "localized": "Sep 16, 2015 10:56:34 PM",
+        "epochSeconds": 1442444194,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Wed, 16 Sep"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-09-17T21:28:14Z",
+        "localized": "Sep 17, 2015 9:28:14 PM",
+        "epochSeconds": 1442525294,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "UPCOMING",
+      "hotels": [
+        {
+          "startTime": {
+            "raw": "2016-08-05T15:00:00-07:00",
+            "localized": "Aug 5, 2016 3:00:00 PM",
+            "epochSeconds": 1470434400,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Fri, 5 Aug"
+          },
+          "endTime": {
+            "raw": "2016-08-13T11:00:00-07:00",
+            "localized": "Aug 13, 2016 11:00:00 AM",
+            "epochSeconds": 1471111200,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Sat, 13 Aug"
+          },
+          "checkInDate": "2016-08-05T15:00:00-07:00",
+          "checkOutDate": "2016-08-13T11:00:00-07:00",
+          "bookingStatus": "BOOKED"
+        }
+      ],
+      "flights": [],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "cb5f0d5f-f317-4d72-b491-dbbdd9120db2",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11616639117",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11616639117",
+      "tripNumber": 11616639117,
+      "title": "The Westin Cleveland Downtown, Cleveland",
+      "description": "",
+      "startTime": {
+        "raw": "2016-08-05T15:00:00-07:00",
+        "localized": "Aug 5, 2016 3:00:00 PM",
+        "epochSeconds": 1470434400,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Fri, 5 Aug"
+      },
+      "endTime": {
+        "raw": "2016-08-13T11:00:00-07:00",
+        "localized": "Aug 13, 2016 11:00:00 AM",
+        "epochSeconds": 1471111200,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Sat, 13 Aug"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-09-17T06:11:12Z",
+        "localized": "Sep 17, 2015 6:11:12 AM",
+        "epochSeconds": 1442470272,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-09-17T21:28:26Z",
+        "localized": "Sep 17, 2015 9:28:26 PM",
+        "epochSeconds": 1442525306,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "bookingStatus": "SAVED",
+      "timePeriod": "UPCOMING",
+      "hotels": [
+        {
+          "startTime": {
+            "raw": "2016-08-05T15:00:00-07:00",
+            "localized": "Aug 5, 2016 3:00:00 PM",
+            "epochSeconds": 1470434400,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Fri, 5 Aug"
+          },
+          "endTime": {
+            "raw": "2016-08-13T11:00:00-07:00",
+            "localized": "Aug 13, 2016 11:00:00 AM",
+            "epochSeconds": 1471111200,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Sat, 13 Aug"
+          },
+          "checkInDate": "2016-08-05T15:00:00-07:00",
+          "checkOutDate": "2016-08-13T11:00:00-07:00",
+          "bookingStatus": "SAVED"
+        }
+      ],
+      "flights": [],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "9e506ba4-9819-44ce-a8eb-ca691efd71d7",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11439289559",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11439289559",
+      "tripNumber": 11439289559,
+      "title": "Detroit",
+      "description": "",
+      "startTime": {
+        "raw": "2014-10-13T07:15:00-07:00",
+        "localized": "Oct 13, 2014 7:15:00 AM",
+        "epochSeconds": 1413209700,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Mon, 13 Oct"
+      },
+      "endTime": {
+        "raw": "2014-10-17T18:29:00-07:00",
+        "localized": "Oct 17, 2014 6:29:00 PM",
+        "epochSeconds": 1413595740,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Fri, 17 Oct"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-07-11T21:20:09Z",
+        "localized": "Jul 11, 2014 9:20:09 PM",
+        "epochSeconds": 1405113609,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Fri, 11 Jul"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-07-11T22:23:51Z",
+        "localized": "Jul 11, 2014 10:23:51 PM",
+        "epochSeconds": 1405117431,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Fri, 11 Jul"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [],
+      "flights": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2014-10-13T07:15:00-07:00",
+            "localized": "Oct 13, 2014 7:15:00 AM",
+            "epochSeconds": 1413209700,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Mon, 13 Oct"
+          },
+          "endTime": {
+            "raw": "2014-10-17T18:29:00-07:00",
+            "localized": "Oct 17, 2014 6:29:00 PM",
+            "epochSeconds": 1413595740,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Fri, 17 Oct"
+          },
+          "isInternational": false,
+          "isSplitTicket": false,
+          "brandedFareFamilyName": "",
+          "startDate": "2014-10-13T07:15:00-07:00",
+          "endDate": "2014-10-17T18:29:00-07:00",
+          "isLccOrCharter": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "62372948-51c3-4db6-8d79-71083992a8a6",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11498558560",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11498558560",
+      "tripNumber": 11498558560,
+      "title": "New Orleans",
+      "description": "",
+      "startTime": {
+        "raw": "2014-12-23T07:29:00-08:00",
+        "localized": "Dec 23, 2014 7:29:00 AM",
+        "epochSeconds": 1419348540,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Tue, 23 Dec"
+      },
+      "endTime": {
+        "raw": "2014-12-25T13:20:00-08:00",
+        "localized": "Dec 25, 2014 1:20:00 PM",
+        "epochSeconds": 1419542400,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Thu, 25 Dec"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-11-14T02:48:27Z",
+        "localized": "Nov 14, 2014 2:48:27 AM",
+        "epochSeconds": 1415933307,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Fri, 14 Nov"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-11-14T02:54:41Z",
+        "localized": "Nov 14, 2014 2:54:41 AM",
+        "epochSeconds": 1415933681,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Fri, 14 Nov"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [],
+      "flights": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2014-12-23T07:29:00-08:00",
+            "localized": "Dec 23, 2014 7:29:00 AM",
+            "epochSeconds": 1419348540,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Tue, 23 Dec"
+          },
+          "endTime": {
+            "raw": "2014-12-25T13:20:00-08:00",
+            "localized": "Dec 25, 2014 1:20:00 PM",
+            "epochSeconds": 1419542400,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Thu, 25 Dec"
+          },
+          "isInternational": false,
+          "isSplitTicket": false,
+          "brandedFareFamilyName": "",
+          "startDate": "2014-12-23T07:29:00-08:00",
+          "endDate": "2014-12-25T13:20:00-08:00",
+          "isLccOrCharter": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "d584d7b7-87e6-4596-89da-5c1320c65778",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11498756365",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11498756365",
+      "tripNumber": 11498756365,
+      "title": "Chicago",
+      "description": "",
+      "startTime": {
+        "raw": "2015-02-01T14:00:00-08:00",
+        "localized": "Feb 1, 2015 2:00:00 PM",
+        "epochSeconds": 1422828000,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Sun, 1 Feb"
+      },
+      "endTime": {
+        "raw": "2015-02-06T17:07:00-08:00",
+        "localized": "Feb 6, 2015 5:07:00 PM",
+        "epochSeconds": 1423271220,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Fri, 6 Feb"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-11-14T20:05:38Z",
+        "localized": "Nov 14, 2014 8:05:38 PM",
+        "epochSeconds": 1415995538,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Fri, 14 Nov"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-11-30T22:04:44Z",
+        "localized": "Nov 30, 2014 10:04:44 PM",
+        "epochSeconds": 1417385084,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Sun, 30 Nov"
+      },
+      "bookingStatus": "CANCELLED",
+      "timePeriod": "COMPLETED",
+      "hotels": [],
+      "flights": [
+        {
+          "bookingStatus": "CANCELLED",
+          "startTime": {
+            "raw": "2015-02-01T14:00:00-08:00",
+            "localized": "Feb 1, 2015 2:00:00 PM",
+            "epochSeconds": 1422828000,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Sun, 1 Feb"
+          },
+          "endTime": {
+            "raw": "2015-02-06T17:07:00-08:00",
+            "localized": "Feb 6, 2015 5:07:00 PM",
+            "epochSeconds": 1423271220,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Fri, 6 Feb"
+          },
+          "isInternational": false,
+          "isSplitTicket": false,
+          "brandedFareFamilyName": "",
+          "startDate": "2015-02-01T14:00:00-08:00",
+          "endDate": "2015-02-06T17:07:00-08:00",
+          "isLccOrCharter": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "cf35afbb-b3ac-43d0-9c09-701bdc48c83b",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11523182431",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11523182431",
+      "tripNumber": 11523182431,
+      "title": "Fairmont Olympic Hotel, Seattle",
+      "description": "",
+      "startTime": {
+        "raw": "2015-07-14T15:00:00-07:00",
+        "localized": "Jul 14, 2015 3:00:00 PM",
+        "epochSeconds": 1436911200,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Tue, 14 Jul"
+      },
+      "endTime": {
+        "raw": "2015-07-17T11:00:00-07:00",
+        "localized": "Jul 17, 2015 11:00:00 AM",
+        "epochSeconds": 1437156000,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Fri, 17 Jul"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-01-31T05:19:22Z",
+        "localized": "Jan 31, 2015 5:19:22 AM",
+        "epochSeconds": 1422681562,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Sat, 31 Jan"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-06-03T21:58:42Z",
+        "localized": "Jun 3, 2015 9:58:42 PM",
+        "epochSeconds": 1433368722,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Wed, 3 Jun"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [
+        {
+          "startTime": {
+            "raw": "2015-07-14T15:00:00-07:00",
+            "localized": "Jul 14, 2015 3:00:00 PM",
+            "epochSeconds": 1436911200,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Tue, 14 Jul"
+          },
+          "endTime": {
+            "raw": "2015-07-17T11:00:00-07:00",
+            "localized": "Jul 17, 2015 11:00:00 AM",
+            "epochSeconds": 1437156000,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Fri, 17 Jul"
+          },
+          "checkInDate": "2015-07-14T15:00:00-07:00",
+          "checkOutDate": "2015-07-17T11:00:00-07:00",
+          "bookingStatus": "BOOKED"
+        }
+      ],
+      "flights": [],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "5f067328-d48a-48a4-85a9-887eada5c6ba",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/7744023373",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7744023373",
+      "tripNumber": 7744023373,
+      "title": "El Rancho Motel, Coronado",
+      "description": "",
+      "startTime": {
+        "raw": "2015-08-18T15:00:00-07:00",
+        "localized": "Aug 18, 2015 3:00:00 PM",
+        "epochSeconds": 1439935200,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Tue, 18 Aug"
+      },
+      "endTime": {
+        "raw": "2015-08-21T11:00:00-07:00",
+        "localized": "Aug 21, 2015 11:00:00 AM",
+        "epochSeconds": 1440180000,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Fri, 21 Aug"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-06-03T21:56:55Z",
+        "localized": "Jun 3, 2015 9:56:55 PM",
+        "epochSeconds": 1433368615,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Wed, 3 Jun"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-06-03T21:59:40Z",
+        "localized": "Jun 3, 2015 9:59:40 PM",
+        "epochSeconds": 1433368780,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Wed, 3 Jun"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [
+        {
+          "startTime": {
+            "raw": "2015-08-18T15:00:00-07:00",
+            "localized": "Aug 18, 2015 3:00:00 PM",
+            "epochSeconds": 1439935200,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Tue, 18 Aug"
+          },
+          "endTime": {
+            "raw": "2015-08-21T11:00:00-07:00",
+            "localized": "Aug 21, 2015 11:00:00 AM",
+            "epochSeconds": 1440180000,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Fri, 21 Aug"
+          },
+          "checkInDate": "2015-08-18T15:00:00-07:00",
+          "checkOutDate": "2015-08-21T11:00:00-07:00",
+          "bookingStatus": "BOOKED"
+        }
+      ],
+      "flights": [],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "8c57fdd6-78cc-47c3-b20f-ba4e5c0f6efc",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11498585013",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11498585013",
+      "tripNumber": 11498585013,
+      "title": "London",
+      "description": "",
+      "startTime": {
+        "raw": "2015-03-09T10:30:00-07:00",
+        "localized": "Mar 9, 2015 10:30:00 AM",
+        "epochSeconds": 1425922200,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Mon, 9 Mar"
+      },
+      "endTime": {
+        "raw": "2015-03-17T13:50:00-07:00",
+        "localized": "Mar 17, 2015 1:50:00 PM",
+        "epochSeconds": 1426625400,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Tue, 17 Mar"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-11-14T04:45:35Z",
+        "localized": "Nov 14, 2014 4:45:35 AM",
+        "epochSeconds": 1415940335,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Fri, 14 Nov"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-11-14T04:51:54Z",
+        "localized": "Nov 14, 2014 4:51:54 AM",
+        "epochSeconds": 1415940714,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Fri, 14 Nov"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [],
+      "flights": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2015-03-09T10:30:00-07:00",
+            "localized": "Mar 9, 2015 10:30:00 AM",
+            "epochSeconds": 1425922200,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Mon, 9 Mar"
+          },
+          "endTime": {
+            "raw": "2015-03-17T13:50:00-07:00",
+            "localized": "Mar 17, 2015 1:50:00 PM",
+            "epochSeconds": 1426625400,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Tue, 17 Mar"
+          },
+          "isInternational": false,
+          "isSplitTicket": false,
+          "brandedFareFamilyName": "",
+          "startDate": "2015-03-09T10:30:00-07:00",
+          "endDate": "2015-03-17T13:50:00-07:00",
+          "isLccOrCharter": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "fa1a05b7-928d-4c5b-9bcf-0a356555e05c",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11498762367",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11498762367",
+      "tripNumber": 11498762367,
+      "title": "Atlanta",
+      "description": "",
+      "startTime": {
+        "raw": "2015-03-02T17:55:00-08:00",
+        "localized": "Mar 2, 2015 5:55:00 PM",
+        "epochSeconds": 1425347700,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Mon, 2 Mar"
+      },
+      "endTime": {
+        "raw": "2015-03-06T09:44:00-08:00",
+        "localized": "Mar 6, 2015 9:44:00 AM",
+        "epochSeconds": 1425663840,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Fri, 6 Mar"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-11-14T22:01:48Z",
+        "localized": "Nov 14, 2014 10:01:48 PM",
+        "epochSeconds": 1416002508,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Fri, 14 Nov"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-11-30T22:04:47Z",
+        "localized": "Nov 30, 2014 10:04:47 PM",
+        "epochSeconds": 1417385087,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Sun, 30 Nov"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [],
+      "flights": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2015-03-02T17:55:00-08:00",
+            "localized": "Mar 2, 2015 5:55:00 PM",
+            "epochSeconds": 1425347700,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Mon, 2 Mar"
+          },
+          "endTime": {
+            "raw": "2015-03-06T09:44:00-08:00",
+            "localized": "Mar 6, 2015 9:44:00 AM",
+            "epochSeconds": 1425663840,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Fri, 6 Mar"
+          },
+          "isInternational": false,
+          "isSplitTicket": false,
+          "brandedFareFamilyName": "",
+          "startDate": "2015-03-02T17:55:00-08:00",
+          "endDate": "2015-03-06T09:44:00-08:00",
+          "isLccOrCharter": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "dfcfa15d-8688-4d01-9f73-be9cee26c7d2",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11504120919",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11504120919",
+      "tripNumber": 11504120919,
+      "title": "Stratosphere Hotel - Casino & Resort Hotel, Las Vegas",
+      "description": "",
+      "startTime": {
+        "raw": "2015-04-13T15:00:00-07:00",
+        "localized": "Apr 13, 2015 3:00:00 PM",
+        "epochSeconds": 1428962400,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Mon, 13 Apr"
+      },
+      "endTime": {
+        "raw": "2015-04-18T11:00:00-07:00",
+        "localized": "Apr 18, 2015 11:00:00 AM",
+        "epochSeconds": 1429380000,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Sat, 18 Apr"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-12-01T00:40:48Z",
+        "localized": "Dec 1, 2014 12:40:48 AM",
+        "epochSeconds": 1417394448,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Mon, 1 Dec"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-12-01T00:41:37Z",
+        "localized": "Dec 1, 2014 12:41:37 AM",
+        "epochSeconds": 1417394497,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Mon, 1 Dec"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [
+        {
+          "startTime": {
+            "raw": "2015-04-13T15:00:00-07:00",
+            "localized": "Apr 13, 2015 3:00:00 PM",
+            "epochSeconds": 1428962400,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Mon, 13 Apr"
+          },
+          "endTime": {
+            "raw": "2015-04-18T11:00:00-07:00",
+            "localized": "Apr 18, 2015 11:00:00 AM",
+            "epochSeconds": 1429380000,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Sat, 18 Apr"
+          },
+          "checkInDate": "2015-04-13T15:00:00-07:00",
+          "checkOutDate": "2015-04-18T11:00:00-07:00",
+          "bookingStatus": "BOOKED"
+        }
+      ],
+      "flights": [],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "d4a5e7e1-39e8-407f-99a0-11bfa5d12ea2",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/7634119198",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7634119198",
+      "tripNumber": 7634119198,
+      "title": "Car rental in Miami",
+      "description": "",
+      "startTime": {
+        "raw": "2015-05-11T10:30:00-07:00",
+        "localized": "May 11, 2015 10:30:00 AM",
+        "epochSeconds": 1431365400,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Mon, 11 May"
+      },
+      "endTime": {
+        "raw": "2015-05-13T10:30:00-07:00",
+        "localized": "May 13, 2015 10:30:00 AM",
+        "epochSeconds": 1431538200,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Wed, 13 May"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-12-01T00:42:30Z",
+        "localized": "Dec 1, 2014 12:42:30 AM",
+        "epochSeconds": 1417394550,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Mon, 1 Dec"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-12-01T00:43:06Z",
+        "localized": "Dec 1, 2014 12:43:06 AM",
+        "epochSeconds": 1417394586,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Mon, 1 Dec"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [],
+      "flights": [],
+      "cars": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2015-05-11T10:30:00-07:00",
+            "localized": "May 11, 2015 10:30:00 AM",
+            "epochSeconds": 1431365400,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Mon, 11 May"
+          },
+          "endTime": {
+            "raw": "2015-05-13T10:30:00-07:00",
+            "localized": "May 13, 2015 10:30:00 AM",
+            "epochSeconds": 1431538200,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Wed, 13 May"
+          },
+          "inCancelAllowedWindow": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "464a832d-c7ca-4859-887a-2a6fe96f3863",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11505032776",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11505032776",
+      "tripNumber": 11505032776,
+      "title": "New York",
+      "description": "",
+      "startTime": {
+        "raw": "2015-03-08T21:00:00-07:00",
+        "localized": "Mar 8, 2015 9:00:00 PM",
+        "epochSeconds": 1425873600,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Sun, 8 Mar"
+      },
+      "endTime": {
+        "raw": "2015-03-11T11:00:00-07:00",
+        "localized": "Mar 11, 2015 11:00:00 AM",
+        "epochSeconds": 1426096800,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Wed, 11 Mar"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-12-02T17:45:22Z",
+        "localized": "Dec 2, 2014 5:45:22 PM",
+        "epochSeconds": 1417542322,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Tue, 2 Dec"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-12-02T17:46:38Z",
+        "localized": "Dec 2, 2014 5:46:38 PM",
+        "epochSeconds": 1417542398,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Tue, 2 Dec"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [
+        {
+          "startTime": {
+            "raw": "2015-03-09T15:00:00-07:00",
+            "localized": "Mar 9, 2015 3:00:00 PM",
+            "epochSeconds": 1425938400,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Mon, 9 Mar"
+          },
+          "endTime": {
+            "raw": "2015-03-11T11:00:00-07:00",
+            "localized": "Mar 11, 2015 11:00:00 AM",
+            "epochSeconds": 1426096800,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Wed, 11 Mar"
+          },
+          "checkInDate": "2015-03-09T15:00:00-07:00",
+          "checkOutDate": "2015-03-11T11:00:00-07:00",
+          "bookingStatus": "BOOKED"
+        }
+      ],
+      "flights": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2015-03-08T21:00:00-08:00",
+            "localized": "Mar 8, 2015 9:00:00 PM",
+            "epochSeconds": 1425877200,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Sun, 8 Mar"
+          },
+          "endTime": {
+            "raw": "2015-03-11T09:20:00-07:00",
+            "localized": "Mar 11, 2015 9:20:00 AM",
+            "epochSeconds": 1426090800,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "Wed, 11 Mar"
+          },
+          "isInternational": false,
+          "isSplitTicket": false,
+          "brandedFareFamilyName": "",
+          "startDate": "2015-03-08T21:00:00-07:00",
+          "endDate": "2015-03-11T09:20:00-07:00",
+          "isLccOrCharter": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "87986243-c877-4dfb-899d-a7eced0e1ded",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/7636843946",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7636843946",
+      "tripNumber": 7636843946,
+      "title": "New York, United States",
+      "description": "",
+      "startTime": {
+        "raw": "2015-03-25T08:00:00-07:00",
+        "localized": "Mar 25, 2015 8:00:00 AM",
+        "epochSeconds": 1427295600,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Wed, 25 Mar"
+      },
+      "endTime": {
+        "raw": "2015-03-25T08:45:00-07:00",
+        "localized": "Mar 25, 2015 8:45:00 AM",
+        "epochSeconds": 1427298300,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Wed, 25 Mar"
+      },
+      "tripCreatedTime": {
+        "raw": "2014-12-04T05:39:03Z",
+        "localized": "Dec 4, 2014 5:39:03 AM",
+        "epochSeconds": 1417671543,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 4 Dec"
+      },
+      "tripUpdatedTime": {
+        "raw": "2014-12-04T06:01:18Z",
+        "localized": "Dec 4, 2014 6:01:18 AM",
+        "epochSeconds": 1417672878,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 4 Dec"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "COMPLETED",
+      "hotels": [],
+      "flights": [],
+      "activities": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2015-03-25T08:00:00-07:00",
+            "localized": "Mar 25, 2015 8:00:00 AM",
+            "epochSeconds": 1427295600,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "3/25/2015",
+            "localizedMediumDate": "Mar 25",
+            "localizedFullDate": "Wed, Mar 25",
+            "localizedLongDate": "Mar 25, 2015"
+          },
+          "endTime": {
+            "raw": "2015-03-25T08:45:00-07:00",
+            "localized": "Mar 25, 2015 8:45:00 AM",
+            "epochSeconds": 1427298300,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "3/25/2015",
+            "localizedMediumDate": "Mar 25",
+            "localizedFullDate": "Wed, Mar 25",
+            "localizedLongDate": "Mar 25, 2015"
+          },
+          "activityCategoryID": 0,
+          "unbookedPackageV2": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "de60f174-bc74-4a0f-8685-ca1c08fe35f1",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/7822022514",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7822022514",
+      "tripNumber": 7822022514,
+      "title": "Car rental in Barcelona",
+      "description": "",
+      "startTime": {
+        "raw": "2016-03-10T10:30:00-08:00",
+        "localized": "Mar 10, 2016 10:30:00 AM",
+        "epochSeconds": 1457634600,
+        "timeZoneOffsetSeconds": -28800,
+        "localizedShortDate": "Thu, 10 Mar"
+      },
+      "endTime": {
+        "raw": "2016-03-13T10:30:00-07:00",
+        "localized": "Mar 13, 2016 10:30:00 AM",
+        "epochSeconds": 1457890200,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Sun, 13 Mar"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-09-17T06:29:03Z",
+        "localized": "Sep 17, 2015 6:29:03 AM",
+        "epochSeconds": 1442471343,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-09-17T21:34:51Z",
+        "localized": "Sep 17, 2015 9:34:51 PM",
+        "epochSeconds": 1442525691,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "UPCOMING",
+      "hotels": [],
+      "flights": [],
+      "cars": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2016-03-10T10:30:00-08:00",
+            "localized": "Mar 10, 2016 10:30:00 AM",
+            "epochSeconds": 1457634600,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Thu, 10 Mar"
+          },
+          "endTime": {
+            "raw": "2016-03-13T10:30:00-08:00",
+            "localized": "Mar 13, 2016 10:30:00 AM",
+            "epochSeconds": 1457893800,
+            "timeZoneOffsetSeconds": -28800,
+            "localizedShortDate": "Sun, 13 Mar"
+          },
+          "inCancelAllowedWindow": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "5d55d77c-e395-4ccd-b462-230658a47d9b",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/7822024975",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7822024975",
+      "tripNumber": 7822024975,
+      "title": "New York, United States",
+      "description": "",
+      "startTime": {
+        "raw": "2016-05-11T00:00:00-07:00",
+        "localized": "May 11, 2016 12:00:00 AM",
+        "epochSeconds": 1462950000,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Wed, 11 May"
+      },
+      "endTime": {
+        "raw": "2016-06-09T00:00:00-07:00",
+        "localized": "Jun 9, 2016 12:00:00 AM",
+        "epochSeconds": 1465455600,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Thu, 9 Jun"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-09-17T06:31:21Z",
+        "localized": "Sep 17, 2015 6:31:21 AM",
+        "epochSeconds": 1442471481,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-09-17T21:35:49Z",
+        "localized": "Sep 17, 2015 9:35:49 PM",
+        "epochSeconds": 1442525749,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "UPCOMING",
+      "hotels": [],
+      "flights": [],
+      "activities": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2016-05-11T00:00:00-07:00",
+            "localized": "May 11, 2016 12:00:00 AM",
+            "epochSeconds": 1462950000,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "5/11/2016",
+            "localizedMediumDate": "May 11",
+            "localizedFullDate": "Wed, May 11",
+            "localizedLongDate": "May 11, 2016"
+          },
+          "endTime": {
+            "raw": "2016-06-09T00:00:00-07:00",
+            "localized": "Jun 9, 2016 12:00:00 AM",
+            "epochSeconds": 1465455600,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "6/9/2016",
+            "localizedMediumDate": "Jun 9",
+            "localizedFullDate": "Thu, Jun 9",
+            "localizedLongDate": "Jun 9, 2016"
+          },
+          "activityCategoryID": 0,
+          "unbookedPackageV2": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    },
+    {
+      "levelOfDetail": "SUMMARY",
+      "tripId": "bb6c9ad1-3f0f-44bf-bd78-f0681fe70bd8",
+      "apiDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/7822027698",
+      "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/7822027698",
+      "tripNumber": 7822027698,
+      "title": "Narita, Japan",
+      "description": "",
+      "startTime": {
+        "raw": "2016-08-05T05:30:00-07:00",
+        "localized": "Aug 5, 2016 5:30:00 AM",
+        "epochSeconds": 1470400200,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Fri, 5 Aug"
+      },
+      "endTime": {
+        "raw": "2016-08-05T07:00:00-07:00",
+        "localized": "Aug 5, 2016 7:00:00 AM",
+        "epochSeconds": 1470405600,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "Fri, 5 Aug"
+      },
+      "tripCreatedTime": {
+        "raw": "2015-09-17T06:34:43Z",
+        "localized": "Sep 17, 2015 6:34:43 AM",
+        "epochSeconds": 1442471683,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "tripUpdatedTime": {
+        "raw": "2015-09-17T21:37:41Z",
+        "localized": "Sep 17, 2015 9:37:41 PM",
+        "epochSeconds": 1442525861,
+        "timeZoneOffsetSeconds": 0,
+        "localizedShortDate": "Thu, 17 Sep"
+      },
+      "bookingStatus": "BOOKED",
+      "timePeriod": "UPCOMING",
+      "hotels": [],
+      "flights": [],
+      "activities": [
+        {
+          "bookingStatus": "BOOKED",
+          "startTime": {
+            "raw": "2016-08-05T05:30:00-07:00",
+            "localized": "Aug 5, 2016 5:30:00 AM",
+            "epochSeconds": 1470400200,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "8/5/2016",
+            "localizedMediumDate": "Aug 5",
+            "localizedFullDate": "Fri, Aug 5",
+            "localizedLongDate": "Aug 5, 2016"
+          },
+          "endTime": {
+            "raw": "2016-08-05T07:00:00-07:00",
+            "localized": "Aug 5, 2016 7:00:00 AM",
+            "epochSeconds": 1470405600,
+            "timeZoneOffsetSeconds": -25200,
+            "localizedShortDate": "8/5/2016",
+            "localizedMediumDate": "Aug 5",
+            "localizedFullDate": "Fri, Aug 5",
+            "localizedLongDate": "Aug 5, 2016"
+          },
+          "activityCategoryID": 0,
+          "unbookedPackageV2": false
+        }
+      ],
+      "tripSource": "expedia",
+      "isMRP": false
+    }
+  ]
+}

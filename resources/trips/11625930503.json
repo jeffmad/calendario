@@ -1,0 +1,306 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "50b8001e-1d0d-44bd-91d7-9e75fa2bb32c",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11625930503",
+    "tripNumber": 11625930503,
+    "title": "Chicago",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/50b8001e-1d0d-44bd-91d7-9e75fa2bb32c/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-07-08T09:15:00-04:00",
+      "localized": "Jul 8, 2016 9:15:00 AM",
+      "epochSeconds": 1467983700,
+      "timeZoneOffsetSeconds": -14400,
+      "localizedShortDate": "7/8/2016",
+      "localizedMediumDate": "Jul 8",
+      "localizedFullDate": "Fri, Jul 8",
+      "localizedLongDate": "Jul 8, 2016"
+    },
+    "endTime": {
+      "raw": "2016-07-08T10:53:00-05:00",
+      "localized": "Jul 8, 2016 10:53:00 AM",
+      "epochSeconds": 1467993180,
+      "timeZoneOffsetSeconds": -18000,
+      "localizedShortDate": "7/8/2016",
+      "localizedMediumDate": "Jul 8",
+      "localizedFullDate": "Fri, Jul 8",
+      "localizedLongDate": "Jul 8, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-30T16:56:28Z",
+      "localized": "Sep 30, 2015 4:56:28 PM",
+      "epochSeconds": 1443632188,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-30T16:58:32Z",
+      "localized": "Sep 30, 2015 4:58:32 PM",
+      "epochSeconds": 1443632312,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-30T16:58:36Z",
+      "localized": "Sep 30, 2015 4:58:36 PM",
+      "epochSeconds": 1443632316,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "rewards": {
+      "totalPoints": 28,
+      "basePoints": 25,
+      "bonusPoints": [
+        {
+          "m_pointValue": 3.00,
+          "m_pointType": "offerPoint",
+          "m_pointDescription": "+silver Bonus Offer",
+          "m_status": "PENDING"
+        }
+      ],
+      "logoUrl": "/static/default/default/images/myrewards/RewardsLogo_193x76.png",
+      "viewStatementURL": "/user/rewards"
+    },
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzrwLCExGTJnrvPLnpYxDRfl38TRju-OXs3RJ7qwSSrzO",
+    "airAttachQualificationInfo": {
+      "airAttachQualified": true,
+      "offerExpires": "2015-10-20T09:56:28.197-07:00",
+      "offerExpiresTime": {
+        "raw": "2015-10-20T09:56:28-07:00",
+        "localized": "Oct 20, 2015 9:56:28 AM",
+        "epochSeconds": 1445360188,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "10/20/15",
+        "localizedMediumDate": "Oct 20, 2015",
+        "localizedFullDate": "Tuesday, October 20, 2015",
+        "localizedLongDate": "October 20, 2015"
+      }
+    },
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11625930503 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11625930503 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "flights": [
+      {
+        "uniqueID": "6EDC366E-FB6A-4A11-B3F6-D5BAA97E7535_0",
+        "bookingStatus": "BOOKED",
+        "bookingStatusText": "Booked",
+        "bookingStatusMessage": "Your ticket is not yet confirmed. We are confirming it with the airline and will update your online itinerary within 24 hours.",
+        "ticketingStatus": "INPROGRESS",
+        "orderNumber": "8003321689804",
+        "updateFrequentFlyerPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/50b8001e-1d0d-44bd-91d7-9e75fa2bb32c/updateFrequentFlyerInformation",
+        "orderLineNumber": "95a1eead-cf1f-4cef-8a60-d022c0b11151",
+        "confirmationNumbers": [
+          {
+            "airlineName": "Delta",
+            "number": "H4C5DP"
+          }
+        ],
+        "paymentModel": "AGENCY",
+        "fareType": "PUBLISHED",
+        "flightType": "ONE_WAY",
+        "isInternational": false,
+        "fareTotal": {
+          "subTotal": "123.1",
+          "subTotalFormatted": "$123.10",
+          "currency": "USD",
+          "base": "101.4",
+          "baseFormatted": "$101.40",
+          "taxes": "21.7",
+          "taxesFormatted": "$21.70",
+          "total": "123.1",
+          "totalFormatted": "$123.10"
+        },
+        "farePerPassenger": [
+          {
+            "passengerIndex": 0,
+            "passengerTypeCode": "ADULT",
+            "passengerTypeCodeLocalized": "Adult",
+            "currency": "USD",
+            "base": "101.4",
+            "baseFormatted": "$101.40",
+            "taxes": "21.7",
+            "taxesFormatted": "$21.70",
+            "fees": [
+              {
+                "localizedName": "Transportation Tax",
+                "amount": "7.6",
+                "amountFormatted": "$7.60"
+              },
+              {
+                "localizedName": "Flight Segment Tax",
+                "amount": "4.0",
+                "amountFormatted": "$4.00"
+              },
+              {
+                "localizedName": "Passenger Civil Aviation Security Service Fee",
+                "amount": "5.6",
+                "amountFormatted": "$5.60"
+              },
+              {
+                "localizedName": "Passenger Facility Charge",
+                "amount": "4.5",
+                "amountFormatted": "$4.50"
+              }
+            ],
+            "total": "123.1",
+            "totalFormatted": "$123.10"
+          }
+        ],
+        "isSplitTicket": false,
+        "fulfillmentMethod": "ETICKET",
+        "passengers": [
+          {
+            "typeCode": "ADULT",
+            "typeLocalized": "Adult",
+            "firstName": "Elmer",
+            "lastName": "Fudd",
+            "fullName": "Elmer Fudd",
+            "age": 36,
+            "gender": "Male",
+            "dateOfBirth": "1980-1-1",
+            "TSARedressNumber": "",
+            "phoneNumbers": [
+              {
+                "countryCode": "1",
+                "phone": "4155050490"
+              }
+            ],
+            "ticketNumbers": [],
+            "frequentFlyerPlans": [],
+            "seats": []
+          }
+        ],
+        "brandedFareFamilyName": "",
+        "legs": [
+          {
+            "type": "NONSTOP",
+            "state": "PRE_START_4",
+            "numberOfStops": 0,
+            "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smDL.gif",
+            "segments": [
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 40.77429,
+                  "longitude": -73.872035,
+                  "name": "LaGuardia",
+                  "longName": "New York, NY (LGA-LaGuardia)",
+                  "airportCode": "LGA",
+                  "airportMetroCode": "NYC",
+                  "city": "New York",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2016-07-08T09:15:00-04:00",
+                  "localized": "Jul 8, 2016 9:15:00 AM",
+                  "epochSeconds": 1467983700,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Fri, 8 Jul"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 41.976928,
+                  "longitude": -87.904787,
+                  "name": "O'Hare Intl.",
+                  "longName": "Chicago, IL (ORD-O'Hare Intl.)",
+                  "airportCode": "ORD",
+                  "airportMetroCode": "CHI",
+                  "city": "Chicago",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2016-07-08T10:53:00-05:00",
+                  "localized": "Jul 8, 2016 10:53:00 AM",
+                  "epochSeconds": 1467993180,
+                  "timeZoneOffsetSeconds": -18000,
+                  "localizedShortDate": "Fri, 8 Jul"
+                },
+                "departureTerminal": "A",
+                "arrivalTerminal": "2",
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "SHUTTLE AMERICA-DL CONNECTION-DL SHUTTLE",
+                "confirmationAirline": "Delta",
+                "confirmationNUmber": "H4C5DP",
+                "flightNumber": "5937",
+                "equipmentCode": "E75",
+                "equipmentDescription": "Embraer 175",
+                "distance": 725,
+                "distanceUnits": "mi",
+                "duration": "PT2H38M",
+                "formattedDuration": "2h 38m",
+                "bookingCode": "X",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "6EDC366E-FB6A-4A11-B3F6-D5BAA97E7535_0_L1_S1_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "HK",
+                "isHidden": false
+              }
+            ],
+            "sharableFlightLegURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzrwLCExGTJnrvPLnpYxDRfkx1Yl8_rriAN2F6vXousUq4U3pRQSM-mmYWBuBKO82Ga5hwt536OGPWTRuXSs-BB6_-vxbXLxvgfduuy5joRvB",
+            "duration": "PT2H38M"
+          }
+        ],
+        "rules": {
+          "cancellationFeeLegalText": "A non-refundable administration fee will be applied for changes and cancellations of bookings. Customers will be informed of the administration fee by their Customer Support Centre Agent at the time of their call.",
+          "faresNotGuaranteedText": "Fares are not guaranteed until ticketed.",
+          "cancelChangeIntroductionText": "We understand that sometimes plans change. We do not charge a cancel or change fee. When the airline charges such fees in accordance with its own policies, the cost will be passed on to you.",
+          "feeChangeRefundIntroductionText": "When the airline charges any cancellation or change fees in accordance with its own policies, the cost will be passed on to you.",
+          "refundabilityText": "Tickets are nonrefundable, nontransferable and name changes are not allowed.",
+          "completePenaltyRules": {
+            "text": "Rules and restrictions as imposed by the airline will be applicable to your fare should you need to change or cancel your flight.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/Fare-Rules?tripid=50b8001e-1d0d-44bd-91d7-9e75fa2bb32c",
+            "textAndURL": "Please read the <a id=\"complete_penalty_rules_for_changes_and_cancellations_link\" href=\"https://wwwexpediacom.integration.sb.karmalab.net/Fare-Rules?tripid=50b8001e-1d0d-44bd-91d7-9e75fa2bb32c\" class=\"tooltip\" target=\"rulesAndRestrictions\">complete penalty rules for changes and cancellations <span class=\"visually-hidden\" style=\"display:none;\">(Opens a new window) </span> </a> applicable to this fare.",
+            "apiURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11625930503/items/6EDC366E-FB6A-4A11-B3F6-D5BAA97E7535_0/gdsFareRulesText?useCache=true"
+          },
+          "additionalAirlineFees": {
+            "text": "The airline may charge additional fees for checked baggage or other optional services.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/Flights-BagFees?originapt=LGA&destinationapt=ORD&cabinclass=3&mktgcarrier=DL&opcarrier=&farebasis=XA14SHA0&bookingclass=X&travelDate=2016-07-08&flightNumber=5937",
+            "textAndURL": "The airline may charge <a href=\"https://wwwexpediacom.integration.sb.karmalab.net/Flights-BagFees?originapt=LGA&destinationapt=ORD&cabinclass=3&mktgcarrier=DL&opcarrier=&farebasis=XA14SHA0&bookingclass=X&travelDate=2016-07-08&flightNumber=5937\" class=\"tooltip\" target=\"rulesAndRestrictions\">additional fees <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a> for checked baggage or other optional services."
+          },
+          "airlineLiabilityLimitations": {
+            "text": "Please read important information regarding airline liability limitations.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/p/info-main/warsaw?",
+            "textAndURL": "Please read important information regarding <a id=\"airline_liability_limitations_link\" href=\"https://wwwexpediacom.integration.sb.karmalab.net/p/info-main/warsaw?\" class=\"tooltip\" target=\"rulesAndRestrictions\">airline liability limitations <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a>."
+          },
+          "airlineCheckInInstructionText": "Remember to bring your itinerary and government-issued photo ID for airport check-in and security.",
+          "railFeederMessages": [],
+          "expediaChangeFeeChargeable": false
+        },
+        "sharableItemDetailURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzrwLCExGTJnrvPLnpYxDRfkx1Yl8_rriAN2F6vXousUq4U3pRQSM-mmYWBuBKO82Ga5hwt536OGPWTRuXSs-BB58Xin6Z_WaTGe1YB9ZAfze",
+        "airRecordLocator": "100489003",
+        "isSeatMapAvailable": true,
+        "webChangePathURL": "https://wwwexpediacom.integration.sb.karmalab.net/flight-change-gds?itinnumber=11625930503&arl=100489003&cname=Delta",
+        "bookingProvider": "SABRE",
+        "hasTrainTransfer": false,
+        "ticketingAirCarrierNames": [
+          "Delta"
+        ],
+        "isLccOrCharter": false,
+        "destinationRegionId": 6139044
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

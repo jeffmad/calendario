@@ -1,4 +1,6 @@
-# calendario-service
+# calendario
+
+FIXME: description
 
 ## Developing
 
@@ -54,7 +56,10 @@ But you can also run tests through Leiningen.
 ```sh
 lein test
 ```
-
+a cool way to see if a command is installed.
+```
+command -v convert >/dev/null 2>&1 || { echo "ImageMagick is a required dependency, aborting..." >&2; exit 1; }
+```
 ### Generators
 
 This project has several [generators][] to help you create files.
@@ -64,3 +69,10 @@ This project has several [generators][] to help you create files.
 
 [generators]: https://github.com/weavejester/lein-generate
 
+## Deploying
+
+FIXME: steps to deploy
+
+## Legal
+
+Copyright © 2015 FIXME

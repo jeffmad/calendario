@@ -1,0 +1,533 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "df86b620-2a1b-4f32-a19e-841e35005838",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11624965146",
+    "tripNumber": 11624965146,
+    "title": "Chicago",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/df86b620-2a1b-4f32-a19e-841e35005838/updateTripNameDescription",
+    "startTime": {
+      "raw": "2016-05-13T17:15:00-07:00",
+      "localized": "May 13, 2016 5:15:00 PM",
+      "epochSeconds": 1463184900,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "5/13/2016",
+      "localizedMediumDate": "May 13",
+      "localizedFullDate": "Fri, May 13",
+      "localizedLongDate": "May 13, 2016"
+    },
+    "endTime": {
+      "raw": "2016-05-16T11:45:00-07:00",
+      "localized": "May 16, 2016 11:45:00 AM",
+      "epochSeconds": 1463424300,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "5/16/2016",
+      "localizedMediumDate": "May 16",
+      "localizedFullDate": "Mon, May 16",
+      "localizedLongDate": "May 16, 2016"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-30T01:43:12Z",
+      "localized": "Sep 30, 2015 1:43:12 AM",
+      "epochSeconds": 1443577392,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-30T01:45:50Z",
+      "localized": "Sep 30, 2015 1:45:50 AM",
+      "epochSeconds": 1443577550,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "tripCacheUpdatedTime": {
+      "raw": "2015-09-30T01:46:51Z",
+      "localized": "Sep 30, 2015 1:46:51 AM",
+      "epochSeconds": 1443577611,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 30 Sep"
+    },
+    "bookingStatus": "BOOKED",
+    "rewards": {
+      "totalPoints": 1358,
+      "basePoints": 1235,
+      "bonusPoints": [
+        {
+          "m_pointValue": 123.00,
+          "m_pointType": "offerPoint",
+          "m_pointDescription": "+silver Bonus Offer",
+          "m_status": "PENDING"
+        }
+      ],
+      "logoUrl": "/static/default/default/images/myrewards/RewardsLogo_193x76.png",
+      "viewStatementURL": "/user/rewards"
+    },
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBztrPg7isHPR_ngjJB8nJzxkDsEsOLLwgXKLa27d_QUvL",
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11624965146 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11624965146 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "packages": [
+      {
+        "uniqueID": "A6D77866-5823-44EB-AE98-AA7A005C6297",
+        "bookingStatus": "BOOKED",
+        "orderNumber": "8047273565741",
+        "orderLineNumber": "be41669a-d160-43c4-9bc8-0d51fd89d644",
+        "price": {
+          "currency": "USD",
+          "subTotal": "617.49",
+          "subTotalFormatted": "$617.49",
+          "total": "617.49",
+          "totalFormatted": "$617.49"
+        },
+        "flights": [
+          {
+            "uniqueID": "A6D77866-5823-44EB-AE98-AA7A005C6297_be41669a-d160-43c4-9bc8-0d51fd89d644_1",
+            "bookingStatus": "BOOKED",
+            "bookingStatusText": "Booked",
+            "bookingStatusMessage": "Your ticket is not yet confirmed. We are confirming it with the airline and will update your online itinerary within 24 hours.",
+            "ticketingStatus": "INPROGRESS",
+            "orderNumber": "8047273565741",
+            "updateFrequentFlyerPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/df86b620-2a1b-4f32-a19e-841e35005838/updateFrequentFlyerInformation",
+            "expediaBookingId": "3UD5FM",
+            "paymentModel": "AGENCY",
+            "fareType": "PUBLISHED",
+            "flightType": "ROUND_TRIP",
+            "isInternational": false,
+            "isSplitTicket": false,
+            "fulfillmentMethod": "ETICKET",
+            "passengers": [
+              {
+                "typeCode": "ADULT",
+                "typeLocalized": "Adult",
+                "firstName": "Elmer",
+                "lastName": "Fudd",
+                "fullName": "Elmer Fudd",
+                "age": 36,
+                "gender": "Male",
+                "dateOfBirth": "1980-1-1",
+                "TSARedressNumber": "",
+                "phoneNumbers": [
+                  {
+                    "countryCode": "1",
+                    "phone": "4155050490"
+                  }
+                ],
+                "ticketNumbers": [],
+                "frequentFlyerPlans": [],
+                "seats": []
+              }
+            ],
+            "brandedFareFamilyName": "",
+            "legs": [
+              {
+                "type": "NONSTOP",
+                "state": "PRE_START_4",
+                "numberOfStops": 0,
+                "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smVX.gif",
+                "segments": [
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 33.94415,
+                      "longitude": -118.4032,
+                      "name": "Los Angeles Intl.",
+                      "longName": "Los Angeles, CA (LAX-Los Angeles Intl.)",
+                      "airportCode": "LAX",
+                      "airportMetroCode": "QLA",
+                      "city": "Los Angeles",
+                      "countryCode": "USA"
+                    },
+                    "departureTime": {
+                      "raw": "2016-05-13T17:15:00-07:00",
+                      "localized": "May 13, 2016 5:15:00 PM",
+                      "epochSeconds": 1463184900,
+                      "timeZoneOffsetSeconds": -25200,
+                      "localizedShortDate": "Fri, 13 May"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 41.976928,
+                      "longitude": -87.904787,
+                      "name": "O'Hare Intl.",
+                      "longName": "Chicago, IL (ORD-O'Hare Intl.)",
+                      "airportCode": "ORD",
+                      "airportMetroCode": "CHI",
+                      "city": "Chicago",
+                      "countryCode": "USA"
+                    },
+                    "arrivalTime": {
+                      "raw": "2016-05-13T23:20:00-05:00",
+                      "localized": "May 13, 2016 11:20:00 PM",
+                      "epochSeconds": 1463199600,
+                      "timeZoneOffsetSeconds": -18000,
+                      "localizedShortDate": "Fri, 13 May"
+                    },
+                    "airlineCode": "VX",
+                    "externalAirlineCode": "VX",
+                    "airlineName": "Virgin America",
+                    "operatedByAirCarrierName": "",
+                    "confirmationAirline": "Virgin America",
+                    "flightNumber": "236",
+                    "equipmentCode": "320",
+                    "equipmentDescription": "Airbus A320",
+                    "duration": "PT4H5M",
+                    "formattedDuration": "4h 5m",
+                    "providerCode": "Amadeus",
+                    "bookingCode": "N",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "A6D77866-5823-44EB-AE98-AA7A005C6297_be41669a-d160-43c4-9bc8-0d51fd89d644_1_L1_S1_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HX",
+                    "segmentChangeMessage": "Change to be confirmed",
+                    "segmentChangeMessageLegacy": "There has been a change to your flight. We will email or call you to confirm any changes.",
+                    "isHidden": false
+                  }
+                ],
+                "sharableFlightLegURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBztrPg7isHPR_ngjJB8nJzxnn1oNSw9huwUmjxcIUzr_SFhZXJChZOWcuWeI12HUsdQEzDa1NbyUd-XPQOhlsVYmErddqt6HdGINSCRr0AlJ210ZFIgfN7762uJxyR8fgU4UAJ_pvDiHIwtXiKIYB3cTU2iidcouaZIIW5KttRPRQ",
+                "duration": "PT4H5M",
+                "segmentChangeMessage": "There has been a change to your flight. We will email or call you to confirm any changes."
+              },
+              {
+                "type": "NONSTOP",
+                "state": "PRE_START_4",
+                "numberOfStops": 0,
+                "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smVX.gif",
+                "segments": [
+                  {
+                    "transportationType": "FLIGHT",
+                    "departureType": "FLIGHT_DEPARTURE",
+                    "departureLocation": {
+                      "latitude": 41.976928,
+                      "longitude": -87.904787,
+                      "name": "O'Hare Intl.",
+                      "longName": "Chicago, IL (ORD-O'Hare Intl.)",
+                      "airportCode": "ORD",
+                      "airportMetroCode": "CHI",
+                      "city": "Chicago",
+                      "countryCode": "USA"
+                    },
+                    "departureTime": {
+                      "raw": "2016-05-16T09:20:00-05:00",
+                      "localized": "May 16, 2016 9:20:00 AM",
+                      "epochSeconds": 1463408400,
+                      "timeZoneOffsetSeconds": -18000,
+                      "localizedShortDate": "Mon, 16 May"
+                    },
+                    "arrivalType": "FLIGHT_ARRIVAL",
+                    "arrivalLocation": {
+                      "latitude": 33.94415,
+                      "longitude": -118.4032,
+                      "name": "Los Angeles Intl.",
+                      "longName": "Los Angeles, CA (LAX-Los Angeles Intl.)",
+                      "airportCode": "LAX",
+                      "airportMetroCode": "QLA",
+                      "city": "Los Angeles",
+                      "countryCode": "USA"
+                    },
+                    "arrivalTime": {
+                      "raw": "2016-05-16T11:45:00-07:00",
+                      "localized": "May 16, 2016 11:45:00 AM",
+                      "epochSeconds": 1463424300,
+                      "timeZoneOffsetSeconds": -25200,
+                      "localizedShortDate": "Mon, 16 May"
+                    },
+                    "airlineCode": "VX",
+                    "externalAirlineCode": "VX",
+                    "airlineName": "Virgin America",
+                    "operatedByAirCarrierName": "",
+                    "confirmationAirline": "Virgin America",
+                    "flightNumber": "231",
+                    "equipmentCode": "320",
+                    "equipmentDescription": "Airbus A320",
+                    "duration": "PT4H25M",
+                    "formattedDuration": "4h 25m",
+                    "providerCode": "Amadeus",
+                    "bookingCode": "N",
+                    "cabinCode": "coach",
+                    "cabinCodeLocalized": "Economy / Coach",
+                    "isSeatMapAvailable": true,
+                    "flightIdForSeatMap": "A6D77866-5823-44EB-AE98-AA7A005C6297_be41669a-d160-43c4-9bc8-0d51fd89d644_1_L2_S1_1",
+                    "status": "UNKNOWN",
+                    "airSegmentStatusCode": "HX",
+                    "segmentChangeMessage": "Change to be confirmed",
+                    "segmentChangeMessageLegacy": "There has been a change to your flight. We will email or call you to confirm any changes.",
+                    "isHidden": false
+                  }
+                ],
+                "sharableFlightLegURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBztrPg7isHPR_ngjJB8nJzxnn1oNSw9huwUmjxcIUzr_SFhZXJChZOWcuWeI12HUsdQEzDa1NbyUd-XPQOhlsVYmErddqt6HdGINSCRr0AlJ210ZFIgfN7762uJxyR8fgU2H2syZSPLlEqxtoj9KD4alLc74As0f2hvcHlcWkG3hh",
+                "duration": "PT4H25M",
+                "segmentChangeMessage": "There has been a change to your flight. We will email or call you to confirm any changes."
+              }
+            ],
+            "rules": {
+              "cancellationFeeLegalText": "A non-refundable administration fee will be applied for changes and cancellations of bookings. Customers will be informed of the administration fee by their Customer Support Centre Agent at the time of their call.",
+              "faresNotGuaranteedText": "Fares are not guaranteed until ticketed.",
+              "cancelChangeIntroductionText": "We understand that sometimes plans change. We do not charge a cancel or change fee. When the airline charges such fees in accordance with its own policies, the cost will be passed on to you.",
+              "feeChangeRefundIntroductionText": "When the airline charges any cancellation or change fees in accordance with its own policies, the cost will be passed on to you.",
+              "refundabilityText": "Tickets are nonrefundable, nontransferable and name changes are not allowed.",
+              "completePenaltyRules": {
+                "text": "Rules and restrictions as imposed by the airline will be applicable to your fare should you need to change or cancel your flight.",
+                "url": "https://wwwexpediacom.integration.sb.karmalab.net/Fare-Rules?tripid=df86b620-2a1b-4f32-a19e-841e35005838",
+                "textAndURL": "Please read the <a id=\"complete_penalty_rules_for_changes_and_cancellations_link\" href=\"https://wwwexpediacom.integration.sb.karmalab.net/Fare-Rules?tripid=df86b620-2a1b-4f32-a19e-841e35005838\" class=\"tooltip\" target=\"rulesAndRestrictions\">complete penalty rules for changes and cancellations <span class=\"visually-hidden\" style=\"display:none;\">(Opens a new window) </span> </a> applicable to this fare.",
+                "apiURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11624965146/items/A6D77866-5823-44EB-AE98-AA7A005C6297_be41669a-d160-43c4-9bc8-0d51fd89d644_1/gdsFareRulesText?useCache=true"
+              },
+              "additionalAirlineFees": {
+                "text": "The airline may charge additional fees for checked baggage or other optional services.",
+                "url": "https://wwwexpediacom.integration.sb.karmalab.net/Flights-BagFees?originapt=LAX&destinationapt=ORD&cabinclass=3&mktgcarrier=VX&opcarrier=VX&farebasis=N14NR&bookingclass=N&travelDate=2016-05-13&flightNumber=236",
+                "textAndURL": "The airline may charge <a href=\"https://wwwexpediacom.integration.sb.karmalab.net/Flights-BagFees?originapt=LAX&destinationapt=ORD&cabinclass=3&mktgcarrier=VX&opcarrier=VX&farebasis=N14NR&bookingclass=N&travelDate=2016-05-13&flightNumber=236\" class=\"tooltip\" target=\"rulesAndRestrictions\">additional fees <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a> for checked baggage or other optional services."
+              },
+              "airlineLiabilityLimitations": {
+                "text": "Please read important information regarding airline liability limitations.",
+                "url": "https://wwwexpediacom.integration.sb.karmalab.net/p/info-main/warsaw?",
+                "textAndURL": "Please read important information regarding <a id=\"airline_liability_limitations_link\" href=\"https://wwwexpediacom.integration.sb.karmalab.net/p/info-main/warsaw?\" class=\"tooltip\" target=\"rulesAndRestrictions\">airline liability limitations <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a>."
+              },
+              "airlineCheckInInstructionText": "Remember to bring your itinerary and government-issued photo ID for airport check-in and security.",
+              "railFeederMessages": [],
+              "expediaChangeFeeChargeable": false
+            },
+            "sharableItemDetailURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBztrPg7isHPR_ngjJB8nJzxnn1oNSw9huwUmjxcIUzr_SFhZXJChZOWcuWeI12HUsdQEzDa1NbyUd-XPQOhlsVYmErddqt6HdGINSCRr0AlJ210ZFIgfN7762uJxyR8fgUwfReOO63n87Pk7K0cvO_cg",
+            "airRecordLocator": "100488304",
+            "isSeatMapAvailable": true,
+            "bookingProvider": "Amadeus",
+            "hasTrainTransfer": false,
+            "ticketingAirCarrierNames": [
+              "Virgin America"
+            ],
+            "isLccOrCharter": false
+          }
+        ],
+        "hotels": [
+          {
+            "uniqueID": "A6D77866-5823-44EB-AE98-AA7A005C6297_be41669a-d160-43c4-9bc8-0d51fd89d644_0",
+            "hotelId": "8058",
+            "checkInDateTime": {
+              "raw": "2016-05-13T15:00:00-06:00",
+              "localized": "May 13, 2016 3:00:00 PM",
+              "epochSeconds": 1463173200,
+              "timeZoneOffsetSeconds": -21600,
+              "localizedShortDate": "5/13/2016",
+              "localizedMediumDate": "May 13",
+              "localizedFullDate": "Fri, May 13",
+              "localizedLongDate": "May 13, 2016"
+            },
+            "checkOutDateTime": {
+              "raw": "2016-05-16T11:00:00-06:00",
+              "localized": "May 16, 2016 11:00:00 AM",
+              "epochSeconds": 1463418000,
+              "timeZoneOffsetSeconds": -21600,
+              "localizedShortDate": "5/16/2016",
+              "localizedMediumDate": "May 16",
+              "localizedFullDate": "Mon, May 16",
+              "localizedLongDate": "May 16, 2016"
+            },
+            "checkInDate": "2016-05-13T15:00:00-06:00",
+            "checkOutDate": "2016-05-16T11:00:00-06:00",
+            "checkInDateLocalized": "Fri May/13/2016",
+            "checkOutDateLocalized": "Mon May/16/2016",
+            "numberOfNights": 3,
+            "bookingStatus": "BOOKED",
+            "bookingStatusText": "Booked",
+            "bookingStatusMessage": "Your reservation is booked. No need to call us to reconfirm this reservation.",
+            "inventoryType": "MERCHANT",
+            "inventorySource": "INTERNAL",
+            "paymentModel": "EXPEDIA_COLLECT",
+            "inventoryVisibility": "VISIBLE",
+            "orderNumber": "8047273565741",
+            "state": "PRE_START_4",
+            "infositeURL": "http://wwwexpediacom.integration.sb.karmalab.net/itin.h8058.Hotel-Information?langid=1033",
+            "hotelPropertyInfo": {
+              "address": {
+                "addressLine1": "Ohare International Airport",
+                "city": "Chicago",
+                "countrySubdivisionCode": "IL",
+                "postalCode": "60666",
+                "countryCode": "USA",
+                "countryName": " United States of America",
+                "fullAddress": "Ohare International Airport, Chicago, IL, 60666 United States of America",
+                "airportCode": "ORD"
+              },
+              "name": "Hilton Chicago O'Hare Airport",
+              "starRating": "40",
+              "photoThumbnailURL": "/hotels/1000000/10000/8100/8058/8058_55_l.jpg",
+              "photoThumbnail500pixURL": "/hotels/1000000/10000/8100/8058/8058_55_y.jpg",
+              "photoThumbnail1000pixURL": "/hotels/1000000/10000/8100/8058/8058_55_z.jpg",
+              "localPhone": "1-773-686-8000",
+              "tollFreePhone": "1-800-HILTONS",
+              "formattedPhoneNumbers": "Tel: 1 (773) 686-8000, Fax: 1 (773) 601-2873",
+              "checkInPolicies": [
+                "Check-in time starts at 3 PM",
+                "Minimum check-in age is 18"
+              ],
+              "checkInStartTimePolicy": {
+                "label": "Check-in time starts at",
+                "value": "3 PM"
+              },
+              "checkInEndTimePolicy": {},
+              "checkOutTimePolicy": {
+                "label": "Check-out time is",
+                "value": "noon"
+              },
+              "generalRules": [
+                "Check-out time is noon"
+              ],
+              "restrictionPolicies": [],
+              "fees": [
+                "The following fees and deposits are charged by the property at time of service, check-in, or check-out.<ul> <li>Fee for buffet breakfast: USD 22 per person (approximately)</li> <li>Fee for in-room wireless Internet: USD 15.50 (for 24 hours, rates may vary)</li>      <li>Valet parking fee: USD 52.92 per day</li> <li>Pet fee: USD 50 per day</li>           <li>Refrigerator fee: USD 25 per day</li><li>Crib (infant bed) fee: USD 5 per day</li><li>Rollaway bed fee: USD 30 per day</li>  </ul>",
+                "The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+              ],
+              "mandatoryFees": [],
+              "specialCheckInInstructions": [],
+              "latitude": 41.977221,
+              "longitude": -87.905018,
+              "isVipAccess": false,
+              "googleMapsLink": "//maps.google.com?q=60666+Chicago,+Ohare+International+Airport+",
+              "regionId": "800023"
+            },
+            "rules": {
+              "cancelChangeRulesIntroduction": "We understand that sometimes plans fall through. We do not charge a cancel or change fee. When the hotel charges such fees in accordance with its own policies, the cost will be passed on to you. Hilton Chicago O'Hare Airport charges the following cancellation and change fees.",
+              "cancelChangeRules": [
+                "Cancellations or changes made after 3:00 PM (Central Standard Time (US & Canada)) on May 12, 2016 or no-shows are subject to a hotel fee equal to the first night's rate plus taxes and fees.",
+                "Prices and hotel availability are not guaranteed until full payment is received.If you would like to book multiple rooms, you must use a different name for each room. Otherwise, the duplicate reservation will be canceled by the hotel."
+              ],
+              "cancellationWindowTime": {
+                "raw": "2016-05-12T15:00:00-07:00",
+                "localized": "May 12, 2016 3:00:00 PM",
+                "epochSeconds": 1463090400,
+                "timeZoneOffsetSeconds": -25200,
+                "localizedShortDate": "Thu, 12 May"
+              },
+              "opaqueRules": [],
+              "opaquePolicies": [],
+              "lateArrivalInstructions": "Your room will be guaranteed for late arrival.",
+              "loyaltyPointsDisclaimer": "Hotel supplier loyalty points and/or airline miles may not be awarded when booking Expedia Special Rate hotels.",
+              "currencyDisclaimer": "Unless specified otherwise, <span class=\"rr-bold\">rates are quoted in </span><span class=\"rr-bold\" id=\"hotel_id-default-currency\">US dollars</span>.",
+              "extraGuestPolicies": [
+                "Availability of accommodation in the same property for extra guests is not guaranteed."
+              ],
+              "occupancyPolicies": [
+                "Base rate is for 1 guest.",
+                "This property considers guests of any age to be an adult."
+              ],
+              "paymentPolicies": [
+                "Your credit card is charged the total cost at time of purchase. Prices and room availability are not guaranteed until full payment is received.",
+                "Some hotels request that we wait to submit guest names until 7 days prior to check in. In such a case, your hotel room is reserved, but your name is not yet on file with the hotel."
+              ],
+              "roomRequestDisclaimer": "All special requests (such as in-room amenities, bed type, and smoking preference) are shared with the hotel, but requests are not guaranteed and may incur additional charges. We recommend you confirm them directly with the hotel before travel.",
+              "dualCurrencyText": "Rate quotes in USD are based on current exchange rates, which may vary at time of travel. Final payment will be settled in local currency directly with the hotel.",
+              "feesDisclaimer": "The list of fees presented may not be comprehensive. Fees and deposits may not include tax and are subject to change."
+            },
+            "appliedCoupons": [],
+            "rooms": [
+              {
+                "uniqueID": "A6D77866-5823-44EB-AE98-AA7A005C6297_be41669a-d160-43c4-9bc8-0d51fd89d644_0_12680958",
+                "roomRatePlanDescription": "One King Bed Walk In Shower",
+                "roomTypeCode": "200192823",
+                "ratePlanCode": "201101349",
+                "bookingStatus": "BOOKED",
+                "drrRateDiscountDescription": "",
+                "orderLineNumber": "be41669a-d160-43c4-9bc8-0d51fd89d644",
+                "refundabilityStatus": "REFUNDABLE",
+                "availableOnAllDates": true,
+                "roomPreferences": {
+                  "primaryOccupant": {
+                    "firstName": "Elmer",
+                    "fullName": "Elmer Fudd",
+                    "email": "jmadynski@expedia.com",
+                    "phone": "1-415-5050490"
+                  },
+                  "otherOccupantInfo": {
+                    "adultCount": 1,
+                    "childCount": 0,
+                    "infantCount": 0,
+                    "childAndInfantCount": 0,
+                    "childAndInfantAges": []
+                  },
+                  "occupantSelectedRoomOptions": {
+                    "bedTypeName": "1 king bed",
+                    "smokingPreference": "NONSMOKING_ROOM",
+                    "accessibilityOptions": [],
+                    "hasExtraBedAdult": false,
+                    "hasExtraBedChild": false,
+                    "hasExtraBedInfant": false,
+                    "isSmokingPreferenceSelected": true,
+                    "isRoomOptionsAvailable": true
+                  },
+                  "availableRoomOptions": {
+                    "bedTypes": [
+                      {
+                        "id": "14",
+                        "description": "1 king bed",
+                        "selected": true
+                      }
+                    ],
+                    "accessibilityOptions": [
+                      {
+                        "id": "2424",
+                        "description": "Accessibility equipment for the deaf",
+                        "selected": false
+                      },
+                      {
+                        "id": "2420",
+                        "description": "Accessible bathroom",
+                        "selected": false
+                      },
+                      {
+                        "id": "2419",
+                        "description": "Accessible path of travel",
+                        "selected": false
+                      },
+                      {
+                        "id": "2425",
+                        "description": "Braille or raised signage",
+                        "selected": false
+                      },
+                      {
+                        "id": "2423",
+                        "description": "In-room accessibility",
+                        "selected": false
+                      }
+                    ],
+                    "isSmokingRoomAvailable": false,
+                    "isNonSmokingRoomAvailable": true
+                  }
+                }
+              }
+            ],
+            "sharableItemDetailURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBztrPg7isHPR_ngjJB8nJzxnn1oNSw9huwUmjxcIUzr_SFhZXJChZOWcuWeI12HUsdQEzDa1NbyUd-XPQOhlsVYmErddqt6HdGINSCRr0AlJ210ZFIgfN7762uJxyR8fgUwoJm-F5s-4lzRw0MaW6e4M",
+            "isFreeCancellationAvailable": false,
+            "paymentsAndCreditFees": {
+              "paymentsHotelFeesAndDepositsDisclaimer": "The below fees and deposits only apply if they are not included in your selected room rate.",
+              "noFeesStaticText": "The price above DOES NOT include any applicable hotel service fees, charges for optional incidentals (such as minibar snacks or telephone calls), or regulatory surcharges. The hotel will assess these fees, charges, and surcharges upon check-out.",
+              "isDirectAgency": false,
+              "isGDS": false,
+              "isFullyCancelled": false,
+              "isAnyRoomCancelled": false,
+              "isDepositRequired": false,
+              "isPaymentsCreditsVisible": false
+            }
+          }
+        ]
+      }
+    ],
+    "readTripError": false,
+    "tripSource": "expedia",
+    "isMRP": false
+  }
+}

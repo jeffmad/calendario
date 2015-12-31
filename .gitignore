@@ -11,13 +11,16 @@ pom.xml
 .lein*
 .DS_Store
 out/
+/target
 /classes
 /checkouts
 pom.xml
 pom.xml.asc
 *.jar
+!db/**
 *.class
 /.lein-*
 /.nrepl-port
 /profiles.clj
 dev/local.clj
+log/**

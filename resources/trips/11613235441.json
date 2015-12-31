@@ -1,0 +1,511 @@
+{
+  "apiVersion": "1.0",
+  "responseType": "TRIP_DETAILS",
+  "responseData": {
+    "levelOfDetail": "FULL",
+    "tripId": "c64165d2-ea63-4026-9fdc-559b2b4cfd3b",
+    "webDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/trips/11613235441",
+    "tripNumber": 11613235441,
+    "title": "Denver",
+    "updateTripNameDescPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/c64165d2-ea63-4026-9fdc-559b2b4cfd3b/updateTripNameDescription",
+    "startTime": {
+      "raw": "2015-12-06T10:30:00-07:00",
+      "localized": "Dec 6, 2015 10:30:00 AM",
+      "epochSeconds": 1449423000,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "12/6/2015",
+      "localizedMediumDate": "Dec 6",
+      "localizedFullDate": "Sun, Dec 6",
+      "localizedLongDate": "Dec 6, 2015"
+    },
+    "endTime": {
+      "raw": "2015-12-20T11:59:00-07:00",
+      "localized": "Dec 20, 2015 11:59:00 AM",
+      "epochSeconds": 1450637940,
+      "timeZoneOffsetSeconds": -25200,
+      "localizedShortDate": "12/20/2015",
+      "localizedMediumDate": "Dec 20",
+      "localizedFullDate": "Sun, Dec 20",
+      "localizedLongDate": "Dec 20, 2015"
+    },
+    "tripCreatedTime": {
+      "raw": "2015-09-09T00:04:26Z",
+      "localized": "Sep 9, 2015 12:04:26 AM",
+      "epochSeconds": 1441757066,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 9 Sep"
+    },
+    "tripUpdatedTime": {
+      "raw": "2015-09-16T22:27:51Z",
+      "localized": "Sep 16, 2015 10:27:51 PM",
+      "epochSeconds": 1442442471,
+      "timeZoneOffsetSeconds": 0,
+      "localizedShortDate": "Wed, 16 Sep"
+    },
+    "bookingStatus": "CANCELLED",
+    "sharableDetailsURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsqAAsPJO_Yuh2TsHWOJy22ncHtKEuVVCZ3iM1H0HfjL",
+    "airAttachQualificationInfo": {
+      "airAttachQualified": true,
+      "offerExpires": "2015-09-28T17:04:26.583-07:00",
+      "offerExpiresTime": {
+        "raw": "2015-09-28T17:04:26-07:00",
+        "localized": "Sep 28, 2015 5:04:26 PM",
+        "epochSeconds": 1443485066,
+        "timeZoneOffsetSeconds": -25200,
+        "localizedShortDate": "9/28/15",
+        "localizedMediumDate": "Sep 28, 2015",
+        "localizedFullDate": "Monday, September 28, 2015",
+        "localizedLongDate": "September 28, 2015"
+      }
+    },
+    "customerSupport": {
+      "customerSupportURL": "http://support.expedia.com/app/home",
+      "customerSupportPhoneInfo": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11613235441 </strong>"
+      ],
+      "customerSupportPhoneNumberDomestic": "+1-866-230-3837",
+      "customerSupportPhoneNumberInternational": "+1-417-520-5298",
+      "customerSupportPhoneInfoForEmail": [
+        "Call Expedia+ silver Priority Customer Care at 1-866-230-3837 or 1-417-520-5298.",
+        "For faster service, mention <strong>itinerary #11613235441 </strong>"
+      ],
+      "termsAndConditionsURL": ""
+    },
+    "isBookedUsingForeignCurrency": false,
+    "flights": [
+      {
+        "uniqueID": "A4C6010A-0CE3-4A6C-ACD9-8F0A0379F746_0",
+        "bookingStatus": "CANCELLED",
+        "bookingStatusText": "Cancelled",
+        "bookingStatusMessage": "This reservation has been fully cancelled. We're sorry your plans didn't work out. When you're ready to book a new trip, we'll be happy to help.",
+        "ticketingStatus": "CANCELLED",
+        "orderNumber": "8033946430905",
+        "updateFrequentFlyerPathURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/c64165d2-ea63-4026-9fdc-559b2b4cfd3b/updateFrequentFlyerInformation",
+        "orderLineNumber": "af73fae0-0700-467c-8f34-ee8dea08e4f6",
+        "paymentModel": "AGENCY",
+        "fareType": "PUBLISHED",
+        "flightType": "MULTI_DESTINATION",
+        "isInternational": false,
+        "fareTotal": {
+          "subTotal": "530.2",
+          "subTotalFormatted": "$530.20",
+          "currency": "USD",
+          "base": "447.45",
+          "baseFormatted": "$447.45",
+          "taxes": "82.75",
+          "taxesFormatted": "$82.75",
+          "total": "530.2",
+          "totalFormatted": "$530.20"
+        },
+        "farePerPassenger": [
+          {
+            "passengerIndex": 0,
+            "passengerTypeCode": "ADULT",
+            "passengerTypeCodeLocalized": "Adult",
+            "currency": "USD",
+            "base": "447.45",
+            "baseFormatted": "$447.45",
+            "taxes": "82.75",
+            "taxesFormatted": "$82.75",
+            "fees": [
+              {
+                "localizedName": "Transportation Tax",
+                "amount": "33.55",
+                "amountFormatted": "$33.55"
+              },
+              {
+                "localizedName": "Flight Segment Tax",
+                "amount": "20.0",
+                "amountFormatted": "$20.00"
+              },
+              {
+                "localizedName": "Passenger Civil Aviation Security Service Fee",
+                "amount": "11.2",
+                "amountFormatted": "$11.20"
+              },
+              {
+                "localizedName": "Passenger Facility Charge",
+                "amount": "18.0",
+                "amountFormatted": "$18.00"
+              }
+            ],
+            "total": "530.2",
+            "totalFormatted": "$530.20"
+          }
+        ],
+        "isSplitTicket": false,
+        "fulfillmentMethod": "ETICKET",
+        "passengers": [
+          {
+            "typeCode": "ADULT",
+            "typeLocalized": "Adult",
+            "firstName": "Elmer",
+            "lastName": "Fudd",
+            "fullName": "Elmer Fudd",
+            "age": 35,
+            "gender": "Male",
+            "dateOfBirth": "1980-1-1",
+            "TSARedressNumber": "",
+            "phoneNumbers": [
+              {
+                "countryCode": "1",
+                "phone": "4155050490"
+              }
+            ],
+            "ticketNumbers": [],
+            "frequentFlyerPlans": [],
+            "seats": []
+          }
+        ],
+        "brandedFareFamilyName": "",
+        "legs": [
+          {
+            "type": "ONESTOP",
+            "state": "PRE_START_4",
+            "numberOfStops": 1,
+            "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smDL.gif",
+            "segments": [
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 37.61594,
+                  "longitude": -122.387996,
+                  "name": "San Francisco Intl.",
+                  "longName": "San Francisco, CA (SFO-San Francisco Intl.)",
+                  "airportCode": "SFO",
+                  "airportMetroCode": "QSF",
+                  "city": "San Francisco",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2015-12-06T10:30:00-07:00",
+                  "localized": "Dec 6, 2015 10:30:00 AM",
+                  "epochSeconds": 1449423000,
+                  "timeZoneOffsetSeconds": -25200,
+                  "localizedShortDate": "Sun, 6 Dec"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 40.78501,
+                  "longitude": -111.98285,
+                  "name": "Salt Lake City Intl.",
+                  "longName": "Salt Lake City, UT (SLC-Salt Lake City Intl.)",
+                  "airportCode": "SLC",
+                  "city": "Salt Lake City",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2015-12-06T13:13:00-06:00",
+                  "localized": "Dec 6, 2015 1:13:00 PM",
+                  "epochSeconds": 1449429180,
+                  "timeZoneOffsetSeconds": -21600,
+                  "localizedShortDate": "Sun, 6 Dec"
+                },
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "SKYWEST DBA DELTA CONNECTION",
+                "confirmationAirline": "Delta",
+                "flightNumber": "4461",
+                "layoverDuration": "PT42M",
+                "duration": "PT1H43M",
+                "formattedDuration": "1h 43m",
+                "bookingCode": "V",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "A4C6010A-0CE3-4A6C-ACD9-8F0A0379F746_0_L1_S1_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "SS",
+                "isHidden": false
+              },
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 40.78501,
+                  "longitude": -111.98285,
+                  "name": "Salt Lake City Intl.",
+                  "longName": "Salt Lake City, UT (SLC-Salt Lake City Intl.)",
+                  "airportCode": "SLC",
+                  "city": "Salt Lake City",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2015-12-06T13:55:00-06:00",
+                  "localized": "Dec 6, 2015 1:55:00 PM",
+                  "epochSeconds": 1449431700,
+                  "timeZoneOffsetSeconds": -21600,
+                  "localizedShortDate": "Sun, 6 Dec"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 39.849354,
+                  "longitude": -104.672735,
+                  "name": "Denver Intl.",
+                  "longName": "Denver, CO (DEN-Denver Intl.)",
+                  "airportCode": "DEN",
+                  "airportMetroCode": "DEN",
+                  "city": "Denver",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2015-12-06T15:20:00-06:00",
+                  "localized": "Dec 6, 2015 3:20:00 PM",
+                  "epochSeconds": 1449436800,
+                  "timeZoneOffsetSeconds": -21600,
+                  "localizedShortDate": "Sun, 6 Dec"
+                },
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "",
+                "confirmationAirline": "Delta",
+                "flightNumber": "1606",
+                "duration": "PT1H25M",
+                "formattedDuration": "1h 25m",
+                "bookingCode": "V",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "A4C6010A-0CE3-4A6C-ACD9-8F0A0379F746_0_L1_S2_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "SS",
+                "isHidden": false
+              }
+            ],
+            "sharableFlightLegURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsqAAsPJO_Yuh2TsHWOJy22qDYBArDXMBoXsEaQRuOBLuL4_GbJ53bCZRdDcAzqHTqypV-3VzIFUS7o3Q5qTXndAumqHIx9SC5iHksckSpl7",
+            "duration": "PT3H50M"
+          },
+          {
+            "type": "ONESTOP",
+            "state": "PRE_START_4",
+            "numberOfStops": 1,
+            "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smDL.gif",
+            "segments": [
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 39.849354,
+                  "longitude": -104.672735,
+                  "name": "Denver Intl.",
+                  "longName": "Denver, CO (DEN-Denver Intl.)",
+                  "airportCode": "DEN",
+                  "airportMetroCode": "DEN",
+                  "city": "Denver",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2015-12-13T06:15:00-06:00",
+                  "localized": "Dec 13, 2015 6:15:00 AM",
+                  "epochSeconds": 1450008900,
+                  "timeZoneOffsetSeconds": -21600,
+                  "localizedShortDate": "Sun, 13 Dec"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 42.221613,
+                  "longitude": -83.348916,
+                  "name": "Detroit Metropolitan Wayne County",
+                  "longName": "Detroit, MI (DTW-Detroit Metropolitan Wayne County)",
+                  "airportCode": "DTW",
+                  "airportMetroCode": "DTT",
+                  "city": "Detroit",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2015-12-13T11:04:00-04:00",
+                  "localized": "Dec 13, 2015 11:04:00 AM",
+                  "epochSeconds": 1450019040,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Sun, 13 Dec"
+                },
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "",
+                "confirmationAirline": "Delta",
+                "flightNumber": "1610",
+                "layoverDuration": "PT3H6M",
+                "duration": "PT2H49M",
+                "formattedDuration": "2h 49m",
+                "bookingCode": "T",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "A4C6010A-0CE3-4A6C-ACD9-8F0A0379F746_0_L2_S1_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "SS",
+                "isHidden": false
+              },
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 42.221613,
+                  "longitude": -83.348916,
+                  "name": "Detroit Metropolitan Wayne County",
+                  "longName": "Detroit, MI (DTW-Detroit Metropolitan Wayne County)",
+                  "airportCode": "DTW",
+                  "airportMetroCode": "DTT",
+                  "city": "Detroit",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2015-12-13T14:10:00-04:00",
+                  "localized": "Dec 13, 2015 2:10:00 PM",
+                  "epochSeconds": 1450030200,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Sun, 13 Dec"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 40.644166,
+                  "longitude": -73.782548,
+                  "name": "John F. Kennedy Intl.",
+                  "longName": "New York, NY (JFK-John F. Kennedy Intl.)",
+                  "airportCode": "JFK",
+                  "airportMetroCode": "NYC",
+                  "city": "New York",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2015-12-13T16:05:00-04:00",
+                  "localized": "Dec 13, 2015 4:05:00 PM",
+                  "epochSeconds": 1450037100,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Sun, 13 Dec"
+                },
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "EXPRESSJET DBA DELTA CONNECTION",
+                "confirmationAirline": "Delta",
+                "flightNumber": "5010",
+                "duration": "PT1H55M",
+                "formattedDuration": "1h 55m",
+                "bookingCode": "T",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "A4C6010A-0CE3-4A6C-ACD9-8F0A0379F746_0_L2_S2_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "SS",
+                "isHidden": false
+              }
+            ],
+            "sharableFlightLegURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsqAAsPJO_Yuh2TsHWOJy22qDYBArDXMBoXsEaQRuOBLuL4_GbJ53bCZRdDcAzqHTqypV-3VzIFUS7o3Q5qTXneAHFAbEukiDltXjZJzSufV",
+            "duration": "PT7H50M"
+          },
+          {
+            "type": "NONSTOP",
+            "state": "PRE_START_4",
+            "numberOfStops": 0,
+            "airlineLogoURL": "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/smDL.gif",
+            "segments": [
+              {
+                "transportationType": "FLIGHT",
+                "departureType": "FLIGHT_DEPARTURE",
+                "departureLocation": {
+                  "latitude": 40.644166,
+                  "longitude": -73.782548,
+                  "name": "John F. Kennedy Intl.",
+                  "longName": "New York, NY (JFK-John F. Kennedy Intl.)",
+                  "airportCode": "JFK",
+                  "airportMetroCode": "NYC",
+                  "city": "New York",
+                  "countryCode": "USA"
+                },
+                "departureTime": {
+                  "raw": "2015-12-20T08:15:00-04:00",
+                  "localized": "Dec 20, 2015 8:15:00 AM",
+                  "epochSeconds": 1450613700,
+                  "timeZoneOffsetSeconds": -14400,
+                  "localizedShortDate": "Sun, 20 Dec"
+                },
+                "arrivalType": "FLIGHT_ARRIVAL",
+                "arrivalLocation": {
+                  "latitude": 37.61594,
+                  "longitude": -122.387996,
+                  "name": "San Francisco Intl.",
+                  "longName": "San Francisco, CA (SFO-San Francisco Intl.)",
+                  "airportCode": "SFO",
+                  "airportMetroCode": "QSF",
+                  "city": "San Francisco",
+                  "countryCode": "USA"
+                },
+                "arrivalTime": {
+                  "raw": "2015-12-20T11:59:00-07:00",
+                  "localized": "Dec 20, 2015 11:59:00 AM",
+                  "epochSeconds": 1450637940,
+                  "timeZoneOffsetSeconds": -25200,
+                  "localizedShortDate": "Sun, 20 Dec"
+                },
+                "airlineCode": "DL",
+                "externalAirlineCode": "DL",
+                "airlineName": "Delta",
+                "operatedByAirCarrierName": "",
+                "confirmationAirline": "Delta",
+                "flightNumber": "413",
+                "duration": "PT6H44M",
+                "formattedDuration": "6h 44m",
+                "bookingCode": "U",
+                "cabinCode": "coach",
+                "cabinCodeLocalized": "Economy / Coach",
+                "isSeatMapAvailable": true,
+                "flightIdForSeatMap": "A4C6010A-0CE3-4A6C-ACD9-8F0A0379F746_0_L3_S1_1",
+                "status": "UNKNOWN",
+                "airSegmentStatusCode": "SS",
+                "segmentChangeMessage": "Change to be confirmed",
+                "segmentChangeMessageLegacy": "There has been a change to your flight. We will email or call you to confirm any changes.",
+                "isHidden": false
+              }
+            ],
+            "sharableFlightLegURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsqAAsPJO_Yuh2TsHWOJy22qDYBArDXMBoXsEaQRuOBLuL4_GbJ53bCZRdDcAzqHTqypV-3VzIFUS7o3Q5qTXnepbF_Csg9lPjnFGYQXFtXg",
+            "duration": "PT6H44M",
+            "segmentChangeMessage": "There has been a change to your flight. We will email or call you to confirm any changes."
+          }
+        ],
+        "rules": {
+          "cancellationFeeLegalText": "A non-refundable administration fee will be applied for changes and cancellations of bookings. Customers will be informed of the administration fee by their Customer Support Centre Agent at the time of their call.",
+          "cancelChangeIntroductionText": "We understand that sometimes plans change. We do not charge a cancel or change fee. When the airline charges such fees in accordance with its own policies, the cost will be passed on to you.",
+          "feeChangeRefundIntroductionText": "When the airline charges any cancellation or change fees in accordance with its own policies, the cost will be passed on to you.",
+          "refundabilityText": "Tickets are nonrefundable, nontransferable and name changes are not allowed.",
+          "completePenaltyRules": {
+            "text": "Rules and restrictions as imposed by the airline will be applicable to your fare should you need to change or cancel your flight.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/Fare-Rules?tripid=c64165d2-ea63-4026-9fdc-559b2b4cfd3b",
+            "textAndURL": "Please read the <a id=\"complete_penalty_rules_for_changes_and_cancellations_link\" href=\"https://wwwexpediacom.integration.sb.karmalab.net/Fare-Rules?tripid=c64165d2-ea63-4026-9fdc-559b2b4cfd3b\" class=\"tooltip\" target=\"rulesAndRestrictions\">complete penalty rules for changes and cancellations <span class=\"visually-hidden\" style=\"display:none;\">(Opens a new window) </span> </a> applicable to this fare.",
+            "apiURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/11613235441/items/A4C6010A-0CE3-4A6C-ACD9-8F0A0379F746_0/gdsFareRulesText?useCache=true"
+          },
+          "additionalAirlineFees": {
+            "text": "The airline may charge additional fees for checked baggage or other optional services.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/Flights-BagFees?originapt=SFO&destinationapt=DEN&cabinclass=3&mktgcarrier=DL&opcarrier=&farebasis=VA14A0QD&bookingclass=V&travelDate=2015-12-06&flightNumber=4461",
+            "textAndURL": "The airline may charge <a href=\"https://wwwexpediacom.integration.sb.karmalab.net/Flights-BagFees?originapt=SFO&destinationapt=DEN&cabinclass=3&mktgcarrier=DL&opcarrier=&farebasis=VA14A0QD&bookingclass=V&travelDate=2015-12-06&flightNumber=4461\" class=\"tooltip\" target=\"rulesAndRestrictions\">additional fees <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a> for checked baggage or other optional services."
+          },
+          "airlineLiabilityLimitations": {
+            "text": "Please read important information regarding airline liability limitations.",
+            "url": "https://wwwexpediacom.integration.sb.karmalab.net/p/info-main/warsaw?",
+            "textAndURL": "Please read important information regarding <a id=\"airline_liability_limitations_link\" href=\"https://wwwexpediacom.integration.sb.karmalab.net/p/info-main/warsaw?\" class=\"tooltip\" target=\"rulesAndRestrictions\">airline liability limitations <span class=\"visually-hidden\" style=\"display:none;\" >(Opens a new window) </span> </a>."
+          },
+          "railFeederMessages": [],
+          "expediaChangeFeeChargeable": false
+        },
+        "sharableItemDetailURL": "https://wwwexpediacom.integration.sb.karmalab.net/api/trips/shared/pBRdYsO6ld9AflkqrFGBzsqAAsPJO_Yuh2TsHWOJy22qDYBArDXMBoXsEaQRuOBLuL4_GbJ53bCZRdDcAzqHTqypV-3VzIFUS7o3Q5qTXnel0cj13vwHxbQ2ZSX2t0wJ",
+        "airRecordLocator": "100478956",
+        "isSeatMapAvailable": true,
+        "bookingProvider": "SABRE",
+        "hasTrainTransfer": false,
+        "ticketingAirCarrierNames": [
+          "Delta"
+        ],
+        "isLccOrCharter": false,
+        "destinationRegionId": 6060658
+      }
+    ],
+    "readTripError": false,
+    "isMRP": false
+  }
+}

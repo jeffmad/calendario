@@ -12,7 +12,8 @@
             [calendario.component.calendar-service :refer [calendar-service]]
             [calendario.component.scheduler :refer [scheduler]]
             [calendario.component.metrics :refer [metrics]]
-            [calendario.component.hikaricp :refer [hikaricp]]))
+            [calendario.component.hikaricp :refer [hikaricp]]
+            [calendario.endpoint.isactive :refer [isactive-endpoint]]))
 
 (def base-config
   {:app {:middleware [[wrap-not-found :not-found]
@@ -31,11 +32,12 @@
          :metrics (metrics (:metrics config))
          :calapi (endpoint-component calapi-endpoint)
          :calendar-service (calendar-service (:calendar-service config))
+         :isactive (endpoint-component isactive-endpoint)
          )
         (component/system-using
          {:db [:metrics]
           :http [:app]
-          :app  [:calapi]
+          :app  [:calapi :isactive]
           :calapi [:calendar-service :metrics]
           :scheduler [:calendar-service]
           :calendar-service [:db :http-client :metrics]

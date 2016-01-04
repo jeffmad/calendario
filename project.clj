@@ -33,15 +33,22 @@
                  [metrics-clojure "2.6.0"]
                  [metrics-clojure-jvm "2.6.0"]
                  [metrics-clojure-ring "2.6.0"]
-                 ]
+                 [com.sun.jersey/jersey-core "1.17.1"] ;; jersey needed as a dependency of platform-isactive
+                 [com.sun.jersey/jersey-servlet "1.17.1"]
+                 [com.expedia.www.platform/platform-isactive "1.1.5"]]
   :plugins [[lein-environ "1.0.1"]
             [lein-gen "0.2.2"]]
+  :repositories [["central" {:name "Expedia Central Nexus"
+                             :url "http://nexus.sb.karmalab.net/nexus/content/groups/public"
+                             :snapshots false}]]
   :generators [[duct/generators "0.4.5"][lein-gen/generators "0.2.2"]]
   :duct {:ns-prefix calendario}
   :main ^:skip-aot calendario.main
   :target-path "target/%s/"
   :aliases {"gen"   ["generate"]
+
             "setup" ["do" ["generate" "locals"]]}
+  :uberjar-name "calendario-service.jar"
   :profiles
   {:dev  [:project/dev  :profiles/dev]
    :test [:project/test :profiles/test]
@@ -54,5 +61,8 @@
                                   [org.clojure/tools.namespace "0.2.11"]
                                   [eftest "0.1.0"]
                                   [kerodon "0.7.0"]]
-                   :env {:port 3000}}
+                   :env {:port 3000}
+                   :jvm-opts ["-Dapplication.name=prime-sample-clojure" ;;these properties needed for platform-isactive and log4j
+                              "-Dapplication.home=."
+                              "-Dapplication.environment=dev"]}
    :project/test  {}})

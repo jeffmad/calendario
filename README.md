@@ -15,6 +15,19 @@ lein setup
 This will create files for local configuration, and prep your system
 for the project.
 
+### Postgresql
+
+Install postgres
+On osx
+```sh
+brew install postgresql
+```
+
+Then, create init caldb
+```sh
+psql -f init_db.sql
+```
+
 ### Environment
 
 To begin developing, start with a REPL.

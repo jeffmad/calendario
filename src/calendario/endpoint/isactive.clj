@@ -1,4 +1,4 @@
-(ns calendario-service.endpoint.isactive
+(ns calendario.endpoint.isactive
   (:import
     (com.expedia.www.platform.isactive.resources IsActiveResource BuildInfoResource)
     (com.expedia.www.platform.isactive.providers FileBasedActiveVersionProvider))

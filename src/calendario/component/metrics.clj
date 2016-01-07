@@ -88,7 +88,7 @@
       (r/stop r))
     (if-let [reg (:registry this)]
       (remove-all-metrics reg))
-    (dissoc this :registry :reporter)))
+    (assoc this :registry nil :reporter nil)))
 
 (defn metrics [options]
   (map->Metrics options))

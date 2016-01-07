@@ -23,9 +23,8 @@
       this))
   (stop [this]
     (if (:conn-mgr this)
-      (do (clj-http.conn-mgr/shutdown-manager (:conn-mgr this))
-          (dissoc this :conn-mgr))
-      this)))
+      (clj-http.conn-mgr/shutdown-manager (:conn-mgr this)))
+    (assoc this :conn-mgr nil)))
 
 (defn http-client [options]
   (map->HttpClient options))

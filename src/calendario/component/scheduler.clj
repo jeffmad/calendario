@@ -27,14 +27,12 @@
   (stop [this]
     (let [stop-job (fn [m]
                      (if (:job m)
-                       (do (stop (:job m))
-                           (dissoc m :job))
-                       m))
-          _ (debug "now stopping timer job")
-          remove-pool (fn [m] (if (:pool m) (dissoc m :pool) m))]
+                       (stop (:job m)))
+                     (assoc m :job nil))
+          _ (debug "now stopping timer job")]
       (-> this
           stop-job
-          remove-pool))))
+          (assoc :pool nil)))))
 
 (defn scheduler [options]
   (map->Scheduler options))

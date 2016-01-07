@@ -30,9 +30,8 @@
       (assoc component :spec (make-spec component metrics))))
   (stop [component]
     (if-let [spec (:spec component)]
-      (do (.close (:datasource spec))
-          (dissoc component :spec))
-      component)))
+      (.close (:datasource spec)))
+    (assoc component :spec nil)))
 
 (defn hikaricp [options]
   {:pre [(:uri options)]}

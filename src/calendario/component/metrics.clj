@@ -20,7 +20,7 @@
         .build statsd)))
 
 (defn console-reporter [registry]
-  (let [opts {:stream (java.io.PrintStream. "/Users/jmadynski/src/clojure/calendario/metrics/metrics.txt" )
+  (let [opts {:stream (java.io.PrintStream. "/dev/null" ) ;disable writing metrics for now
               :rate-unit TimeUnit/SECONDS
               :duration-unit TimeUnit/MILLISECONDS
               :filter MetricFilter/ALL}]

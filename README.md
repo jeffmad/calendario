@@ -15,6 +15,25 @@ lein setup
 This will create files for local configuration, and prep your system
 for the project.
 
+### Postgresql
+
+Install postgres
+On osx
+```sh
+brew install postgresql
+```
+
+Then, create init caldb
+```sh
+psql -f db/init_db.sql
+```
+
+Run flyway
+```sh
+./db/flyway-3.2.1/flyway -configFile=db/flyway-3.2.1/conf/flyway.conf baseline
+./db/flyway-3.2.1/flyway -configFile=db/flyway-3.2.1/conf/flyway.conf migrate
+```
+
 ### Environment
 
 To begin developing, start with a REPL.
@@ -70,6 +89,24 @@ This project has several [generators][] to help you create files.
 [generators]: https://github.com/weavejester/lein-generate
 
 ## Deploying
+
+### One time database setup
+The database should only have to be set up once per environment.
+
+Create a postgres RDS instance for the environment using one of the rds-create-instance jenkins jobs.
+https://ewe.deploy.sb.karmalab.net:8443/job/ewetest_rds-create-instance/
+
+Run the init_db script on the db.
+```sh
+psql -h caldb.cmguqnu4wehw.us-west-2.rds.amazonaws.com -U cal -d caldb -f db/init_db.sql
+```
+
+Run flyway baseline:
+```sh
+./db/flyway-3.2.1/flyway -url=jdbc:postgresql://caldb.cmguqnu4wehw.us-west-2.rds.amazonaws.com:5432/caldb -user=caldba -password=333BlackTower baseline
+```
+
+### Deploying
 
 FIXME: steps to deploy
 

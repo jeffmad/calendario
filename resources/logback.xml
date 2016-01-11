@@ -9,11 +9,11 @@
     </encoder>
 
     <!-- Default location of log file is log/dev.log -->
-    <file>log/calendario.log</file>
+    <file>logs/calendario-service.txt</file>
 
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <!-- Roll over log files daily -->
-      <fileNamePattern>log/calendario.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      <fileNamePattern>log/calendario-service.%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
 
       <!-- or when size reaches 64 MB -->
       <timeBasedFileNamingAndTriggeringPolicy

@@ -30,7 +30,6 @@ psql -f db/init_db.sql
 
 Run flyway
 ```sh
-./db/flyway-3.2.1/flyway -configFile=db/flyway-3.2.1/conf/flyway.conf baseline
 ./db/flyway-3.2.1/flyway -configFile=db/flyway-3.2.1/conf/flyway.conf migrate
 ```
 
@@ -101,9 +100,9 @@ Run the init_db script on the db.
 psql -h caldb.cmguqnu4wehw.us-west-2.rds.amazonaws.com -U cal -d caldb -f db/init_db.sql
 ```
 
-Run flyway baseline:
+Run flyway migrate:
 ```sh
-./db/flyway-3.2.1/flyway -url=jdbc:postgresql://caldb.cmguqnu4wehw.us-west-2.rds.amazonaws.com:5432/caldb -user=caldba -password=333BlackTower baseline
+./db/flyway-3.2.1/flyway -url=jdbc:postgresql://caldb.cmguqnu4wehw.us-west-2.rds.amazonaws.com:5432/caldb -user=caldba -password=333BlackTower migrate
 ```
 
 ### Deploying

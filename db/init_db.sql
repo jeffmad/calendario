@@ -62,6 +62,7 @@ create database caldb with owner = webdbas;
 alter database caldb set search_path=cal, caluser, tz,public;
 
 GRANT CONNECT ON DATABASE caldb TO webusers;
+GRANT CREATE ON DATABASE caldb TO webdbas;
 
 \c caldb
 --------------------------------------------------------

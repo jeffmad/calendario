@@ -127,6 +127,15 @@
    (try-pgsql
     (find-active-users-with-expiring-calendars {} {:connection db}))))
 
+(defn find-expuser-by-email
+  "given an email, return a map representing the expuser. if not found,
+   nil is returned."
+  [db email]
+  (first
+   (try-pgsql
+    (expuser-by-email {:email email}
+                      {:connection db}))))
+
 (defn find-expuser-by-siteid-tuid
   "given a siteid and tuid, return a map representing the expuser. if not found,
    nil is returned."
@@ -147,7 +156,7 @@
     (siteusers-by-iduser {:iduser iduser}
                          {:connection db}))))
 
-(defn find-siteuser
+(defn find-site-user
   "given siteid and tuid, return a map representing the siteuser. if not found,
    nil is returned."[db siteid tuid]
   (first
@@ -156,16 +165,16 @@
                               :siteid siteid}
                              {:connection db}))))
 
-(defn user-lookup
-  "given an email and uuid, return a map representing the user.
+(defn user-lookup-by-expuserid
+  "given an expuserid and uuid, return a map representing the user.
    If an exp user has more than 1 siteuser, only the siteuser matching the uuid
    will be returned. If no user is found, nil is returned. "
-  [db email uuid]
+  [db expuserid uuid]
   (first
    (try-pgsql
-    (check-user-exists {:uuid uuid
-                        :email email}
-                       {:connection db}))))
+    (check-expuser-exists {:uuid uuid
+                           :expuserid expuserid}
+                          {:connection db}))))
 
 ; (java.time.Instant/now)
 (defn create-exp-user!
@@ -251,15 +260,15 @@
   "if the user exists, lookup and return the latest calendar for the user.
    side effect is to record the fact that it was accessed if not already present.
    If the calendar is expired return :expired"
-  [db email uuid expire-time]
-  (if (user-lookup db email uuid)
+  [db expuserid uuid expire-time]
+  (if (user-lookup-by-expuserid db expuserid uuid)
     (let [{:keys [icaltext
                   createdate
                   idsiteuser
                   siteid
                   tuid]} (first
                           (try-pgsql
-                           (latest-calendar-text-for-user {:email email
+                           (latest-calendar-text-for-user {:expuserid expuserid
                                                            :calid uuid}
                                                           {:connection db})))
           _ (record-access-if-not-present db idsiteuser siteid tuid)]
@@ -274,7 +283,7 @@
   "assign this user a new uuid for their calendar perhaps because they no longer
    want to share the calendar with others"
   [db siteid tuid uuid]
-  (if (find-siteuser db siteid tuid)
+  (if (find-site-user db siteid tuid)
     (try-pgsql
      (reset-calendar! {:uuid uuid
                        :siteid siteid

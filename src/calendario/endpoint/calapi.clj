@@ -50,7 +50,13 @@
                            siteid " tuid:" tuid))
              (let [cause (:cause (ex-data e))
                    status-code (status-code-for cause)]
-               {:status status-code :body {:error true :error-message (:error (ex-data e))}}))))
+               {:status status-code :body {:error true :error-message (str (.getMessage e) " data: " (:error (ex-data e)))}}))
+           (catch Throwable e
+             (error e (str "caught throwable getting calendar url for siteid: "
+                           siteid " tuid:" tuid))
+             {:status 503
+              :body {:error true :error-message (str (.toString e) " message:" (.getMessage e))}})))
+
    (POST "/user" request
          (try
            (if-let [user (cs/make-user calendar-service (:body request))]
@@ -86,15 +92,19 @@
                         (wrap-json-response
                          (wrap-json-body
                           (cal-mgmt-routes calendar-service reg) {:keywords? true})))
-               (GET "/calendar/ical/:email/:token/trips.ics" [email token]
+               (GET "/calendar/ical/:expuserid/:token/trips.ics" [expuserid token]
                     (try
-                      (let [r (-> (response (cs/calendar-for calendar-service email token))
+                      (let [e (Integer/parseInt expuserid)
+                            r (-> (response (cs/calendar-for
+                                             calendar-service
+                                             e
+                                             token))
                                   (content-type "text/calendar; charset=utf-8"))]
                         (inc! (counter reg ["calendario" "api" "calaccess"]))
                         r)
                       (catch clojure.lang.ExceptionInfo e
-                        (error e (str "caught exception serving calendar for email: "
-                                      email))
+                        (error e (str "caught exception serving calendar for expuserid: "
+                                      expuserid))
                         (let [cause (:cause (ex-data e))
                               status-code (status-code-for cause)]
                           (-> (response (generate-string

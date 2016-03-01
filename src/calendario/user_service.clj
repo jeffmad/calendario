@@ -60,7 +60,7 @@
       { :expuserid (zx/xml1-> z :expUser (zx/attr :id))
        :email (zx/xml1-> z :expUser (zx/attr :emailAddress))
        :tuidmappings (mapv tuid-mapping (zx/xml-> z :expUserTUIDMapping))}
-      (error (str "profile response not successful " r)))))
+      (error (str "user accounts response not successful " r)))))
 
 (defn update-metrics-user-by-email-success! [metrics-registry time]
   (inc! (counter metrics-registry ["calendario" "us" "acctsaccess"]))
@@ -81,6 +81,8 @@
            conn-timeout
            socket-timeout
            conn-mgr]} metrics-registry email]
+  {:pre [(and (not (clojure.string/blank? email))
+              ((complement nil?) email))]}
   (let [url (str user-service-endpoint "/exp-account/tuids")
         resp (post-url url {:throw-exceptions true
                             :body (format exp-account-template email)
@@ -98,7 +100,11 @@
         (accounts (:body resp)))
       (do
         (update-metrics-user-by-email-error! metrics-registry)
-        nil))))
+        (throw (ex-info (str  "could not get accounts for user, status="
+                              (:status resp) " email: " email
+                              " response:" resp )
+                        {:cause :service-unavailable
+                         :error "did not get status 200 retrieving user accounts" }))))))
 
 (defn- profile
   "take the raw xml response, parse it, and return a map containing the required
@@ -113,7 +119,10 @@
        :last (zx/xml1-> z :user :personalName (zx/attr :last))
        :country-code (zx/xml1-> z :user :preferredPhone (zx/attr :countryCode))
        :phone (zx/xml1-> z :user :preferredPhone (zx/attr :phoneNumber))}
-      (error (str "profile response not successful " r)))))
+      (throw (ex-info (str  "profile response not successful, status="
+                            (:status r) " response: " r)
+                      {:cause :service-unavailable
+                       :error "did not get success in xml attr in profile" })))))
 
 (def exp-profile-template "<?xml version=\"1.0\" encoding=\"utf-8\"?><usr:getUserProfileRequest xmlns:usr=\"urn:com:expedia:www:services:user:messages:v3\" siteID=\"%s\"><usr:user actAsTuid=\"%s\" loggedInTuid=\"%s\"/><usr:messageInfo enableTraceLog=\"false\" clientName=\"localhost\" transactionGUID=\"a2192179-d5b7-4234-918c-8f662aaaf545\"/></usr:getUserProfileRequest>")
 
@@ -151,4 +160,8 @@
         (profile (:body resp)))
       (do
         (update-metrics-user-profile-error! metrics-registry)
-        nil))))
+        (throw (ex-info (str  "could not get profile for user, status="
+                              (:status resp) " tuid: " tuid
+                              " siteid: " site-id " response:" resp )
+                        {:cause :service-unavailable
+                         :error "did not get status 200 retrieving user profile" }))))))

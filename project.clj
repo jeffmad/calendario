@@ -2,7 +2,7 @@
   :description "web app that generates a user icalendar subscription"
   :url "http://ewegithub.sb.karmalab.net/EWE/calendario"
   :min-lein-version "2.0.0"
-  :dependencies [[org.clojure/clojure "1.7.0"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
                  [com.stuartsierra/component "0.3.0"]
                  [compojure "1.4.0"]
                  [duct "0.4.5"]

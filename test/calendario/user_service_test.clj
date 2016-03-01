@@ -38,7 +38,7 @@
                                                      :body "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><getUserProfileResponse success=\"false\" xmlns=\"urn:com:expedia:www:services:user:messages:v3\"><errorMessage errorCode=\"IllegalArguments\">Invalid traveler (LoggedInTUID: 577015 or ActAsTUID: 577015).</errorMessage></getUserProfileResponse>"
                                                          })
                   update-metrics-user-profile-success! (fn [reg time] nil)]
-      (is (= nil
+      (is (thrown-with-msg? clojure.lang.ExceptionInfo #"profile response not successful"
              (get-user-profile {:user-service-endpoint "someurl"
                                    :conn-timeout 10
                                    :socket-timeout 10

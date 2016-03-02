@@ -39,13 +39,13 @@
   (testing "finding a siteuser"
     (let [u '({:iduser 1, :idsiteuser 1, :tuid 577015, :tpid 1, :eapid 0, :siteid 1, :calid #uuid "6eb7f25d-4bbf-4753-aae2-72635fcd959b", :locale nil})]
       (with-redefs [siteuser-by-siteid-tuid (fn [p c] u)]
-        (is (= (first u) (find-siteuser {:db "yes"} 1 577015)))))))
+        (is (= (first u) (find-site-user {:db "yes"} 1 577015)))))))
 
-(deftest user-lookup-test
+(deftest user-lookup-by-expuserid-test
   (testing "verifying user exists"
     (let [u '({:email "jeffmad@gmail.com", :eapid 0, :locale nil, :iduser 1, :siteid 1, :expuserid 12345, :tuid 577015, :calid #uuid "6eb7f25d-4bbf-4753-aae2-72635fcd959b", :tpid 1, :idsiteuser 1})]
-      (with-redefs [check-user-exists (fn [p c] u)]
-        (is (= (first u) (user-lookup {:db "yes"} "jeffmad@gmail.com" "6eb7f25d-4bbf-4753-aae2-72635fcd959b" )))))))
+      (with-redefs [check-expuser-exists (fn [p c] u)]
+        (is (= (first u) (user-lookup-by-expuserid {:db "yes"} "12345" "6eb7f25d-4bbf-4753-aae2-72635fcd959b" )))))))
 
 (deftest create-expuser-test
   (testing "adding an expuser to db"
@@ -102,7 +102,7 @@
                                                              :tuid 577015}))
                   calendar-accessed-recently (fn [p c] '({:count 1}))
                   record-calendar-access<! (fn [p c] nil)
-                  check-user-exists (fn [p c] u) ]
+                  check-expuser-exists (fn [p c] u) ]
       (is (= "BEGIN:VCALENDAR\nPRODID:-//Expedia\\, Inc. //Trip Calendar V0.1//EN\nVERSION:2.0\nMETHOD:PUBLISH\nCALSCALE:GREGORIAN\nEND:VCALENDAR\n"
              (latest-calendar-for-user {:db "yes"} "a@b.com" "DEADBEEF" (.toInstant #inst "2015-11-10T16:59:58.147000000-00:00"))))
       (is (= :expired (latest-calendar-for-user {:db "yes"} "a@b.com" "DEADBEEF" (java.time.Instant/now))))))))

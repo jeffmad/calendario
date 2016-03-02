@@ -16,12 +16,15 @@ select s.siteid, s.tuid, s.idsiteuser from caluser.siteusers s, cal.calendaracce
 -- name: calendar-accessed-recently
 -- check if user has accessed calendar recently
 select count(ca.idsiteuser) from cal.calendaraccess ca, caluser.siteusers s where s.tuid = :tuid and s.siteid = :siteid and ca.lastaccess > current_timestamp - interval '24 hours' and s.idsiteuser = ca.idsiteuser
--- name: check-user-exists
+-- name: check-expuser-exists
 -- check user exists by joining expusers and site user
-select e.email, e.iduser, e.expuserid, s.idsiteuser, s.calid, s.tpid, s.eapid, s.tuid, s.siteid, s.locale from caluser."expusers" e, caluser."siteusers" s where e.email = LOWER(:email) and s.calid = :uuid::uuid and e.iduser = s.iduser;
+select e.email, e.iduser, e.expuserid, s.idsiteuser, s.calid, s.tpid, s.eapid, s.tuid, s.siteid, s.locale from caluser."expusers" e, caluser."siteusers" s where e.expuserid = :expuserid and s.calid = :uuid::uuid and e.iduser = s.iduser;
 -- name: expuser-by-siteid-tuid
 -- retrieve expuser by siteid tuid
 select e.iduser, e.expuserid, e.email, e.createdate from caluser."expusers" e, caluser."siteusers" s where e.iduser = s.iduser and s.siteid = :siteid and s.tuid = :tuid
+-- name: expuser-by-email
+-- retrieve expuser by email
+select e.iduser, e.expuserid, e.email, e.createdate from caluser."expusers" e where e.email = LOWER(:email)
 -- name: latest-calendar-created-for-user
 -- pass in email and uuid, get icaltext if it exists, use greatest-n-per-group to get most recent calendar for user
 with latest_cals as (
@@ -40,7 +43,7 @@ and lc.createdate >= date_trunc('month', current_date - interval '2 days')
 and lc.createdate < date_trunc('month', current_date)+'1month'
 ORDER BY c.createdate DESC LIMIT 1
 -- name: latest-calendar-text-for-user
--- pass in email and uuid, get icaltext if it exists, use greatest-n-per-group to get most recent calendar for user
+-- pass in expuserid and uuid, get icaltext if it exists, use greatest-n-per-group to get most recent calendar for user
 with latest_cals as (
 select a.idcalendar, a.idsiteuser, a.createdate from cal."calendarsusers" a inner join ( select idsiteuser, MAX(createdate) as d from cal."calendarsusers" group by idsiteuser ) b on a.idsiteuser = b.idsiteuser and a.createdate = b.d
 )
@@ -49,7 +52,7 @@ from caluser."expusers" e,
 caluser."siteusers" s,
 latest_cals lc,
 cal."calendars" c
-where e.email = LOWER(:email)
+where e.expuserid = :expuserid
 and s.calid = :calid::uuid
 and s.idsiteuser = lc.idsiteuser
 and c.idcalendar = lc.idcalendar

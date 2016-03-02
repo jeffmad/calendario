@@ -49,13 +49,19 @@
    If the user has shared the url with others and no longer wants
    those individuals to have access, the user must reset the calendar url."
   [{{db :spec} :db http-client :http-client {reg :registry} :metrics} siteid tuid]
-  (let [_ (debug (str "Getting calendar for user with siteid " siteid " tuid:" tuid))
+  (let [_ (debug (str "Getting calendar url for user with siteid " siteid " tuid:" tuid))
         u (or (um/user-lookup db siteid tuid)
               (um/create-user db http-client reg siteid tuid))
-        email (get-in u [:expuser :email])
+        _ (debug (str siteid "/" tuid " " u))
+        expuserid (:expuserid (:expuser u))
         uuid (:calid (first (filter #(= tuid (:tuid %)) (:siteusers u))))]
-    (str "/calendar/ical/"
-         (java.net.URLEncoder/encode email) "/private-" uuid "/trips.ics")))
+    (if (and expuserid uuid)
+      (str "/calendar/ical/"
+           expuserid "/private-" uuid "/trips.ics")
+      (throw (ex-info (str  "unable to get calendar url for user tuid:"
+                            tuid " siteid: " siteid)
+                      {:cause :service-unavailable
+                       :error (str  "unable to get expuserid and uuid for user with tuid: " tuid " siteid: " siteid) })))))
 
 ;curl -v -k -H "Content-Type: application/json" -X POST -d '{"expuserid": 600000, "email": "kurt@vonnegut.com", "tpid": 1, "eapid": 0, "tuid": 550000, "siteid": 1}' 'http://localhost:3000/api/user'
 
@@ -133,8 +139,8 @@
 (defn build-and-store-latest-calendar
   "pull the booked upcoming trips, make calendar events for them,
    and store the calendar text in the database"
-  [{{db :spec} :db http-client :http-client :as calendar-service} email uuid]
-  (let [user (cu/user-lookup db email uuid)]
+  [{{db :spec} :db http-client :http-client :as calendar-service} expuserid uuid]
+  (let [user (cu/user-lookup-by-expuserid db expuserid uuid)]
     (build-and-store-calendar-for-user calendar-service (:idsiteuser user) (:siteid user) (:tuid user))))
 
 (defn time-n-hours-before
@@ -172,21 +178,21 @@
 (defn build-or-get-cached-calendar
   "get the latest calendar for the user. If it is expired, then build and store
    a new calendar, then return it"
-  [{{db :spec} :db http-client :http-client :as calendar-service} email uuid expire-time]
-  (let [latest (cu/latest-calendar-for-user db email uuid expire-time)]
+  [{{db :spec} :db http-client :http-client :as calendar-service} expuserid uuid expire-time]
+  (let [latest (cu/latest-calendar-for-user db expuserid uuid expire-time)]
     (if (= :expired latest)
-      (build-and-store-latest-calendar calendar-service email uuid)
+      (build-and-store-latest-calendar calendar-service expuserid uuid)
       latest)))
 
 ; rebuild every calendar that has been accessed between >23 and <25 hours ago and
 ; is expired
 
 (defn calendar-for
-  "given an email and a guid token, return the cached or recently built
+  "given an expuserid and a guid token, return the cached or recently built
    calendar "
-  [{{db :spec} :db http-client :http-client :as calendar-service} email token]
+  [{{db :spec} :db http-client :http-client :as calendar-service} expuserid token]
   (let [uuid (second (re-matches #"^private-([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})" token))
         expire-time (time-n-hours-before (java.time.Instant/now) (:expires-in-hours calendar-service))
-        user (cu/user-lookup db email uuid)]
+        user (cu/user-lookup-by-expuserid db expuserid uuid)]
     (if user
-      (build-or-get-cached-calendar calendar-service email uuid expire-time))))
+      (build-or-get-cached-calendar calendar-service expuserid uuid expire-time))))

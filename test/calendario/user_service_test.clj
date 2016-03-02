@@ -37,7 +37,8 @@
     (with-redefs [post-url (fn [url opts meta-data reg] {:status 200
                                                      :body "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><getUserProfileResponse success=\"false\" xmlns=\"urn:com:expedia:www:services:user:messages:v3\"><errorMessage errorCode=\"IllegalArguments\">Invalid traveler (LoggedInTUID: 577015 or ActAsTUID: 577015).</errorMessage></getUserProfileResponse>"
                                                          })
-                  update-metrics-user-profile-success! (fn [reg time] nil)]
+                  update-metrics-user-profile-success! (fn [reg time] nil)
+                  user-profile-from-cache (fn [siteid tuid] nil)]
       (is (thrown-with-msg? clojure.lang.ExceptionInfo #"profile response not successful"
              (get-user-profile {:user-service-endpoint "someurl"
                                    :conn-timeout 10
@@ -46,7 +47,8 @@
   (testing "retrieve user profile but exception occurs"
     (with-redefs [post-url (fn [url opts meta-data reg] (throw (ex-info "could not connect to user service" {:cause :service-unavailable :error {:reason "something bad happened"
                                                                                                                                              :data meta-data
-                                                                                                                                             :url url}})))]
+                                                                                                                                                 :url url}})))
+                  user-profile-from-cache (fn [siteid tuid] nil)]
       (is (thrown? clojure.lang.ExceptionInfo
              (get-user-profile {:user-service-endpoint "someurl"
                                 :conn-timeout 10

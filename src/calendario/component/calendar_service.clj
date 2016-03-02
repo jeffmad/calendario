@@ -58,7 +58,7 @@
     (if (and expuserid uuid)
       (str "/calendar/ical/"
            expuserid "/private-" uuid "/trips.ics")
-      (throw (ex-info (str  "unable to get calendar for user tuid:"
+      (throw (ex-info (str  "unable to get calendar url for user tuid:"
                             tuid " siteid: " siteid)
                       {:cause :service-unavailable
                        :error (str  "unable to get expuserid and uuid for user with tuid: " tuid " siteid: " siteid) })))))

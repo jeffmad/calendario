@@ -58,12 +58,12 @@
                           locale
                           now) non-existing)))
 
-(def up-memo (memoize us/get-user-profile))
-(def ue-memo (memoize us/get-user-by-email))
+;(def up-memo (memoize us/get-user-profile))
+;(def ue-memo (memoize us/get-user-by-email))
 
 (defn single-use-account? [user-accounts siteid tuid]
-  (seq (filter #(and (= tuid (:tuid %))
-                     (= siteid (:tpid %))
+  (seq (filter #(and (= tuid (Integer/parseInt (:tuid %)))
+                     (= siteid (Integer/parseInt (:tpid %)))
                      (= "true" (:single-use %)))
                (:tuidmappings user-accounts))))
 

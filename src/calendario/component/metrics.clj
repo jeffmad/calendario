@@ -2,6 +2,7 @@
   (:require [com.stuartsierra.component :as component]
             [metrics.core :refer [new-registry remove-all-metrics]]
             [metrics.jvm.core :refer [instrument-jvm]]
+            [metrics.reporters.jmx :as jmxr]
             [metrics.reporters.console :as r]
             [metrics.counters :refer [defcounter]]
             [metrics.histograms :refer [defhistogram]])
@@ -18,6 +19,13 @@
         .convertRatesTo TimeUnit/SECONDS
         .filter MetricFilter/ALL
         .build statsd)))
+
+(defn jmx-reporter [registry]
+     (let [opts {:domain "CAL"
+                 :rate-unit TimeUnit/SECONDS
+                 :duration-unit TimeUnit/MILLISECONDS
+                 :filter MetricFilter/ALL}]
+       (jmxr/reporter registry opts)))
 
 (defn console-reporter [registry]
   (let [opts {:stream (java.io.PrintStream. "/dev/null" ) ;disable writing metrics for now
@@ -78,14 +86,17 @@
   (start [this]
     (let [reg (new-registry)
           ;reporter (statsd-reporter reg host port)
-          reporter (console-reporter reg)]
+                                        ;reporter (console-reporter reg)
+          reporter (jmx-reporter reg)]
       (instrument-jvm reg)
       (init-metrics reg)
-      (r/start reporter reporting-interval)
+      ;(r/start reporter reporting-interval)
+      (jmxr/start reporter)
     (assoc this :registry reg :reporter reporter)))
   (stop [this]
     (if-let [r (:reporter this)]
-      (r/stop r))
+      ;(r/stop r))
+      (jmxr/stop r))
     (if-let [reg (:registry this)]
       (remove-all-metrics reg))
     (assoc this :registry nil :reporter nil)))

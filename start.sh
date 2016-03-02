@@ -17,6 +17,10 @@ export STATSD_INTERVAL=15
 export EXPIRES_IN_HOURS=8
 export NET_POOL_SIZE=20
 export SCHEDULER_INTERVAL=300000
- 
+
 JAVA_HOME=$(/usr/libexec/java_home -v1.8)
-$JAVA_HOME/bin/java -Xms512m -Xmx2g -jar calendario-0.1.0-standalone.jar 
+$JAVA_HOME/bin/java -Xms512m -Xmx2g -Dcom.sun.management.jmxremote \
+                                    -Dcom.sun.management.jmxremote.port=1098 \
+                                    -Dcom.sun.management.jmxremote.local.only=false \
+                                    -Dcom.sun.management.jmxremote.authenticate=false \
+                                    -Dcom.sun.management.jmxremote.ssl=false -jar calendario-service.jar

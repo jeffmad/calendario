@@ -29,10 +29,10 @@ IF NOT EXISTS ((select 1 from pg_roles where rolname = 'webusers'))
   ALTER ROLE webusers SET search_path=cal,caluser,tz,public;
 END IF;
 
-IF EXISTS ((select 1 from pg_user where usename = 'root'))
+IF EXISTS ((select 1 from pg_user where usename = 'calendario_root'))
 THEN
-	ALTER USER root VALID UNTIL 'infinity';
-	GRANT webdbas TO root;
+	ALTER USER calendario_root VALID UNTIL 'infinity';
+	GRANT webdbas TO calendario_root;
 END IF;
 
 IF NOT EXISTS ((select 1 from pg_roles where rolname = 'caldba'))

@@ -11,7 +11,8 @@
    (client/get url {:throw-exceptions true
                     :conn-timeout conn-timeout
                     :socket-timeout socket-timeout
-                    :connection-manager conn-mgr })
+                    :connection-manager conn-mgr
+                    :insecure? true})
    (catch java.net.SocketTimeoutException ste
      (inc! (counter metrics-registry ["calendario" "trip" "readtimeout"]))
      (error ste (str "socket timeout reading " url)))
@@ -40,7 +41,8 @@
   (let [url (format (str trip-service-endpoint "/api/users/%s/trips?siteid=%s") tuid site-id)
         resp (get-url url {:conn-timeout conn-timeout
                            :socket-timeout socket-timeout
-                           :connection-manager conn-mgr } metrics-registry)]
+                           :connection-manager conn-mgr
+                           :insecure? true} metrics-registry)]
     (if (= 200 (:status resp))
       (do
         (inc! (counter metrics-registry ["calendario" "trip" "sumsucc"]))
@@ -86,7 +88,8 @@
         resp (get-url url {
                        :conn-timeout conn-timeout
                        :socket-timeout socket-timeout
-                       :connection-manager conn-mgr } metrics-registry)
+                           :connection-manager conn-mgr
+                           :insecure? true} metrics-registry)
         _ (debug (str "reading trip " itin-number " took " (:request-time resp)))]
     (if (and resp (= 200 (:status resp)))
       (do
